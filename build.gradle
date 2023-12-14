@@ -15,11 +15,11 @@ buildscript {
         // https://developer.android.com/jetpack/androidx/releases/room
         room = '2.5.0-alpha01'
         // https://developer.android.com/jetpack/androidx/releases/datastore
-        datastore = '1.0.0'
+//        datastore = '1.0.0'
         // https://developer.android.com/jetpack/androidx/releases/work
-        work = '2.8.0-alpha02'
+//        work = '2.8.0-alpha02'
         // https://developer.android.com/jetpack/androidx/releases/profileinstaller
-        profileinstaller = '1.2.0-beta02'
+//        profileinstaller = '1.2.0-beta02'
         // https://square.github.io/okhttp/changelogs/changelog/
 //        okhttp = '5.0.0-alpha.7'
 //        retrofit2 = '2.9.0'
