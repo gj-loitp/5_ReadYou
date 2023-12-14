@@ -35,4 +35,4 @@
 -keep class com.rometools.** { *; }
 
 # Provider API
--keep class me.ash.reader.data.provider.** { *; }
+-keep class com.roy93group.reader.data.provider.** { *; }

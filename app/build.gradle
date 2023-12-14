@@ -15,10 +15,10 @@ if (keyPropsFile.exists()) {
 }
 
 android {
-    namespace 'me.ash.reader'
+    namespace 'com.roy93group.reader'
     compileSdk 34
     defaultConfig {
-        applicationId "me.ash.reader"
+        applicationId "com.roy93group.reader"
         minSdk 26
         targetSdk 34
         versionCode 20231214
