@@ -7,13 +7,13 @@ buildscript {
         // https://developer.android.com/jetpack/androidx/releases/compose-material3
         material3 = '1.0.1'
         // https://developer.android.com/jetpack/androidx/releases/lifecycle
-        lifecycle = '2.5.0-rc01'
+//        lifecycle = '2.5.0-rc01'
         // https://developer.android.com/jetpack/androidx/releases/navigation
-        navigation = '2.5.0-rc01'
+//        navigation = '2.5.0-rc01'
         // https://developer.android.com/jetpack/androidx/releases/paging
-        paging = '3.1.1'
+//        paging = '3.1.1'
         // https://developer.android.com/jetpack/androidx/releases/room
-        room = '2.5.0-alpha01'
+//        room = '2.5.0-alpha01'
         // https://developer.android.com/jetpack/androidx/releases/datastore
 //        datastore = '1.0.0'
         // https://developer.android.com/jetpack/androidx/releases/work
