@@ -103,16 +103,16 @@ dependencies {
     // https://mvnrepository.com/artifact/com.rometools/rome
     implementation "com.rometools:rome:$rome"
     // https://coil-kt.github.io/coil/changelog/
-    implementation("io.coil-kt:coil-base:$coil")
-    implementation("io.coil-kt:coil-compose:$coil")
-    implementation("io.coil-kt:coil-svg:$coil")
-    implementation("io.coil-kt:coil-gif:$coil")
+    implementation("io.coil-kt:coil-base:2.1.0")
+    implementation("io.coil-kt:coil-compose:2.1.0")
+    implementation("io.coil-kt:coil-svg:2.1.0")
+    implementation("io.coil-kt:coil-gif:2.1.0")
     // Cancel TLSv1.3 support pre Android10
     // implementation 'org.conscrypt:conscrypt-android:2.5.2'
 
     // https://square.github.io/okhttp/changelogs/changelog/
-    implementation "com.squareup.okhttp3:okhttp:$okhttp"
-    implementation "com.squareup.okhttp3:okhttp-coroutines-jvm:$okhttp"
+    implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.7"
+    implementation "com.squareup.okhttp3:okhttp-coroutines-jvm:5.0.0-alpha.7"
     implementation "com.squareup.retrofit2:retrofit:$retrofit2"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit2"
     // https://developer.android.com/jetpack/androidx/releases/profileinstaller

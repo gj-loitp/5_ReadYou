@@ -21,10 +21,10 @@ buildscript {
         // https://developer.android.com/jetpack/androidx/releases/profileinstaller
         profileinstaller = '1.2.0-beta02'
         // https://square.github.io/okhttp/changelogs/changelog/
-        okhttp = '5.0.0-alpha.7'
+//        okhttp = '5.0.0-alpha.7'
         retrofit2 = '2.9.0'
         // https://coil-kt.github.io/coil/changelog/
-        coil = '2.1.0'
+//        coil = '2.1.0'
         // https://mvnrepository.com/artifact/com.rometools/rome
         rome = '1.18.0'
         // https://github.com/dankito/Readability4J
