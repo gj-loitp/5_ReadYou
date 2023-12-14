@@ -112,9 +112,9 @@ dependencies {
 
     // https://square.github.io/okhttp/changelogs/changelog/
     implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.7"
-    implementation "com.squareup.okhttp3:okhttp-coroutines-jvm:5.0.0-alpha.7"
-    implementation "com.squareup.retrofit2:retrofit:$retrofit2"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit2"
+    implementation "com.squareup.okhttp3:okhttp-coroutines-jvm:5.0.0-alpha.11"
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     // https://developer.android.com/jetpack/androidx/releases/profileinstaller
     implementation "androidx.profileinstaller:profileinstaller:$profileinstaller"
     // https://developer.android.com/jetpack/androidx/releases/work
