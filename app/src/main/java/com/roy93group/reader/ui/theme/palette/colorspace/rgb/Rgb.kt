@@ -1,5 +1,3 @@
-
-
 package com.roy93group.reader.ui.theme.palette.colorspace.rgb
 
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz

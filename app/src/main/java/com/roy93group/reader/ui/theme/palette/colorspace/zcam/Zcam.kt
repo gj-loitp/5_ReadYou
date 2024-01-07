@@ -1,5 +1,3 @@
-
-
 package com.roy93group.reader.ui.theme.palette.colorspace.zcam
 
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz
@@ -10,7 +8,12 @@ import com.roy93group.reader.ui.theme.palette.colorspace.zcam.Izazbz.Companion.t
 import com.roy93group.reader.ui.theme.palette.util.square
 import com.roy93group.reader.ui.theme.palette.util.toDegrees
 import com.roy93group.reader.ui.theme.palette.util.toRadians
-import kotlin.math.*
+import kotlin.math.atan2
+import kotlin.math.cos
+import kotlin.math.exp
+import kotlin.math.pow
+import kotlin.math.sin
+import kotlin.math.sqrt
 
 data class Zcam(
     val hz: Double = Double.NaN,

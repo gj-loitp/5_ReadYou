@@ -1,5 +1,3 @@
-
-
 package com.roy93group.reader.ui.theme.palette.core
 
 import androidx.compose.runtime.Composable

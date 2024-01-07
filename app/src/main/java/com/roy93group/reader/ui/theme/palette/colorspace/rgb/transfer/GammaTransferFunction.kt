@@ -1,6 +1,4 @@
-
-
-package com.roy93group.reader.ui.theme.palette.colorspace.rgb.transferfunction
+package com.roy93group.reader.ui.theme.palette.colorspace.rgb.transfer
 
 import kotlin.math.pow
 

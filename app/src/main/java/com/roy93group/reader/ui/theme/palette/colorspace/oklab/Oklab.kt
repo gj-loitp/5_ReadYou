@@ -1,5 +1,3 @@
-
-
 package com.roy93group.reader.ui.theme.palette.colorspace.oklab
 
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz
@@ -34,6 +32,6 @@ data class Oklab(
         fun CieXyz.toOklab(): Oklab =
             (lmsToOklab * (xyzToLms * xyz).map { it.pow(1.0 / 3.0) }.toDoubleArray()).asOklab()
 
-        internal fun DoubleArray.asOklab(): Oklab = Oklab(this[0], this[1], this[2])
+        private fun DoubleArray.asOklab(): Oklab = Oklab(this[0], this[1], this[2])
     }
 }

@@ -1,5 +1,3 @@
-
-
 package com.roy93group.reader.ui.theme.palette.core
 
 import androidx.compose.runtime.Composable
@@ -20,6 +18,6 @@ data class ZcamLch(
         @Composable
         fun Color.toZcamLch(): ZcamLch = toRgb().toZcam().toZcamLch()
 
-        fun Zcam.toZcamLch(): ZcamLch = ZcamLch(L = Jz, C = Cz, h = hz)
+        private fun Zcam.toZcamLch(): ZcamLch = ZcamLch(L = Jz, C = Cz, h = hz)
     }
 }

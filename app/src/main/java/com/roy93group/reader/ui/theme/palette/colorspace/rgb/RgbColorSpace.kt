@@ -1,12 +1,10 @@
-
-
 package com.roy93group.reader.ui.theme.palette.colorspace.rgb
 
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz
-import com.roy93group.reader.ui.theme.palette.colorspace.rgb.transferfunction.GammaTransferFunction
-import com.roy93group.reader.ui.theme.palette.colorspace.rgb.transferfunction.HLGTransferFunction
-import com.roy93group.reader.ui.theme.palette.colorspace.rgb.transferfunction.PQTransferFunction
-import com.roy93group.reader.ui.theme.palette.colorspace.rgb.transferfunction.TransferFunction
+import com.roy93group.reader.ui.theme.palette.colorspace.rgb.transfer.GammaTransferFunction
+import com.roy93group.reader.ui.theme.palette.colorspace.rgb.transfer.HLGTransferFunction
+import com.roy93group.reader.ui.theme.palette.colorspace.rgb.transfer.PQTransferFunction
+import com.roy93group.reader.ui.theme.palette.colorspace.rgb.transfer.TransferFunction
 import com.roy93group.reader.ui.theme.palette.data.Illuminant
 import com.roy93group.reader.ui.theme.palette.util.Matrix3
 

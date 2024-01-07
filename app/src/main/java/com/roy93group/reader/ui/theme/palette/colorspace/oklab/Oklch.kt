@@ -1,5 +1,3 @@
-
-
 package com.roy93group.reader.ui.theme.palette.colorspace.oklab
 
 import com.roy93group.reader.ui.theme.palette.colorspace.rgb.Rgb
