@@ -68,8 +68,6 @@
     <string name="rename_toast">Přejmenováno na \"%1$s\"</string>
     <string name="create_new_group">Vytvořit novou skupinu</string>
     <string name="name">Název</string>
-    <string name="open_with">Otevřít %1$s</string>
-    <string name="options">Možnosti</string>
     <string name="delete">Odstranit</string>
     <string name="delete_toast">\"%1$s\" bylo smazáno</string>
     <string name="unsubscribe">Zrušit odběr</string>
@@ -87,16 +85,12 @@
     <string name="mark_as_unread">Označit jako nepřečtené</string>
     <string name="mark_as_starred">Označit jako oblíbené</string>
     <string name="mark_as_unstar">Zrušit označení jako oblíbené</string>
-    <string name="mark_as_read_one_day">Označit jako přečtené vše starší než 1 den</string>
-    <string name="mark_as_read_three_days">Označit jako přečtené vše starší než 3 dny</string>
-    <string name="mark_as_read_seven_days">Označit jako přečtené vše starší než 7 dní</string>
     <string name="one_day">1d</string>
     <string name="three_days">3d</string>
     <string name="seven_days">7d</string>
     <string name="close">Zavřít</string>
     <string name="get_new_updates">Získat aktualizace</string>
     <string name="get_new_updates_desc">Byla vydána verze %1$s</string>
-    <string name="in_coding">Ve vývoji</string>
     <string name="coming_soon">Již brzy</string>
     <string name="accounts">Účty</string>
     <string name="accounts_desc">Místní, FreshRSS</string>
@@ -282,7 +276,6 @@
     <string name="icons">Ikony</string>
     <string name="icons_and_labels">Ikony a štítky</string>
     <string name="icons_and_label_only_selected">Ikony a štítek (pouze vybrané)</string>
-    <string name="tips_top_bar_tonal_elevation">Zvýšení tónu horní lišty je k dispozici pouze při posouvání.</string>
     <string name="tips_article_list_tonal_elevation">Zvýšení tónu seznamu článků je dostupné pouze ve světlém režimu.</string>
     <string name="tips_group_list_tonal_elevation">Zvýšení tónu seznamu skupin je dostupné pouze ve světlém režimu.</string>
     <string name="share">Sdílet</string>
@@ -290,7 +283,6 @@
     <string name="text">Text</string>
     <string name="font_size">Font size</string>
     <string name="letter_spacing">Letter spacing</string>
-    <string name="line_spacing">Line spacing</string>
     <string name="alignment">Alignment</string>
     <string name="general">General</string>
     <string name="auto_hide_toolbars">Auto hide toolbars</string>

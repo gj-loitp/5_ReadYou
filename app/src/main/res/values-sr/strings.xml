@@ -35,9 +35,7 @@
     <string name="feed_favicons">Омиљене иконице фида</string>
     <string name="tonal_elevation">Тонско узвишење</string>
     <string name="images_desc">Заобљени углови, хоризонтални испун</string>
-    <string name="open_link_ask_dialog_title">Отвори са…</string>
     <string name="on_start">На почетку</string>
-    <string name="mark_as_read_three_days">Означи као прочитано - старије од 3 дана</string>
     <string name="accounts">Налози</string>
     <string name="unread">Непрочитано</string>
     <string name="seven_days">7д</string>
@@ -66,7 +64,6 @@
     <string name="title_desc">Подебљано, велика слова, поравнање</string>
     <string name="agree">Сагласан сам</string>
     <string name="rename">Преименуј</string>
-    <string name="mark_as_read_seven_days">Означи као прочитано - старије од 7 дана</string>
     <string name="every_2_hours">Сваких 2 сата</string>
     <string name="search_for">Претражите %1$s предмете</string>
     <string name="on">Укључено</string>
@@ -103,7 +100,6 @@
     <string name="for_1_month">1 месец</string>
     <string name="back">Назад</string>
     <string name="allow_notification">Дозволи обавештење</string>
-    <string name="line_spacing">Проред</string>
     <string name="delete">Избриши</string>
     <string name="color_and_style_desc">Тема, стил боје, величина фонта</string>
     <string name="preview_feed_name">Reddit</string>
@@ -133,7 +129,6 @@
     <string name="rearrange_buttons">Преуреди дугмад</string>
     <string name="manually">Ручно</string>
     <string name="server_url">URL сервера</string>
-    <string name="in_coding">У процесу програмирања</string>
     <string name="all_move_to_group_toast">Премештени су сви фидови у групу „%1$s“</string>
     <string name="connection">Веза</string>
     <string name="all_deny_parse_full_content_toast">Нема више рашчлањивања комплетног садржаја свих чланака у групи „%1$s“</string>
@@ -145,16 +140,13 @@
     <string name="open_source_licenses">Лиценце отвореног кода</string>
     <string name="paste">Налепи</string>
     <string name="group_list">Листа група</string>
-    <string name="tips_top_bar_tonal_elevation">Тонско узвишење за листу горњих панела доступно је само када скролујете</string>
     <string name="use_device_theme">Користи тему уређаја</string>
     <string name="primary_color_hint">Као #666666 или 666666</string>
-    <string name="open_with">Отвори %1$s</string>
     <string name="for_1_day">1 дан</string>
     <string name="always_ask">Увек питај</string>
     <string name="clear_all_articles">Очисти све чланке</string>
     <string name="sync_interval">Синхронизација</string>
     <string name="clear_all_articles_toast">Листа чланака је очишћена</string>
-    <string name="options">Опције</string>
     <string name="local">Локално</string>
     <string name="services">Услуге</string>
     <string name="text_desc">Величина фонта, размак између слова, поравнање</string>
@@ -224,7 +216,6 @@
     <string name="every_30_minutes">Сваких 30 минута</string>
     <string name="settings">Подешавања</string>
     <string name="clear_articles_in_feed_toast">Очишћени су сви архивирани чланци у фиду „%1$s“</string>
-    <string name="mark_as_read_one_day">Означи као прочитано - старије од 1 дана</string>
     <string name="loading">Учитавање…</string>
     <string name="text">Текст</string>
     <string name="default_browser">Присили подразумевани претраживач</string>

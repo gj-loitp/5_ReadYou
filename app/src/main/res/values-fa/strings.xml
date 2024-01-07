@@ -53,8 +53,6 @@
     <string name="rename_toast">تغییر نام به %1$s</string>
     <string name="create_new_group">ایجاد گروه جدید</string>
     <string name="name">نام</string>
-    <string name="open_with">باز کردن%1$s</string>
-    <string name="options">گزینه ها</string>
     <string name="delete">حذف</string>
     <string name="delete_toast">%1$s حذف شد</string>
     <string name="unsubscribe">لغو اشتراک</string>
@@ -69,16 +67,12 @@
     <string name="mark_as_unread">به عنوان خوانده نشده علامت بزن</string>
     <string name="mark_as_starred">علامت زدن به عنوان ستاره دار</string>
     <string name="mark_as_unstar">حذف علامت ستاره</string>
-    <string name="mark_as_read_one_day">علامت گذاری به عنوان خوانده شده در بیش از ۱ روز</string>
-    <string name="mark_as_read_three_days">علامت گذاری به عنوان خوانده شده در بیش از ۳ روز</string>
-    <string name="mark_as_read_seven_days">علامت گذاری به عنوان خوانده شده بیش از ۷ روز</string>
     <string name="one_day">یک روز</string>
     <string name="three_days">۳ روز</string>
     <string name="seven_days">۷ روز</string>
     <string name="close">بستن</string>
     <string name="get_new_updates">دریافت بروزرسانی جدید</string>
     <string name="get_new_updates_desc">نسخه %1$s در دسترس است</string>
-    <string name="in_coding">در کدنویسی</string>
     <string name="coming_soon">به زودی</string>
     <string name="accounts">حساب</string>
     <string name="accounts_desc">محلی، FresgRSS</string>
@@ -150,9 +144,7 @@
     <string name="icons">آیکون ها</string>
     <string name="icons_and_labels">آیکون ها و برچسب ها</string>
     <string name="icons_and_label_only_selected">آیکون ها و برچسب ها (آنهایی که فقط انتخاب شده اند)</string>
-    <string name="tips_top_bar_tonal_elevation">این ارتفاع تونال فقط هنگام پیمایش در دسترس است.</string>
     <string name="letter_spacing">فاصله بین حروف</string>
-    <string name="line_spacing">فاصله بین حروف</string>
     <string name="alignment">هم ترازی</string>
     <string name="general">عمومی</string>
     <string name="auto_hide_toolbars">پنهان کردن خودکار نوار ابزار</string>

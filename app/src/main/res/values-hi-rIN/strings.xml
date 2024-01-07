@@ -62,8 +62,6 @@
     <string name="rename_toast">नया नाम  \"%1$s\"</string>
     <string name="create_new_group">नया ग्रुप बनाएँ </string>
     <string name="name">नाम </string>
-    <string name="open_with">खोलें  %1$s</string>
-    <string name="options">विकल्प </string>
     <string name="delete">मिटाएं  </string>
     <string name="delete_toast">मिट गया \"%1$s\"</string>
     <string name="unsubscribe">सदस्यता छोडें</string>
@@ -81,16 +79,12 @@
     <string name="mark_as_unread">अपठित के रूप में चिह्नित करें</string>
     <string name="mark_as_starred">तारांकित के रूप में चिह्नित करें</string>
     <string name="mark_as_unstar">अन-स्टारड के रूप में चिह्नित करें</string>
-    <string name="mark_as_read_one_day">1 दिन से अधिक पढ़ें के रूप में चिह्नित करें</string>
-    <string name="mark_as_read_three_days">3 दिन से अधिक पढ़ें के रूप में चिह्नित करें</string>
-    <string name="mark_as_read_seven_days">7 दिन से अधिक पढ़ें के रूप में चिह्नित करें</string>
     <string name="one_day">1 दिन </string>
     <string name="three_days">3 दिन </string>
     <string name="seven_days">7 दिन </string>
     <string name="close">बंद करें </string>
     <string name="get_new_updates">नवीनतम संस्करण प्राप्त करें</string>
     <string name="get_new_updates_desc">%1$s संस्करण उपलब्ध है</string>
-    <string name="in_coding">कोडिंग चल रही है</string>
     <string name="coming_soon">जल्द आ रहा है</string>
     <string name="accounts">खाते</string>
     <string name="accounts_desc">लोकल, नया RSS</string>
@@ -168,7 +162,6 @@
     <string name="icons">चिह्न</string>
     <string name="icons_and_labels">चिह्न ऐवं लेबल</string>
     <string name="icons_and_label_only_selected">चिह्न और लेबल (केवल सक्रिय)</string>
-    <string name="tips_top_bar_tonal_elevation">शीर्ष बार सूची के लिए टोनल ऊंचाई केवल स्क्रॉल करते समय उपलब्ध है</string>
     <string name="tips_article_list_tonal_elevation">लेख सूची के लिए टोनल ऊंचाई केवल हलके थीम में उपलब्ध है</string>
     <string name="tips_group_list_tonal_elevation">ग्रुप सूची के लिए टोनल एलिवेशन केवल हलके थीम में उपलब्ध है</string>
     <string name="share">साँझा करें </string>
@@ -176,7 +169,6 @@
     <string name="text">पाठा </string>
     <string name="font_size">फोंट साइज</string>
     <string name="letter_spacing">लैटर स्पेसिंग</string>
-    <string name="line_spacing">लाइन  स्पेसिंग </string>
     <string name="alignment">संरेखण</string>
     <string name="general">सामान्य </string>
     <string name="auto_hide_toolbars">टूलबार स्वतः छुपाएँ </string>

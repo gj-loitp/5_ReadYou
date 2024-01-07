@@ -65,8 +65,6 @@
     <string name="rename_toast">Renamed to \"%1$s\"</string>
     <string name="create_new_group">Create New Group</string>
     <string name="name">Name</string>
-    <string name="open_with">Open %1$s</string>
-    <string name="options">Options</string>
     <string name="delete">Delete</string>
     <string name="delete_toast">Deleted \"%1$s\"</string>
     <string name="unsubscribe">Unsubscribe</string>
@@ -84,16 +82,12 @@
     <string name="mark_as_unread">Mark as Unread</string>
     <string name="mark_as_starred">Mark as Starred</string>
     <string name="mark_as_unstar">Mark as Unstarred</string>
-    <string name="mark_as_read_one_day">Mark as read older than 1 day</string>
-    <string name="mark_as_read_three_days">Mark as read older than 3 days</string>
-    <string name="mark_as_read_seven_days">Mark as read older than 7 days</string>
     <string name="one_day">1d</string>
     <string name="three_days">3d</string>
     <string name="seven_days">7d</string>
     <string name="close">Close</string>
     <string name="get_new_updates">Get new updates</string>
     <string name="get_new_updates_desc">New version %1$s is available</string>
-    <string name="in_coding">In coding</string>
     <string name="coming_soon">Coming soon</string>
     <string name="accounts">Accounts</string>
     <string name="accounts_desc">Local, FreshRSS</string>
@@ -298,7 +292,6 @@
     <string name="icons">Icons</string>
     <string name="icons_and_labels">Icons and Labels</string>
     <string name="icons_and_label_only_selected">Icons and Label (only active)</string>
-    <string name="tips_top_bar_tonal_elevation">Tonal elevation for the top bar list is only available when scrolling</string>
     <string name="tips_article_list_tonal_elevation">Tonal elevation for the article list is only available in the light theme</string>
     <string name="tips_group_list_tonal_elevation">Tonal elevation for the group list is only available in the light theme</string>
     <string name="share">Share</string>
@@ -306,7 +299,6 @@
     <string name="text">Text</string>
     <string name="font_size">Font size</string>
     <string name="letter_spacing">Letter spacing</string>
-    <string name="line_spacing">Line spacing</string>
     <string name="alignment">Alignment</string>
     <string name="general">General</string>
     <string name="auto_hide_toolbars">Auto hide toolbars</string>
@@ -402,5 +394,4 @@
     <string name="always_ask">Always Ask</string>
     <string name="open_link_specific_browser">Browser</string>
     <string name="open_link_something_wrong">Open Link Setting was ignored because something went whrong.</string>
-    <string name="open_link_ask_dialog_title">Open with…</string>
 </resources>

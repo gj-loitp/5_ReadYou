@@ -56,8 +56,6 @@
     <string name="change_url">Canviar l\'URL</string>
     <string name="rename_toast">Canviar el nom a \"%1$s\"</string>
     <string name="name">Nom</string>
-    <string name="open_with">Obrir \"%1$s\"</string>
-    <string name="options">Opcions</string>
     <string name="delete">Esborrar</string>
     <string name="delete_toast">Esborrar \"%1$s\"</string>
     <string name="refresh">Refrescar</string>
@@ -86,15 +84,11 @@
     <string name="mark_all_as_read">Marca tot com llegit</string>
     <string name="mark_as_starred">Marca com favorit</string>
     <string name="mark_as_unstar">Marca com no favorit</string>
-    <string name="mark_as_read_one_day">Marca com llegit tot article de mes d\'un dia</string>
-    <string name="mark_as_read_three_days">Marca com llegit tot article de mes de 3 dies</string>
-    <string name="mark_as_read_seven_days">Marca com llegit tot article de mes de 7 dies</string>
     <string name="one_day">1d</string>
     <string name="seven_days">7d</string>
     <string name="close">Tanca</string>
     <string name="get_new_updates">Actualitza</string>
     <string name="get_new_updates_desc">Una nova versió de \"%1$s\" està disponible</string>
-    <string name="in_coding">Codificant-se</string>
     <string name="coming_soon">Aviat disponible</string>
     <string name="color_and_style">Color i estil</string>
     <string name="color_and_style_desc">Tema, color, estil, tamany de font</string>
@@ -166,7 +160,6 @@
     <string name="icons">Icones</string>
     <string name="icons_and_labels">Icones i etiquetes</string>
     <string name="icons_and_label_only_selected">Icones i etiquetes (només actives)</string>
-    <string name="tips_top_bar_tonal_elevation">L\'elevació tonal de la llista de la barra superior només està disponible quan es desplaça</string>
     <string name="tips_article_list_tonal_elevation">L\'elevació tonal de la llista d\'articles només està disponible al tema lluminós</string>
     <string name="tips_group_list_tonal_elevation">L\'elevació tonal de la llista de grups només està disponible al tema lluminós</string>
     <string name="share">Compartir</string>
@@ -174,7 +167,6 @@
     <string name="text">Text</string>
     <string name="font_size">Tamany de font</string>
     <string name="letter_spacing">Espaiat de lletra</string>
-    <string name="line_spacing">Espaiat de línia</string>
     <string name="auto_hide_toolbars">Amaga automàticament les barres d\'eines</string>
     <string name="rounded_corners">Cantonades rodones</string>
     <string name="videos">Vídeos</string>

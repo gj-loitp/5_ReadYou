@@ -23,8 +23,6 @@
     <string name="search_for">%1$sアイテムを検索</string>
     <string name="mark_as_read">既読にする</string>
     <string name="mark_as_starred">星を付ける</string>
-    <string name="mark_as_read_one_day">1 日以上前の記事を既読としてマーク</string>
-    <string name="mark_as_read_three_days">３日以上前の記事を既読としてマーク</string>
     <string name="seven_days">７日</string>
     <string name="close">閉じる</string>
     <string name="get_new_updates">新しいアップデートを取得する</string>
@@ -106,19 +104,15 @@
     <string name="rename">名前を変更</string>
     <string name="change_url">URLを変更</string>
     <string name="clear_articles_in_group_toast">「%1$s」 グループ内のアーカイブされた記事をすべて削除しました</string>
-    <string name="open_with">%1$s を開く</string>
-    <string name="options">オプション</string>
     <string name="rename_toast">「%1$s」に名前を変更しました</string>
     <string name="delete">削除</string>
     <string name="delete_toast">「%1$s」を削除しました</string>
     <string name="group_option_tips">以下のオプションは、このグループ内のすべてのフィードに適用されます。</string>
     <string name="unsubscribe_tips">「%1$s」の購読を解除し、その中のアーカイブされた記事をすべて削除します。</string>
     <string name="mark_as_unread">未読にする</string>
-    <string name="mark_as_read_seven_days">７ 日以上前の記事を既読としてマーク</string>
     <string name="yesterday">昨日</string>
     <string name="mark_as_unstar">星を外す</string>
     <string name="three_days">３日</string>
-    <string name="in_coding">開発中</string>
     <string name="one_day">１日</string>
     <string name="coming_soon">近日公開</string>
     <string name="accounts_desc">ローカル、FreshRSS</string>
@@ -163,7 +157,6 @@
     <string name="icons">アイコン</string>
     <string name="icons_and_labels">アイコンとラベル</string>
     <string name="icons_and_label_only_selected">アイコンとラベル (選択済みのみ)</string>
-    <string name="tips_top_bar_tonal_elevation">この色調の高さは、スクロール時にのみ有効です。</string>
     <string name="tips_article_list_tonal_elevation">この色調の高さは、ライトテーマでのみ使用できます。</string>
     <string name="tips_group_list_tonal_elevation">この色調の高さは、ライト テーマでのみ使用できます。</string>
     <string name="share">共有</string>
@@ -171,7 +164,6 @@
     <string name="text">テキスト</string>
     <string name="font_size">フォントサイズ</string>
     <string name="letter_spacing">文字間隔</string>
-    <string name="line_spacing">行間隔</string>
     <string name="alignment">整列方向</string>
     <string name="general">一般</string>
     <string name="auto_hide_toolbars">ツールバーを自動的に隠す</string>

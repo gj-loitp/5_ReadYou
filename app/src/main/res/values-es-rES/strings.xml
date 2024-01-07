@@ -65,8 +65,6 @@
     <string name="rename_toast">Renombrar a \"%1$s\"</string>
     <string name="create_new_group">Crear grupo nuevo</string>
     <string name="name">Nombre</string>
-    <string name="open_with">Abrir %1$s</string>
-    <string name="options">Opciones</string>
     <string name="delete">Eliminar</string>
     <string name="delete_toast">Eliminado \"%1$s\"</string>
     <string name="unsubscribe">Darse de baja</string>
@@ -84,16 +82,12 @@
     <string name="mark_as_unread">Marcar como no leído</string>
     <string name="mark_as_starred">Marcar como destacado</string>
     <string name="mark_as_unstar">Marcar sin estrella</string>
-    <string name="mark_as_read_one_day">Marcar como leído hace más de 1 día</string>
-    <string name="mark_as_read_three_days">Marcar como leído hace más de 3 días</string>
-    <string name="mark_as_read_seven_days">Marcar como leído hace más de 7 días</string>
     <string name="one_day">1 día</string>
     <string name="three_days">3 días</string>
     <string name="seven_days">7 días</string>
     <string name="close">Cerrar</string>
     <string name="get_new_updates">Obtener nuevas actualizaciones</string>
     <string name="get_new_updates_desc">La nueva versión %1$s está disponible</string>
-    <string name="in_coding">En codificación</string>
     <string name="coming_soon">Próximamente</string>
     <string name="accounts">Cuentas</string>
     <string name="accounts_desc">Local, FreshRSS</string>
@@ -173,7 +167,6 @@
     <string name="icons">Íconos</string>
     <string name="icons_and_labels">Íconos y etiquetas</string>
     <string name="icons_and_label_only_selected">Íconos y etiquetas (sólo el activado)</string>
-    <string name="tips_top_bar_tonal_elevation">La elevación del tono de la lista de la barra superior sólo está disponible al desplazarse</string>
     <string name="tips_article_list_tonal_elevation">La elevación del tono de la lista de artículos sólo está disponible con el tema claro</string>
     <string name="tips_group_list_tonal_elevation">La elevación del tono de la lista de grupos sólo está disponible en el tema claro</string>
     <string name="share">Compartir</string>
@@ -181,7 +174,6 @@
     <string name="text">Text</string>
     <string name="font_size">Tamaño de fuente</string>
     <string name="letter_spacing">Espaciado de letras</string>
-    <string name="line_spacing">Espaciado de línea</string>
     <string name="alignment">Alineación</string>
     <string name="general">General</string>
     <string name="auto_hide_toolbars">Ocultar automáticamente las barras de herramientas</string>
@@ -259,7 +251,6 @@
     <string name="password">Contraseña</string>
     <string name="system_default">Sistema</string>
     <string name="custom_tabs">Forzar las pestañas personalizadas</string>
-    <string name="open_link_ask_dialog_title">Abrir con…</string>
     <string name="open_link_specific_browser">Navegador</string>
     <string name="auto_default_browser">Automático ( navegador predeterminado)</string>
     <string name="always_ask">Preguntar siempre</string>

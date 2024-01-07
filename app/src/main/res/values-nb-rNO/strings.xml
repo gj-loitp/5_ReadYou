@@ -125,7 +125,6 @@
     <string name="advanced">Avansert</string>
     <string name="maximize">Maksimer</string>
     <string name="all_parse_full_content_tips">Full innholdsfortokning a alle artikler i «%1$s»-gruppen.</string>
-    <string name="open_with">Åpne %1$s</string>
     <string name="accounts_desc">Lokal, FreshRSS</string>
     <string name="basic_colors">Grunnfarger</string>
     <string name="primary_color_hint">Som #666666 eller 666666</string>
@@ -149,11 +148,9 @@
     <string name="all_deny_parse_full_content_toast">Opphevet full innholdsfortokning a alle artikler i «%1$s»-gruppen</string>
     <string name="clear_articles_in_feed_toast">Tømte alle arkiverte artikler i «%1$s»-informasjonskanalen</string>
     <string name="letter_spacing">Tegnavstand</string>
-    <string name="line_spacing">Linjeavstand</string>
     <string name="general">Generelt</string>
     <string name="auto_hide_toolbars">Skjul verktøylinjer automatisk</string>
     <string name="clear_articles_in_group_toast">Tømte alle arkiverte artikler i «%1$s»-gruppen</string>
-    <string name="options">Alternativer</string>
     <string name="align_left">Venstrejuster</string>
     <string name="delete">Slett</string>
     <string name="delete_toast">Slettet «%1$s»</string>
@@ -167,13 +164,9 @@
     <string name="browse_tos_tips">Utforsk <i><u>tjenestevilkår og personvernspraksis</u></i></string>
     <string name="interaction_desc">Ved programstart, haptisk tilbakemelding</string>
     <string name="seven_days">7 d</string>
-    <string name="mark_as_read_one_day">Marker som lest for mer enn 1 dag siden</string>
-    <string name="mark_as_read_three_days">Marker som lest for mer enn 3 dager siden</string>
-    <string name="mark_as_read_seven_days">Marker som lest for mer enn 7 dager siden</string>
     <string name="one_day">1 d</string>
     <string name="three_days">3 d</string>
     <string name="get_new_updates">Hent nye versjoner av programmet</string>
-    <string name="in_coding">Kodes nå</string>
     <string name="coming_soon">Kommer snart</string>
     <string name="rate_limit">Du må vente før du kan utføre nye forespørsler</string>
     <string name="tips_group_list_tonal_elevation">Denne fargelysstyrken er kun tilgjengelig med lys drakt.</string>
@@ -208,7 +201,6 @@
     <string name="article_date">Publiseringstidspunkt</string>
     <string name="filter_bar">Filtreringsfelt</string>
     <string name="icons_and_label_only_selected">Ikoner og etikett (kun valgte)</string>
-    <string name="tips_top_bar_tonal_elevation">Denne fargelysstyrken er kun tilgjengelig under rulling.</string>
     <string name="horizontal_padding">Vannrett marg</string>
     <string name="preview_article_desc">«Tosken» er åttende og siste bok i serien «Mysterienes herre», skrevet av Sepiablekksprut Som Liker Å Dykke.</string>
     <string name="for_1_week">1 uke</string>

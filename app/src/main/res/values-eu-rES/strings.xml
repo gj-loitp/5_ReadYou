@@ -62,8 +62,6 @@
     <string name="rename_toast">\"%1$s\" izen berria jarri da</string>
     <string name="create_new_group">Talde berria sortu</string>
     <string name="name">Izena</string>
-    <string name="open_with">Ireki %1$s</string>
-    <string name="options">Aukerak</string>
     <string name="delete">Ezabatu</string>
     <string name="delete_toast">\"%1$s\" ezabatuta</string>
     <string name="unsubscribe">Harpidetza kendu</string>
@@ -81,16 +79,12 @@
     <string name="mark_as_unread">Irakurri gabe bezala markatu</string>
     <string name="mark_as_starred">Izar marka jarri</string>
     <string name="mark_as_unstar">Izar marka kendu</string>
-    <string name="mark_as_read_one_day">Markatu irakurrita bezala egun 1 baino zaharragoak</string>
-    <string name="mark_as_read_three_days">Markatu irakurrita bezala 3 egun baino zaharragoak</string>
-    <string name="mark_as_read_seven_days">Markatu irakurrita bezala 7 egun baino zaharragoak</string>
     <string name="one_day">Egun 1</string>
     <string name="three_days">3e</string>
     <string name="seven_days">7e</string>
     <string name="close">Itxi</string>
     <string name="get_new_updates">Eguneraketa berriak lortu</string>
     <string name="get_new_updates_desc">%1$s bertsioa eskuragarri dago</string>
-    <string name="in_coding">Kodeatzen</string>
     <string name="coming_soon">Laster</string>
     <string name="accounts">Kontuak</string>
     <string name="accounts_desc">Lokala, FreshRSS</string>
@@ -278,7 +272,6 @@
     <string name="icons">Ikonoak</string>
     <string name="icons_and_labels">Ikonoak eta etiketak</string>
     <string name="icons_and_label_only_selected">Ikonoak eta etiketak (hautatutakoa soilik)</string>
-    <string name="tips_top_bar_tonal_elevation">Tonuaren goratze hau desplazamendu bertikalean dago eskuragarri soilik.</string>
     <string name="tips_article_list_tonal_elevation">Tonuaren goratze hau itxura argian dago eskuragarri soilik.</string>
     <string name="tips_group_list_tonal_elevation">Tonuaren goratze hau itxura argian dago eskuragarri soilik.</string>
     <string name="share">Partekatu</string>
@@ -286,7 +279,6 @@
     <string name="text">Testua</string>
     <string name="font_size">Letra-tamaina</string>
     <string name="letter_spacing">Letren arteko tartea</string>
-    <string name="line_spacing">Lerroartea</string>
     <string name="alignment">Lerrokatzea</string>
     <string name="general">Orokorra</string>
     <string name="auto_hide_toolbars">Tresna-barrak automatikoki ezkutatu</string>

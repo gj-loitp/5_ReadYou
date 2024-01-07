@@ -63,10 +63,8 @@
     <string name="mark_as_read">Markeer als gelezen</string>
     <string name="mark_all_as_read">Alles als gelezen markeren</string>
     <string name="mark_as_unread">Markeren als ongelezen</string>
-    <string name="mark_as_read_seven_days">Markeren als meer dan 7 dagen gelezen</string>
     <string name="one_day">1d</string>
     <string name="get_new_updates_desc">Versie %1$s is beschikbaar</string>
-    <string name="in_coding">In codering</string>
     <string name="accounts_desc">Lokaal, FreshRSS</string>
     <string name="color_and_style">Kleur &amp; stijl</string>
     <string name="color_and_style_desc">Thema, kleurstijl, lettergrootte</string>
@@ -82,7 +80,6 @@
     <string name="import_from_opml">Importeren van OPML</string>
     <string name="all_deny_parse_full_content_toast">Geen volledige inhoud meer parseren van alle artikelen in de groep \"%1$s\"</string>
     <string name="clear_articles_group_tips">Wis alle gearchiveerde artikelen in de groep \"%1$s\".</string>
-    <string name="options">Opties</string>
     <string name="date_at_time">%1$s bij %2$s</string>
     <string name="rename">Hernoemen</string>
     <string name="change_url">URL wijzigen</string>
@@ -97,7 +94,6 @@
     <string name="all_move_to_group_toast">Alle feeds verplaatst naar de groep \"%1$s\"</string>
     <string name="name">Naam</string>
     <string name="all_move_to_group_tips">Verplaats alle feeds in de groep \"%1$s\" naar de groep \"%2$s\".</string>
-    <string name="open_with">Open %1$s</string>
     <string name="seven_days">7d</string>
     <string name="accounts">Accounts</string>
     <string name="interaction_desc">Bij het starten, haptische feedback</string>
@@ -110,8 +106,6 @@
     <string name="yesterday">Gisteren</string>
     <string name="mark_as_starred">Markeren met ster</string>
     <string name="mark_as_unstar">Markeren al ster verwijderen</string>
-    <string name="mark_as_read_one_day">Markeer als lees meer dan 1 dag</string>
-    <string name="mark_as_read_three_days">Markeer als lees meer dan 3 dagen</string>
     <string name="close">Sluiten</string>
     <string name="get_new_updates">Ontvang nieuwe updates</string>
     <string name="coming_soon">Binnenkort beschikbaar</string>
@@ -139,7 +133,6 @@
     <string name="top_bar">Bovenste balk</string>
     <string name="filter_bar">Filterbalk</string>
     <string name="icons">pictogrammen</string>
-    <string name="tips_top_bar_tonal_elevation">Deze toonhoogte is alleen beschikbaar tijdens het scrollen.</string>
     <string name="article_desc">Artikel beschrijvingen</string>
     <string name="feed_favicons">Feed favicons</string>
     <string name="fill_selected_icon">Vul het geselecteerde pictogram</string>
@@ -212,7 +205,6 @@
     <string name="text">Tekst</string>
     <string name="font_size">Lettergrootte</string>
     <string name="letter_spacing">Letterafstand</string>
-    <string name="line_spacing">Regelafstand</string>
     <string name="rounded_corners">Afgeronde hoeken</string>
     <string name="videos">Video\'s</string>
     <string name="justify">Verantwoorden</string>

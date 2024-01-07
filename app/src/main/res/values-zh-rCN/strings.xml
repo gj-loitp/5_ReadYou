@@ -60,8 +60,6 @@
     <string name="rename_toast">已重命名为 \"%1$s\"</string>
     <string name="create_new_group">新建分组</string>
     <string name="name">名称</string>
-    <string name="open_with">打开 %1$s</string>
-    <string name="options">选项</string>
     <string name="delete">删除</string>
     <string name="delete_toast">\"%1$s\" 已被删除</string>
     <string name="unsubscribe">取消订阅</string>
@@ -79,16 +77,12 @@
     <string name="mark_as_unread">标记为未读</string>
     <string name="mark_as_starred">标记为已加星标</string>
     <string name="mark_as_unstar">标记为未加星标</string>
-    <string name="mark_as_read_one_day">将逾 1 天前的文章标为已读</string>
-    <string name="mark_as_read_three_days">将逾 3 天前文章标为已读</string>
-    <string name="mark_as_read_seven_days">将逾 7 天前文章标为已读</string>
     <string name="one_day">1天</string>
     <string name="three_days">3天</string>
     <string name="seven_days">7天</string>
     <string name="close">关闭</string>
     <string name="get_new_updates">获取新的更新</string>
     <string name="get_new_updates_desc">有新版本 %1$s 可用</string>
-    <string name="in_coding">施工中</string>
     <string name="coming_soon">正在路上</string>
     <string name="accounts">账户</string>
     <string name="accounts_desc">本地、FreshRSS</string>
@@ -165,7 +159,6 @@
     <string name="icons">图标</string>
     <string name="icons_and_labels">图标和文字</string>
     <string name="icons_and_label_only_selected">图标和标签（仅活跃）</string>
-    <string name="tips_top_bar_tonal_elevation">标题栏列表的色调海拔仅在滚动时可用</string>
     <string name="tips_article_list_tonal_elevation">文章列表的色调海拔仅在亮色主题时可用</string>
     <string name="tips_group_list_tonal_elevation">分组列表的色调海拔仅在亮色主题时可用</string>
     <string name="share">分享</string>
@@ -173,7 +166,6 @@
     <string name="text">文本</string>
     <string name="font_size">字体大小</string>
     <string name="letter_spacing">字符间距</string>
-    <string name="line_spacing">行间距</string>
     <string name="alignment">对齐</string>
     <string name="general">通用</string>
     <string name="auto_hide_toolbars">自动隐藏工具条</string>
@@ -250,7 +242,6 @@
     <string name="connection">连接信息</string>
     <string name="system_default">系统默认</string>
     <string name="custom_tabs">强制使用自定义标签页</string>
-    <string name="open_link_ask_dialog_title">打开方式…</string>
     <string name="open_link_specific_browser">浏览器</string>
     <string name="auto_default_browser">自动（偏好默认浏览器）</string>
     <string name="always_ask">始终询问</string>

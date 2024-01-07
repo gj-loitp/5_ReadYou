@@ -59,8 +59,6 @@
     <string name="rename_toast">已重新命名為「%1$s」</string>
     <string name="create_new_group">建立新群組</string>
     <string name="name">名稱</string>
-    <string name="open_with">打開 %1$s</string>
-    <string name="options">選項</string>
     <string name="delete">刪除</string>
     <string name="delete_toast">「%1$s」已刪除</string>
     <string name="unsubscribe">取消訂閱</string>
@@ -78,16 +76,12 @@
     <string name="mark_as_unread">標為未讀</string>
     <string name="mark_as_starred">加上星號</string>
     <string name="mark_as_unstar">移除星號</string>
-    <string name="mark_as_read_one_day">將逾 1 天的文章標為已讀</string>
-    <string name="mark_as_read_three_days">將逾 3 天的文章標為已讀</string>
-    <string name="mark_as_read_seven_days">將逾 7 天的文章標為已讀</string>
     <string name="one_day">1 天</string>
     <string name="three_days">3 天</string>
     <string name="seven_days">7 天</string>
     <string name="close">關閉</string>
     <string name="get_new_updates">取得更新</string>
     <string name="get_new_updates_desc">版本 %1$s 現已發布</string>
-    <string name="in_coding">打造中</string>
     <string name="coming_soon">即將登場</string>
     <string name="accounts">帳戶</string>
     <string name="accounts_desc">本機、FreshRSS</string>
@@ -166,7 +160,6 @@
     <string name="icons">圖示</string>
     <string name="icons_and_labels">圖示和文字</string>
     <string name="icons_and_label_only_selected">圖示和文字 (僅已選擇)</string>
-    <string name="tips_top_bar_tonal_elevation">標題列的色調海拔僅適用於捲動時</string>
     <string name="tips_article_list_tonal_elevation">文章清單的色調海拔僅適用於淺色主題</string>
     <string name="tips_group_list_tonal_elevation">群組清單的色調海拔僅適用於淺色主題</string>
     <string name="share">分享</string>
@@ -174,7 +167,6 @@
     <string name="text">內文</string>
     <string name="font_size">字型大小</string>
     <string name="letter_spacing">字元間距</string>
-    <string name="line_spacing">行距</string>
     <string name="alignment">對齊</string>
     <string name="general">一般</string>
     <string name="auto_hide_toolbars">自動隱藏工具列</string>
@@ -252,7 +244,6 @@
     <string name="connection">連線</string>
     <string name="system_default">系統</string>
     <string name="custom_tabs">內建瀏覽器</string>
-    <string name="open_link_ask_dialog_title">開啟方式</string>
     <string name="open_link_specific_browser">指定瀏覽器</string>
     <string name="auto_default_browser">自動 (預設瀏覽器優先)</string>
     <string name="always_ask">一律詢問</string>

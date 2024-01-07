@@ -56,8 +56,6 @@
     <string name="unsubscribe">Bỏ quan tâm</string>
     <string name="unsubscribe_tips">Bỏ quan tâm \"%1$s\" và xóa toàn bộ bài viết lưu trữ trong đó</string>
     <string name="delete_group">Xóa Nhóm</string>
-    <string name="open_with">Mở %1$s</string>
-    <string name="options">Tùy chọn</string>
     <string name="delete">Xóa</string>
     <string name="delete_toast">Đã xóa \"%1$s\"</string>
     <string name="delete_group_tips">Xóa nhóm \"%1$s\" với toàn bộ bảng tin và bài viết lưu trữ trong đó</string>
@@ -77,7 +75,6 @@
     <string name="close">Đóng</string>
     <string name="get_new_updates">Kiểm tra phiên bản</string>
     <string name="get_new_updates_desc">Đã có phiên bản %1$s mới</string>
-    <string name="in_coding">Lập trình</string>
     <string name="coming_soon">Sẽ sớm ra mắt</string>
     <string name="accounts">Tài khoản</string>
     <string name="accounts_desc">Điện thoại, FreshRSS</string>
@@ -109,9 +106,6 @@
     <string name="all_move_to_group_tips">Chuyển tất cả feed từ nhóm \"%1$s\" sang nhóm \"%2$s\"</string>
     <string name="all_move_to_group_toast">Di chuyển tất cả feed đến nhóm \"%1$s\"</string>
     <string name="group_option_tips">Những tùy chọn này áp dụng với tất cả feed trong nhóm này</string>
-    <string name="mark_as_read_one_day">Đánh dấu đã đọc hơn 1 ngày</string>
-    <string name="mark_as_read_three_days">Đánh dấu đã đọc hơn 3 ngày</string>
-    <string name="mark_as_read_seven_days">Đánh dấu đã đọc hơn 7 ngày</string>
     <string name="search_for_in">Tìm kiếm %1$s mục trong \"%2$s\"</string>
     <string name="search_for">Tìm kiếm %1$s mục</string>
     <string name="all_deny_parse_full_content_toast">Không tiếp tục phân tích đầy đủ nội dung của bài viết trong nhóm \"%1$s\"</string>
@@ -171,8 +165,6 @@
     <string name="text">Văn bản</string>
     <string name="font_size">Cỡ phông</string>
     <string name="letter_spacing">Khoảng cách ký tự</string>
-    <string name="line_spacing">Khoảng cách dòng</string>
-    <string name="tips_top_bar_tonal_elevation">Tông màu danh sách thanh trên chỉ có thể thấy khi cuộn lên xuống</string>
     <string name="icons_and_label_only_selected">Biểu tượng &amp; nhãn (chỉ những mục chọn)</string>
     <string name="tips_article_list_tonal_elevation">Tông màu danh sách bài viết chỉ có thể thấy trong chủ đề sáng</string>
     <string name="tips_group_list_tonal_elevation">Tông màu danh sách nhóm chỉ có thể thấy trong chủ đề sáng</string>

@@ -65,8 +65,6 @@
     <string name="rename_toast">Zmieniono nazwę na \"%1$s\"</string>
     <string name="create_new_group">Utwórz nową grupę</string>
     <string name="name">Nazwa</string>
-    <string name="open_with">Otwórz %1$s</string>
-    <string name="options">Opcje</string>
     <string name="delete">Usuń</string>
     <string name="delete_toast">Usunięto \"%1$s\"</string>
     <string name="unsubscribe">Odsubskrybuj</string>
@@ -84,16 +82,12 @@
     <string name="mark_as_unread">Oznacz jako nieprzeczytane</string>
     <string name="mark_as_starred">Oznacz jako wyróżnione</string>
     <string name="mark_as_unstar">Odznacz jako wyróżnione</string>
-    <string name="mark_as_read_one_day">Oznacz artykuły starsze niż 1 dzień jako przeczytane</string>
-    <string name="mark_as_read_three_days">Oznacz artykuły starsze niż 3 dni jako przeczytane</string>
-    <string name="mark_as_read_seven_days">Oznacz artykuły starsze niż 7 dni jako przeczytane</string>
     <string name="one_day">1d</string>
     <string name="three_days">3d</string>
     <string name="seven_days">7d</string>
     <string name="close">Zamknij</string>
     <string name="get_new_updates">Sprawdź aktualizacje</string>
     <string name="get_new_updates_desc">Wersja %1$s jest już dostępna</string>
-    <string name="in_coding">W trakcie kodowania</string>
     <string name="coming_soon">Dostępne wkrótce</string>
     <string name="accounts">Konta</string>
     <string name="accounts_desc">Lokalne, FreshRSS</string>
@@ -279,7 +273,6 @@
     <string name="icons">Ikony</string>
     <string name="icons_and_labels">Ikony z tekstem</string>
     <string name="icons_and_label_only_selected">Ikony z tekstem (tylko zaznaczone)</string>
-    <string name="tips_top_bar_tonal_elevation">Ten odcień jest dostępny tylko podczas przewijania.</string>
     <string name="tips_article_list_tonal_elevation">Ten odcień jest dostępny tylko w jasnym motywie.</string>
     <string name="tips_group_list_tonal_elevation">Ten odcień jest dostępny tylko w jasnym motywie.</string>
     <string name="share">Udostępnij</string>
@@ -287,7 +280,6 @@
     <string name="text">Tekst</string>
     <string name="font_size">Rozmiar czcionki</string>
     <string name="letter_spacing">Odstępy między znakami</string>
-    <string name="line_spacing">Odstępy między liniami</string>
     <string name="alignment">Wyrównanie</string>
     <string name="general">Ogólne</string>
     <string name="auto_hide_toolbars">Ukryj interfejs podczas czytania</string>

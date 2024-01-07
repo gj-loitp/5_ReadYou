@@ -63,7 +63,6 @@
     <string name="delete_toast">\"%1$s\" eliminado</string>
     <string name="delete_group_tips">Eliminar o grupo \"%1$s\" com todas as suas fontes e artigos arquivados.</string>
     <string name="yesterday">Ontem</string>
-    <string name="mark_as_read_seven_days">Marcar como lidos artigos com mais de 7 dias</string>
     <string name="agree">Concordar</string>
     <string name="reading_fonts">Tipos de letra de leitura</string>
     <string name="skip_this_version">Saltar esta versão</string>
@@ -80,8 +79,6 @@
     <string name="rename_toast">Nome alterado para \"%1$s\"</string>
     <string name="create_new_group">Criar novo grupo</string>
     <string name="name">Nome</string>
-    <string name="open_with">Abrir %1$s</string>
-    <string name="options">Opções</string>
     <string name="delete">Eliminar</string>
     <string name="unsubscribe">Cancelar subscrição</string>
     <string name="unsubscribe_tips">Cancelar subscrição de %1$s\" e eliminar todos os seus artigos.</string>
@@ -92,15 +89,12 @@
     <string name="mark_as_unread">Marcar como não lido</string>
     <string name="mark_as_starred">Marcar como favorito</string>
     <string name="mark_as_unstar">Desmarcar como favorito</string>
-    <string name="mark_as_read_one_day">Marcar como lidos artigos com mais de 1 dia</string>
-    <string name="mark_as_read_three_days">Marcar como lidos artigos com mais de 3 dias</string>
     <string name="one_day">1d</string>
     <string name="three_days">3d</string>
     <string name="seven_days">7d</string>
     <string name="close">Fechar</string>
     <string name="get_new_updates">Obter novas atualizações</string>
     <string name="get_new_updates_desc">Nova versão %1$s disponível</string>
-    <string name="in_coding">Em desenvolvimento</string>
     <string name="coming_soon">Em breve</string>
     <string name="accounts">Contas</string>
     <string name="accounts_desc">Local, FreshRSS</string>
@@ -200,11 +194,9 @@
     <string name="fill_selected_icon">Preencher o ícone do item selecionado</string>
     <string name="filter_bar">Barra de Filtros</string>
     <string name="icons_and_label_only_selected">Ícones e rótulos (apenas ativos)</string>
-    <string name="tips_top_bar_tonal_elevation">Esta elevação tonal está disponível apenas enquanto estiver rolando a página.</string>
     <string name="text">Texto</string>
     <string name="font_size">Tamanho da fonte</string>
     <string name="letter_spacing">Espaçamento entre letras</string>
-    <string name="line_spacing">Espaçamento entre linhas</string>
     <string name="rearrange_buttons">Rearranjar os botões</string>
     <string name="bionic_reading">Leitura Biônica</string>
     <string name="images">Imagens</string>

@@ -65,8 +65,6 @@
     <string name="rename_toast">Rinominato in \"%1$s\"</string>
     <string name="create_new_group">Crea nuovo gruppo</string>
     <string name="name">Nome</string>
-    <string name="open_with">Apri %1$s</string>
-    <string name="options">Opzioni</string>
     <string name="delete">Elimina</string>
     <string name="delete_toast">Eliminato \"%1$s\"</string>
     <string name="unsubscribe">Disiscriviti</string>
@@ -84,16 +82,12 @@
     <string name="mark_as_unread">Segna come non letto</string>
     <string name="mark_as_starred">Segna come salvato</string>
     <string name="mark_as_unstar">Segna come non salvato</string>
-    <string name="mark_as_read_one_day">Segna come letto dopo più di 1 giorno</string>
-    <string name="mark_as_read_three_days">Segna come letto dopo più di 3 giorni</string>
-    <string name="mark_as_read_seven_days">Segna come letto dopo più di 7 giorni</string>
     <string name="one_day">1g</string>
     <string name="three_days">3g</string>
     <string name="seven_days">7g</string>
     <string name="close">Chiudi</string>
     <string name="get_new_updates">Ottieni nuovi aggiornamenti</string>
     <string name="get_new_updates_desc">La nuova versione %1$s è disponibile</string>
-    <string name="in_coding">Programmando</string>
     <string name="coming_soon">Prossimamente</string>
     <string name="accounts">Account</string>
     <string name="accounts_desc">Locale, FreshRSS</string>
@@ -170,7 +164,6 @@
     <string name="icons">Icone</string>
     <string name="icons_and_labels">Icone ed Etichette</string>
     <string name="icons_and_label_only_selected">Icone ed etichette (solo attive)</string>
-    <string name="tips_top_bar_tonal_elevation">L\'elevazione tonale è disponibile solo durante lo scorrimento</string>
     <string name="tips_article_list_tonal_elevation">L\'elevazione tonale è disponibile solo con il tema chiaro</string>
     <string name="tips_group_list_tonal_elevation">L\'elevazione tonale per il gruppo è disponibile solo con il tema chiaro</string>
     <string name="share">Condividi</string>
@@ -178,7 +171,6 @@
     <string name="text">Text</string>
     <string name="font_size">Dimensione dei caratteri</string>
     <string name="letter_spacing">Spaziatura dei caratteri</string>
-    <string name="line_spacing">Spaziatura delle linee</string>
     <string name="alignment">Allineamento</string>
     <string name="general">General</string>
     <string name="auto_hide_toolbars">Nascondi automaticamente le barre degli strumenti</string>

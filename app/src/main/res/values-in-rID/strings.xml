@@ -62,8 +62,6 @@
     <string name="rename_toast">Nama diganti menjadi \"%1$s\"</string>
     <string name="create_new_group">Buat Grup Baru</string>
     <string name="name">Nama</string>
-    <string name="open_with">Buka %1$s</string>
-    <string name="options">Opsi</string>
     <string name="delete">Hapus</string>
     <string name="delete_toast">\"%1$s\" Sudah Dihapus</string>
     <string name="unsubscribe">Berhenti Berlangganan</string>
@@ -81,16 +79,12 @@
     <string name="mark_as_unread">Tandai belum dibaca</string>
     <string name="mark_as_starred">Tandai sebagai dibintangi</string>
     <string name="mark_as_unstar">Tandai sebagai Tidak Dibintangi</string>
-    <string name="mark_as_read_one_day">Tandai telah dibaca lebih dari 1 hari</string>
-    <string name="mark_as_read_three_days">Tandai telah dibaca lebih dari 3 hari</string>
-    <string name="mark_as_read_seven_days">Tandai telah dibaca lebih dari 7 hari</string>
     <string name="one_day">1h</string>
     <string name="three_days">3h</string>
     <string name="seven_days">7h</string>
     <string name="close">Tutup</string>
     <string name="get_new_updates">Dapatkan pembaruan terbaru</string>
     <string name="get_new_updates_desc">Versi %1$s baru sudah tersedia</string>
-    <string name="in_coding">Dalam tahap koding</string>
     <string name="coming_soon">Segera datang</string>
     <string name="accounts">Akun</string>
     <string name="accounts_desc">Lokal, FreshRSS</string>
@@ -168,7 +162,6 @@
     <string name="icons">Ikon</string>
     <string name="icons_and_labels">Ikon dan Label</string>
     <string name="icons_and_label_only_selected">Ikon dan Label (hanya yang aktif)</string>
-    <string name="tips_top_bar_tonal_elevation">Perubahan nada warna untuk daftar bilah atas hanya tersedia saat menggulir</string>
     <string name="tips_article_list_tonal_elevation">Perubahan nada warna untuk daftar artikel hanya tersedia dalam tema terang</string>
     <string name="tips_group_list_tonal_elevation">Perubahan nada warna untuk daftar grup hanya tersedia dalam tema terang</string>
     <string name="share">Bagikan</string>
@@ -176,7 +169,6 @@
     <string name="text">Teks</string>
     <string name="font_size">Ukuran fon</string>
     <string name="letter_spacing">Jarak antar kata</string>
-    <string name="line_spacing">Jarak antar baris</string>
     <string name="alignment">Kesejajaran</string>
     <string name="general">Umum</string>
     <string name="auto_hide_toolbars">Otomatis sembunyikan bilah alat</string>
@@ -254,7 +246,6 @@
     <string name="connection">Koneksl</string>
     <string name="system_default">Sistem</string>
     <string name="custom_tabs">Paksakan Custom Tabs</string>
-    <string name="open_link_ask_dialog_title">Buka dengan…</string>
     <string name="open_link_specific_browser">Peramban</string>
     <string name="auto_default_browser">Otomatis (Lebih Suka Peramban Bawaan)</string>
     <string name="always_ask">Selalu Tanyakan</string>

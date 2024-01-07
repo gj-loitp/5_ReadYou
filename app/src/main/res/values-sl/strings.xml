@@ -43,7 +43,6 @@
     <string name="rename_toast">Preimenovano v \"%1$s\"</string>
     <string name="create_new_group">Ustvari novo skupino</string>
     <string name="name">Ime</string>
-    <string name="open_with">Odpri %1$s</string>
     <string name="delete">Izbriši</string>
     <string name="delete_toast">\"%1$s\" je izbrisano</string>
     <string name="unsubscribe">Odjavi se</string>
@@ -54,7 +53,6 @@
     <string name="mark_all_as_read">Označi vse kot prebrano</string>
     <string name="mark_as_unstar">Odstrani iz priljubljenih</string>
     <string name="close">Zapri</string>
-    <string name="in_coding">V procesu programiranja</string>
     <string name="coming_soon">Kmalu na voljo</string>
     <string name="accounts">Računi</string>
     <string name="interaction_desc">Ob zagonu, haptična povratna informacija</string>
@@ -94,13 +92,11 @@
     <string name="icons">Ikone</string>
     <string name="icons_and_labels">Ikone in oznake</string>
     <string name="icons_and_label_only_selected">Ikone in oznake (samo izbrane)</string>
-    <string name="tips_top_bar_tonal_elevation">To povišanje barvnih tonov je na voljo samo med drsenjem.</string>
     <string name="tips_article_list_tonal_elevation">To povišanje barvnih tonov je na voljo samo v svetli temi.</string>
     <string name="tips_group_list_tonal_elevation">To povišanje barvnih tonov je na voljo samo v svetli temi.</string>
     <string name="touch_to_play_video">Dotaknite se za predvajanje videoposnetka</string>
     <string name="font_size">Velikost pisave</string>
     <string name="letter_spacing">Razmik med črkami</string>
-    <string name="line_spacing">Razmik med vrsticami</string>
     <string name="general">Splošno</string>
     <string name="rearrange_buttons">Preureditev gumbov</string>
     <string name="bionic_reading">Bionično branje</string>
@@ -160,7 +156,6 @@
     <string name="move_to_group">Premakni v skupino</string>
     <string name="delete_group">Izbriši skupino</string>
     <string name="date_at_time">%1$s ob %2$s</string>
-    <string name="options">Možnosti</string>
     <string name="yesterday">Včeraj</string>
     <string name="mark_as_starred">Dodaj med priljubljene</string>
     <string name="unsubscribe_tips">Odjavite se od \"%1$s\" in izbrišite vse arhivirane novice iz tega vira.</string>
@@ -200,9 +195,6 @@
     <string name="share">Deljenje z drugimi</string>
     <string name="alignment">Poravnava</string>
     <string name="auto_hide_toolbars">Samodejno skrivanje orodnih vrstic</string>
-    <string name="mark_as_read_one_day">Označi kot prebrano več, kot 1 dan</string>
-    <string name="mark_as_read_three_days">Označi kot prebrano več, kot 3 dni</string>
-    <string name="mark_as_read_seven_days">Označi kot prebrano več, kot 7 dni</string>
     <string name="videos_desc">Zaobljeni vogali, vodoravno oblazinjenje</string>
     <string name="maximize">Povečaj</string>
     <string name="images_desc">Zaobljeni vogali, vodoravno oblazinjenje</string>

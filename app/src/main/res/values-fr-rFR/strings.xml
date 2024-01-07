@@ -65,8 +65,6 @@
     <string name="rename_toast">Renommé en « %1$s »</string>
     <string name="create_new_group">Créer un nouveau groupe</string>
     <string name="name">Nom</string>
-    <string name="open_with">Ouvrir %1$s</string>
-    <string name="options">Options</string>
     <string name="delete">Supprimer</string>
     <string name="delete_toast">« %1$s » a été supprimé</string>
     <string name="unsubscribe">Se désabonner</string>
@@ -84,16 +82,12 @@
     <string name="mark_as_unread">Marquer comme non lu</string>
     <string name="mark_as_starred">Ajouter aux favoris</string>
     <string name="mark_as_unstar">Retirer des favoris</string>
-    <string name="mark_as_read_one_day">Marquer comme lu les articles datant de plus d’un jour</string>
-    <string name="mark_as_read_three_days">Marquer comme lu les articles datant de plus de 3 jours</string>
-    <string name="mark_as_read_seven_days">Marquer comme lu les articles datant de plus de 7 jours</string>
     <string name="one_day">1 j</string>
     <string name="three_days">3 j</string>
     <string name="seven_days">7 j</string>
     <string name="close">Fermer</string>
     <string name="get_new_updates">Rechercher des mises à jour</string>
     <string name="get_new_updates_desc">La version %1$s est disponible</string>
-    <string name="in_coding">En développement</string>
     <string name="coming_soon">Bientôt disponible</string>
     <string name="accounts">Comptes</string>
     <string name="accounts_desc">Local, FreshRSS</string>
@@ -170,7 +164,6 @@
     <string name="icons">Icônes</string>
     <string name="icons_and_labels">Icônes et étiquettes</string>
     <string name="icons_and_label_only_selected">Icônes et étiquettes (sélectionné uniquement)</string>
-    <string name="tips_top_bar_tonal_elevation">L’intensité de la liste de la barre supérieure n’est disponible que lors du défilement</string>
     <string name="tips_article_list_tonal_elevation">L’intensité de la liste d’articles est uniquement disponible pour le thème clair</string>
     <string name="tips_group_list_tonal_elevation">L’intensité de la liste de groupe est uniquement disponible pour le thème clair</string>
     <string name="share">Partager</string>
@@ -178,7 +171,6 @@
     <string name="text">Texte</string>
     <string name="font_size">Taille de la police</string>
     <string name="letter_spacing">Espacement des lettres</string>
-    <string name="line_spacing">Espacement des lignes</string>
     <string name="alignment">Alignement</string>
     <string name="general">General</string>
     <string name="auto_hide_toolbars">Masquer automatiquement la barres d’outils</string>

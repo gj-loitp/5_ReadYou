@@ -148,7 +148,6 @@
     <string name="one_day">יום</string>
     <string name="searching">מתבצע חיפוש…</string>
     <string name="rename">שינוי שם</string>
-    <string name="options">אפשרויות</string>
     <string name="move_to_group">העברה לקבוצה</string>
     <string name="delete">מחיקה</string>
     <string name="coming_soon">בקרוב</string>
@@ -175,7 +174,6 @@
     <string name="article_date">מועד פרסום הכתבה</string>
     <string name="article_desc">תיאורי הכתבה</string>
     <string name="general">כללי</string>
-    <string name="line_spacing">ריווח שורות</string>
     <string name="group_list">רשימת קבוצות</string>
     <string name="font_size">גודל גופן</string>
     <string name="letter_spacing">ריווח אותיות</string>

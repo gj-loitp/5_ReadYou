@@ -49,7 +49,6 @@
     <string name="mark_as_unread">Маркирай като непрочетено</string>
     <string name="all_allow_notification_toast">Всички известия от групата \"%1$s\" са разрешени</string>
     <string name="all_parse_full_content_toast">Пълно съдържание на съдържанието на всички статии в групата \"%1$s\"</string>
-    <string name="open_with">Отворен %1$s</string>
     <string name="rename_toast">Преименуван на \"%1$s\"</string>
     <string name="delete">Изтрий</string>
     <string name="unsubscribe">Отпишете се</string>
@@ -72,21 +71,17 @@
     <string name="unsubscribe_tips">Отпишете се от \"%1$s\" и изтрийте всички архивирани статии в него.</string>
     <string name="delete_group">Изтриване на група</string>
     <string name="name">Име</string>
-    <string name="options">Настроики</string>
     <string name="delete_toast">Изтрити \"%1$s\"</string>
     <string name="delete_group_tips">Изтрийте групата \"%1$s\" и всички емисии и архивирани статии в нея.</string>
     <string name="group_option_tips">Следните опции ще бъдат приложени към всички емисии в тази група.</string>
     <string name="yesterday">Вчера</string>
     <string name="date_at_time">%1$s при %2$s</string>
     <string name="search_for_in">Търсене на %1$s елементи в \"%2$s\"</string>
-    <string name="mark_as_read_one_day">Марк като прочетете повече от 1 ден</string>
     <string name="mark_as_read">Маркирай като прочетено</string>
     <string name="mark_all_as_read">Отбележи всички като прочетени</string>
     <string name="mark_as_starred">Марк като звезда</string>
-    <string name="mark_as_read_seven_days">Марк като прочетете повече от 7 дни</string>
     <string name="mark_as_unstar">Марк като нестабилен</string>
     <string name="get_new_updates">Вземете нови актуализации</string>
-    <string name="mark_as_read_three_days">Марк като прочетете повече от 3 дни</string>
     <string name="close">Близо</string>
     <string name="one_day">1д</string>
     <string name="interaction_desc">При стартиране, хаптична обратна връзка</string>
@@ -96,7 +91,6 @@
     <string name="get_new_updates_desc">Версия %1$s е налична</string>
     <string name="color_and_style_desc">Тема, цветови стил, размер на шрифта</string>
     <string name="use_device_languages">Използвайте езика на устройството</string>
-    <string name="in_coding">При кодиране</string>
     <string name="coming_soon">Очаквайте скоро</string>
     <string name="accounts">Сметки</string>
     <string name="color_and_style">Цвят и стил</string>

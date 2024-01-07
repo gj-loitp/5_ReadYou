@@ -23,7 +23,6 @@
     <string name="go_to">Gå til</string>
     <string name="settings">Indstillinger</string>
     <string name="search_for_in">Søg efter %1$s elementer i \"%2$s\"</string>
-    <string name="mark_as_read_seven_days">Marker som læst hvis over 7 dage gammel</string>
     <string name="all">Alle</string>
     <string name="unread">Ulæst</string>
     <string name="starred">Stjernemarkeret</string>
@@ -68,8 +67,6 @@
     <string name="rename_toast">Navn ændret til \"%1$s\"</string>
     <string name="create_new_group">Opret ny gruppe</string>
     <string name="name">Navn</string>
-    <string name="open_with">Åben %1$s</string>
-    <string name="options">Alternativer</string>
     <string name="delete">Slet</string>
     <string name="delete_toast">\"%1$s\" slettet</string>
     <string name="unsubscribe">Ophæv abonnement</string>
@@ -86,8 +83,6 @@
     <string name="mark_as_unread">Mærker som ulæst</string>
     <string name="mark_as_starred">Mærker som stjernemarkeret</string>
     <string name="mark_as_unstar">Fjern stjernemarkering</string>
-    <string name="mark_as_read_one_day">Marker som læst hvis over 1 dag gammel</string>
-    <string name="mark_as_read_three_days">Marker som læst hvis over 3 dage gammel</string>
     <string name="one_day">1d</string>
     <string name="three_days">3d</string>
     <string name="seven_days">7d</string>
@@ -98,7 +93,6 @@
     <string name="accounts">Kontoer</string>
     <string name="accounts_desc">Lokal, FreshRSS</string>
     <string name="color_and_style">Farve &amp; stil</string>
-    <string name="in_coding">I kode</string>
     <string name="interaction_desc">Startside, haptisk feedback</string>
     <string name="languages">Sprog</string>
     <string name="languages_desc">Engelsk, Kinesisk, med mere</string>
@@ -171,7 +165,6 @@
     <string name="touch_to_play_video">Tryk for at afspille en video</string>
     <string name="text">Tekst</string>
     <string name="letter_spacing">Bogstavafstand</string>
-    <string name="line_spacing">Linjeafstand</string>
     <string name="general">Generelt</string>
     <string name="rounded_corners">Afrundede hjørner</string>
     <string name="videos">Videoer</string>
@@ -211,7 +204,6 @@
     <string name="system_default">System</string>
     <string name="synchronous_tips">Genstart krævet, før ændringerne træder i kraft</string>
     <string name="accounts_tips">Tryk på kontonavnet på feedsiden for at skifte mellem konti</string>
-    <string name="tips_top_bar_tonal_elevation">Tonal højde for den øverste bjælkeliste er kun tilgængelig, når du scroller</string>
     <string name="tips_article_list_tonal_elevation">Tonal højde for artikellisten er kun tilgængelig i det lyse tema</string>
     <string name="auto_hide_toolbars">Skjul automatisk værktøjslinjer</string>
     <string name="use_app_theme">Anvend app tema</string>

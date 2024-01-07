@@ -62,8 +62,6 @@
     <string name="rename_toast">Umbenannt zu „%1$s“</string>
     <string name="create_new_group">Neue Gruppe erstellen</string>
     <string name="name">Name</string>
-    <string name="open_with">Öffne %1$s</string>
-    <string name="options">Optionen</string>
     <string name="delete">Löschen</string>
     <string name="delete_toast">„%1$s“ wurde gelöscht</string>
     <string name="unsubscribe">Deabonnieren</string>
@@ -81,16 +79,12 @@
     <string name="mark_as_unread">Als ungelesen markieren</string>
     <string name="mark_as_starred">Als markiert markieren</string>
     <string name="mark_as_unstar">Markierung entfernen</string>
-    <string name="mark_as_read_one_day">Als gelesen markieren wenn älter als 1 Tag</string>
-    <string name="mark_as_read_three_days">Als gelesen markieren älter als 3 Tage</string>
-    <string name="mark_as_read_seven_days">Als gelesen markieren älter als 7 Tage</string>
     <string name="one_day">1 T</string>
     <string name="three_days">3 T</string>
     <string name="seven_days">7 T</string>
     <string name="close">Schließen</string>
     <string name="get_new_updates">Neue Updates erhalten</string>
     <string name="get_new_updates_desc">Neue version %1$s ist verfügbar</string>
-    <string name="in_coding">In Entwicklung</string>
     <string name="coming_soon">Demnächst verfügbar</string>
     <string name="accounts">Konten</string>
     <string name="accounts_desc">Lokal, FreshRSS</string>
@@ -167,7 +161,6 @@
     <string name="icons">Symbole</string>
     <string name="icons_and_labels">Symbole &amp; Beschriftungen</string>
     <string name="icons_and_label_only_selected">Symbole &amp; Beschriftungen (nur aktive)</string>
-    <string name="tips_top_bar_tonal_elevation">Das farbliche Hervorheben der oberen Leiste ist nur beim Scrollen verfügbar</string>
     <string name="tips_article_list_tonal_elevation">Das farbliche Hervorheben der Artikelliste ist nur für das helle Design verfügbar</string>
     <string name="tips_group_list_tonal_elevation">Das farbliche Hervorheben der Gruppenliste ist nur für das helle Design verfügbar</string>
     <string name="share">Teilen</string>
@@ -175,7 +168,6 @@
     <string name="text">Text</string>
     <string name="font_size">Schriftgröße</string>
     <string name="letter_spacing">Zeichenabstand</string>
-    <string name="line_spacing">Zeilenabstand</string>
     <string name="alignment">Ausrichtung</string>
     <string name="general">Allgemein</string>
     <string name="auto_hide_toolbars">Leisten automatisch ausblenden</string>

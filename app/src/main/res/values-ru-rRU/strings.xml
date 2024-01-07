@@ -37,7 +37,6 @@
     <string name="change_url">Изменить URL</string>
     <string name="create_new_group">Создать новую группу</string>
     <string name="name">Имя</string>
-    <string name="options">Опции</string>
     <string name="delete">Удалить</string>
     <string name="unsubscribe">Отписаться</string>
     <string name="delete_group">Удалить группу</string>
@@ -51,7 +50,6 @@
     <string name="seven_days">3д</string>
     <string name="close">Закрыть</string>
     <string name="get_new_updates">Получить обновления</string>
-    <string name="in_coding">В разработке</string>
     <string name="coming_soon">В скором времени</string>
     <string name="accounts">Аккаунты</string>
     <string name="help_translate">Помочь в переводе</string>
@@ -76,7 +74,6 @@
     <string name="all_allow_notification_toast">Все уведомления из группы \"%1$s\" разрешены</string>
     <string name="all_move_to_group_toast">Все ленты перемещены в группу \"%1$s\"</string>
     <string name="rename_toast">Переименовано в \"%1$s\"</string>
-    <string name="open_with">Открыть %1$s</string>
     <string name="delete_toast">Удалено \"%1$s\"</string>
     <string name="date_at_time">%1$s в %2$s</string>
     <string name="search_for_in">Поиск %1$s элементов в \"%2$s\"</string>
@@ -163,14 +160,12 @@
     <string name="align_right">Справа</string>
     <string name="align_left">Слева</string>
     <string name="letter_spacing">Межбуквенное расстояние</string>
-    <string name="line_spacing">Расстояние между строк</string>
     <string name="icons_and_labels">Иконки и заголовки</string>
     <string name="top_bar">Верхняя панель</string>
     <string name="article_date_sticky_header">Липкий заголовок даты публикации (экспериментальное)</string>
     <string name="feed_favicons">Значки для лент</string>
     <string name="bionic_reading">Органическое чтение</string>
     <string name="all_parse_full_content_toast">Получать полный контент для всех статей в группе \"%1$s\"</string>
-    <string name="tips_top_bar_tonal_elevation">Тональная высота для верхнего списка панели доступна только при прокрутке</string>
     <string name="tips_article_list_tonal_elevation">Тональная высота для списка статей доступна только в светлой теме</string>
     <string name="tips_group_list_tonal_elevation">Тональная высота доступна только в светлой теме</string>
     <string name="icons_and_label_only_selected">Иконки и Заголовок (только активные)</string>
@@ -185,9 +180,6 @@
     <string name="all_deny_parse_full_content_toast">Не получать полный контент для всех статей в группе \"%1$s\"</string>
     <string name="clear_articles_in_feed_toast">Все архивные статьи в ленте \"%1$s\" очищены</string>
     <string name="clear_articles_in_group_toast">Все архивные статьи в группе \"%1$s\" очищены</string>
-    <string name="mark_as_read_one_day">Отметить как прочитанное больше, чем 1 день</string>
-    <string name="mark_as_read_three_days">Отметить как прочитанное больше, чем 3 дня</string>
-    <string name="mark_as_read_seven_days">Отметить как прочитанное больше, чем 7 дней</string>
     <string name="filter_bar">Панель фильтров</string>
     <plurals name="unread_desc">
         <item quantity="one">%1$d Непрочитанная статья</item>
