@@ -3,7 +3,13 @@ package com.roy93group.reader.ui.ext
 import android.content.Context
 import android.util.Log
 import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.*
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.booleanPreferencesKey
+import androidx.datastore.preferences.core.doublePreferencesKey
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.emptyPreferences
+import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
@@ -407,7 +413,7 @@ sealed class DataStoreKeys<T> {
     object OpenLinkAppSpecificBrowser : DataStoreKeys<String>() {
 
         override val key: Preferences.Key<String>
-                get() = stringPreferencesKey("openLppSpecificBrowser")
+            get() = stringPreferencesKey("openLppSpecificBrowser")
     }
 
     // Languages

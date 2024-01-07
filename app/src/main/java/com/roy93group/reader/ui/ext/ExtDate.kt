@@ -6,7 +6,8 @@ import com.roy93group.reader.R
 import java.text.DateFormat
 import java.text.ParsePosition
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.Date
 
 fun Date.formatAsString(
     context: Context,

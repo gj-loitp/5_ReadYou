@@ -65,7 +65,7 @@ import com.roy93group.reader.ui.ext.getCurrentVersion
 import com.roy93group.reader.ui.page.common.RouteName
 import com.roy93group.reader.ui.page.home.FilterState
 import com.roy93group.reader.ui.page.home.HomeViewModel
-import com.roy93group.reader.ui.page.home.feed.accounts.AccountsTab
+import com.roy93group.reader.ui.page.home.feed.acc.AccountsTab
 import com.roy93group.reader.ui.page.home.feed.drawer.feed.FeedOptionDrawer
 import com.roy93group.reader.ui.page.home.feed.drawer.group.GroupOptionDrawer
 import com.roy93group.reader.ui.page.home.feed.subs.SubscribeDialog

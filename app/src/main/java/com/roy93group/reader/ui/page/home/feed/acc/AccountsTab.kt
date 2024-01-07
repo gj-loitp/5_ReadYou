@@ -1,8 +1,12 @@
-package com.roy93group.reader.ui.page.home.feed.accounts
+package com.roy93group.reader.ui.page.home.feed.acc
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.People
@@ -24,11 +28,11 @@ import androidx.compose.ui.unit.sp
 import com.google.accompanist.flowlayout.FlowCrossAxisAlignment
 import com.google.accompanist.flowlayout.FlowRow
 import com.google.accompanist.flowlayout.MainAxisAlignment
+import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
 import com.roy93group.reader.ui.component.base.RYDialog
 import com.roy93group.reader.ui.ext.currentAccountId
 import com.roy93group.reader.ui.theme.palette.alwaysLight
-import com.roy93group.reader.R
 
 @Composable
 fun AccountsTab(

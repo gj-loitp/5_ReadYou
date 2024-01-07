@@ -2,7 +2,12 @@ package com.roy93group.reader.ui.page.home.feed.drawer.feed
 
 import android.view.HapticFeedbackConstants
 import androidx.activity.compose.BackHandler
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.CreateNewFolder
@@ -18,7 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import kotlinx.coroutines.launch
+import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.LocalOpenLink
 import com.roy93group.reader.infrastructure.preference.LocalOpenLinkSpecificBrowser
 import com.roy93group.reader.ui.component.ChangeUrlDialog
@@ -31,7 +36,7 @@ import com.roy93group.reader.ui.ext.openURL
 import com.roy93group.reader.ui.ext.roundClick
 import com.roy93group.reader.ui.ext.showToast
 import com.roy93group.reader.ui.page.home.feed.FeedOptionView
-import com.roy93group.reader.R
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable

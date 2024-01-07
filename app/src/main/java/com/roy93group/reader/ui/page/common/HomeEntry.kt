@@ -4,8 +4,12 @@ import android.util.Log
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.background
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -13,12 +17,15 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.collectLatest
 import com.roy93group.reader.domain.model.general.Filter
 import com.roy93group.reader.infrastructure.preference.LocalDarkTheme
 import com.roy93group.reader.infrastructure.preference.LocalReadingDarkTheme
-import com.roy93group.reader.ui.ext.*
+import com.roy93group.reader.ui.ext.animatedComposable
+import com.roy93group.reader.ui.ext.collectAsStateValue
+import com.roy93group.reader.ui.ext.findActivity
+import com.roy93group.reader.ui.ext.initialFilter
+import com.roy93group.reader.ui.ext.initialPage
+import com.roy93group.reader.ui.ext.isFirstLaunch
 import com.roy93group.reader.ui.page.home.HomeViewModel
 import com.roy93group.reader.ui.page.home.feed.FeedsPage
 import com.roy93group.reader.ui.page.home.flow.FlowPage
@@ -31,12 +38,19 @@ import com.roy93group.reader.ui.page.setting.color.ColorAndStylePage
 import com.roy93group.reader.ui.page.setting.color.DarkThemePage
 import com.roy93group.reader.ui.page.setting.color.feed.FeedsPageStylePage
 import com.roy93group.reader.ui.page.setting.color.flow.FlowPageStylePage
-import com.roy93group.reader.ui.page.setting.color.reading.*
+import com.roy93group.reader.ui.page.setting.color.reading.ReadingDarkThemePage
+import com.roy93group.reader.ui.page.setting.color.reading.ReadingImagePage
+import com.roy93group.reader.ui.page.setting.color.reading.ReadingStylePage
+import com.roy93group.reader.ui.page.setting.color.reading.ReadingTextPage
+import com.roy93group.reader.ui.page.setting.color.reading.ReadingTitlePage
+import com.roy93group.reader.ui.page.setting.color.reading.ReadingVideoPage
 import com.roy93group.reader.ui.page.setting.interaction.InteractionPage
 import com.roy93group.reader.ui.page.setting.language.LanguagesPage
 import com.roy93group.reader.ui.page.setting.tip.TipsAndSupportPage
 import com.roy93group.reader.ui.page.startup.StartupPage
 import com.roy93group.reader.ui.theme.AppTheme
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collectLatest
 
 @OptIn(ExperimentalAnimationApi::class, androidx.compose.material.ExperimentalMaterialApi::class)
 @Composable

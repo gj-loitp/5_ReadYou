@@ -21,7 +21,6 @@ import com.roy93group.reader.infrastructure.preference.OpenLinkPreference
 import com.roy93group.reader.infrastructure.preference.OpenLinkSpecificBrowserPreference
 import java.io.File
 
-
 fun Context.findActivity(): Activity? = when (this) {
     is Activity -> this
     is ContextWrapper -> baseContext.findActivity()
@@ -79,18 +78,21 @@ fun Context.share(content: String) {
 fun Context.openURL(
     url: String?,
     openLink: OpenLinkPreference,
-    specificBrowser: OpenLinkSpecificBrowserPreference = OpenLinkSpecificBrowserPreference.default
+    specificBrowser: OpenLinkSpecificBrowserPreference = OpenLinkSpecificBrowserPreference.default,
 ) {
     if (!url.isNullOrBlank()) {
         val uri = url.toUri()
         val intent = Intent(Intent.ACTION_VIEW, uri)
         val customTabsIntent = CustomTabsIntent.Builder().setShowTitle(true).build()
         try {
-            when(openLink) {
+            when (openLink) {
                 OpenLinkPreference.AlwaysAsk -> {
                     val intents = packageManager.run {
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                            queryIntentActivities(intent, PackageManager.ResolveInfoFlags.of(PackageManager.MATCH_ALL.toLong()))
+                            queryIntentActivities(
+                                intent,
+                                PackageManager.ResolveInfoFlags.of(PackageManager.MATCH_ALL.toLong())
+                            )
                         } else {
                             queryIntentActivities(intent, PackageManager.MATCH_ALL)
                         }
@@ -105,10 +107,12 @@ fun Context.openURL(
 
                     startActivity(chooser)
                 }
+
                 OpenLinkPreference.AutoPreferCustomTabs -> {
                     customTabsIntent.launchUrl(this, uri)
                 }
-                OpenLinkPreference.AutoPreferDefaultBrowser-> startActivity(intent)
+
+                OpenLinkPreference.AutoPreferDefaultBrowser -> startActivity(intent)
                 OpenLinkPreference.CustomTabs -> {
                     val customTabsPackages = getCustomTabsPackages()
                     require(customTabsPackages.isNotEmpty())
@@ -122,10 +126,12 @@ fun Context.openURL(
                     customTabsIntent.intent.setPackage(targetApp)
                     customTabsIntent.launchUrl(this, uri)
                 }
+
                 OpenLinkPreference.DefaultBrowser -> {
                     val packageName = getDefaultBrowserInfo()!!.activityInfo.packageName
                     startActivity(intent.setPackage(packageName))
                 }
+
                 OpenLinkPreference.SpecificBrowser -> {
                     require(!specificBrowser.packageName.isNullOrBlank())
                     startActivity(intent.setPackage(specificBrowser.packageName))
@@ -175,12 +181,12 @@ fun Context.getCustomTabsPackages(): List<String> {
     return appInfoList.mapNotNull { info ->
         val serviceIntent = Intent(ACTION_CUSTOM_TABS_CONNECTION).setPackage(info.activityInfo.packageName)
         val service = pm.run {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            resolveService(serviceIntent, PackageManager.ResolveInfoFlags.of(0))
-        } else {
-            resolveService(serviceIntent, 0)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                resolveService(serviceIntent, PackageManager.ResolveInfoFlags.of(0))
+            } else {
+                resolveService(serviceIntent, 0)
+            }
         }
-    }
         if (service != null) {
             return@mapNotNull info.activityInfo.packageName
         }
