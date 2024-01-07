@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.home.feeds.drawer.group
+package com.roy93group.reader.ui.page.home.feed.drawer.feed
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.DeleteForever
@@ -16,51 +16,51 @@ import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
 
 @Composable
-fun DeleteGroupDialog(
-    groupName: String,
-    groupOptionViewModel: GroupOptionViewModel = hiltViewModel(),
+fun DeleteFeedDialog(
+    feedName: String,
+    feedOptionViewModel: FeedOptionViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
-    val groupOptionUiState = groupOptionViewModel.groupOptionUiState.collectAsStateValue()
+    val feedOptionUiState = feedOptionViewModel.feedOptionUiState.collectAsStateValue()
     val scope = rememberCoroutineScope()
-    val toastString = stringResource(R.string.delete_toast, groupName)
+    val toastString = stringResource(R.string.delete_toast, feedName)
 
     RYDialog(
-        visible = groupOptionUiState.deleteDialogVisible,
+        visible = feedOptionUiState.deleteDialogVisible,
         onDismissRequest = {
-            groupOptionViewModel.hideDeleteDialog()
+            feedOptionViewModel.hideDeleteDialog()
         },
         icon = {
             Icon(
                 imageVector = Icons.Outlined.DeleteForever,
-                contentDescription = stringResource(R.string.delete_group),
+                contentDescription = stringResource(R.string.unsubscribe),
             )
         },
         title = {
-            Text(text = stringResource(R.string.delete_group))
+            Text(text = stringResource(R.string.unsubscribe))
         },
         text = {
-            Text(text = stringResource(R.string.delete_group_tips, groupName))
+            Text(text = stringResource(R.string.unsubscribe_tips, feedName))
         },
         confirmButton = {
             TextButton(
                 onClick = {
-                    groupOptionViewModel.delete {
-                        groupOptionViewModel.hideDeleteDialog()
-                        groupOptionViewModel.hideDrawer(scope)
+                    feedOptionViewModel.delete {
+                        feedOptionViewModel.hideDeleteDialog()
+                        feedOptionViewModel.hideDrawer(scope)
                         context.showToast(toastString)
                     }
                 }
             ) {
                 Text(
-                    text = stringResource(R.string.delete),
+                    text = stringResource(R.string.unsubscribe),
                 )
             }
         },
         dismissButton = {
             TextButton(
                 onClick = {
-                    groupOptionViewModel.hideDeleteDialog()
+                    feedOptionViewModel.hideDeleteDialog()
                 }
             ) {
                 Text(

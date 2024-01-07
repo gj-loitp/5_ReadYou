@@ -1,9 +1,18 @@
-package com.roy93group.reader.ui.page.home.feeds.drawer.group
+package com.roy93group.reader.ui.page.home.feed.drawer.group
 
 import android.content.Context
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.animateContentSize
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
@@ -29,14 +38,18 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.flowlayout.FlowCrossAxisAlignment
 import com.google.accompanist.flowlayout.FlowRow
 import com.google.accompanist.flowlayout.MainAxisAlignment
-import kotlinx.coroutines.launch
+import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.group.Group
 import com.roy93group.reader.ui.component.RenameDialog
 import com.roy93group.reader.ui.component.base.BottomDrawer
 import com.roy93group.reader.ui.component.base.RYSelectionChip
 import com.roy93group.reader.ui.component.base.Subtitle
-import com.roy93group.reader.ui.ext.*
-import com.roy93group.reader.R
+import com.roy93group.reader.ui.ext.collectAsStateValue
+import com.roy93group.reader.ui.ext.currentAccountId
+import com.roy93group.reader.ui.ext.getDefaultGroupId
+import com.roy93group.reader.ui.ext.roundClick
+import com.roy93group.reader.ui.ext.showToast
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable

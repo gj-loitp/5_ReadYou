@@ -1,7 +1,7 @@
-package com.roy93group.reader.ui.page.home.feeds.drawer.feed
+package com.roy93group.reader.ui.page.home.feed.drawer.group
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.DeleteSweep
+import androidx.compose.material.icons.outlined.DeleteForever
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -16,51 +16,51 @@ import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
 
 @Composable
-fun ClearFeedDialog(
-    feedName: String,
-    feedOptionViewModel: FeedOptionViewModel = hiltViewModel(),
+fun DeleteGroupDialog(
+    groupName: String,
+    groupOptionViewModel: GroupOptionViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
-    val feedOptionUiState = feedOptionViewModel.feedOptionUiState.collectAsStateValue()
+    val groupOptionUiState = groupOptionViewModel.groupOptionUiState.collectAsStateValue()
     val scope = rememberCoroutineScope()
-    val toastString = stringResource(R.string.clear_articles_in_feed_toast, feedName)
+    val toastString = stringResource(R.string.delete_toast, groupName)
 
     RYDialog(
-        visible = feedOptionUiState.clearDialogVisible,
+        visible = groupOptionUiState.deleteDialogVisible,
         onDismissRequest = {
-            feedOptionViewModel.hideClearDialog()
+            groupOptionViewModel.hideDeleteDialog()
         },
         icon = {
             Icon(
-                imageVector = Icons.Outlined.DeleteSweep,
-                contentDescription = stringResource(R.string.clear_articles),
+                imageVector = Icons.Outlined.DeleteForever,
+                contentDescription = stringResource(R.string.delete_group),
             )
         },
         title = {
-            Text(text = stringResource(R.string.clear_articles))
+            Text(text = stringResource(R.string.delete_group))
         },
         text = {
-            Text(text = stringResource(R.string.clear_articles_feed_tips, feedName))
+            Text(text = stringResource(R.string.delete_group_tips, groupName))
         },
         confirmButton = {
             TextButton(
                 onClick = {
-                    feedOptionViewModel.clearFeed {
-                        feedOptionViewModel.hideClearDialog()
-                        feedOptionViewModel.hideDrawer(scope)
+                    groupOptionViewModel.delete {
+                        groupOptionViewModel.hideDeleteDialog()
+                        groupOptionViewModel.hideDrawer(scope)
                         context.showToast(toastString)
                     }
                 }
             ) {
                 Text(
-                    text = stringResource(R.string.clear),
+                    text = stringResource(R.string.delete),
                 )
             }
         },
         dismissButton = {
             TextButton(
                 onClick = {
-                    feedOptionViewModel.hideClearDialog()
+                    groupOptionViewModel.hideDeleteDialog()
                 }
             ) {
                 Text(

@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.home.feeds.drawer.feed
+package com.roy93group.reader.ui.page.home.feed.drawer.feed
 
 import androidx.annotation.Keep
 import androidx.compose.material.ExperimentalMaterialApi

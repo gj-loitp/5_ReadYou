@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.home.feeds
+package com.roy93group.reader.ui.page.home.feed
 
 import androidx.annotation.Keep
 import androidx.compose.foundation.lazy.LazyListState
@@ -6,10 +6,6 @@ import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.snapshots.SnapshotStateMap
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.launch
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
 import com.roy93group.reader.domain.service.AccountService
@@ -18,6 +14,18 @@ import com.roy93group.reader.infrastructure.android.AndroidStringsHelper
 import com.roy93group.reader.infrastructure.di.DefaultDispatcher
 import com.roy93group.reader.infrastructure.di.IODispatcher
 import com.roy93group.reader.ui.page.home.FilterState
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.emptyFlow
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.mapLatest
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel

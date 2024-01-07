@@ -19,7 +19,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.roy93group.reader.R
 import com.roy93group.reader.ui.component.base.BottomDrawer
 import com.roy93group.reader.ui.ext.collectAsStateValue
-import com.roy93group.reader.ui.page.home.feeds.drawer.feed.FeedOptionViewModel
+import com.roy93group.reader.ui.page.home.feed.drawer.feed.FeedOptionViewModel
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterialApi::class)

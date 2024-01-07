@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.home.feeds.drawer.feed
+package com.roy93group.reader.ui.page.home.feed.drawer.feed
 
 import android.view.HapticFeedbackConstants
 import androidx.activity.compose.BackHandler
@@ -30,7 +30,7 @@ import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.openURL
 import com.roy93group.reader.ui.ext.roundClick
 import com.roy93group.reader.ui.ext.showToast
-import com.roy93group.reader.ui.page.home.feeds.FeedOptionView
+import com.roy93group.reader.ui.page.home.feed.FeedOptionView
 import com.roy93group.reader.R
 
 @OptIn(ExperimentalMaterialApi::class)

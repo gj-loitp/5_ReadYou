@@ -1,11 +1,18 @@
-package com.roy93group.reader.ui.page.home.feeds
+package com.roy93group.reader.ui.page.home.feed
 
 import android.view.HapticFeedbackConstants
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ExpandLess
@@ -23,11 +30,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.ui.page.home.feeds.drawer.group.GroupOptionViewModel
+import com.roy93group.reader.ui.page.home.feed.drawer.group.GroupOptionViewModel
 import com.roy93group.reader.ui.theme.Shape32
 import com.roy93group.reader.ui.theme.ShapeTop32
-import com.roy93group.reader.R
 
 @OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable

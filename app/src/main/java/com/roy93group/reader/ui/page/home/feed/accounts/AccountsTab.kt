@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.home.feeds.accounts
+package com.roy93group.reader.ui.page.home.feed.accounts
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

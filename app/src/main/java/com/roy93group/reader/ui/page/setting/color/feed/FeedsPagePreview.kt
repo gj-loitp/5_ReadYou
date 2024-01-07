@@ -37,8 +37,8 @@ import com.roy93group.reader.ui.component.FilterBar
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.ext.alphaLN
 import com.roy93group.reader.ui.ext.surfaceColorAtElevation
-import com.roy93group.reader.ui.page.home.feeds.FeedItem
-import com.roy93group.reader.ui.page.home.feeds.GroupItem
+import com.roy93group.reader.ui.page.home.feed.FeedItem
+import com.roy93group.reader.ui.page.home.feed.GroupItem
 import com.roy93group.reader.ui.theme.palette.onDark
 import kotlin.math.ln
 

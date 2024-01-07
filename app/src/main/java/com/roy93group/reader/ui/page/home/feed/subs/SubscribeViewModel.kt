@@ -1,22 +1,27 @@
-package com.roy93group.reader.ui.page.home.feeds.subscribe
+package com.roy93group.reader.ui.page.home.feed.subs
 
 import android.util.Log
 import androidx.annotation.Keep
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.launch
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.article.Article
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.infrastructure.android.AndroidStringsHelper
 import com.roy93group.reader.domain.service.OpmlService
 import com.roy93group.reader.domain.service.RssService
+import com.roy93group.reader.infrastructure.android.AndroidStringsHelper
 import com.roy93group.reader.infrastructure.rss.RssHelper
 import com.roy93group.reader.ui.ext.formatUrl
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.emptyFlow
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import java.io.InputStream
 import javax.inject.Inject
 

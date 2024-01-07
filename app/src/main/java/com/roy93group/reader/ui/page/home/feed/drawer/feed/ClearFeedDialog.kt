@@ -1,7 +1,7 @@
-package com.roy93group.reader.ui.page.home.feeds.drawer.feed
+package com.roy93group.reader.ui.page.home.feed.drawer.feed
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.DeleteForever
+import androidx.compose.material.icons.outlined.DeleteSweep
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -16,51 +16,51 @@ import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
 
 @Composable
-fun DeleteFeedDialog(
+fun ClearFeedDialog(
     feedName: String,
     feedOptionViewModel: FeedOptionViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
     val feedOptionUiState = feedOptionViewModel.feedOptionUiState.collectAsStateValue()
     val scope = rememberCoroutineScope()
-    val toastString = stringResource(R.string.delete_toast, feedName)
+    val toastString = stringResource(R.string.clear_articles_in_feed_toast, feedName)
 
     RYDialog(
-        visible = feedOptionUiState.deleteDialogVisible,
+        visible = feedOptionUiState.clearDialogVisible,
         onDismissRequest = {
-            feedOptionViewModel.hideDeleteDialog()
+            feedOptionViewModel.hideClearDialog()
         },
         icon = {
             Icon(
-                imageVector = Icons.Outlined.DeleteForever,
-                contentDescription = stringResource(R.string.unsubscribe),
+                imageVector = Icons.Outlined.DeleteSweep,
+                contentDescription = stringResource(R.string.clear_articles),
             )
         },
         title = {
-            Text(text = stringResource(R.string.unsubscribe))
+            Text(text = stringResource(R.string.clear_articles))
         },
         text = {
-            Text(text = stringResource(R.string.unsubscribe_tips, feedName))
+            Text(text = stringResource(R.string.clear_articles_feed_tips, feedName))
         },
         confirmButton = {
             TextButton(
                 onClick = {
-                    feedOptionViewModel.delete {
-                        feedOptionViewModel.hideDeleteDialog()
+                    feedOptionViewModel.clearFeed {
+                        feedOptionViewModel.hideClearDialog()
                         feedOptionViewModel.hideDrawer(scope)
                         context.showToast(toastString)
                     }
                 }
             ) {
                 Text(
-                    text = stringResource(R.string.unsubscribe),
+                    text = stringResource(R.string.clear),
                 )
             }
         },
         dismissButton = {
             TextButton(
                 onClick = {
-                    feedOptionViewModel.hideDeleteDialog()
+                    feedOptionViewModel.hideClearDialog()
                 }
             ) {
                 Text(

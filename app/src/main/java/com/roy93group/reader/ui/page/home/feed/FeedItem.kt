@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.home.feeds
+package com.roy93group.reader.ui.page.home.feed
 
 import android.view.HapticFeedbackConstants
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -25,7 +25,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.ui.component.FeedIcon
 import com.roy93group.reader.ui.component.base.RYExtensibleVisibility
-import com.roy93group.reader.ui.page.home.feeds.drawer.feed.FeedOptionViewModel
+import com.roy93group.reader.ui.page.home.feed.drawer.feed.FeedOptionViewModel
 import com.roy93group.reader.ui.theme.ShapeBottom32
 
 @OptIn(

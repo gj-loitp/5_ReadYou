@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.home.feeds.drawer.group
+package com.roy93group.reader.ui.page.home.feed.drawer.group
 
 import androidx.annotation.Keep
 import androidx.compose.material.ExperimentalMaterialApi
@@ -6,6 +6,10 @@ import androidx.compose.material.ModalBottomSheetState
 import androidx.compose.material.ModalBottomSheetValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.roy93group.reader.domain.model.group.Group
+import com.roy93group.reader.domain.service.RssService
+import com.roy93group.reader.infrastructure.di.IODispatcher
+import com.roy93group.reader.infrastructure.di.MainDispatcher
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
@@ -15,10 +19,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.domain.service.RssService
-import com.roy93group.reader.infrastructure.di.IODispatcher
-import com.roy93group.reader.infrastructure.di.MainDispatcher
 import javax.inject.Inject
 
 @OptIn(ExperimentalMaterialApi::class)

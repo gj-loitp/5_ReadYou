@@ -1,7 +1,7 @@
-package com.roy93group.reader.ui.page.home.feeds.drawer.group
+package com.roy93group.reader.ui.page.home.feed.drawer.group
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.DriveFileMove
+import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -16,64 +16,60 @@ import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
 
 @Composable
-fun AllMoveToGroupDialog(
+fun AllAllowNotificationDialog(
     groupName: String,
     groupOptionViewModel: GroupOptionViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
     val groupOptionUiState = groupOptionViewModel.groupOptionUiState.collectAsStateValue()
     val scope = rememberCoroutineScope()
-    val toastString = stringResource(
-        R.string.all_move_to_group_toast,
-        groupOptionUiState.targetGroup?.name ?: ""
-    )
+    val allowToastString = stringResource(R.string.all_allow_notification_toast, groupName)
+    val denyToastString = stringResource(R.string.all_deny_notification_toast, groupName)
 
     RYDialog(
-        visible = groupOptionUiState.allMoveToGroupDialogVisible,
+        visible = groupOptionUiState.allAllowNotificationDialogVisible,
         onDismissRequest = {
-            groupOptionViewModel.hideAllMoveToGroupDialog()
+            groupOptionViewModel.hideAllAllowNotificationDialog()
         },
         icon = {
             Icon(
-                imageVector = Icons.Outlined.DriveFileMove,
-                contentDescription = stringResource(R.string.move_to_group),
+                imageVector = Icons.Outlined.Notifications,
+                contentDescription = stringResource(R.string.allow_notification),
             )
         },
         title = {
-            Text(text = stringResource(R.string.move_to_group))
+            Text(text = stringResource(R.string.allow_notification))
         },
         text = {
-            Text(
-                text = stringResource(
-                    R.string.all_move_to_group_tips,
-                    groupName,
-                    groupOptionUiState.targetGroup?.name ?: "",
-                )
-            )
+            Text(text = stringResource(R.string.all_allow_notification_tips, groupName))
         },
         confirmButton = {
             TextButton(
                 onClick = {
-                    groupOptionViewModel.allMoveToGroup {
-                        groupOptionViewModel.hideAllMoveToGroupDialog()
+                    groupOptionViewModel.allAllowNotification(true) {
+                        groupOptionViewModel.hideAllAllowNotificationDialog()
                         groupOptionViewModel.hideDrawer(scope)
-                        context.showToast(toastString)
+                        context.showToast(allowToastString)
                     }
                 }
             ) {
                 Text(
-                    text = stringResource(R.string.confirm),
+                    text = stringResource(R.string.allow),
                 )
             }
         },
         dismissButton = {
             TextButton(
                 onClick = {
-                    groupOptionViewModel.hideAllMoveToGroupDialog()
+                    groupOptionViewModel.allAllowNotification(false) {
+                        groupOptionViewModel.hideAllAllowNotificationDialog()
+                        groupOptionViewModel.hideDrawer(scope)
+                        context.showToast(denyToastString)
+                    }
                 }
             ) {
                 Text(
-                    text = stringResource(R.string.cancel),
+                    text = stringResource(R.string.deny),
                 )
             }
         },

@@ -20,7 +20,7 @@ import com.roy93group.reader.infrastructure.preference.LocalDarkTheme
 import com.roy93group.reader.infrastructure.preference.LocalReadingDarkTheme
 import com.roy93group.reader.ui.ext.*
 import com.roy93group.reader.ui.page.home.HomeViewModel
-import com.roy93group.reader.ui.page.home.feeds.FeedsPage
+import com.roy93group.reader.ui.page.home.feed.FeedsPage
 import com.roy93group.reader.ui.page.home.flow.FlowPage
 import com.roy93group.reader.ui.page.home.read.ReadingPage
 import com.roy93group.reader.ui.page.setting.SettingsPage

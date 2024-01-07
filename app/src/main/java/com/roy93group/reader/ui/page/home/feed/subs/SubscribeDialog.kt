@@ -1,8 +1,14 @@
-package com.roy93group.reader.ui.page.home.feeds.subscribe
+package com.roy93group.reader.ui.page.home.feed.subs
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.animation.*
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.with
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.CreateNewFolder
@@ -24,14 +30,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.roy93group.reader.R
 import com.roy93group.reader.ui.component.RenameDialog
 import com.roy93group.reader.ui.component.base.ClipboardTextField
 import com.roy93group.reader.ui.component.base.RYDialog
 import com.roy93group.reader.ui.component.base.TextFieldDialog
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.roundClick
-import com.roy93group.reader.ui.page.home.feeds.FeedOptionView
-import com.roy93group.reader.R
+import com.roy93group.reader.ui.page.home.feed.FeedOptionView
 
 @OptIn(
     androidx.compose.ui.ExperimentalComposeUiApi::class,

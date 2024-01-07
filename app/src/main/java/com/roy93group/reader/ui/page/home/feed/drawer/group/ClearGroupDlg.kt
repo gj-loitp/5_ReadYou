@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.home.feeds.drawer.group
+package com.roy93group.reader.ui.page.home.feed.drawer.group
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.DeleteSweep
