@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="unread">לא נקרא</string>
     <string name="starred">סימון כוכב</string>
-    <plurals name="starred_desc">
+    <plurals name="starred_desc" tools:ignore="UnusedQuantity">
         <item quantity="one">פריט אחד סומן בכוכב</item>
         <item quantity="two">שני פריטים סומנו בכוכב</item>
         <item quantity="many">%1$d פריטים סומנו בכוכב</item>
@@ -116,13 +116,13 @@
     <string name="username">שם משתמש</string>
     <string name="password">סיסמה</string>
     <string name="all">הכול</string>
-    <plurals name="all_desc">
+    <plurals name="all_desc" tools:ignore="UnusedQuantity">
         <item quantity="one">פריט אחד הועבר לארכיון</item>
         <item quantity="two">שני פריטים הועברו לארכיון</item>
         <item quantity="many">%1$d פריטים הועברו לארכיון</item>
         <item quantity="other"></item>
     </plurals>
-    <plurals name="unread_desc">
+    <plurals name="unread_desc" tools:ignore="UnusedQuantity">
         <item quantity="one">פריט אחד לא נקרא</item>
         <item quantity="two">שני פריטים לא נקראו</item>
         <item quantity="many">%1$d פריטים לא נקראו</item>
