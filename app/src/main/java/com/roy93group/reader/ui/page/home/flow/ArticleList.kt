@@ -19,13 +19,13 @@ fun LazyListScope.ArticleList(
     isShowStickyHeader: Boolean,
     articleListTonalElevation: Int,
     onClick: (ArticleWithFeed) -> Unit = {},
-    onSwipeOut: (ArticleWithFeed) -> Unit = {}
+    onSwipeOut: (ArticleWithFeed) -> Unit = {},
 ) {
     for (index in 0 until pagingItems.itemCount) {
         when (val item = pagingItems.peek(index)) {
             is ArticleFlowItem.Article -> {
                 item(key = item.articleWithFeed.article.id) {
-                    swipeToDismiss(
+                    SwipeToDismiss(
                         articleWithFeed = (pagingItems[index] as ArticleFlowItem.Article).articleWithFeed,
                         onClick = { onClick(it) },
                         onSwipeOut = { onSwipeOut(it) }

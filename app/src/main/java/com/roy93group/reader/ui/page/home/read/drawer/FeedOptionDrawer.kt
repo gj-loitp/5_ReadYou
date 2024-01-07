@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.home.reading.drawer
+package com.roy93group.reader.ui.page.home.read.drawer
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
@@ -16,11 +16,11 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
-import kotlinx.coroutines.launch
 import com.roy93group.reader.R
 import com.roy93group.reader.ui.component.base.BottomDrawer
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.page.home.feeds.drawer.feed.FeedOptionViewModel
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable

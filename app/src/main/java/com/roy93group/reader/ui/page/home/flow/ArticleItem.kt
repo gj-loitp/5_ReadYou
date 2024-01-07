@@ -2,7 +2,16 @@ package com.roy93group.reader.ui.page.home.flow
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.DismissDirection
 import androidx.compose.material.DismissValue
 import androidx.compose.material.ExperimentalMaterialApi
@@ -14,7 +23,11 @@ import androidx.compose.material.rememberDismissState
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -29,7 +42,13 @@ import coil.size.Precision
 import coil.size.Scale
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.article.ArticleWithFeed
-import com.roy93group.reader.infrastructure.preference.*
+import com.roy93group.reader.infrastructure.preference.LocalAmoledDarkTheme
+import com.roy93group.reader.infrastructure.preference.LocalDarkTheme
+import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListDesc
+import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListFeedIcon
+import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListFeedName
+import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListImage
+import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListTime
 import com.roy93group.reader.ui.component.FeedIcon
 import com.roy93group.reader.ui.component.base.RYAsyncImage
 import com.roy93group.reader.ui.component.base.SIZE_1000
@@ -160,12 +179,13 @@ fun ArticleItem(
         }
     }
 }
+
 @ExperimentalMaterialApi
 @Composable
-fun swipeToDismiss(
-        articleWithFeed: ArticleWithFeed,
-        onClick: (ArticleWithFeed) -> Unit = {},
-        onSwipeOut: (ArticleWithFeed) -> Unit = {},
+fun SwipeToDismiss(
+    articleWithFeed: ArticleWithFeed,
+    onClick: (ArticleWithFeed) -> Unit = {},
+    onSwipeOut: (ArticleWithFeed) -> Unit = {},
 ) {
     var isArticleVisible by remember { mutableStateOf(true) }
     val dismissState = rememberDismissState(initialValue = DismissValue.Default, confirmStateChange = {
@@ -173,54 +193,57 @@ fun swipeToDismiss(
             isArticleVisible = false
             onSwipeOut(articleWithFeed)
         }
-       true
+        true
     })
     if (isArticleVisible) {
         SwipeToDismiss(
-                state = dismissState,
-                /***  create dismiss alert background box */
-                background = {
-                    if (dismissState.dismissDirection == DismissDirection.StartToEnd) {
-                        Box(
-                                modifier = Modifier
-                                        .fillMaxSize()
-                                        .padding(12.dp)
-                        ) {
-                            Column(modifier = Modifier.align(Alignment.CenterStart)) {
-                                Icon(
-                                        imageVector = Icons.Default.Check,
-                                        contentDescription = null,
-                                        tint = MaterialTheme.colorScheme.inverseSurface,
-                                        modifier = Modifier.align(Alignment.CenterHorizontally)
-                                )
-                                Text(
-                                        text = "Mark Read",
-                                        textAlign = TextAlign.Center,
-                                        color = MaterialTheme.colorScheme.inverseSurface
-                                )
-                            }
-
-                        }
-                    }
-                },
-                /**** Dismiss Content */
-                dismissContent = {
-                    val isDarkTheme = LocalDarkTheme.current.isDarkTheme()
-                    val isAmoledDarkTheme = LocalAmoledDarkTheme.current.value
-
-                    val articleItemBackgroundColor = if (isDarkTheme && isAmoledDarkTheme) {Color.Black}
-                        else {MaterialTheme.colorScheme.background}
-
+            state = dismissState,
+            /***  create dismiss alert background box */
+            background = {
+                if (dismissState.dismissDirection == DismissDirection.StartToEnd) {
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
-                            .background(articleItemBackgroundColor)
+                            .padding(12.dp)
                     ) {
-                        ArticleItem(articleWithFeed, onClick)
+                        Column(modifier = Modifier.align(Alignment.CenterStart)) {
+                            Icon(
+                                imageVector = Icons.Default.Check,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.inverseSurface,
+                                modifier = Modifier.align(Alignment.CenterHorizontally)
+                            )
+                            Text(
+                                text = "Mark Read",
+                                textAlign = TextAlign.Center,
+                                color = MaterialTheme.colorScheme.inverseSurface
+                            )
+                        }
+
                     }
-                },
-                /*** Set Direction to dismiss */
-                directions = setOf(DismissDirection.StartToEnd),
+                }
+            },
+            /**** Dismiss Content */
+            dismissContent = {
+                val isDarkTheme = LocalDarkTheme.current.isDarkTheme()
+                val isAmoledDarkTheme = LocalAmoledDarkTheme.current.value
+
+                val articleItemBackgroundColor = if (isDarkTheme && isAmoledDarkTheme) {
+                    Color.Black
+                } else {
+                    MaterialTheme.colorScheme.background
+                }
+
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(articleItemBackgroundColor)
+                ) {
+                    ArticleItem(articleWithFeed, onClick)
+                }
+            },
+            /*** Set Direction to dismiss */
+            directions = setOf(DismissDirection.StartToEnd),
         )
     }
 }

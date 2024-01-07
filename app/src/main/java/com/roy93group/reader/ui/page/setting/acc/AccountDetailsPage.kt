@@ -3,7 +3,12 @@ package com.roy93group.reader.ui.page.setting.acc
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.windowInsetsBottomHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.DeleteSweep
@@ -13,7 +18,12 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -26,7 +36,16 @@ import com.roy93group.reader.infrastructure.preference.KeepArchivedPreference
 import com.roy93group.reader.infrastructure.preference.SyncBlockListPreference
 import com.roy93group.reader.infrastructure.preference.SyncIntervalPreference
 import com.roy93group.reader.infrastructure.preference.not
-import com.roy93group.reader.ui.component.base.*
+import com.roy93group.reader.ui.component.base.DisplayText
+import com.roy93group.reader.ui.component.base.FeedbackIconButton
+import com.roy93group.reader.ui.component.base.RYDialog
+import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.RYSwitch
+import com.roy93group.reader.ui.component.base.RadioDialog
+import com.roy93group.reader.ui.component.base.RadioDialogOption
+import com.roy93group.reader.ui.component.base.Subtitle
+import com.roy93group.reader.ui.component.base.TextFieldDialog
+import com.roy93group.reader.ui.component.base.Tips
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
 import com.roy93group.reader.ui.ext.showToastLong
@@ -48,8 +67,12 @@ fun AccountDetailsPage(
     var nameValue by remember { mutableStateOf(selectedAccount?.name) }
     var nameDialogVisible by remember { mutableStateOf(false) }
     var blockListValue by remember {
-        mutableStateOf(SyncBlockListPreference.toString(selectedAccount?.syncBlockList
-            ?: SyncBlockListPreference.default))
+        mutableStateOf(
+            SyncBlockListPreference.toString(
+                selectedAccount?.syncBlockList
+                    ?: SyncBlockListPreference.default
+            )
+        )
     }
     var blockListDialogVisible by remember { mutableStateOf(false) }
     var syncIntervalDialogVisible by remember { mutableStateOf(false) }

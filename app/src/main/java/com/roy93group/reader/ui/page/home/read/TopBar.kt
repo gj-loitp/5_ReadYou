@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.home.reading
+package com.roy93group.reader.ui.page.home.read
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets

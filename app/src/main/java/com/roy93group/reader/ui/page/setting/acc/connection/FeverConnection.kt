@@ -1,16 +1,22 @@
 package com.roy93group.reader.ui.page.setting.acc.connection
 
 import androidx.compose.foundation.lazy.LazyItemScope
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
 import com.roy93group.reader.domain.model.account.security.FeverSecurityKey
 import com.roy93group.reader.ui.component.base.TextFieldDialog
 import com.roy93group.reader.ui.ext.mask
 import com.roy93group.reader.ui.page.setting.SettingItem
 import com.roy93group.reader.ui.page.setting.acc.AccountViewModel
-import com.roy93group.reader.R
 
 @Composable
 fun LazyItemScope.FeverConnection(

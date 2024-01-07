@@ -1,7 +1,13 @@
 package com.roy93group.reader.ui.page.home.flow
 
 import androidx.activity.compose.BackHandler
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.windowInsetsBottomHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
@@ -9,7 +15,14 @@ import androidx.compose.material.icons.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.DoneAll
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.platform.LocalLifecycleOwner
@@ -20,16 +33,27 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.work.WorkInfo
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.general.MarkAsReadConditions
-import com.roy93group.reader.infrastructure.preference.*
+import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListDateStickyHeader
+import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListFeedIcon
+import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListTonalElevation
+import com.roy93group.reader.infrastructure.preference.LocalFlowFilterBarFilled
+import com.roy93group.reader.infrastructure.preference.LocalFlowFilterBarPadding
+import com.roy93group.reader.infrastructure.preference.LocalFlowFilterBarStyle
+import com.roy93group.reader.infrastructure.preference.LocalFlowFilterBarTonalElevation
+import com.roy93group.reader.infrastructure.preference.LocalFlowTopBarTonalElevation
 import com.roy93group.reader.ui.component.FilterBar
-import com.roy93group.reader.ui.component.base.*
+import com.roy93group.reader.ui.component.base.DisplayText
+import com.roy93group.reader.ui.component.base.FeedbackIconButton
+import com.roy93group.reader.ui.component.base.RYExtensibleVisibility
+import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.SwipeRefresh
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.page.common.RouteName
 import com.roy93group.reader.ui.page.home.HomeViewModel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @OptIn(
     com.google.accompanist.pager.ExperimentalPagerApi::class,
@@ -50,19 +74,16 @@ fun FlowPage(
     val filterBarFilled = LocalFlowFilterBarFilled.current
     val filterBarPadding = LocalFlowFilterBarPadding.current
     val filterBarTonalElevation = LocalFlowFilterBarTonalElevation.current
-
     val homeUiState = homeViewModel.homeUiState.collectAsStateValue()
     val flowUiState = flowViewModel.flowUiState.collectAsStateValue()
     val filterUiState = homeViewModel.filterUiState.collectAsStateValue()
     val pagingItems = homeUiState.pagingData.collectAsLazyPagingItems()
     val listState =
         if (pagingItems.itemCount > 0) flowUiState.listState else rememberLazyListState()
-
     val scope = rememberCoroutineScope()
     val focusRequester = remember { FocusRequester() }
     var markAsRead by remember { mutableStateOf(false) }
     var onSearch by remember { mutableStateOf(false) }
-
     val owner = LocalLifecycleOwner.current
     var isSyncing by remember { mutableStateOf(false) }
     homeViewModel.syncWorkLiveData.observe(owner) {
@@ -235,7 +256,7 @@ fun FlowPage(
                         isShowFeedIcon = articleListFeedIcon.value,
                         isShowStickyHeader = articleListDateStickyHeader.value,
                         articleListTonalElevation = articleListTonalElevation.value,
-                        onClick =  {
+                        onClick = {
                             onSearch = false
                             navController.navigate("${RouteName.READING}/${it.article.id}") {
                                 launchSingleTop = true
@@ -247,7 +268,7 @@ fun FlowPage(
                             feedId = filterUiState.feed?.id,
                             articleId = it.article.id,
                             MarkAsReadConditions.All
-                            )
+                        )
                     }
                     item {
                         Spacer(modifier = Modifier.height(128.dp))

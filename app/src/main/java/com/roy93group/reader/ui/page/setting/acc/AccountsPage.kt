@@ -1,7 +1,12 @@
 package com.roy93group.reader.ui.page.setting.acc
 
 import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.windowInsetsBottomHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.PersonAdd
@@ -18,12 +23,16 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
-import com.roy93group.reader.ui.component.base.*
+import com.roy93group.reader.R
+import com.roy93group.reader.ui.component.base.DisplayText
+import com.roy93group.reader.ui.component.base.FeedbackIconButton
+import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.Subtitle
+import com.roy93group.reader.ui.component.base.Tips
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.page.common.RouteName
 import com.roy93group.reader.ui.page.setting.SettingItem
 import com.roy93group.reader.ui.theme.palette.onLight
-import com.roy93group.reader.R
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable

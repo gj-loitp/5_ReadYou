@@ -22,7 +22,7 @@ import com.roy93group.reader.ui.ext.*
 import com.roy93group.reader.ui.page.home.HomeViewModel
 import com.roy93group.reader.ui.page.home.feeds.FeedsPage
 import com.roy93group.reader.ui.page.home.flow.FlowPage
-import com.roy93group.reader.ui.page.home.reading.ReadingPage
+import com.roy93group.reader.ui.page.home.read.ReadingPage
 import com.roy93group.reader.ui.page.setting.SettingsPage
 import com.roy93group.reader.ui.page.setting.acc.AccountDetailsPage
 import com.roy93group.reader.ui.page.setting.acc.AccountsPage

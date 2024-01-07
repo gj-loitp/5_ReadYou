@@ -111,15 +111,17 @@ fun AddFeverAccountDialog(
                 enabled = serverUrl.isNotBlank() && username.isNotEmpty() && password.isNotEmpty(),
                 onClick = {
                     focusManager.clearFocus()
-                    accountViewModel.addAccount(Account(
-                        type = AccountType.Fever,
-                        name = context.getString(R.string.fever),
-                        securityKey = FeverSecurityKey(
-                            serverUrl = serverUrl,
-                            username = username,
-                            password = password,
-                        ).toString(),
-                    )) {
+                    accountViewModel.addAccount(
+                        Account(
+                            type = AccountType.Fever,
+                            name = context.getString(R.string.fever),
+                            securityKey = FeverSecurityKey(
+                                serverUrl = serverUrl,
+                                username = username,
+                                password = password,
+                            ).toString(),
+                        )
+                    ) {
                         if (it == null) {
                             context.showToast("Not valid credentials")
                         } else {

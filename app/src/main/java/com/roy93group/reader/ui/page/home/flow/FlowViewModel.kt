@@ -4,15 +4,15 @@ import androidx.annotation.Keep
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.roy93group.reader.domain.model.general.MarkAsReadConditions
+import com.roy93group.reader.domain.service.RssService
+import com.roy93group.reader.infrastructure.di.IODispatcher
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import com.roy93group.reader.domain.model.general.MarkAsReadConditions
-import com.roy93group.reader.domain.service.RssService
-import com.roy93group.reader.infrastructure.di.IODispatcher
 import javax.inject.Inject
 
 @HiltViewModel

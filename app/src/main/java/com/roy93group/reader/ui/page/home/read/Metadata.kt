@@ -1,6 +1,10 @@
-package com.roy93group.reader.ui.page.home.reading
+package com.roy93group.reader.ui.page.home.read
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -12,11 +16,16 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.roy93group.reader.infrastructure.preference.*
+import com.roy93group.reader.infrastructure.preference.LocalOpenLink
+import com.roy93group.reader.infrastructure.preference.LocalOpenLinkSpecificBrowser
+import com.roy93group.reader.infrastructure.preference.LocalReadingFonts
+import com.roy93group.reader.infrastructure.preference.LocalReadingTitleAlign
+import com.roy93group.reader.infrastructure.preference.LocalReadingTitleBold
+import com.roy93group.reader.infrastructure.preference.LocalReadingTitleUpperCase
 import com.roy93group.reader.ui.ext.formatAsString
 import com.roy93group.reader.ui.ext.openURL
 import com.roy93group.reader.ui.ext.roundClick
-import java.util.*
+import java.util.Date
 
 @Composable
 fun Metadata(

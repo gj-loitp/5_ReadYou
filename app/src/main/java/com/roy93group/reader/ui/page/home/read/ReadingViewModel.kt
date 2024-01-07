@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.home.reading
+package com.roy93group.reader.ui.page.home.read
 
 import android.util.Log
 import androidx.annotation.Keep
@@ -6,6 +6,10 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.ItemSnapshotList
+import com.roy93group.reader.domain.model.article.ArticleFlowItem
+import com.roy93group.reader.domain.model.article.ArticleWithFeed
+import com.roy93group.reader.domain.service.RssService
+import com.roy93group.reader.infrastructure.rss.RssHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,10 +17,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import com.roy93group.reader.domain.model.article.ArticleFlowItem
-import com.roy93group.reader.domain.model.article.ArticleWithFeed
-import com.roy93group.reader.infrastructure.rss.RssHelper
-import com.roy93group.reader.domain.service.RssService
 import javax.inject.Inject
 
 @HiltViewModel
