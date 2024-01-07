@@ -1,6 +1,7 @@
 package com.roy93group.reader.infrastructure.preference
 
 import android.util.Log
+import androidx.annotation.Keep
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
@@ -11,6 +12,7 @@ import com.roy93group.reader.domain.model.general.Version
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.dataStore
 
+@Keep
 data class Settings(
     // Version
     val newVersionNumber: Version = NewVersionNumberPreference.default,

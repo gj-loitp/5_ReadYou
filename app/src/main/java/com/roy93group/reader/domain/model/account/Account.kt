@@ -1,5 +1,6 @@
 package com.roy93group.reader.domain.model.account
 
+import androidx.annotation.Keep
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -11,6 +12,7 @@ import java.util.*
  * In the application, at least one account exists and different accounts
  * can have the same feeds and articles.
  */
+@Keep
 @Entity(tableName = "account")
 data class Account(
     @PrimaryKey(autoGenerate = true)

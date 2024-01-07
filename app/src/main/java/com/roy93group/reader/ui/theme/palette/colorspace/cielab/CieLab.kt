@@ -1,8 +1,10 @@
 package com.roy93group.reader.ui.theme.palette.colorspace.cielab
 
+import androidx.annotation.Keep
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz
 import kotlin.math.pow
 
+@Keep
 // TODO: test
 data class CieLab(
     val L: Double,

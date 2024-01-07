@@ -1,5 +1,8 @@
 package com.roy93group.reader.infrastructure.rss
 
+import androidx.annotation.Keep
+
+@Keep
 data class Favicon(
     val url: String? = null,
     val icons: List<Icon>? = null

@@ -1,5 +1,6 @@
 package com.roy93group.reader.domain.model.feed
 
+import androidx.annotation.Keep
 import androidx.room.*
 import com.roy93group.reader.domain.model.group.Group
 
@@ -16,6 +17,8 @@ import com.roy93group.reader.domain.model.group.Group
         onUpdate = ForeignKey.CASCADE,
     )],
 )
+
+@Keep
 data class Feed(
     @PrimaryKey
     var id: String,

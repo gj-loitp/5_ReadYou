@@ -1,5 +1,6 @@
 package com.roy93group.reader.ui.page.home.feeds
 
+import androidx.annotation.Keep
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.snapshots.SnapshotStateMap
@@ -99,6 +100,7 @@ class FeedsViewModel @Inject constructor(
     }
 }
 
+@Keep
 data class FeedsUiState(
     val account: Account? = null,
     val importantSum: Flow<String> = emptyFlow(),

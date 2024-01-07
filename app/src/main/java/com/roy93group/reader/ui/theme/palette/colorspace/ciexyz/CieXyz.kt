@@ -1,8 +1,10 @@
 package com.roy93group.reader.ui.theme.palette.colorspace.ciexyz
 
+import androidx.annotation.Keep
 import com.roy93group.reader.ui.theme.palette.util.div
 import com.roy93group.reader.ui.theme.palette.util.times
 
+@Keep
 data class CieXyz(
     val x: Double,
     val y: Double,

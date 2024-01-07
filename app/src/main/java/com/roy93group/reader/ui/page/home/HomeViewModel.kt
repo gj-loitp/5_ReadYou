@@ -1,5 +1,6 @@
 package com.roy93group.reader.ui.page.home
 
+import androidx.annotation.Keep
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
@@ -98,12 +99,14 @@ class HomeViewModel @Inject constructor(
     }
 }
 
+@Keep
 data class FilterState(
     val group: Group? = null,
     val feed: Feed? = null,
     val filter: Filter = Filter.All,
 )
 
+@Keep
 data class HomeUiState(
     val pagingData: Flow<PagingData<ArticleFlowItem>> = emptyFlow(),
     val searchContent: String = "",

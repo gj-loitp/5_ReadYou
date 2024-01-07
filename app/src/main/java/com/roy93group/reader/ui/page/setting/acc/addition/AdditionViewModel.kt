@@ -1,5 +1,6 @@
-package com.roy93group.reader.ui.page.setting.accounts.addition
+package com.roy93group.reader.ui.page.setting.acc.addition
 
+import androidx.annotation.Keep
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -56,6 +57,7 @@ class AdditionViewModel @Inject constructor(
     }
 }
 
+@Keep
 data class AdditionUiState(
     val addLocalAccountDialogVisible: Boolean = false,
     val addFeverAccountDialogVisible: Boolean = false,

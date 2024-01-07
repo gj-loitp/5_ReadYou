@@ -1,7 +1,10 @@
 package com.roy93group.reader.infrastructure.rss.provider.fever
 
+import androidx.annotation.Keep
+
 object FeverDTO {
 
+    @Keep
     data class Common(
         val api_version: Int?,
         val auth: Int?,
@@ -34,6 +37,7 @@ object FeverDTO {
      *      ]
      *  }
      */
+    @Keep
     data class Feeds(
         val api_version: Int?,
         val auth: Int?,
@@ -42,6 +46,7 @@ object FeverDTO {
         val feeds_groups: List<FeedsGroupsItem>?,
     )
 
+    @Keep
     data class FeedItem(
         val id: Int?,
         val favicon_id: Int?,
@@ -73,6 +78,7 @@ object FeverDTO {
      *      ]
      *  }
      */
+    @Keep
     data class Groups(
         val api_version: Int?,
         val auth: Int?,
@@ -81,11 +87,13 @@ object FeverDTO {
         val feeds_groups: List<FeedsGroupsItem>?,
     )
 
+    @Keep
     data class GroupItem(
         val id: Int?,
         val title: String?,
     )
 
+    @Keep
     data class FeedsGroupsItem(
         val group_id: Int?,
         val feed_ids: String?,
@@ -97,6 +105,7 @@ object FeverDTO {
      *  {
      *  }
      */
+    @Keep
     data class Favicons(
         val api_version: Int?,
         val auth: Int?,
@@ -104,6 +113,7 @@ object FeverDTO {
         val favicons: List<Favicon>?,
     )
 
+    @Keep
     data class Favicon(
         val id: Int,
         val data: String?,
@@ -133,6 +143,7 @@ object FeverDTO {
      *      ]
      *  {
      */
+    @Keep
     data class Items(
         val api_version: Int?,
         val auth: Int?,
@@ -141,6 +152,7 @@ object FeverDTO {
         val items: List<Item>?,
     )
 
+    @Keep
     data class Item(
         val id: String?,
         val feed_id: Int?,
@@ -159,6 +171,7 @@ object FeverDTO {
      *  {
      *  }
      */
+    @Keep
     data class Links(
         val api_version: Int?,
         val auth: Int?,
@@ -166,6 +179,7 @@ object FeverDTO {
         val links: List<Link>?,
     )
 
+    @Keep
     data class Link(
         val id: String?,
         val feed_id: String?,
@@ -189,6 +203,7 @@ object FeverDTO {
      *      "unread_item_ids": "1646660589277217,1646660589277218"
      *  }
      */
+    @Keep
     data class ItemsByUnread(
         val api_version: Int?,
         val auth: Int?,
@@ -206,6 +221,7 @@ object FeverDTO {
      *      "saved_item_ids": "1647441026698935,1646660589277218"
      *  }
      */
+    @Keep
     data class ItemsByStarred(
         val api_version: Int?,
         val auth: Int?,

@@ -20,6 +20,8 @@
 
 package com.roy93group.reader.ui.component.reader
 
+import androidx.annotation.Keep
+
 // Example strings
 // www.youtube.com/embed/cjxnVO9RpaQ
 // www.youtube.com/embed/cjxnVO9RpaQ?feature=oembed
@@ -40,6 +42,7 @@ fun getVideo(src: String?): Video? {
     }
 }
 
+@Keep
 data class Video(
     val src: String,
     val imageUrl: String,

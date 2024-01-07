@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.setting.accounts.connection
+package com.roy93group.reader.ui.page.setting.acc.connection
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height

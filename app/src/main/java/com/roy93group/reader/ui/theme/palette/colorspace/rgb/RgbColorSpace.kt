@@ -1,5 +1,6 @@
 package com.roy93group.reader.ui.theme.palette.colorspace.rgb
 
+import androidx.annotation.Keep
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz
 import com.roy93group.reader.ui.theme.palette.colorspace.rgb.transfer.GammaTransferFunction
 import com.roy93group.reader.ui.theme.palette.colorspace.rgb.transfer.HLGTransferFunction
@@ -8,6 +9,7 @@ import com.roy93group.reader.ui.theme.palette.colorspace.rgb.transfer.TransferFu
 import com.roy93group.reader.ui.theme.palette.data.Illuminant
 import com.roy93group.reader.ui.theme.palette.util.Matrix3
 
+@Keep
 data class RgbColorSpace(
     val name: String,
     val componentRange: ClosedRange<Double>,

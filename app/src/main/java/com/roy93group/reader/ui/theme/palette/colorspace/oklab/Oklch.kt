@@ -1,5 +1,6 @@
 package com.roy93group.reader.ui.theme.palette.colorspace.oklab
 
+import androidx.annotation.Keep
 import com.roy93group.reader.ui.theme.palette.colorspace.rgb.Rgb
 import com.roy93group.reader.ui.theme.palette.colorspace.rgb.Rgb.Companion.toRgb
 import com.roy93group.reader.ui.theme.palette.colorspace.rgb.RgbColorSpace
@@ -11,6 +12,7 @@ import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
 
+@Keep
 data class Oklch(
     val L: Double,
     val C: Double,

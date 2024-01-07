@@ -1,6 +1,7 @@
 package com.roy93group.reader.ui.component.base
 
 import androidx.annotation.DrawableRes
+import androidx.annotation.Keep
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
@@ -89,6 +90,7 @@ fun forwardingPainter(
     onDraw: DrawScope.(ForwardingDrawInfo) -> Unit = DefaultOnDraw,
 ): Painter = ForwardingPainter(painter, alpha, colorFilter, onDraw)
 
+@Keep
 @Immutable
 data class ForwardingDrawInfo(
     val painter: Painter,

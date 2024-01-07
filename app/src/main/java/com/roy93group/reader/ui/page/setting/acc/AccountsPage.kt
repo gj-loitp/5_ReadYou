@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.setting.accounts
+package com.roy93group.reader.ui.page.setting.acc
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.*

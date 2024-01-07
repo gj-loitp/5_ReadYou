@@ -1,10 +1,12 @@
 package com.roy93group.reader.ui.theme.palette.colorspace.oklab
 
+import androidx.annotation.Keep
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz.Companion.asXyz
 import com.roy93group.reader.ui.theme.palette.util.Matrix3
 import kotlin.math.pow
 
+@Keep
 data class Oklab(
     val L: Double,
     val a: Double,

@@ -2,7 +2,7 @@ package com.roy93group.reader.infrastructure.preference
 
 import android.content.Context
 import com.roy93group.reader.R
-import com.roy93group.reader.ui.page.setting.accounts.AccountViewModel
+import com.roy93group.reader.ui.page.setting.acc.AccountViewModel
 
 sealed class KeepArchivedPreference(
     val value: Long,

@@ -1,11 +1,15 @@
 package com.roy93group.reader.infrastructure.rss.provider.greader
 
+import androidx.annotation.Keep
+
 object GoogleReaderApiDto {
     // subscription/list?output=json
+    @Keep
     data class SubscriptionList(
         val subscriptions: List<SubscriptionItem>? = null,
     )
 
+    @Keep
     data class SubscriptionItem(
         val id: String? = null,
         val title: String? = null,
@@ -15,17 +19,20 @@ object GoogleReaderApiDto {
         val iconUrl: String? = null,
     )
 
+    @Keep
     data class CategoryItem(
         val id: String? = null,
         val label: String? = null,
     )
 
     // unread-count?output=json
+    @Keep
     data class UnreadCount(
         val max: Int? = null,
         val unreadcounts: List<UnreadCountItem>? = null,
     )
 
+    @Keep
     data class UnreadCountItem(
         val id: String? = null,
         val count: Int? = null,
@@ -33,15 +40,18 @@ object GoogleReaderApiDto {
     )
 
     // tag/list?output=json
+    @Keep
     data class TagList(
         val tags: List<TagItem>? = null,
     )
 
+    @Keep
     data class TagItem(
         val id: String? = null,
         val type: String? = null,
     )
 
+    @Keep
     // stream/contents/reading-list?output=json
     data class ReadingList(
         val id: String? = null,
@@ -49,6 +59,7 @@ object GoogleReaderApiDto {
         val items: List<Item>? = null,
     )
 
+    @Keep
     data class Item(
         val id: String? = null,
         val crawlTimeMsec: String? = null,
@@ -61,16 +72,19 @@ object GoogleReaderApiDto {
         val author: String? = null,
     )
 
+    @Keep
     data class Summary(
         val content: String? = null,
         val canonical: List<CanonicalItem>? = null,
         val alternate: List<CanonicalItem>? = null,
     )
 
+    @Keep
     data class CanonicalItem(
         val href: String? = null,
     )
 
+    @Keep
     data class OriginItem(
         val streamId: String? = null,
         val title: String? = null,

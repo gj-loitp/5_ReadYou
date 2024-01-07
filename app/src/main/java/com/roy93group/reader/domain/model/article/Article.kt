@@ -1,5 +1,6 @@
 package com.roy93group.reader.domain.model.article
 
+import androidx.annotation.Keep
 import androidx.room.*
 import com.roy93group.reader.domain.model.feed.Feed
 import java.util.*
@@ -17,6 +18,8 @@ import java.util.*
         onUpdate = ForeignKey.CASCADE
     )]
 )
+
+@Keep
 data class Article(
     @PrimaryKey
     var id: String,

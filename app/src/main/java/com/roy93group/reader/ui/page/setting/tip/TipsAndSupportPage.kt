@@ -2,6 +2,7 @@ package com.roy93group.reader.ui.page.setting.tip
 
 import android.view.HapticFeedbackConstants
 import android.view.SoundEffectConstants
+import androidx.annotation.Keep
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -270,6 +271,7 @@ sealed class RoundIconButtonType(
     open val onClick: () -> Unit = {},
 ) {
 
+    @Keep
     @Immutable
     data class Sponsor(
         val desc: Int = R.string.sponsor,
@@ -282,6 +284,7 @@ sealed class RoundIconButtonType(
         onClick = onClick,
     )
 
+    @Keep
     @Immutable
     data class GitHub(
         val desc: String = "GitHub",
@@ -294,6 +297,7 @@ sealed class RoundIconButtonType(
         onClick = onClick,
     )
 
+    @Keep
     @Immutable
     data class Telegram(
         val desc: String = "Telegram",
@@ -307,6 +311,7 @@ sealed class RoundIconButtonType(
         onClick = onClick,
     )
 
+    @Keep
     @Immutable
     data class Help(
         val desc: Int = R.string.help,

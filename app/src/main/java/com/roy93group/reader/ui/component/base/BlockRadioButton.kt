@@ -1,5 +1,6 @@
 package com.roy93group.reader.ui.component.base
 
+import androidx.annotation.Keep
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -38,6 +39,7 @@ fun BlockRadioButton(
     }
 }
 
+@Keep
 data class BlockRadioGroupButtonItem(
     val text: String,
     val onClick: () -> Unit = {},

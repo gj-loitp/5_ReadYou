@@ -1,9 +1,11 @@
 package com.roy93group.reader.ui.theme.palette.colorspace.zcam
 
+import androidx.annotation.Keep
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz
 import com.roy93group.reader.ui.theme.palette.util.Matrix3
 import kotlin.math.pow
 
+@Keep
 data class Izazbz(
     val Iz: Double,
     val az: Double,

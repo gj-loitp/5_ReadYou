@@ -1,5 +1,6 @@
 package com.roy93group.reader.infrastructure.net
 
+import androidx.annotation.Keep
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -91,6 +92,7 @@ fun ResponseBody.downloadToFileWithProgress(saveFile: File): Flow<Download> =
         }
     }.flowOn(Dispatchers.IO).distinctUntilChanged()
 
+@Keep
 data class LatestRelease(
     val html_url: String? = null,
     val tag_name: String? = null,
@@ -103,6 +105,7 @@ data class LatestRelease(
     val body: String? = null,
 )
 
+@Keep
 data class AssetsItem(
     val name: String? = null,
     val content_type: String? = null,
@@ -113,6 +116,7 @@ data class AssetsItem(
     val browser_download_url: String? = null,
 )
 
+@Keep
 sealed class Download {
     object NotYet : Download()
     data class Progress(val percent: Int) : Download()

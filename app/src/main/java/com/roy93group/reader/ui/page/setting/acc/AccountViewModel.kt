@@ -1,13 +1,9 @@
-package com.roy93group.reader.ui.page.setting.accounts
+package com.roy93group.reader.ui.page.setting.acc
 
 import android.util.Log
+import androidx.annotation.Keep
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import com.roy93group.reader.domain.model.account.Account
 import com.roy93group.reader.domain.service.AccountService
 import com.roy93group.reader.domain.service.OpmlService
@@ -15,6 +11,16 @@ import com.roy93group.reader.domain.service.RssService
 import com.roy93group.reader.infrastructure.di.DefaultDispatcher
 import com.roy93group.reader.infrastructure.di.IODispatcher
 import com.roy93group.reader.infrastructure.di.MainDispatcher
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.emptyFlow
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
@@ -120,6 +126,7 @@ class AccountViewModel @Inject constructor(
     }
 }
 
+@Keep
 data class AccountUiState(
     val selectedAccount: Flow<Account?> = emptyFlow(),
     val deleteDialogVisible: Boolean = false,

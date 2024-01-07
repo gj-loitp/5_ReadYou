@@ -20,6 +20,7 @@
 
 package com.roy93group.reader.ui.component.reader
 
+import androidx.annotation.Keep
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -193,6 +194,7 @@ private fun <T> List<T>.peekSecondLatest(): T? {
     return this[1]
 }
 
+@Keep
 data class ComposableStyleWithStartEnd(
     val style: @Composable () -> SpanStyle,
     val start: Int,

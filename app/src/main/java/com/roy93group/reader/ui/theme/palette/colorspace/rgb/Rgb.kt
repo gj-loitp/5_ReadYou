@@ -1,9 +1,11 @@
 package com.roy93group.reader.ui.theme.palette.colorspace.rgb
 
+import androidx.annotation.Keep
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz.Companion.asXyz
 import com.roy93group.reader.ui.theme.palette.util.div
 
+@Keep
 data class Rgb(
     val r: Double,
     val g: Double,

@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.setting.accounts.connection
+package com.roy93group.reader.ui.page.setting.acc.connection
 
 import androidx.compose.foundation.lazy.LazyItemScope
 import androidx.compose.runtime.*
@@ -9,7 +9,7 @@ import com.roy93group.reader.domain.model.account.security.FeverSecurityKey
 import com.roy93group.reader.ui.component.base.TextFieldDialog
 import com.roy93group.reader.ui.ext.mask
 import com.roy93group.reader.ui.page.setting.SettingItem
-import com.roy93group.reader.ui.page.setting.accounts.AccountViewModel
+import com.roy93group.reader.ui.page.setting.acc.AccountViewModel
 import com.roy93group.reader.R
 
 @Composable

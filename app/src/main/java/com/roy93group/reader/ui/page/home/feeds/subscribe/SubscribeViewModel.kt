@@ -1,6 +1,7 @@
 package com.roy93group.reader.ui.page.home.feeds.subscribe
 
 import android.util.Log
+import androidx.annotation.Keep
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -223,6 +224,7 @@ class SubscribeViewModel @Inject constructor(
     }
 }
 
+@Keep
 data class SubscribeUiState(
     val visible: Boolean = false,
     val title: String = "",

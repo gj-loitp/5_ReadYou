@@ -1,5 +1,6 @@
 package com.roy93group.reader.ui.theme.palette.colorspace.zcam
 
+import androidx.annotation.Keep
 import com.roy93group.reader.ui.theme.palette.colorspace.ciexyz.CieXyz
 import com.roy93group.reader.ui.theme.palette.colorspace.rgb.Rgb
 import com.roy93group.reader.ui.theme.palette.colorspace.rgb.Rgb.Companion.toRgb
@@ -15,6 +16,7 @@ import kotlin.math.pow
 import kotlin.math.sin
 import kotlin.math.sqrt
 
+@Keep
 data class Zcam(
     val hz: Double = Double.NaN,
     val Qz: Double = Double.NaN,
@@ -113,6 +115,7 @@ data class Zcam(
 
         private val chromaBoundary: MutableMap<Triple<Int, Double, Double>, Double> = mutableMapOf()
 
+        @Keep
         data class ViewingConditions(
             val whitePoint: CieXyz,
             val luminance: Double,

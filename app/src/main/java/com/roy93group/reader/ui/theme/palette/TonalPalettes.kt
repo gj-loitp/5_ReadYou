@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Build
 import androidx.annotation.ColorRes
 import androidx.annotation.DoNotInline
+import androidx.annotation.Keep
 import androidx.annotation.RequiresApi
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
@@ -36,6 +37,7 @@ private fun TonalValue.toZcamLightness(): Double =
     CieLab(L = if (this != 50) toDouble() else 49.6, a = 0.0, b = 0.0).toXyz().toIzazbz()
         .toZcam().Jz
 
+@Keep
 data class TonalPalettes(
     val hue: Double,
     val primaryChroma: Double,

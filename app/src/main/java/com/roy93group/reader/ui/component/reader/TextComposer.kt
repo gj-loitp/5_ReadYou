@@ -20,6 +20,7 @@
 
 package com.roy93group.reader.ui.component.reader
 
+import androidx.annotation.Keep
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.SpanStyle
 
@@ -170,15 +171,18 @@ inline fun <R : Any> TextComposer.withAnnotation(
 
 sealed class Span
 
+@Keep
 data class SpanWithStyle(
     val spanStyle: SpanStyle,
 ) : Span()
 
+@Keep
 data class SpanWithAnnotation(
     val tag: String,
     val annotation: String,
 ) : Span()
 
+@Keep
 data class SpanWithComposableStyle(
     val spanStyle: @Composable () -> SpanStyle,
 ) : Span()

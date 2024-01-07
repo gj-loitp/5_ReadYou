@@ -1,9 +1,11 @@
 package com.roy93group.reader.ui.theme.palette.core
 
+import androidx.annotation.Keep
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import com.roy93group.reader.ui.theme.palette.colorspace.zcam.Zcam
 
+@Keep
 data class ZcamLch(
     val L: Double,
     val C: Double,

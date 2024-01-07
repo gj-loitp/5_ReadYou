@@ -1,6 +1,7 @@
 package com.roy93group.reader.ui.page.home.reading
 
 import android.util.Log
+import androidx.annotation.Keep
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -161,6 +162,7 @@ class ReadingViewModel @Inject constructor(
     }
 }
 
+@Keep
 data class ReadingUiState(
     val articleWithFeed: ArticleWithFeed? = null,
     val content: String? = null,

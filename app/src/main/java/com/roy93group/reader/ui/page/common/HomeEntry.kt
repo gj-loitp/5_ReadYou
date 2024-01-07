@@ -24,9 +24,9 @@ import com.roy93group.reader.ui.page.home.feeds.FeedsPage
 import com.roy93group.reader.ui.page.home.flow.FlowPage
 import com.roy93group.reader.ui.page.home.reading.ReadingPage
 import com.roy93group.reader.ui.page.setting.SettingsPage
-import com.roy93group.reader.ui.page.setting.accounts.AccountDetailsPage
-import com.roy93group.reader.ui.page.setting.accounts.AccountsPage
-import com.roy93group.reader.ui.page.setting.accounts.AddAccountsPage
+import com.roy93group.reader.ui.page.setting.acc.AccountDetailsPage
+import com.roy93group.reader.ui.page.setting.acc.AccountsPage
+import com.roy93group.reader.ui.page.setting.acc.AddAccountsPage
 import com.roy93group.reader.ui.page.setting.color.ColorAndStylePage
 import com.roy93group.reader.ui.page.setting.color.DarkThemePage
 import com.roy93group.reader.ui.page.setting.color.feed.FeedsPageStylePage

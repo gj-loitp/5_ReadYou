@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.setting.accounts
+package com.roy93group.reader.ui.page.setting.acc
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -31,7 +31,7 @@ import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
 import com.roy93group.reader.ui.ext.showToastLong
 import com.roy93group.reader.ui.page.setting.SettingItem
-import com.roy93group.reader.ui.page.setting.accounts.connection.AccountConnection
+import com.roy93group.reader.ui.page.setting.acc.connection.AccountConnection
 import com.roy93group.reader.ui.theme.palette.onLight
 
 @OptIn(ExperimentalAnimationApi::class)

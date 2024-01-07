@@ -3,6 +3,7 @@ package com.roy93group.reader.infrastructure.preference
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
+import androidx.annotation.Keep
 import androidx.datastore.preferences.core.Preferences
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -11,6 +12,7 @@ import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
 
+@Keep
 data class OpenLinkSpecificBrowserPreference(
     val packageName: String?
     ) : Preference() {

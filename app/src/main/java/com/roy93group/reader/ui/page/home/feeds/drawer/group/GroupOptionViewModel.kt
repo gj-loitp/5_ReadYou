@@ -1,5 +1,6 @@
 package com.roy93group.reader.ui.page.home.feeds.drawer.group
 
+import androidx.annotation.Keep
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.ModalBottomSheetState
 import androidx.compose.material.ModalBottomSheetValue
@@ -191,6 +192,7 @@ class GroupOptionViewModel @Inject constructor(
     }
 }
 
+@Keep
 @OptIn(ExperimentalMaterialApi::class)
 data class GroupOptionUiState(
     var drawerState: ModalBottomSheetState = ModalBottomSheetState(ModalBottomSheetValue.Hidden),

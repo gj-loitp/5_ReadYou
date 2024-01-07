@@ -1,4 +1,4 @@
-package com.roy93group.reader.ui.page.setting.accounts.addition
+package com.roy93group.reader.ui.page.setting.acc.addition
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -12,11 +12,7 @@ import androidx.compose.material.icons.rounded.RssFeed
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
@@ -27,20 +23,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
 import com.roy93group.reader.domain.model.account.AccountType
-import com.roy93group.reader.domain.model.account.security.FeverSecurityKey
 import com.roy93group.reader.ui.component.base.RYDialog
 import com.roy93group.reader.ui.component.base.RYOutlineTextField
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
 import com.roy93group.reader.ui.page.common.RouteName
-import com.roy93group.reader.ui.page.setting.accounts.AccountViewModel
+import com.roy93group.reader.ui.page.setting.acc.AccountViewModel
+import com.roy93group.reader.R
 
 @OptIn(androidx.compose.ui.ExperimentalComposeUiApi::class)
 @Composable
-fun AddFeverAccountDialog(
+fun AddLocalAccountDialog(
     navController: NavHostController,
     viewModel: AdditionViewModel = hiltViewModel(),
     accountViewModel: AccountViewModel = hiltViewModel(),
@@ -49,27 +44,25 @@ fun AddFeverAccountDialog(
     val focusManager = LocalFocusManager.current
     val uiState = viewModel.additionUiState.collectAsStateValue()
 
-    var serverUrl by rememberSaveable { mutableStateOf("") }
-    var username by rememberSaveable { mutableStateOf("") }
-    var password by rememberSaveable { mutableStateOf("") }
+    var name by remember { mutableStateOf("") }
 
     RYDialog(
         modifier = Modifier.padding(horizontal = 44.dp),
-        visible = uiState.addFeverAccountDialogVisible,
+        visible = uiState.addLocalAccountDialogVisible,
         properties = DialogProperties(usePlatformDefaultWidth = false),
         onDismissRequest = {
             focusManager.clearFocus()
-            viewModel.hideAddFeverAccountDialog()
+            viewModel.hideAddLocalAccountDialog()
         },
         icon = {
             Icon(
                 imageVector = Icons.Rounded.RssFeed,
-                contentDescription = stringResource(R.string.fever),
+                contentDescription = stringResource(R.string.local),
             )
         },
         title = {
             Text(
-                text = stringResource(R.string.fever),
+                text = stringResource(R.string.local),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
@@ -80,50 +73,29 @@ fun AddFeverAccountDialog(
             ) {
                 Spacer(modifier = Modifier.height(10.dp))
                 RYOutlineTextField(
-                    value = serverUrl,
-                    onValueChange = { serverUrl = it },
-                    label = stringResource(R.string.server_url),
-                    placeholder = "https://demo.freshrss.org/api/fever.php",
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
-                )
-                Spacer(modifier = Modifier.height(10.dp))
-                RYOutlineTextField(
-                    value = username,
-                    onValueChange = { username = it },
-                    label = stringResource(R.string.username),
-                    placeholder = "demo",
+                    value = name,
+                    onValueChange = { name = it },
+                    label = stringResource(R.string.name),
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
-                )
-                Spacer(modifier = Modifier.height(10.dp))
-                RYOutlineTextField(
-                    value = password,
-                    onValueChange = { password = it },
-                    isPassword = true,
-                    label = stringResource(R.string.password),
-                    placeholder = "demodemo",
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 )
                 Spacer(modifier = Modifier.height(10.dp))
             }
         },
         confirmButton = {
             TextButton(
-                enabled = serverUrl.isNotBlank() && username.isNotEmpty() && password.isNotEmpty(),
+                enabled = name.isNotBlank(),
                 onClick = {
                     focusManager.clearFocus()
-                    accountViewModel.addAccount(Account(
-                        type = AccountType.Fever,
-                        name = context.getString(R.string.fever),
-                        securityKey = FeverSecurityKey(
-                            serverUrl = serverUrl,
-                            username = username,
-                            password = password,
-                        ).toString(),
-                    )) {
+                    accountViewModel.addAccount(
+                        Account(
+                            type = AccountType.Local,
+                            name = name,
+                        )
+                    ) {
                         if (it == null) {
                             context.showToast("Not valid credentials")
                         } else {
-                            viewModel.hideAddFeverAccountDialog()
+                            viewModel.hideAddLocalAccountDialog()
                             navController.popBackStack()
                             navController.navigate("${RouteName.ACCOUNT_DETAILS}/${it.id}") {
                                 launchSingleTop = true
@@ -139,7 +111,7 @@ fun AddFeverAccountDialog(
             TextButton(
                 onClick = {
                     focusManager.clearFocus()
-                    viewModel.hideAddFeverAccountDialog()
+                    viewModel.hideAddLocalAccountDialog()
                 }
             ) {
                 Text(stringResource(R.string.cancel))

@@ -1,5 +1,6 @@
 package com.roy93group.reader.domain.model.group
 
+import androidx.annotation.Keep
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Ignore
@@ -8,6 +9,7 @@ import androidx.room.PrimaryKey
 /**
  * TODO: Add class description
  */
+@Keep
 @Entity(tableName = "group")
 data class Group(
     @PrimaryKey

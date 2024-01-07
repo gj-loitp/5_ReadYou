@@ -1,5 +1,6 @@
 package com.roy93group.reader.ui.component.base
 
+import androidx.annotation.Keep
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -76,6 +77,7 @@ fun RadioDialog(
     )
 }
 
+@Keep
 @Immutable
 data class RadioDialogOption(
     val text: String = "",
