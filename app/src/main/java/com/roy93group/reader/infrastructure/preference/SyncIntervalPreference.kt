@@ -5,7 +5,7 @@ import androidx.work.PeriodicWorkRequest
 import androidx.work.PeriodicWorkRequestBuilder
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.service.SyncWorker
-import com.roy93group.reader.ui.page.settings.accounts.AccountViewModel
+import com.roy93group.reader.ui.page.setting.accounts.AccountViewModel
 import java.util.concurrent.TimeUnit
 
 sealed class SyncIntervalPreference(

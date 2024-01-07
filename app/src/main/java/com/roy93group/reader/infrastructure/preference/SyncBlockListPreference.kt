@@ -1,6 +1,6 @@
 package com.roy93group.reader.infrastructure.preference
 
-import com.roy93group.reader.ui.page.settings.accounts.AccountViewModel
+import com.roy93group.reader.ui.page.setting.accounts.AccountViewModel
 
 typealias SyncBlockList = List<String>
 

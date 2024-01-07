@@ -40,7 +40,7 @@ import com.roy93group.reader.ui.page.home.feeds.drawer.feed.FeedOptionDrawer
 import com.roy93group.reader.ui.page.home.feeds.drawer.group.GroupOptionDrawer
 import com.roy93group.reader.ui.page.home.feeds.subscribe.SubscribeDialog
 import com.roy93group.reader.ui.page.home.feeds.subscribe.SubscribeViewModel
-import com.roy93group.reader.ui.page.settings.accounts.AccountViewModel
+import com.roy93group.reader.ui.page.setting.accounts.AccountViewModel
 import kotlin.collections.set
 import kotlin.math.ln
 
