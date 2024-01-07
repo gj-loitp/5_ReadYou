@@ -1,7 +1,10 @@
 package com.roy93group.reader.ui.page.setting.color.reading
 
-import com.roy93group.reader.R
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -13,7 +16,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.roy93group.reader.infrastructure.preference.*
+import com.roy93group.reader.R
+import com.roy93group.reader.infrastructure.preference.LocalReadingFonts
+import com.roy93group.reader.infrastructure.preference.LocalReadingSubheadAlign
+import com.roy93group.reader.infrastructure.preference.LocalReadingSubheadBold
+import com.roy93group.reader.infrastructure.preference.LocalReadingSubheadUpperCase
+import com.roy93group.reader.infrastructure.preference.LocalReadingTitleAlign
+import com.roy93group.reader.infrastructure.preference.LocalReadingTitleBold
+import com.roy93group.reader.infrastructure.preference.LocalReadingTitleUpperCase
 import com.roy93group.reader.ui.component.reader.bodyStyle
 import com.roy93group.reader.ui.component.reader.h3Style
 import com.roy93group.reader.ui.component.reader.textHorizontalPadding

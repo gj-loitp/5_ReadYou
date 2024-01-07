@@ -3,7 +3,15 @@ package com.roy93group.reader.ui.page.setting.color.reading
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.windowInsetsBottomHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,13 +27,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.roy93group.reader.R
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.component.base.RYScaffold
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.page.setting.SettingItem
 import com.roy93group.reader.ui.theme.palette.onLight
-import com.roy93group.reader.R
 
 @Composable
 fun ReadingVideoPage(

@@ -1,7 +1,10 @@
-package com.roy93group.reader.ui.page.setting.languages
+package com.roy93group.reader.ui.page.setting.language
 
-import com.roy93group.reader.R
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.windowInsetsBottomHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.KeyboardArrowRight
@@ -18,6 +21,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.LanguagesPreference
 import com.roy93group.reader.infrastructure.preference.LocalLanguages
 import com.roy93group.reader.infrastructure.preference.OpenLinkPreference

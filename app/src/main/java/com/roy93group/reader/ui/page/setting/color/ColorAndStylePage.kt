@@ -4,11 +4,27 @@ import android.content.Context
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.animation.*
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.expandIn
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.windowInsetsBottomHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -21,7 +37,12 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -31,16 +52,37 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.*
-import com.roy93group.reader.ui.component.base.*
+import com.roy93group.reader.infrastructure.preference.BasicFontsPreference
+import com.roy93group.reader.infrastructure.preference.CustomPrimaryColorPreference
+import com.roy93group.reader.infrastructure.preference.LocalBasicFonts
+import com.roy93group.reader.infrastructure.preference.LocalCustomPrimaryColor
+import com.roy93group.reader.infrastructure.preference.LocalDarkTheme
+import com.roy93group.reader.infrastructure.preference.LocalThemeIndex
+import com.roy93group.reader.infrastructure.preference.ThemeIndexPreference
+import com.roy93group.reader.infrastructure.preference.not
+import com.roy93group.reader.ui.component.base.BlockRadioButton
+import com.roy93group.reader.ui.component.base.BlockRadioGroupButtonItem
+import com.roy93group.reader.ui.component.base.DisplayText
+import com.roy93group.reader.ui.component.base.DynamicSVGImage
+import com.roy93group.reader.ui.component.base.FeedbackIconButton
+import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.RYSwitch
+import com.roy93group.reader.ui.component.base.RadioDialog
+import com.roy93group.reader.ui.component.base.RadioDialogOption
+import com.roy93group.reader.ui.component.base.Subtitle
+import com.roy93group.reader.ui.component.base.TextFieldDialog
 import com.roy93group.reader.ui.ext.ExternalFonts
 import com.roy93group.reader.ui.page.common.RouteName
 import com.roy93group.reader.ui.page.setting.SettingItem
 import com.roy93group.reader.ui.svg.PALETTE
 import com.roy93group.reader.ui.svg.SVGString
-import com.roy93group.reader.ui.theme.palette.*
+import com.roy93group.reader.ui.theme.palette.TonalPalettes
 import com.roy93group.reader.ui.theme.palette.TonalPalettes.Companion.toTonalPalettes
+import com.roy93group.reader.ui.theme.palette.checkColorHex
 import com.roy93group.reader.ui.theme.palette.dynamic.extractTonalPalettesFromUserWallpaper
+import com.roy93group.reader.ui.theme.palette.onDark
+import com.roy93group.reader.ui.theme.palette.onLight
+import com.roy93group.reader.ui.theme.palette.safeHexToColor
 
 @Composable
 fun ColorAndStylePage(
@@ -305,8 +347,8 @@ fun Palettes(
             addDialogVisible = false
         },
         onConfirm = {
-            it.checkColorHex()?.let {
-                CustomPrimaryColorPreference.put(context, scope, it)
+            it.checkColorHex()?.let { hex ->
+                CustomPrimaryColorPreference.put(context, scope, hex)
                 ThemeIndexPreference.put(context, scope, 4)
                 addDialogVisible = false
             }

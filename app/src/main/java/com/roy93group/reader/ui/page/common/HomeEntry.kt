@@ -29,11 +29,11 @@ import com.roy93group.reader.ui.page.setting.accounts.AccountsPage
 import com.roy93group.reader.ui.page.setting.accounts.AddAccountsPage
 import com.roy93group.reader.ui.page.setting.color.ColorAndStylePage
 import com.roy93group.reader.ui.page.setting.color.DarkThemePage
-import com.roy93group.reader.ui.page.setting.color.feeds.FeedsPageStylePage
+import com.roy93group.reader.ui.page.setting.color.feed.FeedsPageStylePage
 import com.roy93group.reader.ui.page.setting.color.flow.FlowPageStylePage
 import com.roy93group.reader.ui.page.setting.color.reading.*
 import com.roy93group.reader.ui.page.setting.interaction.InteractionPage
-import com.roy93group.reader.ui.page.setting.languages.LanguagesPage
+import com.roy93group.reader.ui.page.setting.language.LanguagesPage
 import com.roy93group.reader.ui.page.setting.tip.TipsAndSupportPage
 import com.roy93group.reader.ui.page.startup.StartupPage
 import com.roy93group.reader.ui.theme.AppTheme
