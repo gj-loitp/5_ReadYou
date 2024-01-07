@@ -1,1 +1,0 @@
-Um elegante e moderno leitor de RSS utilizando o design do Material You
