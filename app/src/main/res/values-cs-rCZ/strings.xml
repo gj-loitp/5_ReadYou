@@ -111,7 +111,7 @@
     <string name="tips_and_support">Tipy a podpora</string>
     <string name="tips_and_support_desc">O aplikaci, open source</string>
     <string name="welcome">Vítejte</string>
-    <string name="tos_tips">Než budete moci pokračovat, musíte souhlasit s podmínkami služby a zásadami ochrany osobních údajů aplikace Read You.</string>
+    <string name="tos_tips">Než budete moci pokračovat, musíte souhlasit s podmínkami služby a zásadami ochrany osobních údajů aplikace RSS Bear Hub.</string>
     <string name="browse_tos_tips">Podívejte se na &lt;i&gt;&lt;u&gt;podmínky služby a zásady ochrany osobních údajů&lt;/u&gt;&lt;/i&gt;</string>
     <string name="terms_of_service">Podmínky služby</string>
     <string name="tos_content">
@@ -128,7 +128,7 @@
         &lt;/p&gt;
         &lt;br/&gt;
         &lt;p&gt;
-        &lt;b&gt;Read You&lt;/b&gt;
+        &lt;b&gt;RSS Bear Hub&lt;/b&gt;
 
         does not collect any user data, and all sensitive information (passwords and other account information) is
         securely stored in the local application database on your device.
@@ -136,7 +136,7 @@
         &lt;/p&gt;
         &lt;br/&gt;
         &lt;p&gt;
-        &lt;b&gt;Read You&lt;/b&gt;
+        &lt;b&gt;RSS Bear Hub&lt;/b&gt;
 
         will use the following permissions to provide you with the service.
 
@@ -168,7 +168,7 @@
         &lt;br/&gt;
         &lt;p&gt;
 
-        This policy does not apply to third-party services that you use with &lt;b&gt;Read You&lt;/b&gt;. You can review
+        This policy does not apply to third-party services that you use with &lt;b&gt;RSS Bear Hub&lt;/b&gt;. You can review
         the privacy policies of the third-party services you use on their websites
 
         &lt;/p&gt;
@@ -181,9 +181,9 @@
         &lt;/h5&gt;
         &lt;br/&gt;
         &lt;p&gt;
-        &lt;b&gt;Read You&lt;/b&gt;
+        &lt;b&gt;RSS Bear Hub&lt;/b&gt;
 
-        is a content collection tool only. Your use of &lt;b&gt;Read You&lt;/b&gt; is subject to the laws and
+        is a content collection tool only. Your use of &lt;b&gt;RSS Bear Hub&lt;/b&gt; is subject to the laws and
         regulations of your country and region, and any liability arising from your actions will be borne by you
         personally.
 
@@ -197,10 +197,10 @@
         &lt;/h5&gt;
         &lt;br/&gt;
         &lt;p&gt;
-        &lt;b&gt;Read You&lt;/b&gt;
+        &lt;b&gt;RSS Bear Hub&lt;/b&gt;
 
         is an open source project under the GNU GPL 3.0 Open Source License[1], which allows you to use, reference, and
-        modify the source code of &lt;b&gt;Read You&lt;/b&gt; for free, but does not allow the
+        modify the source code of &lt;b&gt;RSS Bear Hub&lt;/b&gt; for free, but does not allow the
         modified and derived code to be distributed and sold as closed-source commercial software. For details, please
         see the full GNU GPL 3.0 Open Source License[2].
 

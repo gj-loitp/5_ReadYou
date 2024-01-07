@@ -1,11 +1,3 @@
-/**
- * Copyright (C) 2021 Kyant0
- *
- * @link https://github.com/Kyant0/MusicYou
- * @author Kyant0
- * @modifier Ashinch
- */
-
 package com.roy93group.reader.ui.theme.palette
 
 import android.content.Context
@@ -19,7 +11,12 @@ import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.graphics.Color
 import com.roy93group.reader.ui.theme.palette.colorspace.cielab.CieLab
 import com.roy93group.reader.ui.theme.palette.colorspace.zcam.Izazbz.Companion.toIzazbz
-import com.roy93group.reader.ui.theme.palette.core.*
+import com.roy93group.reader.ui.theme.palette.core.clampToRgb
+import com.roy93group.reader.ui.theme.palette.core.toColor
+import com.roy93group.reader.ui.theme.palette.core.toRgb
+import com.roy93group.reader.ui.theme.palette.core.toXyz
+import com.roy93group.reader.ui.theme.palette.core.toZcam
+import com.roy93group.reader.ui.theme.palette.core.zcamLch
 
 /**
  * The L from CIELab
@@ -242,7 +239,6 @@ data class TonalPalettes(
     }
 }
 
-@RequiresApi(23)
 object ColorResourceHelper {
 
     @DoNotInline

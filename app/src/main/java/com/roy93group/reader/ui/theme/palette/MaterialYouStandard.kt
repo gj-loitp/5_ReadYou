@@ -1,10 +1,3 @@
-/**
- * Copyright (C) 2021 Kyant0
- *
- * @link https://github.com/Kyant0/MusicYou
- * @author Kyant0
- */
-
 package com.roy93group.reader.ui.theme.palette
 
 object MaterialYouStandard {

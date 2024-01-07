@@ -1,10 +1,4 @@
-/**
- * Copyright (C) 2021 Kyant0
- *
- * @link https://github.com/Kyant0/MusicYou
- * @author Kyant0
- * @modifier Ashinch
- */
+
 
 package com.roy93group.reader.ui.ext
 
