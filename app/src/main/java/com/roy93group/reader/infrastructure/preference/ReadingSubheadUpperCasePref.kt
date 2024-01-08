@@ -8,7 +8,7 @@ import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
 
-sealed class ReadingSubheadUpperCasePref(val value: Boolean) : Preference() {
+sealed class ReadingSubheadUpperCasePref(val value: Boolean) : Pref() {
     object ON : ReadingSubheadUpperCasePref(true)
     object OFF : ReadingSubheadUpperCasePref(false)
 

@@ -26,9 +26,9 @@ import com.roy93group.reader.infrastructure.preference.LocalReadingImageHorizont
 import com.roy93group.reader.infrastructure.preference.LocalReadingImageMaximize
 import com.roy93group.reader.infrastructure.preference.LocalReadingImageRoundedCorners
 import com.roy93group.reader.infrastructure.preference.LocalReadingTheme
-import com.roy93group.reader.infrastructure.preference.ReadingImageHorizontalPaddingPreference
-import com.roy93group.reader.infrastructure.preference.ReadingImageRoundedCornersPreference
-import com.roy93group.reader.infrastructure.preference.ReadingThemePreference
+import com.roy93group.reader.infrastructure.preference.ReadingImageHorizontalPaddingPref
+import com.roy93group.reader.infrastructure.preference.ReadingImageRoundedCornersPref
+import com.roy93group.reader.infrastructure.preference.ReadingThemePref
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
@@ -124,12 +124,12 @@ fun ReadingImagePage(
                         title = stringResource(R.string.maximize),
                         onClick = {
                             (!maximize).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         },
                     ) {
                         BaseSwitch(activated = maximize.value) {
                             (!maximize).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         }
                     }
                 }
@@ -154,8 +154,8 @@ fun ReadingImagePage(
             roundedCornersDialogVisible = false
         },
         onConfirm = {
-            ReadingImageRoundedCornersPreference.put(context, scope, roundedCornersValue ?: 0)
-            ReadingThemePreference.Custom.put(context, scope)
+            ReadingImageRoundedCornersPref.put(context, scope, roundedCornersValue ?: 0)
+            ReadingThemePref.Custom.put(context, scope)
             roundedCornersDialogVisible = false
         }
     )
@@ -172,8 +172,8 @@ fun ReadingImagePage(
             horizontalPaddingDialogVisible = false
         },
         onConfirm = {
-            ReadingImageHorizontalPaddingPreference.put(context, scope, horizontalPaddingValue ?: 0)
-            ReadingThemePreference.Custom.put(context, scope)
+            ReadingImageHorizontalPaddingPref.put(context, scope, horizontalPaddingValue ?: 0)
+            ReadingThemePref.Custom.put(context, scope)
             horizontalPaddingDialogVisible = false
         }
     )

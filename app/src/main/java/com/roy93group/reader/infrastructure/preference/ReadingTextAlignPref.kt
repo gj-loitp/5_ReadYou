@@ -11,7 +11,7 @@ import com.roy93group.reader.ui.ext.put
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-sealed class ReadingTextAlignPref(val value: Int) : Preference() {
+sealed class ReadingTextAlignPref(val value: Int) : Pref() {
     object Left : ReadingTextAlignPref(0)
     object Right : ReadingTextAlignPref(1)
     object Center : ReadingTextAlignPref(2)

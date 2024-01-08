@@ -57,7 +57,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.OpenLinkPreference
+import com.roy93group.reader.infrastructure.preference.OpenLinkPref
 import com.roy93group.reader.ui.component.base.CurlyCornerShape
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.component.base.BaseScaffold
@@ -223,7 +223,7 @@ fun TipsAndSupportPage(
                             view.playSoundEffect(SoundEffectConstants.CLICK)
                             context.openURL(
                                 context.getString(R.string.github_link),
-                                OpenLinkPreference.AutoPreferCustomTabs
+                                OpenLinkPref.AutoPreferCustomTabs
                             )
                         })
                         Spacer(modifier = Modifier.width(16.dp))
@@ -236,7 +236,7 @@ fun TipsAndSupportPage(
                             view.playSoundEffect(SoundEffectConstants.CLICK)
                             context.openURL(
                                 context.getString(R.string.telegram_link),
-                                OpenLinkPreference.AutoPreferCustomTabs
+                                OpenLinkPref.AutoPreferCustomTabs
                             )
                         })
                         Spacer(modifier = Modifier.width(16.dp))

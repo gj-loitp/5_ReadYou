@@ -36,8 +36,8 @@ import com.roy93group.reader.infrastructure.preference.LocalReadingSubheadUpperC
 import com.roy93group.reader.infrastructure.preference.LocalReadingTitleAlign
 import com.roy93group.reader.infrastructure.preference.LocalReadingTitleBold
 import com.roy93group.reader.infrastructure.preference.LocalReadingTitleUpperCase
-import com.roy93group.reader.infrastructure.preference.ReadingSubheadAlignPreference
-import com.roy93group.reader.infrastructure.preference.ReadingThemePreference
+import com.roy93group.reader.infrastructure.preference.ReadingSubheadAlignPref
+import com.roy93group.reader.infrastructure.preference.ReadingThemePref
 import com.roy93group.reader.infrastructure.preference.ReadingTitleAlignPref
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
@@ -114,24 +114,24 @@ fun ReadingTitlePage(
                         title = stringResource(R.string.bold),
                         onClick = {
                             (!titleBold).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         },
                     ) {
                         BaseSwitch(activated = titleBold.value) {
                             (!titleBold).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         }
                     }
                     SettingItem(
                         title = stringResource(R.string.upper_case),
                         onClick = {
                             (!titleUpperCase).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         },
                     ) {
                         BaseSwitch(activated = titleUpperCase.value) {
                             (!titleUpperCase).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         }
                     }
                     SettingItem(
@@ -152,24 +152,24 @@ fun ReadingTitlePage(
                         title = stringResource(R.string.bold),
                         onClick = {
                             (!subtitleBold).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         },
                     ) {
                         BaseSwitch(activated = subtitleBold.value) {
                             (!subtitleBold).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         }
                     }
                     SettingItem(
                         title = stringResource(R.string.upper_case),
                         onClick = {
                             (!subheadUpperCase).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         },
                     ) {
                         BaseSwitch(activated = subheadUpperCase.value) {
                             (!subheadUpperCase).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         }
                     }
                     SettingItem(
@@ -199,7 +199,7 @@ fun ReadingTitlePage(
                 selected = it == titleAlign,
             ) {
                 it.put(context, scope)
-                ReadingThemePreference.Custom.put(context, scope)
+                ReadingThemePref.Custom.put(context, scope)
             }
         }
     ) {
@@ -209,13 +209,13 @@ fun ReadingTitlePage(
     RadioDlg(
         visible = subtitleAlignDialogVisible,
         title = stringResource(R.string.alignment),
-        options = ReadingSubheadAlignPreference.values.map {
+        options = ReadingSubheadAlignPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == subtitleAlign,
             ) {
                 it.put(context, scope)
-                ReadingThemePreference.Custom.put(context, scope)
+                ReadingThemePref.Custom.put(context, scope)
             }
         }
     ) {

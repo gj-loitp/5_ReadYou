@@ -45,9 +45,9 @@ import com.roy93group.reader.infrastructure.preference.LocalReadingDarkTheme
 import com.roy93group.reader.infrastructure.preference.LocalReadingFonts
 import com.roy93group.reader.infrastructure.preference.LocalReadingPageTonalElevation
 import com.roy93group.reader.infrastructure.preference.LocalReadingTheme
-import com.roy93group.reader.infrastructure.preference.ReadingFontsPreference
-import com.roy93group.reader.infrastructure.preference.ReadingPageTonalElevationPreference
-import com.roy93group.reader.infrastructure.preference.ReadingThemePreference
+import com.roy93group.reader.infrastructure.preference.ReadingFontsPref
+import com.roy93group.reader.infrastructure.preference.ReadingPageTonalElevationPref
+import com.roy93group.reader.infrastructure.preference.ReadingThemePref
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.ReadingThemePrev
 import com.roy93group.reader.ui.component.base.DisplayText
@@ -82,7 +82,7 @@ fun ReadingStylePage(
     val launcher = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         uri?.let {
             ExternalFonts(context, it, ExternalFonts.FontType.ReadingFont).copyToInternalStorage()
-            ReadingFontsPreference.External.put(context, scope)
+            ReadingFontsPref.External.put(context, scope)
         }
     }
 
@@ -109,8 +109,8 @@ fun ReadingStylePage(
                         modifier = Modifier.horizontalScroll(rememberScrollState())
                     ) {
                         Spacer(modifier = Modifier.width(24.dp))
-                        ReadingThemePreference.values.map {
-                            if (readingTheme == ReadingThemePreference.Custom || it != ReadingThemePreference.Custom) {
+                        ReadingThemePref.values.map {
+                            if (readingTheme == ReadingThemePref.Custom || it != ReadingThemePref.Custom) {
                                 ReadingThemePrev(selected = readingTheme, theme = it) {
                                     it.put(context, scope)
                                     it.applyTheme(context, scope)
@@ -268,7 +268,7 @@ fun ReadingStylePage(
     RadioDlg(
         visible = tonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
-        options = ReadingPageTonalElevationPreference.values.map {
+        options = ReadingPageTonalElevationPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == tonalElevation,
@@ -283,13 +283,13 @@ fun ReadingStylePage(
     RadioDlg(
         visible = fontsDialogVisible,
         title = stringResource(R.string.reading_fonts),
-        options = ReadingFontsPreference.values.map {
+        options = ReadingFontsPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 style = TextStyle(fontFamily = it.asFontFamily(context)),
                 selected = it == fonts,
             ) {
-                if (it.value == ReadingFontsPreference.External.value) {
+                if (it.value == ReadingFontsPref.External.value) {
                     launcher.launch("*/*")
                 } else {
                     it.put(context, scope)

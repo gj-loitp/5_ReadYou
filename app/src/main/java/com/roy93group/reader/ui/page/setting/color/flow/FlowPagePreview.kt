@@ -30,8 +30,8 @@ import com.roy93group.reader.domain.model.article.Article
 import com.roy93group.reader.domain.model.article.ArticleWithFeed
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.general.Filter
-import com.roy93group.reader.infrastructure.preference.FlowArticleListTonalElevationPreference
-import com.roy93group.reader.infrastructure.preference.FlowTopBarTonalElevationPreference
+import com.roy93group.reader.infrastructure.preference.FlowArticleListTonalElevationPref
+import com.roy93group.reader.infrastructure.preference.FlowTopBarTonalElevationPref
 import com.roy93group.reader.ui.component.FilterBar
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.ext.surfaceColorAtElevation
@@ -42,8 +42,8 @@ import java.util.Date
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FlowPagePreview(
-    topBarTonalElevation: FlowTopBarTonalElevationPreference,
-    articleListTonalElevation: FlowArticleListTonalElevationPreference,
+    topBarTonalElevation: FlowTopBarTonalElevationPref,
+    articleListTonalElevation: FlowArticleListTonalElevationPref,
     filterBarStyle: Int,
     filterBarFilled: Boolean,
     filterBarPadding: Dp,

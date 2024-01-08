@@ -18,7 +18,7 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import com.roy93group.reader.domain.model.general.Filter
-import com.roy93group.reader.infrastructure.preference.FlowFilterBarStylePreference
+import com.roy93group.reader.infrastructure.preference.FlowFilterBarStylePref
 import com.roy93group.reader.infrastructure.preference.LocalThemeIndex
 import com.roy93group.reader.ui.ext.surfaceColorAtElevation
 import com.roy93group.reader.ui.theme.palette.onDark
@@ -46,9 +46,9 @@ fun FilterBar(
             NavigationBarItem(
 //                        modifier = Modifier.height(60.dp),
                 alwaysShowLabel = when (filterBarStyle) {
-                    FlowFilterBarStylePreference.Icon.value -> false
-                    FlowFilterBarStylePreference.IconLabel.value -> true
-                    FlowFilterBarStylePreference.IconLabelOnlySelected.value -> false
+                    FlowFilterBarStylePref.Icon.value -> false
+                    FlowFilterBarStylePref.IconLabel.value -> true
+                    FlowFilterBarStylePref.IconLabelOnlySelected.value -> false
                     else -> false
                 },
                 icon = {
@@ -61,7 +61,7 @@ fun FilterBar(
                         contentDescription = item.toName()
                     )
                 },
-                label = if (filterBarStyle == FlowFilterBarStylePreference.Icon.value) {
+                label = if (filterBarStyle == FlowFilterBarStylePref.Icon.value) {
                     null
                 } else {
                     {

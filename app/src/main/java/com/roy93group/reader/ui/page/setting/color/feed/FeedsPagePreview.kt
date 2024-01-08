@@ -30,9 +30,9 @@ import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.general.Filter
 import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.infrastructure.preference.FeedsGroupListExpandPreference
-import com.roy93group.reader.infrastructure.preference.FeedsGroupListTonalElevationPreference
-import com.roy93group.reader.infrastructure.preference.FeedsTopBarTonalElevationPreference
+import com.roy93group.reader.infrastructure.preference.FeedsGroupListExpandPref
+import com.roy93group.reader.infrastructure.preference.FeedsGroupListTonalElevationPref
+import com.roy93group.reader.infrastructure.preference.FeedsTopBarTonalElevationPref
 import com.roy93group.reader.ui.component.FilterBar
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.ext.alphaLN
@@ -45,9 +45,9 @@ import kotlin.math.ln
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FeedsPagePreview(
-    topBarTonalElevation: FeedsTopBarTonalElevationPreference,
-    groupListExpand: FeedsGroupListExpandPreference,
-    groupListTonalElevation: FeedsGroupListTonalElevationPreference,
+    topBarTonalElevation: FeedsTopBarTonalElevationPref,
+    groupListExpand: FeedsGroupListExpandPref,
+    groupListTonalElevation: FeedsGroupListTonalElevationPref,
     filterBarStyle: Int,
     filterBarFilled: Boolean,
     filterBarPadding: Dp,

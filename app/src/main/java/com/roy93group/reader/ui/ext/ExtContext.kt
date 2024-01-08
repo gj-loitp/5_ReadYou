@@ -17,8 +17,8 @@ import androidx.core.net.toUri
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.general.Version
 import com.roy93group.reader.domain.model.general.toVersion
-import com.roy93group.reader.infrastructure.preference.OpenLinkPreference
-import com.roy93group.reader.infrastructure.preference.OpenLinkSpecificBrowserPreference
+import com.roy93group.reader.infrastructure.preference.OpenLinkPref
+import com.roy93group.reader.infrastructure.preference.OpenLinkSpecificBrowserPref
 import java.io.File
 
 fun Context.findActivity(): Activity? = when (this) {
@@ -77,8 +77,8 @@ fun Context.share(content: String) {
 
 fun Context.openURL(
     url: String?,
-    openLink: OpenLinkPreference,
-    specificBrowser: OpenLinkSpecificBrowserPreference = OpenLinkSpecificBrowserPreference.default,
+    openLink: OpenLinkPref,
+    specificBrowser: OpenLinkSpecificBrowserPref = OpenLinkSpecificBrowserPref.default,
 ) {
     if (!url.isNullOrBlank()) {
         val uri = url.toUri()
@@ -86,7 +86,7 @@ fun Context.openURL(
         val customTabsIntent = CustomTabsIntent.Builder().setShowTitle(true).build()
         try {
             when (openLink) {
-                OpenLinkPreference.AlwaysAsk -> {
+                OpenLinkPref.AlwaysAsk -> {
                     val intents = packageManager.run {
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                             queryIntentActivities(
@@ -108,12 +108,12 @@ fun Context.openURL(
                     startActivity(chooser)
                 }
 
-                OpenLinkPreference.AutoPreferCustomTabs -> {
+                OpenLinkPref.AutoPreferCustomTabs -> {
                     customTabsIntent.launchUrl(this, uri)
                 }
 
-                OpenLinkPreference.AutoPreferDefaultBrowser -> startActivity(intent)
-                OpenLinkPreference.CustomTabs -> {
+                OpenLinkPref.AutoPreferDefaultBrowser -> startActivity(intent)
+                OpenLinkPref.CustomTabs -> {
                     val customTabsPackages = getCustomTabsPackages()
                     require(customTabsPackages.isNotEmpty())
                     val defaultBrowser = getDefaultBrowserInfo()!!.activityInfo.packageName
@@ -127,12 +127,12 @@ fun Context.openURL(
                     customTabsIntent.launchUrl(this, uri)
                 }
 
-                OpenLinkPreference.DefaultBrowser -> {
+                OpenLinkPref.DefaultBrowser -> {
                     val packageName = getDefaultBrowserInfo()!!.activityInfo.packageName
                     startActivity(intent.setPackage(packageName))
                 }
 
-                OpenLinkPreference.SpecificBrowser -> {
+                OpenLinkPref.SpecificBrowser -> {
                     require(!specificBrowser.packageName.isNullOrBlank())
                     startActivity(intent.setPackage(specificBrowser.packageName))
                 }

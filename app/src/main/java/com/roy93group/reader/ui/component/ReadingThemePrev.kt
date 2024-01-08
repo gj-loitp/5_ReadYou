@@ -32,15 +32,15 @@ import androidx.compose.ui.unit.dp
 import com.roy93group.reader.infrastructure.preference.LocalReadingImageHorizontalPadding
 import com.roy93group.reader.infrastructure.preference.LocalReadingImageRoundedCorners
 import com.roy93group.reader.infrastructure.preference.LocalReadingTextAlign
-import com.roy93group.reader.infrastructure.preference.ReadingThemePreference
+import com.roy93group.reader.infrastructure.preference.ReadingThemePref
 import com.roy93group.reader.ui.theme.Shape24
 import com.roy93group.reader.ui.theme.palette.onDark
 import com.roy93group.reader.ui.theme.palette.onLight
 
 @Composable
 fun ReadingThemePrev(
-    selected: ReadingThemePreference = ReadingThemePreference.MaterialYou,
-    theme: ReadingThemePreference = ReadingThemePreference.MaterialYou,
+    selected: ReadingThemePref = ReadingThemePref.MaterialYou,
+    theme: ReadingThemePref = ReadingThemePref.MaterialYou,
     onClick: () -> Unit = {},
 ) {
     val context = LocalContext.current
@@ -62,10 +62,10 @@ fun ReadingThemePrev(
             )
             .clickable(onClick = onClick),
         horizontalAlignment = when (theme) {
-            ReadingThemePreference.MaterialYou -> Alignment.Start
-            ReadingThemePreference.Reeder -> Alignment.Start
-            ReadingThemePreference.Paper -> Alignment.CenterHorizontally
-            ReadingThemePreference.Custom -> LocalReadingTextAlign.current.toAlignment()
+            ReadingThemePref.MaterialYou -> Alignment.Start
+            ReadingThemePref.Reeder -> Alignment.Start
+            ReadingThemePref.Paper -> Alignment.CenterHorizontally
+            ReadingThemePref.Custom -> LocalReadingTextAlign.current.toAlignment()
         }
     ) {
         Spacer(modifier = Modifier.height(22.dp))
@@ -123,20 +123,20 @@ fun ReadingThemePrev(
             modifier = Modifier
                 .padding(
                     horizontal = when (theme) {
-                        ReadingThemePreference.MaterialYou -> 12.dp
-                        ReadingThemePreference.Reeder -> 0.dp
-                        ReadingThemePreference.Paper -> 12.dp
-                        ReadingThemePreference.Custom -> (LocalReadingImageHorizontalPadding.current / 2).dp
+                        ReadingThemePref.MaterialYou -> 12.dp
+                        ReadingThemePref.Reeder -> 0.dp
+                        ReadingThemePref.Paper -> 12.dp
+                        ReadingThemePref.Custom -> (LocalReadingImageHorizontalPadding.current / 2).dp
                     }
                 )
                 .fillMaxWidth()
                 .height(46.dp)
                 .clip(
                     when (theme) {
-                        ReadingThemePreference.MaterialYou -> MaterialTheme.shapes.medium
-                        ReadingThemePreference.Reeder -> RectangleShape
-                        ReadingThemePreference.Paper -> RectangleShape
-                        ReadingThemePreference.Custom -> roundedCorners
+                        ReadingThemePref.MaterialYou -> MaterialTheme.shapes.medium
+                        ReadingThemePref.Reeder -> RectangleShape
+                        ReadingThemePref.Paper -> RectangleShape
+                        ReadingThemePref.Custom -> roundedCorners
                     }
                 )
                 .background(MaterialTheme.colorScheme.primaryContainer onDark MaterialTheme.colorScheme.secondaryContainer)
@@ -159,8 +159,8 @@ fun ReadingThemePrev(
 @Composable
 private fun ReadYouPreview() {
     ReadingThemePrev(
-        selected = ReadingThemePreference.MaterialYou,
-        theme = ReadingThemePreference.MaterialYou,
+        selected = ReadingThemePref.MaterialYou,
+        theme = ReadingThemePref.MaterialYou,
     )
 }
 
@@ -168,7 +168,7 @@ private fun ReadYouPreview() {
 @Composable
 private fun ReederPreview() {
     ReadingThemePrev(
-        theme = ReadingThemePreference.Reeder,
+        theme = ReadingThemePref.Reeder,
     )
 }
 
@@ -176,7 +176,7 @@ private fun ReederPreview() {
 @Composable
 private fun PaperPreview() {
     ReadingThemePrev(
-        theme = ReadingThemePreference.Paper,
+        theme = ReadingThemePref.Paper,
     )
 }
 
@@ -184,6 +184,6 @@ private fun PaperPreview() {
 @Composable
 private fun CustomPreview() {
     ReadingThemePrev(
-        theme = ReadingThemePreference.Custom,
+        theme = ReadingThemePref.Custom,
     )
 }

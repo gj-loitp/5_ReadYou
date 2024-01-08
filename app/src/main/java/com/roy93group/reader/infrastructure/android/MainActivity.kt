@@ -15,7 +15,7 @@ import coil.compose.LocalImageLoader
 import dagger.hilt.android.AndroidEntryPoint
 import com.roy93group.reader.domain.repository.AccountDao
 import com.roy93group.reader.infrastructure.preference.AccountSettingsProvider
-import com.roy93group.reader.infrastructure.preference.LanguagesPreference
+import com.roy93group.reader.infrastructure.preference.LanguagesPref
 import com.roy93group.reader.infrastructure.preference.SettingsProvider
 import com.roy93group.reader.ui.ext.languages
 import com.roy93group.reader.ui.page.common.HomeEntry
@@ -42,8 +42,8 @@ class MainActivity : ComponentActivity() {
         Log.i("RLog", "onCreate: ${ProfileInstallerInitializer().create(this)}")
 
         // Set the language
-        LanguagesPreference.fromValue(languages).let {
-            if (it == LanguagesPreference.UseDeviceLanguages) return@let
+        LanguagesPref.fromValue(languages).let {
+            if (it == LanguagesPref.UseDeviceLanguages) return@let
             it.setLocale(this)
         }
 

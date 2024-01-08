@@ -2,20 +2,20 @@ package com.roy93group.reader.infrastructure.preference
 
 import android.content.Context
 import androidx.datastore.preferences.core.Preferences
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 
-sealed class ReadingSubheadBoldPref(val value: Boolean) : Pref() {
-    object ON : ReadingSubheadBoldPref(true)
-    object OFF : ReadingSubheadBoldPref(false)
+sealed class FeedsFilterBarFilledPref(val value: Boolean) : Pref() {
+    object ON : FeedsFilterBarFilledPref(true)
+    object OFF : FeedsFilterBarFilledPref(false)
 
     override fun put(context: Context, scope: CoroutineScope) {
         scope.launch {
             context.dataStore.put(
-                DataStoreKeys.ReadingSubheadBold,
+                DataStoreKeys.FeedsFilterBarFilled,
                 value
             )
         }
@@ -27,7 +27,7 @@ sealed class ReadingSubheadBoldPref(val value: Boolean) : Pref() {
         val values = listOf(ON, OFF)
 
         fun fromPreferences(preferences: Preferences) =
-            when (preferences[DataStoreKeys.ReadingSubheadBold.key]) {
+            when (preferences[DataStoreKeys.FeedsFilterBarFilled.key]) {
                 true -> ON
                 false -> OFF
                 else -> default
@@ -35,8 +35,8 @@ sealed class ReadingSubheadBoldPref(val value: Boolean) : Pref() {
     }
 }
 
-operator fun ReadingSubheadBoldPref.not(): ReadingSubheadBoldPref =
+operator fun FeedsFilterBarFilledPref.not(): FeedsFilterBarFilledPref =
     when (value) {
-        true -> ReadingSubheadBoldPref.OFF
-        false -> ReadingSubheadBoldPref.ON
+        true -> FeedsFilterBarFilledPref.OFF
+        false -> FeedsFilterBarFilledPref.ON
     }

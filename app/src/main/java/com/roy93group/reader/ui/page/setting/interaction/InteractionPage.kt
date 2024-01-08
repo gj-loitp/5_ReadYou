@@ -22,13 +22,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.InitialFilterPreference
-import com.roy93group.reader.infrastructure.preference.InitialPagePreference
+import com.roy93group.reader.infrastructure.preference.InitialFilterPref
+import com.roy93group.reader.infrastructure.preference.InitialPagePref
 import com.roy93group.reader.infrastructure.preference.LocalInitialFilter
 import com.roy93group.reader.infrastructure.preference.LocalInitialPage
 import com.roy93group.reader.infrastructure.preference.LocalOpenLink
 import com.roy93group.reader.infrastructure.preference.LocalOpenLinkSpecificBrowser
-import com.roy93group.reader.infrastructure.preference.OpenLinkPreference
+import com.roy93group.reader.infrastructure.preference.OpenLinkPref
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.component.base.BaseScaffold
@@ -50,7 +50,7 @@ fun InteractionPage(
     val openLinkSpecificBrowser = LocalOpenLinkSpecificBrowser.current
     val scope = rememberCoroutineScope()
     val isOpenLinkSpecificBrowserItemEnabled = remember(openLink) {
-        openLink == OpenLinkPreference.SpecificBrowser
+        openLink == OpenLinkPref.SpecificBrowser
     }
     var initialPageDialogVisible by remember { mutableStateOf(false) }
     var initialFilterDialogVisible by remember { mutableStateOf(false) }
@@ -123,7 +123,7 @@ fun InteractionPage(
     RadioDlg(
         visible = initialPageDialogVisible,
         title = stringResource(R.string.initial_page),
-        options = InitialPagePreference.values.map {
+        options = InitialPagePref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == initialPage,
@@ -138,7 +138,7 @@ fun InteractionPage(
     RadioDlg(
         visible = initialFilterDialogVisible,
         title = stringResource(R.string.initial_filter),
-        options = InitialFilterPreference.values.map {
+        options = InitialFilterPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == initialFilter,
@@ -153,7 +153,7 @@ fun InteractionPage(
     RadioDlg(
         visible = openLinkDialogVisible,
         title = stringResource(R.string.initial_open_app),
-        options = OpenLinkPreference.values.map {
+        options = OpenLinkPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == openLink,

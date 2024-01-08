@@ -1,7 +1,6 @@
 package com.roy93group.reader.infrastructure.preference
 
 import android.content.Context
-import androidx.compose.runtime.Stable
 import androidx.compose.ui.text.style.TextAlign
 import androidx.datastore.preferences.core.Preferences
 import com.roy93group.reader.R
@@ -11,22 +10,21 @@ import com.roy93group.reader.ui.ext.put
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-sealed class ReadingTitleAlignPref(val value: Int) : Pref() {
-    object Left : ReadingTitleAlignPref(0)
-    object Right : ReadingTitleAlignPref(1)
-    object Center : ReadingTitleAlignPref(2)
-    object Justify : ReadingTitleAlignPref(3)
+sealed class ReadingSubheadAlignPref(val value: Int) : Pref() {
+    object Left : ReadingSubheadAlignPref(0)
+    object Right : ReadingSubheadAlignPref(1)
+    object Center : ReadingSubheadAlignPref(2)
+    object Justify : ReadingSubheadAlignPref(3)
 
     override fun put(context: Context, scope: CoroutineScope) {
         scope.launch {
             context.dataStore.put(
-                DataStoreKeys.ReadingTitleAlign,
+                DataStoreKeys.ReadingSubheadAlign,
                 value
             )
         }
     }
 
-    @Stable
     fun toDesc(context: Context): String =
         when (this) {
             Left -> context.getString(R.string.align_left)
@@ -35,7 +33,6 @@ sealed class ReadingTitleAlignPref(val value: Int) : Pref() {
             Justify -> context.getString(R.string.justify)
         }
 
-    @Stable
     fun toTextAlign(): TextAlign =
         when (this) {
             Left -> TextAlign.Start
@@ -49,8 +46,8 @@ sealed class ReadingTitleAlignPref(val value: Int) : Pref() {
         val default = Left
         val values = listOf(Left, Right, Center, Justify)
 
-        fun fromPreferences(preferences: Preferences): ReadingTitleAlignPref =
-            when (preferences[DataStoreKeys.ReadingTitleAlign.key]) {
+        fun fromPreferences(preferences: Preferences): ReadingSubheadAlignPref =
+            when (preferences[DataStoreKeys.ReadingSubheadAlign.key]) {
                 0 -> Left
                 1 -> Right
                 2 -> Center

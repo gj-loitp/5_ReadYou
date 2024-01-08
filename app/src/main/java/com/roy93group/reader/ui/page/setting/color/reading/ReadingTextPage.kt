@@ -36,11 +36,11 @@ import com.roy93group.reader.infrastructure.preference.LocalReadingTextBold
 import com.roy93group.reader.infrastructure.preference.LocalReadingTextFontSize
 import com.roy93group.reader.infrastructure.preference.LocalReadingTextHorizontalPadding
 import com.roy93group.reader.infrastructure.preference.LocalReadingTheme
-import com.roy93group.reader.infrastructure.preference.ReadingLetterSpacingPreference
+import com.roy93group.reader.infrastructure.preference.ReadingLetterSpacingPref
 import com.roy93group.reader.infrastructure.preference.ReadingTextAlignPref
 import com.roy93group.reader.infrastructure.preference.ReadingTextFontSizePref
 import com.roy93group.reader.infrastructure.preference.ReadingTextHorizontalPaddingPref
-import com.roy93group.reader.infrastructure.preference.ReadingThemePreference
+import com.roy93group.reader.infrastructure.preference.ReadingThemePref
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
@@ -128,12 +128,12 @@ fun ReadingTextPage(
                         title = stringResource(R.string.bold),
                         onClick = {
                             (!bold).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         },
                     ) {
                         BaseSwitch(activated = bold.value) {
                             (!bold).put(context, scope)
-                            ReadingThemePreference.Custom.put(context, scope)
+                            ReadingThemePref.Custom.put(context, scope)
                         }
                     }
                     SettingItem(
@@ -174,7 +174,7 @@ fun ReadingTextPage(
         },
         onConfirm = {
             ReadingTextFontSizePref.put(context, scope, fontSizeValue ?: 0)
-            ReadingThemePreference.Custom.put(context, scope)
+            ReadingThemePref.Custom.put(context, scope)
             fontSizeDialogVisible = false
         }
     )
@@ -191,8 +191,8 @@ fun ReadingTextPage(
             letterSpacingDialogVisible = false
         },
         onConfirm = {
-            ReadingLetterSpacingPreference.put(context, scope, letterSpacingValue?.toDoubleOrNull() ?: 0.0)
-            ReadingThemePreference.Custom.put(context, scope)
+            ReadingLetterSpacingPref.put(context, scope, letterSpacingValue?.toDoubleOrNull() ?: 0.0)
+            ReadingThemePref.Custom.put(context, scope)
             letterSpacingDialogVisible = false
         }
     )
@@ -210,7 +210,7 @@ fun ReadingTextPage(
         },
         onConfirm = {
             ReadingTextHorizontalPaddingPref.put(context, scope, horizontalPaddingValue ?: 0)
-            ReadingThemePreference.Custom.put(context, scope)
+            ReadingThemePref.Custom.put(context, scope)
             horizontalPaddingDialogVisible = false
         }
     )
@@ -224,7 +224,7 @@ fun ReadingTextPage(
                 selected = it == align,
             ) {
                 it.put(context, scope)
-                ReadingThemePreference.Custom.put(context, scope)
+                ReadingThemePref.Custom.put(context, scope)
             }
         }
     ) {

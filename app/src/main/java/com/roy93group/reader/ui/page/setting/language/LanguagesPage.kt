@@ -22,9 +22,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.LanguagesPreference
+import com.roy93group.reader.infrastructure.preference.LanguagesPref
 import com.roy93group.reader.infrastructure.preference.LocalLanguages
-import com.roy93group.reader.infrastructure.preference.OpenLinkPreference
+import com.roy93group.reader.infrastructure.preference.OpenLinkPref
 import com.roy93group.reader.ui.component.base.Banner
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
@@ -70,13 +70,13 @@ fun LanguagesPage(
                     ) {
                         context.openURL(
                             context.getString(R.string.translatable_url),
-                            OpenLinkPreference.AutoPreferCustomTabs
+                            OpenLinkPref.AutoPreferCustomTabs
                         )
                     }
                     Spacer(modifier = Modifier.height(16.dp))
                 }
                 item {
-                    LanguagesPreference.values.map {
+                    LanguagesPref.values.map {
                         SettingItem(
                             title = it.toDesc(context),
                             onClick = {

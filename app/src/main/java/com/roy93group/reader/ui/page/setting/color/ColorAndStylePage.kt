@@ -52,7 +52,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.BasicFontsPreference
+import com.roy93group.reader.infrastructure.preference.BasicFontsPref
 import com.roy93group.reader.infrastructure.preference.CustomPrimaryColorPreference
 import com.roy93group.reader.infrastructure.preference.LocalBasicFonts
 import com.roy93group.reader.infrastructure.preference.LocalCustomPrimaryColor
@@ -103,7 +103,7 @@ fun ColorAndStylePage(
     val launcher = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri ->
         uri?.let {
             ExternalFonts(context, it, ExternalFonts.FontType.BasicFont).copyToInternalStorage()
-            BasicFontsPreference.External.put(context, scope)
+            BasicFontsPref.External.put(context, scope)
         }
     }
 
@@ -253,13 +253,13 @@ fun ColorAndStylePage(
     RadioDlg(
         visible = fontsDialogVisible,
         title = stringResource(R.string.basic_fonts),
-        options = BasicFontsPreference.values.map {
+        options = BasicFontsPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 style = TextStyle(fontFamily = it.asFontFamily(context)),
                 selected = it == fonts,
             ) {
-                if (it.value == BasicFontsPreference.External.value) {
+                if (it.value == BasicFontsPref.External.value) {
                     launcher.launch("*/*")
                 } else {
                     it.put(context, scope)

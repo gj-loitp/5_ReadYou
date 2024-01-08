@@ -20,7 +20,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.DarkThemePreference
+import com.roy93group.reader.infrastructure.preference.DarkThemePref
 import com.roy93group.reader.infrastructure.preference.LocalAmoledDarkTheme
 import com.roy93group.reader.infrastructure.preference.LocalDarkTheme
 import com.roy93group.reader.infrastructure.preference.not
@@ -59,7 +59,7 @@ fun DarkThemePage(
                     DisplayText(text = stringResource(R.string.dark_theme), desc = "")
                 }
                 item {
-                    DarkThemePreference.values.map {
+                    DarkThemePref.values.map {
                         SettingItem(
                             title = it.toDesc(context),
                             onClick = {

@@ -8,7 +8,7 @@ import com.roy93group.reader.ui.ext.put
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-sealed class ReadingTitleBoldPref(val value: Boolean) : Preference() {
+sealed class ReadingTitleBoldPref(val value: Boolean) : Pref() {
     object ON : ReadingTitleBoldPref(true)
     object OFF : ReadingTitleBoldPref(false)
 

@@ -25,62 +25,62 @@ data class Settings(
     // Theme
     val themeIndex: Int = ThemeIndexPref.default,
     val customPrimaryColor: String = CustomPrimaryColorPreference.default,
-    val darkTheme: DarkThemePreference = DarkThemePreference.default,
-    val amoledDarkTheme: AmoledDarkThemePreference = AmoledDarkThemePreference.default,
-    val basicFonts: BasicFontsPreference = BasicFontsPreference.default,
+    val darkTheme: DarkThemePref = DarkThemePref.default,
+    val amoledDarkTheme: AmoledDarkThemePref = AmoledDarkThemePref.default,
+    val basicFonts: BasicFontsPref = BasicFontsPref.default,
 
     // Feeds page
-    val feedsFilterBarStyle: FeedsFilterBarStylePreference = FeedsFilterBarStylePreference.default,
-    val feedsFilterBarFilled: FeedsFilterBarFilledPreference = FeedsFilterBarFilledPreference.default,
+    val feedsFilterBarStyle: FeedsFilterBarStylePref = FeedsFilterBarStylePref.default,
+    val feedsFilterBarFilled: FeedsFilterBarFilledPref = FeedsFilterBarFilledPref.default,
     val feedsFilterBarPadding: Int = FeedsFilterBarPaddingPreference.default,
-    val feedsFilterBarTonalElevation: FeedsFilterBarTonalElevationPreference = FeedsFilterBarTonalElevationPreference.default,
-    val feedsTopBarTonalElevation: FeedsTopBarTonalElevationPreference = FeedsTopBarTonalElevationPreference.default,
-    val feedsGroupListExpand: FeedsGroupListExpandPreference = FeedsGroupListExpandPreference.default,
-    val feedsGroupListTonalElevation: FeedsGroupListTonalElevationPreference = FeedsGroupListTonalElevationPreference.default,
+    val feedsFilterBarTonalElevation: FeedsFilterBarTonalElevationPref = FeedsFilterBarTonalElevationPref.default,
+    val feedsTopBarTonalElevation: FeedsTopBarTonalElevationPref = FeedsTopBarTonalElevationPref.default,
+    val feedsGroupListExpand: FeedsGroupListExpandPref = FeedsGroupListExpandPref.default,
+    val feedsGroupListTonalElevation: FeedsGroupListTonalElevationPref = FeedsGroupListTonalElevationPref.default,
 
     // Flow page
-    val flowFilterBarStyle: FlowFilterBarStylePreference = FlowFilterBarStylePreference.default,
-    val flowFilterBarFilled: FlowFilterBarFilledPreference = FlowFilterBarFilledPreference.default,
+    val flowFilterBarStyle: FlowFilterBarStylePref = FlowFilterBarStylePref.default,
+    val flowFilterBarFilled: FlowFilterBarFilledPref = FlowFilterBarFilledPref.default,
     val flowFilterBarPadding: Int = FlowFilterBarPaddingPreference.default,
-    val flowFilterBarTonalElevation: FlowFilterBarTonalElevationPreference = FlowFilterBarTonalElevationPreference.default,
-    val flowTopBarTonalElevation: FlowTopBarTonalElevationPreference = FlowTopBarTonalElevationPreference.default,
-    val flowArticleListFeedIcon: FlowArticleListFeedIconPreference = FlowArticleListFeedIconPreference.default,
-    val flowArticleListFeedName: FlowArticleListFeedNamePreference = FlowArticleListFeedNamePreference.default,
-    val flowArticleListImage: FlowArticleListImagePreference = FlowArticleListImagePreference.default,
-    val flowArticleListDesc: FlowArticleListDescPreference = FlowArticleListDescPreference.default,
-    val flowArticleListTime: FlowArticleListTimePreference = FlowArticleListTimePreference.default,
-    val flowArticleListDateStickyHeader: FlowArticleListDateStickyHeaderPreference = FlowArticleListDateStickyHeaderPreference.default,
-    val flowArticleListTonalElevation: FlowArticleListTonalElevationPreference = FlowArticleListTonalElevationPreference.default,
+    val flowFilterBarTonalElevation: FlowFilterBarTonalElevationPref = FlowFilterBarTonalElevationPref.default,
+    val flowTopBarTonalElevation: FlowTopBarTonalElevationPref = FlowTopBarTonalElevationPref.default,
+    val flowArticleListFeedIcon: FlowArticleListFeedIconPref = FlowArticleListFeedIconPref.default,
+    val flowArticleListFeedName: FlowArticleListFeedNamePref = FlowArticleListFeedNamePref.default,
+    val flowArticleListImage: FlowArticleListImagePref = FlowArticleListImagePref.default,
+    val flowArticleListDesc: FlowArticleListDescPref = FlowArticleListDescPref.default,
+    val flowArticleListTime: FlowArticleListTimePref = FlowArticleListTimePref.default,
+    val flowArticleListDateStickyHeader: FlowArticleListDateStickyHeaderPref = FlowArticleListDateStickyHeaderPref.default,
+    val flowArticleListTonalElevation: FlowArticleListTonalElevationPref = FlowArticleListTonalElevationPref.default,
 
     // Reading page
-    val readingTheme: ReadingThemePreference = ReadingThemePreference.default,
-    val readingDarkTheme: ReadingDarkThemePreference = ReadingDarkThemePreference.default,
-    val readingPageTonalElevation: ReadingPageTonalElevationPreference = ReadingPageTonalElevationPreference.default,
+    val readingTheme: ReadingThemePref = ReadingThemePref.default,
+    val readingDarkTheme: ReadingDarkThemePref = ReadingDarkThemePref.default,
+    val readingPageTonalElevation: ReadingPageTonalElevationPref = ReadingPageTonalElevationPref.default,
     val readingAutoHideToolbar: ReadingAutoHideToolbarPreference = ReadingAutoHideToolbarPreference.default,
     val readingTextFontSize: Int = ReadingTextFontSizePref.default,
-    val readingLetterSpacing: Double = ReadingLetterSpacingPreference.default,
+    val readingLetterSpacing: Double = ReadingLetterSpacingPref.default,
     val readingTextHorizontalPadding: Int = ReadingTextHorizontalPaddingPref.default,
     val readingTextAlign: ReadingTextAlignPref = ReadingTextAlignPref.default,
     val readingTextBold: ReadingTextBoldPref = ReadingTextBoldPref.default,
     val readingTitleAlign: ReadingTitleAlignPref = ReadingTitleAlignPref.default,
-    val readingSubheadAlign: ReadingSubheadAlignPreference = ReadingSubheadAlignPreference.default,
-    val readingFonts: ReadingFontsPreference = ReadingFontsPreference.default,
+    val readingSubheadAlign: ReadingSubheadAlignPref = ReadingSubheadAlignPref.default,
+    val readingFonts: ReadingFontsPref = ReadingFontsPref.default,
     val readingTitleBold: ReadingTitleBoldPref = ReadingTitleBoldPref.default,
     val readingSubheadBold: ReadingSubheadBoldPref = ReadingSubheadBoldPref.default,
     val readingTitleUpperCase: ReadingTitleUpperCasePref = ReadingTitleUpperCasePref.default,
     val readingSubheadUpperCase: ReadingSubheadUpperCasePref = ReadingSubheadUpperCasePref.default,
-    val readingImageHorizontalPadding: Int = ReadingImageHorizontalPaddingPreference.default,
-    val readingImageRoundedCorners: Int = ReadingImageRoundedCornersPreference.default,
-    val readingImageMaximize: ReadingImageMaximizePreference = ReadingImageMaximizePreference.default,
+    val readingImageHorizontalPadding: Int = ReadingImageHorizontalPaddingPref.default,
+    val readingImageRoundedCorners: Int = ReadingImageRoundedCornersPref.default,
+    val readingImageMaximize: ReadingImageMaximizePref = ReadingImageMaximizePref.default,
 
     // Interaction
-    val initialPage: InitialPagePreference = InitialPagePreference.default,
-    val initialFilter: InitialFilterPreference = InitialFilterPreference.default,
-    val openLink: OpenLinkPreference = OpenLinkPreference.default,
-    val openLinkSpecificBrowser: OpenLinkSpecificBrowserPreference = OpenLinkSpecificBrowserPreference.default,
+    val initialPage: InitialPagePref = InitialPagePref.default,
+    val initialFilter: InitialFilterPref = InitialFilterPref.default,
+    val openLink: OpenLinkPref = OpenLinkPref.default,
+    val openLinkSpecificBrowser: OpenLinkSpecificBrowserPref = OpenLinkSpecificBrowserPref.default,
 
     // Languages
-    val languages: LanguagesPreference = LanguagesPreference.default,
+    val languages: LanguagesPref = LanguagesPref.default,
 )
 
 // Version
@@ -97,69 +97,69 @@ val LocalThemeIndex =
 val LocalCustomPrimaryColor =
     compositionLocalOf { CustomPrimaryColorPreference.default }
 val LocalDarkTheme =
-    compositionLocalOf<DarkThemePreference> { DarkThemePreference.default }
+    compositionLocalOf<DarkThemePref> { DarkThemePref.default }
 val LocalAmoledDarkTheme =
-    compositionLocalOf<AmoledDarkThemePreference> { AmoledDarkThemePreference.default }
-val LocalBasicFonts = compositionLocalOf<BasicFontsPreference> { BasicFontsPreference.default }
+    compositionLocalOf<AmoledDarkThemePref> { AmoledDarkThemePref.default }
+val LocalBasicFonts = compositionLocalOf<BasicFontsPref> { BasicFontsPref.default }
 
 // Feeds page
 val LocalFeedsFilterBarStyle =
-    compositionLocalOf<FeedsFilterBarStylePreference> { FeedsFilterBarStylePreference.default }
+    compositionLocalOf<FeedsFilterBarStylePref> { FeedsFilterBarStylePref.default }
 val LocalFeedsFilterBarFilled =
-    compositionLocalOf<FeedsFilterBarFilledPreference> { FeedsFilterBarFilledPreference.default }
+    compositionLocalOf<FeedsFilterBarFilledPref> { FeedsFilterBarFilledPref.default }
 val LocalFeedsFilterBarPadding =
     compositionLocalOf { FeedsFilterBarPaddingPreference.default }
 val LocalFeedsFilterBarTonalElevation =
-    compositionLocalOf<FeedsFilterBarTonalElevationPreference> { FeedsFilterBarTonalElevationPreference.default }
+    compositionLocalOf<FeedsFilterBarTonalElevationPref> { FeedsFilterBarTonalElevationPref.default }
 val LocalFeedsTopBarTonalElevation =
-    compositionLocalOf<FeedsTopBarTonalElevationPreference> { FeedsTopBarTonalElevationPreference.default }
+    compositionLocalOf<FeedsTopBarTonalElevationPref> { FeedsTopBarTonalElevationPref.default }
 val LocalFeedsGroupListExpand =
-    compositionLocalOf<FeedsGroupListExpandPreference> { FeedsGroupListExpandPreference.default }
+    compositionLocalOf<FeedsGroupListExpandPref> { FeedsGroupListExpandPref.default }
 val LocalFeedsGroupListTonalElevation =
-    compositionLocalOf<FeedsGroupListTonalElevationPreference> { FeedsGroupListTonalElevationPreference.default }
+    compositionLocalOf<FeedsGroupListTonalElevationPref> { FeedsGroupListTonalElevationPref.default }
 
 // Flow page
 val LocalFlowFilterBarStyle =
-    compositionLocalOf<FlowFilterBarStylePreference> { FlowFilterBarStylePreference.default }
+    compositionLocalOf<FlowFilterBarStylePref> { FlowFilterBarStylePref.default }
 val LocalFlowFilterBarFilled =
-    compositionLocalOf<FlowFilterBarFilledPreference> { FlowFilterBarFilledPreference.default }
+    compositionLocalOf<FlowFilterBarFilledPref> { FlowFilterBarFilledPref.default }
 val LocalFlowFilterBarPadding =
     compositionLocalOf { FlowFilterBarPaddingPreference.default }
 val LocalFlowFilterBarTonalElevation =
-    compositionLocalOf<FlowFilterBarTonalElevationPreference> { FlowFilterBarTonalElevationPreference.default }
+    compositionLocalOf<FlowFilterBarTonalElevationPref> { FlowFilterBarTonalElevationPref.default }
 val LocalFlowTopBarTonalElevation =
-    compositionLocalOf<FlowTopBarTonalElevationPreference> { FlowTopBarTonalElevationPreference.default }
+    compositionLocalOf<FlowTopBarTonalElevationPref> { FlowTopBarTonalElevationPref.default }
 val LocalFlowArticleListFeedIcon =
-    compositionLocalOf<FlowArticleListFeedIconPreference> { FlowArticleListFeedIconPreference.default }
+    compositionLocalOf<FlowArticleListFeedIconPref> { FlowArticleListFeedIconPref.default }
 val LocalFlowArticleListFeedName =
-    compositionLocalOf<FlowArticleListFeedNamePreference> { FlowArticleListFeedNamePreference.default }
+    compositionLocalOf<FlowArticleListFeedNamePref> { FlowArticleListFeedNamePref.default }
 val LocalFlowArticleListImage =
-    compositionLocalOf<FlowArticleListImagePreference> { FlowArticleListImagePreference.default }
+    compositionLocalOf<FlowArticleListImagePref> { FlowArticleListImagePref.default }
 val LocalFlowArticleListDesc =
-    compositionLocalOf<FlowArticleListDescPreference> { FlowArticleListDescPreference.default }
+    compositionLocalOf<FlowArticleListDescPref> { FlowArticleListDescPref.default }
 val LocalFlowArticleListTime =
-    compositionLocalOf<FlowArticleListTimePreference> { FlowArticleListTimePreference.default }
+    compositionLocalOf<FlowArticleListTimePref> { FlowArticleListTimePref.default }
 val LocalFlowArticleListDateStickyHeader =
-    compositionLocalOf<FlowArticleListDateStickyHeaderPreference> { FlowArticleListDateStickyHeaderPreference.default }
+    compositionLocalOf<FlowArticleListDateStickyHeaderPref> { FlowArticleListDateStickyHeaderPref.default }
 val LocalFlowArticleListTonalElevation =
-    compositionLocalOf<FlowArticleListTonalElevationPreference> { FlowArticleListTonalElevationPreference.default }
+    compositionLocalOf<FlowArticleListTonalElevationPref> { FlowArticleListTonalElevationPref.default }
 
 // Reading page
-val LocalReadingTheme = compositionLocalOf<ReadingThemePreference> { ReadingThemePreference.default }
-val LocalReadingDarkTheme = compositionLocalOf<ReadingDarkThemePreference> { ReadingDarkThemePreference.default }
+val LocalReadingTheme = compositionLocalOf<ReadingThemePref> { ReadingThemePref.default }
+val LocalReadingDarkTheme = compositionLocalOf<ReadingDarkThemePref> { ReadingDarkThemePref.default }
 val LocalReadingPageTonalElevation =
-    compositionLocalOf<ReadingPageTonalElevationPreference> { ReadingPageTonalElevationPreference.default }
+    compositionLocalOf<ReadingPageTonalElevationPref> { ReadingPageTonalElevationPref.default }
 val LocalReadingAutoHideToolbar =
     compositionLocalOf<ReadingAutoHideToolbarPreference> { ReadingAutoHideToolbarPreference.default }
 val LocalReadingTextFontSize = compositionLocalOf { ReadingTextFontSizePref.default }
-val LocalReadingLetterSpacing = compositionLocalOf { ReadingLetterSpacingPreference.default }
+val LocalReadingLetterSpacing = compositionLocalOf { ReadingLetterSpacingPref.default }
 val LocalReadingTextHorizontalPadding = compositionLocalOf { ReadingTextHorizontalPaddingPref.default }
 val LocalReadingTextAlign = compositionLocalOf<ReadingTextAlignPref> { ReadingTextAlignPref.default }
 val LocalReadingTextBold = compositionLocalOf<ReadingTextBoldPref> { ReadingTextBoldPref.default }
 val LocalReadingTitleAlign = compositionLocalOf<ReadingTitleAlignPref> { ReadingTitleAlignPref.default }
 val LocalReadingSubheadAlign =
-    compositionLocalOf<ReadingSubheadAlignPreference> { ReadingSubheadAlignPreference.default }
-val LocalReadingFonts = compositionLocalOf<ReadingFontsPreference> { ReadingFontsPreference.default }
+    compositionLocalOf<ReadingSubheadAlignPref> { ReadingSubheadAlignPref.default }
+val LocalReadingFonts = compositionLocalOf<ReadingFontsPref> { ReadingFontsPref.default }
 val LocalReadingTitleBold = compositionLocalOf<ReadingTitleBoldPref> { ReadingTitleBoldPref.default }
 val LocalReadingSubheadBold =
     compositionLocalOf<ReadingSubheadBoldPref> { ReadingSubheadBoldPref.default }
@@ -167,23 +167,23 @@ val LocalReadingTitleUpperCase =
     compositionLocalOf<ReadingTitleUpperCasePref> { ReadingTitleUpperCasePref.default }
 val LocalReadingSubheadUpperCase =
     compositionLocalOf<ReadingSubheadUpperCasePref> { ReadingSubheadUpperCasePref.default }
-val LocalReadingImageHorizontalPadding = compositionLocalOf { ReadingImageHorizontalPaddingPreference.default }
-val LocalReadingImageRoundedCorners = compositionLocalOf { ReadingImageRoundedCornersPreference.default }
+val LocalReadingImageHorizontalPadding = compositionLocalOf { ReadingImageHorizontalPaddingPref.default }
+val LocalReadingImageRoundedCorners = compositionLocalOf { ReadingImageRoundedCornersPref.default }
 val LocalReadingImageMaximize =
-    compositionLocalOf<ReadingImageMaximizePreference> { ReadingImageMaximizePreference.default }
+    compositionLocalOf<ReadingImageMaximizePref> { ReadingImageMaximizePref.default }
 
 // Interaction
-val LocalInitialPage = compositionLocalOf<InitialPagePreference> { InitialPagePreference.default }
+val LocalInitialPage = compositionLocalOf<InitialPagePref> { InitialPagePref.default }
 val LocalInitialFilter =
-    compositionLocalOf<InitialFilterPreference> { InitialFilterPreference.default }
+    compositionLocalOf<InitialFilterPref> { InitialFilterPref.default }
 val LocalOpenLink =
-    compositionLocalOf<OpenLinkPreference> { OpenLinkPreference.default }
+    compositionLocalOf<OpenLinkPref> { OpenLinkPref.default }
 val LocalOpenLinkSpecificBrowser =
-    compositionLocalOf { OpenLinkSpecificBrowserPreference.default }
+    compositionLocalOf { OpenLinkSpecificBrowserPref.default }
 
 // Languages
 val LocalLanguages =
-    compositionLocalOf<LanguagesPreference> { LanguagesPreference.default }
+    compositionLocalOf<LanguagesPref> { LanguagesPref.default }
 
 @Composable
 fun SettingsProvider(

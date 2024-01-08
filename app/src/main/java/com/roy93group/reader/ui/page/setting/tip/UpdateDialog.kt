@@ -35,7 +35,7 @@ import com.roy93group.reader.infrastructure.preference.LocalNewVersionLog
 import com.roy93group.reader.infrastructure.preference.LocalNewVersionNumber
 import com.roy93group.reader.infrastructure.preference.LocalNewVersionPublishDate
 import com.roy93group.reader.infrastructure.preference.LocalNewVersionSize
-import com.roy93group.reader.infrastructure.preference.OpenLinkPreference
+import com.roy93group.reader.infrastructure.preference.OpenLinkPref
 import com.roy93group.reader.infrastructure.preference.SkipVersionNumberPref
 import com.roy93group.reader.ui.component.base.BaseDlg
 import com.roy93group.reader.ui.ext.collectAsStateValue
@@ -114,7 +114,7 @@ fun UpdateDialog(
                 onClick = {
                     context.openURL(
                         "${context.getString(R.string.github_link)}/releases/latest",
-                        OpenLinkPreference.AutoPreferCustomTabs
+                        OpenLinkPref.AutoPreferCustomTabs
                     )
                     // Disable automatic updates in F-Droid
 //                    if (downloadState !is Download.Progress) {

@@ -8,7 +8,7 @@ import com.roy93group.reader.ui.ext.put
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-sealed class ReadingTitleUpperCasePref(val value: Boolean) : Preference() {
+sealed class ReadingTitleUpperCasePref(val value: Boolean) : Pref() {
     object ON : ReadingTitleUpperCasePref(true)
     object OFF : ReadingTitleUpperCasePref(false)
 

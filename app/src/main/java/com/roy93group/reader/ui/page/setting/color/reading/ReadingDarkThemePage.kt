@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.LocalReadingDarkTheme
-import com.roy93group.reader.infrastructure.preference.ReadingDarkThemePreference
+import com.roy93group.reader.infrastructure.preference.ReadingDarkThemePref
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.component.base.BaseScaffold
@@ -53,7 +53,7 @@ fun ReadingDarkThemePage(
                     DisplayText(text = stringResource(R.string.dark_theme), desc = "")
                 }
                 item {
-                    ReadingDarkThemePreference.values.map {
+                    ReadingDarkThemePref.values.map {
                         SettingItem(
                             title = it.toDesc(context),
                             onClick = {

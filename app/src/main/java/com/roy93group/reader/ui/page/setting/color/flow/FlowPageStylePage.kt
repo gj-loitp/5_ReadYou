@@ -30,11 +30,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.FlowArticleListTonalElevationPreference
+import com.roy93group.reader.infrastructure.preference.FlowArticleListTonalElevationPref
 import com.roy93group.reader.infrastructure.preference.FlowFilterBarPaddingPreference
-import com.roy93group.reader.infrastructure.preference.FlowFilterBarStylePreference
-import com.roy93group.reader.infrastructure.preference.FlowFilterBarTonalElevationPreference
-import com.roy93group.reader.infrastructure.preference.FlowTopBarTonalElevationPreference
+import com.roy93group.reader.infrastructure.preference.FlowFilterBarStylePref
+import com.roy93group.reader.infrastructure.preference.FlowFilterBarTonalElevationPref
+import com.roy93group.reader.infrastructure.preference.FlowTopBarTonalElevationPref
 import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListDateStickyHeader
 import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListDesc
 import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListFeedIcon
@@ -282,7 +282,7 @@ fun FlowPageStylePage(
     RadioDlg(
         visible = filterBarStyleDialogVisible,
         title = stringResource(R.string.style),
-        options = FlowFilterBarStylePreference.values.map {
+        options = FlowFilterBarStylePref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == filterBarStyle,
@@ -314,7 +314,7 @@ fun FlowPageStylePage(
     RadioDlg(
         visible = filterBarTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
-        options = FlowFilterBarTonalElevationPreference.values.map {
+        options = FlowFilterBarTonalElevationPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == filterBarTonalElevation,
@@ -329,7 +329,7 @@ fun FlowPageStylePage(
     RadioDlg(
         visible = topBarTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
-        options = FlowTopBarTonalElevationPreference.values.map {
+        options = FlowTopBarTonalElevationPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == topBarTonalElevation,
@@ -344,7 +344,7 @@ fun FlowPageStylePage(
     RadioDlg(
         visible = articleListTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
-        options = FlowArticleListTonalElevationPreference.values.map {
+        options = FlowArticleListTonalElevationPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == articleListTonalElevation,

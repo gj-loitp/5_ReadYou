@@ -31,10 +31,10 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.FeedsFilterBarPaddingPreference
-import com.roy93group.reader.infrastructure.preference.FeedsFilterBarStylePreference
-import com.roy93group.reader.infrastructure.preference.FeedsFilterBarTonalElevationPreference
-import com.roy93group.reader.infrastructure.preference.FeedsGroupListTonalElevationPreference
-import com.roy93group.reader.infrastructure.preference.FeedsTopBarTonalElevationPreference
+import com.roy93group.reader.infrastructure.preference.FeedsFilterBarStylePref
+import com.roy93group.reader.infrastructure.preference.FeedsFilterBarTonalElevationPref
+import com.roy93group.reader.infrastructure.preference.FeedsGroupListTonalElevationPref
+import com.roy93group.reader.infrastructure.preference.FeedsTopBarTonalElevationPref
 import com.roy93group.reader.infrastructure.preference.LocalFeedsFilterBarFilled
 import com.roy93group.reader.infrastructure.preference.LocalFeedsFilterBarPadding
 import com.roy93group.reader.infrastructure.preference.LocalFeedsFilterBarStyle
@@ -216,7 +216,7 @@ fun FeedsPageStylePage(
     RadioDlg(
         visible = filterBarStyleDialogVisible,
         title = stringResource(R.string.style),
-        options = FeedsFilterBarStylePreference.values.map {
+        options = FeedsFilterBarStylePref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = filterBarStyle == it,
@@ -248,7 +248,7 @@ fun FeedsPageStylePage(
     RadioDlg(
         visible = filterBarTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
-        options = FeedsFilterBarTonalElevationPreference.values.map {
+        options = FeedsFilterBarTonalElevationPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == filterBarTonalElevation,
@@ -263,7 +263,7 @@ fun FeedsPageStylePage(
     RadioDlg(
         visible = topBarTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
-        options = FeedsTopBarTonalElevationPreference.values.map {
+        options = FeedsTopBarTonalElevationPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == topBarTonalElevation,
@@ -278,7 +278,7 @@ fun FeedsPageStylePage(
     RadioDlg(
         visible = groupListTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
-        options = FeedsGroupListTonalElevationPreference.values.map {
+        options = FeedsGroupListTonalElevationPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == groupListTonalElevation,
