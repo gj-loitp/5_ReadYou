@@ -30,8 +30,8 @@ import com.roy93group.reader.domain.model.article.Article
 import com.roy93group.reader.domain.model.article.ArticleWithFeed
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.general.Filter
-import com.roy93group.reader.infrastructure.preference.FlowArticleListTonalElevationPref
-import com.roy93group.reader.infrastructure.preference.FlowTopBarTonalElevationPref
+import com.roy93group.reader.infrastructure.pref.FlowArticleListTonalElevationPref
+import com.roy93group.reader.infrastructure.pref.FlowTopBarTonalElevationPref
 import com.roy93group.reader.ui.component.FilterBar
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.ext.surfaceColorAtElevation

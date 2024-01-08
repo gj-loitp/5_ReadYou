@@ -57,7 +57,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.OpenLinkPref
+import com.roy93group.reader.infrastructure.pref.OpenLinkPref
 import com.roy93group.reader.ui.component.base.CurlyCornerShape
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.component.base.BaseScaffold

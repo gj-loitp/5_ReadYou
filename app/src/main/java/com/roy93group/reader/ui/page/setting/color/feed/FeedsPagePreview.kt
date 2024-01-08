@@ -30,9 +30,9 @@ import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.general.Filter
 import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.infrastructure.preference.FeedsGroupListExpandPref
-import com.roy93group.reader.infrastructure.preference.FeedsGroupListTonalElevationPref
-import com.roy93group.reader.infrastructure.preference.FeedsTopBarTonalElevationPref
+import com.roy93group.reader.infrastructure.pref.FeedsGroupListExpandPref
+import com.roy93group.reader.infrastructure.pref.FeedsGroupListTonalElevationPref
+import com.roy93group.reader.infrastructure.pref.FeedsTopBarTonalElevationPref
 import com.roy93group.reader.ui.component.FilterBar
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.ext.alphaLN

@@ -20,10 +20,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.DarkThemePref
-import com.roy93group.reader.infrastructure.preference.LocalAmoledDarkTheme
-import com.roy93group.reader.infrastructure.preference.LocalDarkTheme
-import com.roy93group.reader.infrastructure.preference.not
+import com.roy93group.reader.infrastructure.pref.DarkThemePref
+import com.roy93group.reader.infrastructure.pref.LocalAmoledDarkTheme
+import com.roy93group.reader.infrastructure.pref.LocalDarkTheme
+import com.roy93group.reader.infrastructure.pref.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.component.base.BaseScaffold

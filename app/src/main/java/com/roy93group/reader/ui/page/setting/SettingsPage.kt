@@ -30,8 +30,8 @@ import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.LocalNewVersionNumber
-import com.roy93group.reader.infrastructure.preference.LocalSkipVersionNumber
+import com.roy93group.reader.infrastructure.pref.LocalNewVersionNumber
+import com.roy93group.reader.infrastructure.pref.LocalSkipVersionNumber
 import com.roy93group.reader.ui.component.base.Banner
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton

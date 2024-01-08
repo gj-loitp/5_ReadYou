@@ -2,7 +2,7 @@ package com.roy93group.reader.domain.model.account
 
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverter
-import com.roy93group.reader.infrastructure.preference.SyncOnlyWhenChargingPref
+import com.roy93group.reader.infrastructure.pref.SyncOnlyWhenChargingPref
 
 /**
  * Provide [TypeConverter] of [SyncOnlyWhenChargingPref] for [RoomDatabase].

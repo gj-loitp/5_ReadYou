@@ -24,8 +24,8 @@ import com.roy93group.reader.domain.repository.ArticleDao
 import com.roy93group.reader.domain.repository.FeedDao
 import com.roy93group.reader.domain.repository.GroupDao
 import com.roy93group.reader.infrastructure.android.NotificationHelper
-import com.roy93group.reader.infrastructure.preference.KeepArchivedPreference
-import com.roy93group.reader.infrastructure.preference.SyncIntervalPref
+import com.roy93group.reader.infrastructure.pref.KeepArchivedPreference
+import com.roy93group.reader.infrastructure.pref.SyncIntervalPref
 import com.roy93group.reader.infrastructure.rss.RssHelper
 import com.roy93group.reader.ui.ext.currentAccountId
 import com.roy93group.reader.ui.ext.spacerDollar

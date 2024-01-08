@@ -7,7 +7,7 @@ import androidx.compose.runtime.Stable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
-import com.roy93group.reader.infrastructure.preference.LocalCustomPrimaryColor
+import com.roy93group.reader.infrastructure.pref.LocalCustomPrimaryColor
 import com.roy93group.reader.ui.theme.palette.TonalPalettes
 import com.roy93group.reader.ui.theme.palette.TonalPalettes.Companion.getSystemTonalPalettes
 import com.roy93group.reader.ui.theme.palette.TonalPalettes.Companion.toTonalPalettes

@@ -18,8 +18,8 @@ import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.roy93group.reader.domain.model.general.Filter
-import com.roy93group.reader.infrastructure.preference.LocalDarkTheme
-import com.roy93group.reader.infrastructure.preference.LocalReadingDarkTheme
+import com.roy93group.reader.infrastructure.pref.LocalDarkTheme
+import com.roy93group.reader.infrastructure.pref.LocalReadingDarkTheme
 import com.roy93group.reader.ui.ext.animatedComposable
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.findActivity

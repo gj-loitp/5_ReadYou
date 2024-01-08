@@ -13,7 +13,7 @@ import com.roy93group.reader.domain.repository.AccountDao
 import com.roy93group.reader.domain.repository.ArticleDao
 import com.roy93group.reader.domain.repository.FeedDao
 import com.roy93group.reader.domain.repository.GroupDao
-import com.roy93group.reader.infrastructure.preference.*
+import com.roy93group.reader.infrastructure.pref.*
 import com.roy93group.reader.ui.ext.toInt
 import java.util.*
 

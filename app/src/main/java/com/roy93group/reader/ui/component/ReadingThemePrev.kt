@@ -29,10 +29,10 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.roy93group.reader.infrastructure.preference.LocalReadingImageHorizontalPadding
-import com.roy93group.reader.infrastructure.preference.LocalReadingImageRoundedCorners
-import com.roy93group.reader.infrastructure.preference.LocalReadingTextAlign
-import com.roy93group.reader.infrastructure.preference.ReadingThemePref
+import com.roy93group.reader.infrastructure.pref.LocalReadingImageHorizontalPadding
+import com.roy93group.reader.infrastructure.pref.LocalReadingImageRoundedCorners
+import com.roy93group.reader.infrastructure.pref.LocalReadingTextAlign
+import com.roy93group.reader.infrastructure.pref.ReadingThemePref
 import com.roy93group.reader.ui.theme.Shape24
 import com.roy93group.reader.ui.theme.palette.onDark
 import com.roy93group.reader.ui.theme.palette.onLight

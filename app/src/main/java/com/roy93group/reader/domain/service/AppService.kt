@@ -14,8 +14,8 @@ import com.roy93group.reader.infrastructure.di.MainDispatcher
 import com.roy93group.reader.infrastructure.net.Download
 import com.roy93group.reader.infrastructure.net.NetworkDataSource
 import com.roy93group.reader.infrastructure.net.downloadToFileWithProgress
-import com.roy93group.reader.infrastructure.preference.*
-import com.roy93group.reader.infrastructure.preference.NewVersionSizePref.formatSize
+import com.roy93group.reader.infrastructure.pref.*
+import com.roy93group.reader.infrastructure.pref.NewVersionSizePref.formatSize
 import com.roy93group.reader.ui.ext.getCurrentVersion
 import com.roy93group.reader.ui.ext.getLatestApk
 import com.roy93group.reader.ui.ext.showToast

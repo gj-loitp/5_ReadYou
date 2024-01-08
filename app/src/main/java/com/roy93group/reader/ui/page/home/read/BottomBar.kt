@@ -28,7 +28,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.LocalReadingPageTonalElevation
+import com.roy93group.reader.infrastructure.pref.LocalReadingPageTonalElevation
 import com.roy93group.reader.ui.component.base.CanBeDisabledIconButton
 import com.roy93group.reader.ui.component.base.BaseExtensibleVisibility
 

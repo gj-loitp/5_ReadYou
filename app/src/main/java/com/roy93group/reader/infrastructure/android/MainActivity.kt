@@ -14,9 +14,9 @@ import coil.ImageLoader
 import coil.compose.LocalImageLoader
 import dagger.hilt.android.AndroidEntryPoint
 import com.roy93group.reader.domain.repository.AccountDao
-import com.roy93group.reader.infrastructure.preference.AccountSettingsProvider
-import com.roy93group.reader.infrastructure.preference.LanguagesPref
-import com.roy93group.reader.infrastructure.preference.SettingsProvider
+import com.roy93group.reader.infrastructure.pref.AccountSettingsProvider
+import com.roy93group.reader.infrastructure.pref.LanguagesPref
+import com.roy93group.reader.infrastructure.pref.SettingsProvider
 import com.roy93group.reader.ui.ext.languages
 import com.roy93group.reader.ui.page.common.HomeEntry
 import javax.inject.Inject

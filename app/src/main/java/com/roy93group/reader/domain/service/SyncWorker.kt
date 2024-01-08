@@ -8,9 +8,9 @@ import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import com.roy93group.reader.infrastructure.preference.SyncIntervalPref
-import com.roy93group.reader.infrastructure.preference.SyncOnlyOnWiFiPref
-import com.roy93group.reader.infrastructure.preference.SyncOnlyWhenChargingPref
+import com.roy93group.reader.infrastructure.pref.SyncIntervalPref
+import com.roy93group.reader.infrastructure.pref.SyncOnlyOnWiFiPref
+import com.roy93group.reader.infrastructure.pref.SyncOnlyWhenChargingPref
 import java.util.*
 import java.util.concurrent.TimeUnit
 

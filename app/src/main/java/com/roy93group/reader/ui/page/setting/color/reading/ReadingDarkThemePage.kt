@@ -19,8 +19,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.LocalReadingDarkTheme
-import com.roy93group.reader.infrastructure.preference.ReadingDarkThemePref
+import com.roy93group.reader.infrastructure.pref.LocalReadingDarkTheme
+import com.roy93group.reader.infrastructure.pref.ReadingDarkThemePref
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.component.base.BaseScaffold

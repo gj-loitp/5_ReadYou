@@ -24,8 +24,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.LocalOpenLink
-import com.roy93group.reader.infrastructure.preference.LocalOpenLinkSpecificBrowser
+import com.roy93group.reader.infrastructure.pref.LocalOpenLink
+import com.roy93group.reader.infrastructure.pref.LocalOpenLinkSpecificBrowser
 import com.roy93group.reader.ui.component.ChangeUrlDialog
 import com.roy93group.reader.ui.component.FeedIcon
 import com.roy93group.reader.ui.component.RenameDialog

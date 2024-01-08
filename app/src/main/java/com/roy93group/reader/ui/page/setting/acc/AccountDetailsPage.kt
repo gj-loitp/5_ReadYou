@@ -32,10 +32,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.KeepArchivedPreference
-import com.roy93group.reader.infrastructure.preference.SyncBlockListPref
-import com.roy93group.reader.infrastructure.preference.SyncIntervalPref
-import com.roy93group.reader.infrastructure.preference.not
+import com.roy93group.reader.infrastructure.pref.KeepArchivedPreference
+import com.roy93group.reader.infrastructure.pref.SyncBlockListPref
+import com.roy93group.reader.infrastructure.pref.SyncIntervalPref
+import com.roy93group.reader.infrastructure.pref.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.component.base.BaseDlg

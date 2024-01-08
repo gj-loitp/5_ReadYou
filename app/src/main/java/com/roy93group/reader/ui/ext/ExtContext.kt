@@ -17,8 +17,8 @@ import androidx.core.net.toUri
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.general.Version
 import com.roy93group.reader.domain.model.general.toVersion
-import com.roy93group.reader.infrastructure.preference.OpenLinkPref
-import com.roy93group.reader.infrastructure.preference.OpenLinkSpecificBrowserPref
+import com.roy93group.reader.infrastructure.pref.OpenLinkPref
+import com.roy93group.reader.infrastructure.pref.OpenLinkSpecificBrowserPref
 import java.io.File
 
 fun Context.findActivity(): Activity? = when (this) {

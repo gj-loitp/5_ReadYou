@@ -21,9 +21,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.roy93group.reader.infrastructure.preference.LocalOpenLink
-import com.roy93group.reader.infrastructure.preference.LocalOpenLinkSpecificBrowser
-import com.roy93group.reader.infrastructure.preference.LocalReadingSubheadUpperCase
+import com.roy93group.reader.infrastructure.pref.LocalOpenLink
+import com.roy93group.reader.infrastructure.pref.LocalOpenLinkSpecificBrowser
+import com.roy93group.reader.infrastructure.pref.LocalReadingSubheadUpperCase
 import com.roy93group.reader.ui.component.base.BaseExtensibleVisibility
 import com.roy93group.reader.ui.component.reader.Reader
 import com.roy93group.reader.ui.ext.drawVerticalScrollbar

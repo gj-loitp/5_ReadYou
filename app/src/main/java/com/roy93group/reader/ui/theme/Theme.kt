@@ -5,8 +5,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalContext
-import com.roy93group.reader.infrastructure.preference.LocalBasicFonts
-import com.roy93group.reader.infrastructure.preference.LocalThemeIndex
+import com.roy93group.reader.infrastructure.pref.LocalBasicFonts
+import com.roy93group.reader.infrastructure.pref.LocalThemeIndex
 import com.roy93group.reader.ui.theme.palette.LocalTonalPalettes
 import com.roy93group.reader.ui.theme.palette.TonalPalettes
 import com.roy93group.reader.ui.theme.palette.core.ProvideZcamViewingConditions

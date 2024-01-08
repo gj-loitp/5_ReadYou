@@ -18,8 +18,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.roy93group.reader.infrastructure.preference.LocalReadingAutoHideToolbar
-import com.roy93group.reader.infrastructure.preference.LocalReadingPageTonalElevation
+import com.roy93group.reader.infrastructure.pref.LocalReadingAutoHideToolbar
+import com.roy93group.reader.infrastructure.pref.LocalReadingPageTonalElevation
 import com.roy93group.reader.ui.component.base.BaseScaffold
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.isScrollDown

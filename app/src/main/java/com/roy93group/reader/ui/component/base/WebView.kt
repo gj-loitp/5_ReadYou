@@ -19,8 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
-import com.roy93group.reader.infrastructure.preference.LocalOpenLink
-import com.roy93group.reader.infrastructure.preference.LocalOpenLinkSpecificBrowser
+import com.roy93group.reader.infrastructure.pref.LocalOpenLink
+import com.roy93group.reader.infrastructure.pref.LocalOpenLinkSpecificBrowser
 import com.roy93group.reader.ui.ext.openURL
 
 const val INJECTION_TOKEN = "/android_asset_font/"

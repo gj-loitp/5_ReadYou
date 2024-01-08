@@ -2,7 +2,7 @@ package com.roy93group.reader.domain.model.account
 
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverter
-import com.roy93group.reader.infrastructure.preference.KeepArchivedPreference
+import com.roy93group.reader.infrastructure.pref.KeepArchivedPreference
 
 /**
  * Provide [TypeConverter] of [KeepArchivedPreference] for [RoomDatabase].

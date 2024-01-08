@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.LocalReadingPageTonalElevation
+import com.roy93group.reader.infrastructure.pref.LocalReadingPageTonalElevation
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.component.base.BaseExtensibleVisibility
 import com.roy93group.reader.ui.ext.share

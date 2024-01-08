@@ -40,7 +40,7 @@ import coil.size.Precision
 import coil.size.Size
 import coil.size.pxOrElse
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.LocalReadingImageMaximize
+import com.roy93group.reader.infrastructure.pref.LocalReadingImageMaximize
 import com.roy93group.reader.ui.component.base.BaseAsyncImage
 import org.jsoup.Jsoup
 import org.jsoup.helper.StringUtil

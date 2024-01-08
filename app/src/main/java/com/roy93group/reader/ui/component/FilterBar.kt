@@ -18,8 +18,8 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import com.roy93group.reader.domain.model.general.Filter
-import com.roy93group.reader.infrastructure.preference.FlowFilterBarStylePref
-import com.roy93group.reader.infrastructure.preference.LocalThemeIndex
+import com.roy93group.reader.infrastructure.pref.FlowFilterBarStylePref
+import com.roy93group.reader.infrastructure.pref.LocalThemeIndex
 import com.roy93group.reader.ui.ext.surfaceColorAtElevation
 import com.roy93group.reader.ui.theme.palette.onDark
 

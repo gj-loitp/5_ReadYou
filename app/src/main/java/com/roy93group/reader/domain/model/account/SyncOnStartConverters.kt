@@ -2,7 +2,7 @@ package com.roy93group.reader.domain.model.account
 
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverter
-import com.roy93group.reader.infrastructure.preference.SyncOnStartPref
+import com.roy93group.reader.infrastructure.pref.SyncOnStartPref
 
 /**
  * Provide [TypeConverter] of [SyncOnStartPref] for [RoomDatabase].

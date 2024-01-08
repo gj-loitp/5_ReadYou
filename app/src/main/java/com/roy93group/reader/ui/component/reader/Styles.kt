@@ -16,16 +16,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.roy93group.reader.infrastructure.preference.LocalReadingFonts
-import com.roy93group.reader.infrastructure.preference.LocalReadingImageHorizontalPadding
-import com.roy93group.reader.infrastructure.preference.LocalReadingImageRoundedCorners
-import com.roy93group.reader.infrastructure.preference.LocalReadingLetterSpacing
-import com.roy93group.reader.infrastructure.preference.LocalReadingSubheadAlign
-import com.roy93group.reader.infrastructure.preference.LocalReadingSubheadBold
-import com.roy93group.reader.infrastructure.preference.LocalReadingTextAlign
-import com.roy93group.reader.infrastructure.preference.LocalReadingTextBold
-import com.roy93group.reader.infrastructure.preference.LocalReadingTextFontSize
-import com.roy93group.reader.infrastructure.preference.LocalReadingTextHorizontalPadding
+import com.roy93group.reader.infrastructure.pref.LocalReadingFonts
+import com.roy93group.reader.infrastructure.pref.LocalReadingImageHorizontalPadding
+import com.roy93group.reader.infrastructure.pref.LocalReadingImageRoundedCorners
+import com.roy93group.reader.infrastructure.pref.LocalReadingLetterSpacing
+import com.roy93group.reader.infrastructure.pref.LocalReadingSubheadAlign
+import com.roy93group.reader.infrastructure.pref.LocalReadingSubheadBold
+import com.roy93group.reader.infrastructure.pref.LocalReadingTextAlign
+import com.roy93group.reader.infrastructure.pref.LocalReadingTextBold
+import com.roy93group.reader.infrastructure.pref.LocalReadingTextFontSize
+import com.roy93group.reader.infrastructure.pref.LocalReadingTextHorizontalPadding
 import com.roy93group.reader.ui.ext.alphaLN
 
 const val MAX_CONTENT_WIDTH = 840.0

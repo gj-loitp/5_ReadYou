@@ -22,9 +22,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.LanguagesPref
-import com.roy93group.reader.infrastructure.preference.LocalLanguages
-import com.roy93group.reader.infrastructure.preference.OpenLinkPref
+import com.roy93group.reader.infrastructure.pref.LanguagesPref
+import com.roy93group.reader.infrastructure.pref.LocalLanguages
+import com.roy93group.reader.infrastructure.pref.OpenLinkPref
 import com.roy93group.reader.ui.component.base.Banner
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
