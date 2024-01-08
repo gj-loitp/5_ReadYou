@@ -9,21 +9,16 @@ import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
 
-object NewVersionSizePreference {
+object NewVersionLogPref {
 
     const val default = ""
 
-    fun Int.formatSize(): String =
-        (this / 1024f / 1024f)
-            .takeIf { it > 0f }
-            ?.run { " ${String.format("%.2f", this)} MB" } ?: ""
-
     fun put(context: Context, scope: CoroutineScope, value: String) {
         scope.launch(Dispatchers.IO) {
-            context.dataStore.put(DataStoreKeys.NewVersionSize, value)
+            context.dataStore.put(DataStoreKeys.NewVersionLog, value)
         }
     }
 
     fun fromPreferences(preferences: Preferences) =
-        preferences[DataStoreKeys.NewVersionSize.key] ?: default
+        preferences[DataStoreKeys.NewVersionLog.key] ?: default
 }

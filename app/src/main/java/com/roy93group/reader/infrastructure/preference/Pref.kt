@@ -12,16 +12,16 @@ sealed class Pref {
 fun Preferences.toSettings(): Settings {
     return Settings(
         // Version
-        newVersionNumber = NewVersionNumberPreference.fromPreferences(this),
+        newVersionNumber = NewVersionNumberPref.fromPreferences(this),
         skipVersionNumber = SkipVersionNumberPref.fromPreferences(this),
-        newVersionPublishDate = NewVersionPublishDatePreference.fromPreferences(this),
-        newVersionLog = NewVersionLogPreference.fromPreferences(this),
-        newVersionSize = NewVersionSizePreference.fromPreferences(this),
-        newVersionDownloadUrl = NewVersionDownloadUrlPreference.fromPreferences(this),
+        newVersionPublishDate = NewVersionPublishDatePref.fromPreferences(this),
+        newVersionLog = NewVersionLogPref.fromPreferences(this),
+        newVersionSize = NewVersionSizePref.fromPreferences(this),
+        newVersionDownloadUrl = NewVersionDownloadUrlPref.fromPreferences(this),
 
         // Theme
         themeIndex = ThemeIndexPref.fromPreferences(this),
-        customPrimaryColor = CustomPrimaryColorPreference.fromPreferences(this),
+        customPrimaryColor = CustomPrimaryColorPref.fromPreferences(this),
         darkTheme = DarkThemePref.fromPreferences(this),
         amoledDarkTheme = AmoledDarkThemePref.fromPreferences(this),
         basicFonts = BasicFontsPref.fromPreferences(this),
@@ -29,7 +29,7 @@ fun Preferences.toSettings(): Settings {
         // Feeds page
         feedsFilterBarStyle = FeedsFilterBarStylePref.fromPreferences(this),
         feedsFilterBarFilled = FeedsFilterBarFilledPref.fromPreferences(this),
-        feedsFilterBarPadding = FeedsFilterBarPaddingPreference.fromPreferences(this),
+        feedsFilterBarPadding = FeedsFilterBarPaddingPref.fromPreferences(this),
         feedsFilterBarTonalElevation = FeedsFilterBarTonalElevationPref.fromPreferences(this),
         feedsTopBarTonalElevation = FeedsTopBarTonalElevationPref.fromPreferences(this),
         feedsGroupListExpand = FeedsGroupListExpandPref.fromPreferences(this),
@@ -38,7 +38,7 @@ fun Preferences.toSettings(): Settings {
         // Flow page
         flowFilterBarStyle = FlowFilterBarStylePref.fromPreferences(this),
         flowFilterBarFilled = FlowFilterBarFilledPref.fromPreferences(this),
-        flowFilterBarPadding = FlowFilterBarPaddingPreference.fromPreferences(this),
+        flowFilterBarPadding = FlowFilterBarPaddingPref.fromPreferences(this),
         flowFilterBarTonalElevation = FlowFilterBarTonalElevationPref.fromPreferences(this),
         flowTopBarTonalElevation = FlowTopBarTonalElevationPref.fromPreferences(this),
         flowArticleListFeedIcon = FlowArticleListFeedIconPref.fromPreferences(this),

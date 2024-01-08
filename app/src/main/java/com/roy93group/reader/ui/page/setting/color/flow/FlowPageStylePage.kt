@@ -31,7 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.FlowArticleListTonalElevationPref
-import com.roy93group.reader.infrastructure.preference.FlowFilterBarPaddingPreference
+import com.roy93group.reader.infrastructure.preference.FlowFilterBarPaddingPref
 import com.roy93group.reader.infrastructure.preference.FlowFilterBarStylePref
 import com.roy93group.reader.infrastructure.preference.FlowFilterBarTonalElevationPref
 import com.roy93group.reader.infrastructure.preference.FlowTopBarTonalElevationPref
@@ -306,7 +306,7 @@ fun FlowPageStylePage(
             filterBarPaddingDialogVisible = false
         },
         onConfirm = {
-            FlowFilterBarPaddingPreference.put(context, scope, filterBarPaddingValue ?: 0)
+            FlowFilterBarPaddingPref.put(context, scope, filterBarPaddingValue ?: 0)
             filterBarPaddingDialogVisible = false
         }
     )

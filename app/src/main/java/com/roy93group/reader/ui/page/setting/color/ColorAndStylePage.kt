@@ -53,7 +53,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.BasicFontsPref
-import com.roy93group.reader.infrastructure.preference.CustomPrimaryColorPreference
+import com.roy93group.reader.infrastructure.preference.CustomPrimaryColorPref
 import com.roy93group.reader.infrastructure.preference.LocalBasicFonts
 import com.roy93group.reader.infrastructure.preference.LocalCustomPrimaryColor
 import com.roy93group.reader.infrastructure.preference.LocalDarkTheme
@@ -348,7 +348,7 @@ fun Palettes(
         },
         onConfirm = {
             it.checkColorHex()?.let { hex ->
-                CustomPrimaryColorPreference.put(context, scope, hex)
+                CustomPrimaryColorPref.put(context, scope, hex)
                 ThemeIndexPref.put(context, scope, 4)
                 addDialogVisible = false
             }

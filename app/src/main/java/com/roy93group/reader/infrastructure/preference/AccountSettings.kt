@@ -38,4 +38,3 @@ fun AccountSettingsProvider(
         content()
     }
 }
-

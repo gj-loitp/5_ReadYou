@@ -11,7 +11,7 @@ import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
 
-object NewVersionNumberPreference {
+object NewVersionNumberPref {
 
     val default = Version()
 

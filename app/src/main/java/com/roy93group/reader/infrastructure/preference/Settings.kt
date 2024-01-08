@@ -15,16 +15,16 @@ import com.roy93group.reader.ui.ext.dataStore
 @Keep
 data class Settings(
     // Version
-    val newVersionNumber: Version = NewVersionNumberPreference.default,
+    val newVersionNumber: Version = NewVersionNumberPref.default,
     val skipVersionNumber: Version = SkipVersionNumberPref.default,
-    val newVersionPublishDate: String = NewVersionPublishDatePreference.default,
-    val newVersionLog: String = NewVersionLogPreference.default,
-    val newVersionSize: String = NewVersionSizePreference.default,
-    val newVersionDownloadUrl: String = NewVersionDownloadUrlPreference.default,
+    val newVersionPublishDate: String = NewVersionPublishDatePref.default,
+    val newVersionLog: String = NewVersionLogPref.default,
+    val newVersionSize: String = NewVersionSizePref.default,
+    val newVersionDownloadUrl: String = NewVersionDownloadUrlPref.default,
 
     // Theme
     val themeIndex: Int = ThemeIndexPref.default,
-    val customPrimaryColor: String = CustomPrimaryColorPreference.default,
+    val customPrimaryColor: String = CustomPrimaryColorPref.default,
     val darkTheme: DarkThemePref = DarkThemePref.default,
     val amoledDarkTheme: AmoledDarkThemePref = AmoledDarkThemePref.default,
     val basicFonts: BasicFontsPref = BasicFontsPref.default,
@@ -32,7 +32,7 @@ data class Settings(
     // Feeds page
     val feedsFilterBarStyle: FeedsFilterBarStylePref = FeedsFilterBarStylePref.default,
     val feedsFilterBarFilled: FeedsFilterBarFilledPref = FeedsFilterBarFilledPref.default,
-    val feedsFilterBarPadding: Int = FeedsFilterBarPaddingPreference.default,
+    val feedsFilterBarPadding: Int = FeedsFilterBarPaddingPref.default,
     val feedsFilterBarTonalElevation: FeedsFilterBarTonalElevationPref = FeedsFilterBarTonalElevationPref.default,
     val feedsTopBarTonalElevation: FeedsTopBarTonalElevationPref = FeedsTopBarTonalElevationPref.default,
     val feedsGroupListExpand: FeedsGroupListExpandPref = FeedsGroupListExpandPref.default,
@@ -41,7 +41,7 @@ data class Settings(
     // Flow page
     val flowFilterBarStyle: FlowFilterBarStylePref = FlowFilterBarStylePref.default,
     val flowFilterBarFilled: FlowFilterBarFilledPref = FlowFilterBarFilledPref.default,
-    val flowFilterBarPadding: Int = FlowFilterBarPaddingPreference.default,
+    val flowFilterBarPadding: Int = FlowFilterBarPaddingPref.default,
     val flowFilterBarTonalElevation: FlowFilterBarTonalElevationPref = FlowFilterBarTonalElevationPref.default,
     val flowTopBarTonalElevation: FlowTopBarTonalElevationPref = FlowTopBarTonalElevationPref.default,
     val flowArticleListFeedIcon: FlowArticleListFeedIconPref = FlowArticleListFeedIconPref.default,
@@ -84,18 +84,18 @@ data class Settings(
 )
 
 // Version
-val LocalNewVersionNumber = compositionLocalOf { NewVersionNumberPreference.default }
+val LocalNewVersionNumber = compositionLocalOf { NewVersionNumberPref.default }
 val LocalSkipVersionNumber = compositionLocalOf { SkipVersionNumberPref.default }
-val LocalNewVersionPublishDate = compositionLocalOf { NewVersionPublishDatePreference.default }
-val LocalNewVersionLog = compositionLocalOf { NewVersionLogPreference.default }
-val LocalNewVersionSize = compositionLocalOf { NewVersionSizePreference.default }
-val LocalNewVersionDownloadUrl = compositionLocalOf { NewVersionDownloadUrlPreference.default }
+val LocalNewVersionPublishDate = compositionLocalOf { NewVersionPublishDatePref.default }
+val LocalNewVersionLog = compositionLocalOf { NewVersionLogPref.default }
+val LocalNewVersionSize = compositionLocalOf { NewVersionSizePref.default }
+val LocalNewVersionDownloadUrl = compositionLocalOf { NewVersionDownloadUrlPref.default }
 
 // Theme
 val LocalThemeIndex =
     compositionLocalOf { ThemeIndexPref.default }
 val LocalCustomPrimaryColor =
-    compositionLocalOf { CustomPrimaryColorPreference.default }
+    compositionLocalOf { CustomPrimaryColorPref.default }
 val LocalDarkTheme =
     compositionLocalOf<DarkThemePref> { DarkThemePref.default }
 val LocalAmoledDarkTheme =
@@ -108,7 +108,7 @@ val LocalFeedsFilterBarStyle =
 val LocalFeedsFilterBarFilled =
     compositionLocalOf<FeedsFilterBarFilledPref> { FeedsFilterBarFilledPref.default }
 val LocalFeedsFilterBarPadding =
-    compositionLocalOf { FeedsFilterBarPaddingPreference.default }
+    compositionLocalOf { FeedsFilterBarPaddingPref.default }
 val LocalFeedsFilterBarTonalElevation =
     compositionLocalOf<FeedsFilterBarTonalElevationPref> { FeedsFilterBarTonalElevationPref.default }
 val LocalFeedsTopBarTonalElevation =
@@ -124,7 +124,7 @@ val LocalFlowFilterBarStyle =
 val LocalFlowFilterBarFilled =
     compositionLocalOf<FlowFilterBarFilledPref> { FlowFilterBarFilledPref.default }
 val LocalFlowFilterBarPadding =
-    compositionLocalOf { FlowFilterBarPaddingPreference.default }
+    compositionLocalOf { FlowFilterBarPaddingPref.default }
 val LocalFlowFilterBarTonalElevation =
     compositionLocalOf<FlowFilterBarTonalElevationPref> { FlowFilterBarTonalElevationPref.default }
 val LocalFlowTopBarTonalElevation =

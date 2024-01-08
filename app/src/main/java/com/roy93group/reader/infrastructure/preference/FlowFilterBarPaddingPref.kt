@@ -8,7 +8,7 @@ import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
 
-object FlowFilterBarPaddingPreference {
+object FlowFilterBarPaddingPref {
 
     const val default = 60
 

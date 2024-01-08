@@ -30,7 +30,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.roy93group.reader.R
-import com.roy93group.reader.infrastructure.preference.FeedsFilterBarPaddingPreference
+import com.roy93group.reader.infrastructure.preference.FeedsFilterBarPaddingPref
 import com.roy93group.reader.infrastructure.preference.FeedsFilterBarStylePref
 import com.roy93group.reader.infrastructure.preference.FeedsFilterBarTonalElevationPref
 import com.roy93group.reader.infrastructure.preference.FeedsGroupListTonalElevationPref
@@ -240,7 +240,7 @@ fun FeedsPageStylePage(
             filterBarPaddingDialogVisible = false
         },
         onConfirm = {
-            FeedsFilterBarPaddingPreference.put(context, scope, filterBarPaddingValue ?: 0)
+            FeedsFilterBarPaddingPref.put(context, scope, filterBarPaddingValue ?: 0)
             filterBarPaddingDialogVisible = false
         }
     )

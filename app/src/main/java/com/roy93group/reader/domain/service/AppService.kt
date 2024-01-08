@@ -15,7 +15,7 @@ import com.roy93group.reader.infrastructure.net.Download
 import com.roy93group.reader.infrastructure.net.NetworkDataSource
 import com.roy93group.reader.infrastructure.net.downloadToFileWithProgress
 import com.roy93group.reader.infrastructure.preference.*
-import com.roy93group.reader.infrastructure.preference.NewVersionSizePreference.formatSize
+import com.roy93group.reader.infrastructure.preference.NewVersionSizePref.formatSize
 import com.roy93group.reader.ui.ext.getCurrentVersion
 import com.roy93group.reader.ui.ext.getLatestApk
 import com.roy93group.reader.ui.ext.showToast
@@ -63,11 +63,11 @@ class AppService @Inject constructor(
             Log.i("RLog", "current version $currentVersion")
             if (latestVersion.whetherNeedUpdate(currentVersion, skipVersion)) {
                 Log.i("RLog", "new version $latestVersion")
-                NewVersionNumberPreference.put(context, this, latestVersion.toString())
-                NewVersionLogPreference.put(context, this, latestLog)
-                NewVersionPublishDatePreference.put(context, this, latestPublishDate)
-                NewVersionSizePreference.put(context, this, latestSize.formatSize())
-                NewVersionDownloadUrlPreference.put(context, this, latestDownloadUrl)
+                NewVersionNumberPref.put(context, this, latestVersion.toString())
+                NewVersionLogPref.put(context, this, latestLog)
+                NewVersionPublishDatePref.put(context, this, latestPublishDate)
+                NewVersionSizePref.put(context, this, latestSize.formatSize())
+                NewVersionDownloadUrlPref.put(context, this, latestDownloadUrl)
                 true
             } else {
                 false

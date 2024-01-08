@@ -2,23 +2,22 @@ package com.roy93group.reader.infrastructure.preference
 
 import android.content.Context
 import androidx.datastore.preferences.core.Preferences
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
-object NewVersionDownloadUrlPreference {
+object CustomPrimaryColorPref {
 
     const val default = ""
 
     fun put(context: Context, scope: CoroutineScope, value: String) {
-        scope.launch(Dispatchers.IO) {
-            context.dataStore.put(DataStoreKeys.NewVersionDownloadUrl, value)
+        scope.launch {
+            context.dataStore.put(DataStoreKeys.CustomPrimaryColor, value)
         }
     }
 
     fun fromPreferences(preferences: Preferences) =
-        preferences[DataStoreKeys.NewVersionDownloadUrl.key] ?: default
+        preferences[DataStoreKeys.CustomPrimaryColor.key] ?: default
 }
