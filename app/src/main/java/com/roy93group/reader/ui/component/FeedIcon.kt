@@ -15,7 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.roy93group.reader.ui.component.base.RYAsyncImage
+import com.roy93group.reader.ui.component.base.BaseAsyncImage
 import me.ash.reader.ui.component.base.Base64Image
 
 @Composable
@@ -49,7 +49,7 @@ fun FeedIcon(
             base64Uri = iconUrl
         )
     } else {
-        RYAsyncImage(
+        BaseAsyncImage(
             modifier = Modifier
                 .size(size)
                 .clip(CircleShape),

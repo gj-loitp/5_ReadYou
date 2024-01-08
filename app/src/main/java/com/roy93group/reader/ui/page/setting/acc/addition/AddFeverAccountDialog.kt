@@ -31,8 +31,8 @@ import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
 import com.roy93group.reader.domain.model.account.AccountType
 import com.roy93group.reader.domain.model.account.security.FeverSecurityKey
-import com.roy93group.reader.ui.component.base.RYDialog
-import com.roy93group.reader.ui.component.base.RYOutlineTextField
+import com.roy93group.reader.ui.component.base.BaseDlg
+import com.roy93group.reader.ui.component.base.BaseOutlineTextField
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
 import com.roy93group.reader.ui.page.common.RouteName
@@ -53,7 +53,7 @@ fun AddFeverAccountDialog(
     var username by rememberSaveable { mutableStateOf("") }
     var password by rememberSaveable { mutableStateOf("") }
 
-    RYDialog(
+    BaseDlg(
         modifier = Modifier.padding(horizontal = 44.dp),
         visible = uiState.addFeverAccountDialogVisible,
         properties = DialogProperties(usePlatformDefaultWidth = false),
@@ -79,7 +79,7 @@ fun AddFeverAccountDialog(
                 modifier = Modifier.verticalScroll(rememberScrollState())
             ) {
                 Spacer(modifier = Modifier.height(10.dp))
-                RYOutlineTextField(
+                BaseOutlineTextField(
                     value = serverUrl,
                     onValueChange = { serverUrl = it },
                     label = stringResource(R.string.server_url),
@@ -87,7 +87,7 @@ fun AddFeverAccountDialog(
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
                 )
                 Spacer(modifier = Modifier.height(10.dp))
-                RYOutlineTextField(
+                BaseOutlineTextField(
                     value = username,
                     onValueChange = { username = it },
                     label = stringResource(R.string.username),
@@ -95,7 +95,7 @@ fun AddFeverAccountDialog(
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
                 )
                 Spacer(modifier = Modifier.height(10.dp))
-                RYOutlineTextField(
+                BaseOutlineTextField(
                     value = password,
                     onValueChange = { password = it },
                     isPassword = true,

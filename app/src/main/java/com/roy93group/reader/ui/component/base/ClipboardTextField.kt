@@ -34,7 +34,7 @@ fun ClipboardTextField(
 ) {
     Column(modifier = modifier) {
         Spacer(modifier = Modifier.height(10.dp))
-        RYTextField(
+        BaseTextField(
             readOnly = readOnly,
             value = value,
             singleLine = singleLine,

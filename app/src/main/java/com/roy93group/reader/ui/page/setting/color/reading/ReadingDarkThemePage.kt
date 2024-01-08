@@ -23,7 +23,7 @@ import com.roy93group.reader.infrastructure.preference.LocalReadingDarkTheme
 import com.roy93group.reader.infrastructure.preference.ReadingDarkThemePreference
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.BaseScaffold
 import com.roy93group.reader.ui.page.setting.SettingItem
 import com.roy93group.reader.ui.theme.palette.onLight
 
@@ -36,7 +36,7 @@ fun ReadingDarkThemePage(
     val darkTheme = LocalReadingDarkTheme.current
     val scope = rememberCoroutineScope()
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(

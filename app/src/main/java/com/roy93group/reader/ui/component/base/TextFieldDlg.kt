@@ -37,7 +37,7 @@ fun TextFieldDlg(
 ) {
     val focusManager = LocalFocusManager.current
 
-    RYDialog(
+    BaseDlg(
         modifier = modifier,
         visible = visible,
         onDismissRequest = onDismissRequest,

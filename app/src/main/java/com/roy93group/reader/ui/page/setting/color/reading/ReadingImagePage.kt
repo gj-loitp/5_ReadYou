@@ -32,8 +32,8 @@ import com.roy93group.reader.infrastructure.preference.ReadingThemePreference
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
-import com.roy93group.reader.ui.component.base.RYSwitch
+import com.roy93group.reader.ui.component.base.BaseScaffold
+import com.roy93group.reader.ui.component.base.BaseSwitch
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.component.base.TextFieldDlg
 import com.roy93group.reader.ui.page.setting.SettingItem
@@ -57,7 +57,7 @@ fun ReadingImagePage(
     var roundedCornersValue: Int? by remember { mutableStateOf(roundedCorners) }
     var horizontalPaddingValue: Int? by remember { mutableStateOf(horizontalPadding) }
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(
@@ -127,7 +127,7 @@ fun ReadingImagePage(
                             ReadingThemePreference.Custom.put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = maximize.value) {
+                        BaseSwitch(activated = maximize.value) {
                             (!maximize).put(context, scope)
                             ReadingThemePreference.Custom.put(context, scope)
                         }

@@ -56,7 +56,7 @@ import com.roy93group.reader.ui.component.FilterBar
 import com.roy93group.reader.ui.component.base.Banner
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.BaseScaffold
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.ext.alphaLN
 import com.roy93group.reader.ui.ext.collectAsStateValue
@@ -145,7 +145,7 @@ fun FeedsPage(
         context.findActivity()?.moveTaskToBack(false)
     }
 
-    RYScaffold(
+    BaseScaffold(
         topBarTonalElevation = topBarTonalElevation.value.dp,
         containerTonalElevation = groupListTonalElevation.value.dp,
         navigationIcon = {

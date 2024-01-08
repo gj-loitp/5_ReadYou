@@ -26,7 +26,7 @@ import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.roy93group.reader.R
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.BaseScaffold
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.component.base.Tips
 import com.roy93group.reader.ui.ext.collectAsStateValue
@@ -44,7 +44,7 @@ fun AccountsPage(
     val uiState = viewModel.accountUiState.collectAsStateValue()
     val accounts = viewModel.accounts.collectAsStateValue(initial = emptyList())
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(

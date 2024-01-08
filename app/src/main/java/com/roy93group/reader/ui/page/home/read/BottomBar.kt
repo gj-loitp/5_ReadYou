@@ -30,7 +30,7 @@ import androidx.compose.ui.zIndex
 import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.LocalReadingPageTonalElevation
 import com.roy93group.reader.ui.component.base.CanBeDisabledIconButton
-import com.roy93group.reader.ui.component.base.RYExtensibleVisibility
+import com.roy93group.reader.ui.component.base.BaseExtensibleVisibility
 
 @Composable
 fun BottomBar(
@@ -51,7 +51,7 @@ fun BottomBar(
             .zIndex(1f),
         contentAlignment = Alignment.BottomCenter
     ) {
-        RYExtensibleVisibility(visible = isShow) {
+        BaseExtensibleVisibility(visible = isShow) {
             val view = LocalView.current
 
             Surface(

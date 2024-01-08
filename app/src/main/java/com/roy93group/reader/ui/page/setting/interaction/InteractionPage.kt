@@ -31,8 +31,8 @@ import com.roy93group.reader.infrastructure.preference.LocalOpenLinkSpecificBrow
 import com.roy93group.reader.infrastructure.preference.OpenLinkPreference
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
-import com.roy93group.reader.ui.component.base.RadioDialog
+import com.roy93group.reader.ui.component.base.BaseScaffold
+import com.roy93group.reader.ui.component.base.RadioDlg
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.ext.getBrowserAppList
@@ -57,7 +57,7 @@ fun InteractionPage(
     var openLinkDialogVisible by remember { mutableStateOf(false) }
     var openLinkSpecificBrowserDialogVisible by remember { mutableStateOf(false) }
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(
@@ -120,7 +120,7 @@ fun InteractionPage(
         }
     )
 
-    RadioDialog(
+    RadioDlg(
         visible = initialPageDialogVisible,
         title = stringResource(R.string.initial_page),
         options = InitialPagePreference.values.map {
@@ -135,7 +135,7 @@ fun InteractionPage(
         initialPageDialogVisible = false
     }
 
-    RadioDialog(
+    RadioDlg(
         visible = initialFilterDialogVisible,
         title = stringResource(R.string.initial_filter),
         options = InitialFilterPreference.values.map {
@@ -150,7 +150,7 @@ fun InteractionPage(
         initialFilterDialogVisible = false
     }
 
-    RadioDialog(
+    RadioDlg(
         visible = openLinkDialogVisible,
         title = stringResource(R.string.initial_open_app),
         options = OpenLinkPreference.values.map {
@@ -169,7 +169,7 @@ fun InteractionPage(
         context.getBrowserAppList()
     }
 
-    RadioDialog(
+    RadioDlg(
         visible = openLinkSpecificBrowserDialogVisible,
         title = stringResource(R.string.open_link_specific_browser),
         options = browserList.map {

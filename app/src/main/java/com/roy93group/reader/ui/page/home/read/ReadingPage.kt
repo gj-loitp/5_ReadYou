@@ -20,7 +20,7 @@ import androidx.navigation.NavHostController
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.roy93group.reader.infrastructure.preference.LocalReadingAutoHideToolbar
 import com.roy93group.reader.infrastructure.preference.LocalReadingPageTonalElevation
-import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.BaseScaffold
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.isScrollDown
 import com.roy93group.reader.ui.page.home.HomeViewModel
@@ -63,7 +63,7 @@ fun ReadingPage(
         }
     }
 
-    RYScaffold(
+    BaseScaffold(
         topBarTonalElevation = tonalElevation.value.dp,
         containerTonalElevation = tonalElevation.value.dp,
         content = {

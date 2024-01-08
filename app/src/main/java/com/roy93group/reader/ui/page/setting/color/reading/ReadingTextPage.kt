@@ -44,9 +44,9 @@ import com.roy93group.reader.infrastructure.preference.ReadingThemePreference
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
-import com.roy93group.reader.ui.component.base.RYSwitch
-import com.roy93group.reader.ui.component.base.RadioDialog
+import com.roy93group.reader.ui.component.base.BaseScaffold
+import com.roy93group.reader.ui.component.base.BaseSwitch
+import com.roy93group.reader.ui.component.base.RadioDlg
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.component.base.TextFieldDlg
@@ -76,7 +76,7 @@ fun ReadingTextPage(
     var letterSpacingValue: String? by remember { mutableStateOf(letterSpacing.toString()) }
     var horizontalPaddingValue: Int? by remember { mutableStateOf(horizontalPadding) }
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(
@@ -131,7 +131,7 @@ fun ReadingTextPage(
                             ReadingThemePreference.Custom.put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = bold.value) {
+                        BaseSwitch(activated = bold.value) {
                             (!bold).put(context, scope)
                             ReadingThemePreference.Custom.put(context, scope)
                         }
@@ -215,7 +215,7 @@ fun ReadingTextPage(
         }
     )
 
-    RadioDialog(
+    RadioDlg(
         visible = alignDialogVisible,
         title = stringResource(R.string.alignment),
         options = ReadingTextAlignPreference.values.map {

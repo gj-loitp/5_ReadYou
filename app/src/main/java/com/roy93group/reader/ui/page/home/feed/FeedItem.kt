@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.ui.component.FeedIcon
-import com.roy93group.reader.ui.component.base.RYExtensibleVisibility
+import com.roy93group.reader.ui.component.base.BaseExtensibleVisibility
 import com.roy93group.reader.ui.page.home.feed.drawer.feed.FeedOptionViewModel
 import com.roy93group.reader.ui.theme.ShapeBottom32
 
@@ -44,7 +44,7 @@ fun FeedItem(
     val view = LocalView.current
     val scope = rememberCoroutineScope()
 
-    RYExtensibleVisibility(visible = isExpanded()) {
+    BaseExtensibleVisibility(visible = isExpanded()) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()

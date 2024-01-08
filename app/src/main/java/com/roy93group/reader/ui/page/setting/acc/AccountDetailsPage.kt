@@ -38,10 +38,10 @@ import com.roy93group.reader.infrastructure.preference.SyncIntervalPreference
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYDialog
-import com.roy93group.reader.ui.component.base.RYScaffold
-import com.roy93group.reader.ui.component.base.RYSwitch
-import com.roy93group.reader.ui.component.base.RadioDialog
+import com.roy93group.reader.ui.component.base.BaseDlg
+import com.roy93group.reader.ui.component.base.BaseScaffold
+import com.roy93group.reader.ui.component.base.BaseSwitch
+import com.roy93group.reader.ui.component.base.RadioDlg
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.component.base.TextFieldDlg
@@ -98,7 +98,7 @@ fun AccountDetailsPage(
         }
     }
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(
@@ -153,7 +153,7 @@ fun AccountDetailsPage(
                             }
                         },
                     ) {
-                        RYSwitch(activated = selectedAccount?.syncOnStart?.value == true) {
+                        BaseSwitch(activated = selectedAccount?.syncOnStart?.value == true) {
                             selectedAccount?.id?.let {
                                 (!selectedAccount.syncOnStart).put(it, viewModel)
                             }
@@ -167,7 +167,7 @@ fun AccountDetailsPage(
                             }
                         },
                     ) {
-                        RYSwitch(activated = selectedAccount?.syncOnlyOnWiFi?.value == true) {
+                        BaseSwitch(activated = selectedAccount?.syncOnlyOnWiFi?.value == true) {
                             selectedAccount?.id?.let {
                                 (!selectedAccount.syncOnlyOnWiFi).put(it, viewModel)
                             }
@@ -181,7 +181,7 @@ fun AccountDetailsPage(
                             }
                         },
                     ) {
-                        RYSwitch(activated = selectedAccount?.syncOnlyWhenCharging?.value == true) {
+                        BaseSwitch(activated = selectedAccount?.syncOnlyWhenCharging?.value == true) {
                             selectedAccount?.id?.let {
                                 (!selectedAccount.syncOnlyWhenCharging).put(it, viewModel)
                             }
@@ -251,7 +251,7 @@ fun AccountDetailsPage(
         }
     )
 
-    RadioDialog(
+    RadioDlg(
         visible = syncIntervalDialogVisible,
         title = stringResource(R.string.sync_interval),
         options = SyncIntervalPreference.values.map {
@@ -268,7 +268,7 @@ fun AccountDetailsPage(
         syncIntervalDialogVisible = false
     }
 
-    RadioDialog(
+    RadioDlg(
         visible = keepArchivedDialogVisible,
         title = stringResource(R.string.keep_archived_articles),
         options = KeepArchivedPreference.values.map {
@@ -306,7 +306,7 @@ fun AccountDetailsPage(
         }
     )
 
-    RYDialog(
+    BaseDlg(
         visible = uiState.clearDialogVisible,
         onDismissRequest = {
             viewModel.hideClearDialog()
@@ -352,7 +352,7 @@ fun AccountDetailsPage(
         },
     )
 
-    RYDialog(
+    BaseDlg(
         visible = uiState.deleteDialogVisible,
         onDismissRequest = {
             viewModel.hideDeleteDialog()

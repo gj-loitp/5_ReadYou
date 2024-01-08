@@ -1,12 +1,17 @@
-
-
 package com.roy93group.reader.ui.component.base
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
@@ -23,9 +28,8 @@ import androidx.compose.ui.unit.sp
 import com.roy93group.reader.ui.theme.palette.LocalTonalPalettes
 import com.roy93group.reader.ui.theme.palette.onDark
 
-// TODO: ripple & swipe
 @Composable
-fun RYSwitch(
+fun BaseSwitch(
     modifier: Modifier = Modifier,
     activated: Boolean,
     enable: Boolean = true,
@@ -95,7 +99,7 @@ fun SwitchHeadline(
                 )
             }
             Box(Modifier.padding(start = 20.dp)) {
-                RYSwitch(activated = activated)
+                BaseSwitch(activated = activated)
             }
         }
     }

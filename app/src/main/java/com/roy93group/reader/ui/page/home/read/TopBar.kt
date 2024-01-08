@@ -23,7 +23,7 @@ import androidx.navigation.NavHostController
 import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.LocalReadingPageTonalElevation
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYExtensibleVisibility
+import com.roy93group.reader.ui.component.base.BaseExtensibleVisibility
 import com.roy93group.reader.ui.ext.share
 import com.roy93group.reader.ui.page.common.RouteName
 
@@ -45,7 +45,7 @@ fun TopBar(
             .zIndex(1f),
         contentAlignment = Alignment.TopCenter
     ) {
-        RYExtensibleVisibility(visible = isShow) {
+        BaseExtensibleVisibility(visible = isShow) {
             TopAppBar(
                 title = {},
                 modifier = Modifier,

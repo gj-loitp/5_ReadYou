@@ -40,7 +40,7 @@ fun DisplayText(
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )
-        RYExtensibleVisibility(visible = desc.isNotEmpty()) {
+        BaseExtensibleVisibility(visible = desc.isNotEmpty()) {
             Text(
                 modifier = Modifier.height(16.dp),
                 text = desc,

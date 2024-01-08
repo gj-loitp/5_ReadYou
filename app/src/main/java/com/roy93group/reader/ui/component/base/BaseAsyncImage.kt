@@ -20,7 +20,7 @@ import com.roy93group.reader.R
 val SIZE_1000 = Size(1000, 1000)
 
 @Composable
-fun RYAsyncImage(
+fun BaseAsyncImage(
     modifier: Modifier = Modifier,
     data: Any? = null,
     size: Size = Size.ORIGINAL,

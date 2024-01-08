@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.asImageBitmap
 @Composable
 fun Base64Image(
     modifier: Modifier = Modifier,
-    base64Uri: String
+    base64Uri: String,
 ) {
     val bitmap = base64ToBitmap(base64Uri)
     val imageBitmap = bitmap.asImageBitmap()

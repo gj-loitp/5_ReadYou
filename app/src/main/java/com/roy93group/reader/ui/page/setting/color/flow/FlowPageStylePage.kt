@@ -50,9 +50,9 @@ import com.roy93group.reader.infrastructure.preference.LocalFlowTopBarTonalEleva
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
-import com.roy93group.reader.ui.component.base.RYSwitch
-import com.roy93group.reader.ui.component.base.RadioDialog
+import com.roy93group.reader.ui.component.base.BaseScaffold
+import com.roy93group.reader.ui.component.base.BaseSwitch
+import com.roy93group.reader.ui.component.base.RadioDlg
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.component.base.TextFieldDlg
@@ -88,7 +88,7 @@ fun FlowPageStylePage(
 
     var filterBarPaddingValue: Int? by remember { mutableStateOf(filterBarPadding) }
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(
@@ -167,7 +167,7 @@ fun FlowPageStylePage(
                             (!articleListFeedIcon).put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = articleListFeedIcon.value) {
+                        BaseSwitch(activated = articleListFeedIcon.value) {
                             (!articleListFeedIcon).put(context, scope)
                         }
                     }
@@ -177,7 +177,7 @@ fun FlowPageStylePage(
                             (!articleListFeedName).put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = articleListFeedName.value) {
+                        BaseSwitch(activated = articleListFeedName.value) {
                             (!articleListFeedName).put(context, scope)
                         }
                     }
@@ -187,7 +187,7 @@ fun FlowPageStylePage(
                             (!articleListImage).put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = articleListImage.value) {
+                        BaseSwitch(activated = articleListImage.value) {
                             (!articleListImage).put(context, scope)
                         }
                     }
@@ -197,7 +197,7 @@ fun FlowPageStylePage(
                             (!articleListDesc).put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = articleListDesc.value) {
+                        BaseSwitch(activated = articleListDesc.value) {
                             (!articleListDesc).put(context, scope)
                         }
                     }
@@ -207,7 +207,7 @@ fun FlowPageStylePage(
                             (!articleListTime).put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = articleListTime.value) {
+                        BaseSwitch(activated = articleListTime.value) {
                             (!articleListTime).put(context, scope)
                         }
                     }
@@ -217,7 +217,7 @@ fun FlowPageStylePage(
                             (!articleListStickyDate).put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = articleListStickyDate.value) {
+                        BaseSwitch(activated = articleListStickyDate.value) {
                             (!articleListStickyDate).put(context, scope)
                         }
                     }
@@ -251,7 +251,7 @@ fun FlowPageStylePage(
                             (!filterBarFilled).put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = filterBarFilled.value) {
+                        BaseSwitch(activated = filterBarFilled.value) {
                             (!filterBarFilled).put(context, scope)
                         }
                     }
@@ -279,7 +279,7 @@ fun FlowPageStylePage(
         }
     )
 
-    RadioDialog(
+    RadioDlg(
         visible = filterBarStyleDialogVisible,
         title = stringResource(R.string.style),
         options = FlowFilterBarStylePreference.values.map {
@@ -311,7 +311,7 @@ fun FlowPageStylePage(
         }
     )
 
-    RadioDialog(
+    RadioDlg(
         visible = filterBarTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
         options = FlowFilterBarTonalElevationPreference.values.map {
@@ -326,7 +326,7 @@ fun FlowPageStylePage(
         filterBarTonalElevationDialogVisible = false
     }
 
-    RadioDialog(
+    RadioDlg(
         visible = topBarTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
         options = FlowTopBarTonalElevationPreference.values.map {
@@ -341,7 +341,7 @@ fun FlowPageStylePage(
         topBarTonalElevationDialogVisible = false
     }
 
-    RadioDialog(
+    RadioDlg(
         visible = articleListTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
         options = FlowArticleListTonalElevationPreference.values.map {

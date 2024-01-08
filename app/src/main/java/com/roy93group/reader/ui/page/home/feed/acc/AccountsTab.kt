@@ -30,7 +30,7 @@ import com.google.accompanist.flowlayout.FlowRow
 import com.google.accompanist.flowlayout.MainAxisAlignment
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
-import com.roy93group.reader.ui.component.base.RYDialog
+import com.roy93group.reader.ui.component.base.BaseDlg
 import com.roy93group.reader.ui.ext.currentAccountId
 import com.roy93group.reader.ui.theme.palette.alwaysLight
 
@@ -44,7 +44,7 @@ fun AccountsTab(
 ) {
     val context = LocalContext.current
 
-    RYDialog(
+    BaseDlg(
         modifier = modifier,
         visible = visible,
         onDismissRequest = onDismissRequest,

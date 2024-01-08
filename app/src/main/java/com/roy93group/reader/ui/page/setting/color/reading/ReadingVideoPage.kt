@@ -30,7 +30,7 @@ import androidx.navigation.NavHostController
 import com.roy93group.reader.R
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.BaseScaffold
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.page.setting.SettingItem
 import com.roy93group.reader.ui.theme.palette.onLight
@@ -42,7 +42,7 @@ fun ReadingVideoPage(
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(

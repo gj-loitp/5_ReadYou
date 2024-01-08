@@ -41,7 +41,7 @@ import coil.size.Size
 import coil.size.pxOrElse
 import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.LocalReadingImageMaximize
-import com.roy93group.reader.ui.component.base.RYAsyncImage
+import com.roy93group.reader.ui.component.base.BaseAsyncImage
 import org.jsoup.Jsoup
 import org.jsoup.helper.StringUtil
 import org.jsoup.nodes.Element
@@ -485,7 +485,7 @@ private fun TextComposer.appendTextChildren(
 //                                            }
                                             ) {
                                                 val imageSize = maxImageSize()
-                                                RYAsyncImage(
+                                                BaseAsyncImage(
                                                     modifier = Modifier
                                                         .align(Alignment.Center)
                                                         .fillMaxWidth()
@@ -620,7 +620,7 @@ private fun TextComposer.appendTextChildren(
                                             BoxWithConstraints(
                                                 modifier = Modifier.fillMaxWidth()
                                             ) {
-                                                RYAsyncImage(
+                                                BaseAsyncImage(
                                                     modifier = Modifier
                                                         .fillMaxWidth()
                                                         .padding(horizontal = imageHorizontalPadding().dp)

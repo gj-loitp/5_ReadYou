@@ -60,7 +60,7 @@ import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.OpenLinkPreference
 import com.roy93group.reader.ui.component.base.CurlyCornerShape
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.BaseScaffold
 import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.getCurrentVersion
@@ -90,7 +90,7 @@ fun TipsAndSupportPage(
         currentVersion = context.getCurrentVersion().toString()
     }
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(

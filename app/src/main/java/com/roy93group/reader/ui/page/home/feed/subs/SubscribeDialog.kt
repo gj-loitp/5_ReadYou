@@ -33,7 +33,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.roy93group.reader.R
 import com.roy93group.reader.ui.component.RenameDialog
 import com.roy93group.reader.ui.component.base.ClipboardTextField
-import com.roy93group.reader.ui.component.base.RYDialog
+import com.roy93group.reader.ui.component.base.BaseDlg
 import com.roy93group.reader.ui.component.base.TextFieldDlg
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.roundClick
@@ -68,7 +68,7 @@ fun SubscribeDialog(
         }
     }
 
-    RYDialog(
+    BaseDlg(
         modifier = Modifier.padding(horizontal = 44.dp),
         visible = subscribeUiState.visible,
         properties = DialogProperties(usePlatformDefaultWidth = false),

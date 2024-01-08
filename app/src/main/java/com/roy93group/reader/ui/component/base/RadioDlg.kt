@@ -24,14 +24,14 @@ import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RadioDialog(
+fun RadioDlg(
     modifier: Modifier = Modifier,
     visible: Boolean = false,
     title: String = "",
     options: List<RadioDialogOption> = emptyList(),
     onDismissRequest: () -> Unit = {},
 ) {
-    RYDialog(
+    BaseDlg(
         modifier = modifier,
         visible = visible,
         onDismissRequest = onDismissRequest,

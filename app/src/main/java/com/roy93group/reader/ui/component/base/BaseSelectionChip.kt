@@ -26,7 +26,7 @@ import com.roy93group.reader.ui.theme.palette.alwaysLight
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun RYSelectionChip(
+fun BaseSelectionChip(
     content: String,
     selected: Boolean,
     modifier: Modifier = Modifier,

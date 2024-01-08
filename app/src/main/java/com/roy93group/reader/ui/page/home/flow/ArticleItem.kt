@@ -50,7 +50,7 @@ import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListFeedN
 import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListImage
 import com.roy93group.reader.infrastructure.preference.LocalFlowArticleListTime
 import com.roy93group.reader.ui.component.FeedIcon
-import com.roy93group.reader.ui.component.base.RYAsyncImage
+import com.roy93group.reader.ui.component.base.BaseAsyncImage
 import com.roy93group.reader.ui.component.base.SIZE_1000
 import com.roy93group.reader.ui.theme.Shape20
 
@@ -164,7 +164,7 @@ fun ArticleItem(
 
             // Image
             if (articleWithFeed.article.img != null && articleListImage.value) {
-                RYAsyncImage(
+                BaseAsyncImage(
                     modifier = Modifier
                         .padding(start = 10.dp)
                         .size(80.dp)

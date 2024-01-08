@@ -11,7 +11,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.roy93group.reader.R
-import com.roy93group.reader.ui.component.base.RYDialog
+import com.roy93group.reader.ui.component.base.BaseDlg
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
 
@@ -26,7 +26,7 @@ fun AllAllowNotificationDialog(
     val allowToastString = stringResource(R.string.all_allow_notification_toast, groupName)
     val denyToastString = stringResource(R.string.all_deny_notification_toast, groupName)
 
-    RYDialog(
+    BaseDlg(
         visible = groupOptionUiState.allAllowNotificationDialogVisible,
         onDismissRequest = {
             groupOptionViewModel.hideAllAllowNotificationDialog()

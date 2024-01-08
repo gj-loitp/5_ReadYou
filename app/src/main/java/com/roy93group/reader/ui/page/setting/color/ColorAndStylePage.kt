@@ -65,9 +65,9 @@ import com.roy93group.reader.ui.component.base.BlockRadioGroupButtonItem
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.DynamicSVGImage
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
-import com.roy93group.reader.ui.component.base.RYSwitch
-import com.roy93group.reader.ui.component.base.RadioDialog
+import com.roy93group.reader.ui.component.base.BaseScaffold
+import com.roy93group.reader.ui.component.base.BaseSwitch
+import com.roy93group.reader.ui.component.base.RadioDlg
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.component.base.TextFieldDlg
@@ -107,7 +107,7 @@ fun ColorAndStylePage(
         }
     }
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(
@@ -199,7 +199,7 @@ fun ColorAndStylePage(
                             }
                         },
                     ) {
-                        RYSwitch(
+                        BaseSwitch(
                             activated = darkTheme.isDarkTheme()
                         ) {
                             darkThemeNot.put(context, scope)
@@ -250,7 +250,7 @@ fun ColorAndStylePage(
         }
     )
 
-    RadioDialog(
+    RadioDlg(
         visible = fontsDialogVisible,
         title = stringResource(R.string.basic_fonts),
         options = BasicFontsPreference.values.map {

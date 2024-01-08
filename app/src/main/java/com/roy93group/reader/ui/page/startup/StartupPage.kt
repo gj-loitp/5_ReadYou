@@ -31,8 +31,8 @@ import com.ireward.htmlcompose.HtmlText
 import com.roy93group.reader.R
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.DynamicSVGImage
-import com.roy93group.reader.ui.component.base.RYDialog
-import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.BaseDlg
+import com.roy93group.reader.ui.component.base.BaseScaffold
 import com.roy93group.reader.ui.component.base.Tips
 import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
@@ -50,7 +50,7 @@ fun StartupPage(
     val scope = rememberCoroutineScope()
     var tosVisible by remember { mutableStateOf(false) }
 
-    RYScaffold(
+    BaseScaffold(
         content = {
             LazyColumn(
                 modifier = Modifier.navigationBarsPadding(),
@@ -112,7 +112,7 @@ fun StartupPage(
         }
     )
 
-    RYDialog(
+    BaseDlg(
         visible = tosVisible,
         onDismissRequest = { tosVisible = false },
         icon = {

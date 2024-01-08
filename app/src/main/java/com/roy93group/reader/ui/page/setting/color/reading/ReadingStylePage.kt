@@ -52,9 +52,9 @@ import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.ReadingThemePrev
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
-import com.roy93group.reader.ui.component.base.RYSwitch
-import com.roy93group.reader.ui.component.base.RadioDialog
+import com.roy93group.reader.ui.component.base.BaseScaffold
+import com.roy93group.reader.ui.component.base.BaseSwitch
+import com.roy93group.reader.ui.component.base.RadioDlg
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.ext.ExternalFonts
@@ -86,7 +86,7 @@ fun ReadingStylePage(
         }
     }
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(
@@ -162,7 +162,7 @@ fun ReadingStylePage(
                             }
                         },
                     ) {
-                        RYSwitch(
+                        BaseSwitch(
                             activated = darkTheme.isDarkTheme()
                         ) {
                             darkThemeNot.put(context, scope)
@@ -176,7 +176,7 @@ fun ReadingStylePage(
 //                            (!articleListDesc).put(context, scope)
                         },
                     ) {
-                        RYSwitch(
+                        BaseSwitch(
                             activated = false,
                             enable = false,
                         ) {
@@ -189,7 +189,7 @@ fun ReadingStylePage(
                             (!autoHideToolbar).put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = autoHideToolbar.value) {
+                        BaseSwitch(activated = autoHideToolbar.value) {
                             (!autoHideToolbar).put(context, scope)
                         }
                     }
@@ -265,7 +265,7 @@ fun ReadingStylePage(
         }
     )
 
-    RadioDialog(
+    RadioDlg(
         visible = tonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
         options = ReadingPageTonalElevationPreference.values.map {
@@ -280,7 +280,7 @@ fun ReadingStylePage(
         tonalElevationDialogVisible = false
     }
 
-    RadioDialog(
+    RadioDlg(
         visible = fontsDialogVisible,
         title = stringResource(R.string.reading_fonts),
         options = ReadingFontsPreference.values.map {

@@ -45,9 +45,9 @@ import com.roy93group.reader.infrastructure.preference.LocalFeedsTopBarTonalElev
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
-import com.roy93group.reader.ui.component.base.RYSwitch
-import com.roy93group.reader.ui.component.base.RadioDialog
+import com.roy93group.reader.ui.component.base.BaseScaffold
+import com.roy93group.reader.ui.component.base.BaseSwitch
+import com.roy93group.reader.ui.component.base.RadioDlg
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.component.base.TextFieldDlg
@@ -78,7 +78,7 @@ fun FeedsPageStylePage(
 
     var filterBarPaddingValue: Int? by remember { mutableStateOf(filterBarPadding) }
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(
@@ -152,7 +152,7 @@ fun FeedsPageStylePage(
                             (!groupListExpand).put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = groupListExpand.value) {
+                        BaseSwitch(activated = groupListExpand.value) {
                             (!groupListExpand).put(context, scope)
                         }
                     }
@@ -186,7 +186,7 @@ fun FeedsPageStylePage(
                             (!filterBarFilled).put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = filterBarFilled.value) {
+                        BaseSwitch(activated = filterBarFilled.value) {
                             (!filterBarFilled).put(context, scope)
                         }
                     }
@@ -213,7 +213,7 @@ fun FeedsPageStylePage(
         }
     )
 
-    RadioDialog(
+    RadioDlg(
         visible = filterBarStyleDialogVisible,
         title = stringResource(R.string.style),
         options = FeedsFilterBarStylePreference.values.map {
@@ -245,7 +245,7 @@ fun FeedsPageStylePage(
         }
     )
 
-    RadioDialog(
+    RadioDlg(
         visible = filterBarTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
         options = FeedsFilterBarTonalElevationPreference.values.map {
@@ -260,7 +260,7 @@ fun FeedsPageStylePage(
         filterBarTonalElevationDialogVisible = false
     }
 
-    RadioDialog(
+    RadioDlg(
         visible = topBarTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
         options = FeedsTopBarTonalElevationPreference.values.map {
@@ -275,7 +275,7 @@ fun FeedsPageStylePage(
         topBarTonalElevationDialogVisible = false
     }
 
-    RadioDialog(
+    RadioDlg(
         visible = groupListTonalElevationDialogVisible,
         title = stringResource(R.string.tonal_elevation),
         options = FeedsGroupListTonalElevationPreference.values.map {

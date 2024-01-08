@@ -42,9 +42,9 @@ import com.roy93group.reader.infrastructure.preference.ReadingTitleAlignPreferen
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
-import com.roy93group.reader.ui.component.base.RYSwitch
-import com.roy93group.reader.ui.component.base.RadioDialog
+import com.roy93group.reader.ui.component.base.BaseScaffold
+import com.roy93group.reader.ui.component.base.BaseSwitch
+import com.roy93group.reader.ui.component.base.RadioDlg
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.page.setting.SettingItem
@@ -67,7 +67,7 @@ fun ReadingTitlePage(
     var titleAlignDialogVisible by remember { mutableStateOf(false) }
     var subtitleAlignDialogVisible by remember { mutableStateOf(false) }
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(
@@ -117,7 +117,7 @@ fun ReadingTitlePage(
                             ReadingThemePreference.Custom.put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = titleBold.value) {
+                        BaseSwitch(activated = titleBold.value) {
                             (!titleBold).put(context, scope)
                             ReadingThemePreference.Custom.put(context, scope)
                         }
@@ -129,7 +129,7 @@ fun ReadingTitlePage(
                             ReadingThemePreference.Custom.put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = titleUpperCase.value) {
+                        BaseSwitch(activated = titleUpperCase.value) {
                             (!titleUpperCase).put(context, scope)
                             ReadingThemePreference.Custom.put(context, scope)
                         }
@@ -155,7 +155,7 @@ fun ReadingTitlePage(
                             ReadingThemePreference.Custom.put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = subtitleBold.value) {
+                        BaseSwitch(activated = subtitleBold.value) {
                             (!subtitleBold).put(context, scope)
                             ReadingThemePreference.Custom.put(context, scope)
                         }
@@ -167,7 +167,7 @@ fun ReadingTitlePage(
                             ReadingThemePreference.Custom.put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = subheadUpperCase.value) {
+                        BaseSwitch(activated = subheadUpperCase.value) {
                             (!subheadUpperCase).put(context, scope)
                             ReadingThemePreference.Custom.put(context, scope)
                         }
@@ -190,7 +190,7 @@ fun ReadingTitlePage(
         }
     )
 
-    RadioDialog(
+    RadioDlg(
         visible = titleAlignDialogVisible,
         title = stringResource(R.string.alignment),
         options = ReadingTitleAlignPreference.values.map {
@@ -206,7 +206,7 @@ fun ReadingTitlePage(
         titleAlignDialogVisible = false
     }
 
-    RadioDialog(
+    RadioDlg(
         visible = subtitleAlignDialogVisible,
         title = stringResource(R.string.alignment),
         options = ReadingSubheadAlignPreference.values.map {

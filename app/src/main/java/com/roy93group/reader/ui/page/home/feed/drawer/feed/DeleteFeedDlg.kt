@@ -11,7 +11,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.roy93group.reader.R
-import com.roy93group.reader.ui.component.base.RYDialog
+import com.roy93group.reader.ui.component.base.BaseDlg
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
 
@@ -25,7 +25,7 @@ fun DeleteFeedDialog(
     val scope = rememberCoroutineScope()
     val toastString = stringResource(R.string.delete_toast, feedName)
 
-    RYDialog(
+    BaseDlg(
         visible = feedOptionUiState.deleteDialogVisible,
         onDismissRequest = {
             feedOptionViewModel.hideDeleteDialog()

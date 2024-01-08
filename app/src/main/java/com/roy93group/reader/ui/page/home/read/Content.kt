@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import com.roy93group.reader.infrastructure.preference.LocalOpenLink
 import com.roy93group.reader.infrastructure.preference.LocalOpenLinkSpecificBrowser
 import com.roy93group.reader.infrastructure.preference.LocalReadingSubheadUpperCase
-import com.roy93group.reader.ui.component.base.RYExtensibleVisibility
+import com.roy93group.reader.ui.component.base.BaseExtensibleVisibility
 import com.roy93group.reader.ui.component.reader.Reader
 import com.roy93group.reader.ui.ext.drawVerticalScrollbar
 import com.roy93group.reader.ui.ext.openURL
@@ -76,7 +76,7 @@ fun Content(
             }
             item {
                 Spacer(modifier = Modifier.height(22.dp))
-                RYExtensibleVisibility(visible = isLoading) {
+                BaseExtensibleVisibility(visible = isLoading) {
                     Box(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center,

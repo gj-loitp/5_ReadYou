@@ -46,8 +46,8 @@ import com.roy93group.reader.infrastructure.preference.LocalFlowTopBarTonalEleva
 import com.roy93group.reader.ui.component.FilterBar
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYExtensibleVisibility
-import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.BaseExtensibleVisibility
+import com.roy93group.reader.ui.component.base.BaseScaffold
 import com.roy93group.reader.ui.component.base.SwipeRefresh
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.page.common.RouteName
@@ -116,7 +116,7 @@ fun FlowPage(
         onSearch = false
     }
 
-    RYScaffold(
+    BaseScaffold(
         topBarTonalElevation = topBarTonalElevation.value.dp,
         containerTonalElevation = articleListTonalElevation.value.dp,
         navigationIcon = {
@@ -136,7 +136,7 @@ fun FlowPage(
             }
         },
         actions = {
-            RYExtensibleVisibility(visible = !filterUiState.filter.isStarred()) {
+            BaseExtensibleVisibility(visible = !filterUiState.filter.isStarred()) {
                 FeedbackIconButton(
                     imageVector = Icons.Rounded.DoneAll,
                     contentDescription = stringResource(R.string.mark_all_as_read),
@@ -200,7 +200,7 @@ fun FlowPage(
                             },
                             desc = if (isSyncing) stringResource(R.string.syncing) else "",
                         )
-                        RYExtensibleVisibility(visible = markAsRead) {
+                        BaseExtensibleVisibility(visible = markAsRead) {
                             Spacer(modifier = Modifier.height((56 + 24 + 10).dp))
                         }
                         MarkAsReadBar(
@@ -218,7 +218,7 @@ fun FlowPage(
                                 conditions = it,
                             )
                         }
-                        RYExtensibleVisibility(visible = onSearch) {
+                        BaseExtensibleVisibility(visible = onSearch) {
                             SearchBar(
                                 value = homeUiState.searchContent,
                                 placeholder = when {

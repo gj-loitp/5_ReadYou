@@ -37,7 +37,7 @@ import com.roy93group.reader.infrastructure.preference.LocalNewVersionPublishDat
 import com.roy93group.reader.infrastructure.preference.LocalNewVersionSize
 import com.roy93group.reader.infrastructure.preference.OpenLinkPreference
 import com.roy93group.reader.infrastructure.preference.SkipVersionNumberPreference
-import com.roy93group.reader.ui.component.base.RYDialog
+import com.roy93group.reader.ui.component.base.BaseDlg
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.installLatestApk
 import com.roy93group.reader.ui.ext.openURL
@@ -77,7 +77,7 @@ fun UpdateDialog(
         }
     }
 
-    RYDialog(
+    BaseDlg(
         modifier = Modifier.heightIn(max = 400.dp),
         visible = updateUiState.updateDialogVisible,
         onDismissRequest = { updateViewModel.hideDialog() },

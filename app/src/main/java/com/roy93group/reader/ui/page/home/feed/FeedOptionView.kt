@@ -40,7 +40,7 @@ import com.google.accompanist.flowlayout.FlowRow
 import com.google.accompanist.flowlayout.MainAxisAlignment
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.ui.component.base.RYSelectionChip
+import com.roy93group.reader.ui.component.base.BaseSelectionChip
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.theme.palette.alwaysLight
 
@@ -151,7 +151,7 @@ private fun Preset(
         crossAxisSpacing = 10.dp,
         mainAxisSpacing = 10.dp,
     ) {
-        RYSelectionChip(
+        BaseSelectionChip(
             modifier = Modifier.animateContentSize(),
             content = stringResource(R.string.allow_notification),
             selected = selectedAllowNotificationPreset,
@@ -168,7 +168,7 @@ private fun Preset(
         ) {
             allowNotificationPresetOnClick()
         }
-        RYSelectionChip(
+        BaseSelectionChip(
             modifier = Modifier.animateContentSize(),
             content = stringResource(R.string.parse_full_content),
             selected = selectedParseFullContentPreset,
@@ -186,7 +186,7 @@ private fun Preset(
             parseFullContentPresetOnClick()
         }
         if (notSubscribeMode) {
-            RYSelectionChip(
+            BaseSelectionChip(
                 modifier = Modifier.animateContentSize(),
                 content = stringResource(R.string.clear_articles),
                 selected = false,
@@ -194,7 +194,7 @@ private fun Preset(
                 clearArticlesOnClick()
             }
             if (showUnsubscribe) {
-                RYSelectionChip(
+                BaseSelectionChip(
                     modifier = Modifier.animateContentSize(),
                     content = stringResource(R.string.unsubscribe),
                     selected = false,
@@ -222,7 +222,7 @@ private fun AddToGroup(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             items(groups) {
-                RYSelectionChip(
+                BaseSelectionChip(
                     modifier = Modifier.animateContentSize(),
                     content = it.name,
                     selected = it.id == selectedGroupId,
@@ -241,7 +241,7 @@ private fun AddToGroup(
             mainAxisSpacing = 10.dp,
         ) {
             groups.forEach {
-                RYSelectionChip(
+                BaseSelectionChip(
                     modifier = Modifier.animateContentSize(),
                     content = it.name,
                     selected = it.id == selectedGroupId,

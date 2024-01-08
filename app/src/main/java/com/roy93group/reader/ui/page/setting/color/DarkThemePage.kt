@@ -26,8 +26,8 @@ import com.roy93group.reader.infrastructure.preference.LocalDarkTheme
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
-import com.roy93group.reader.ui.component.base.RYSwitch
+import com.roy93group.reader.ui.component.base.BaseScaffold
+import com.roy93group.reader.ui.component.base.BaseSwitch
 import com.roy93group.reader.ui.component.base.Subtitle
 import com.roy93group.reader.ui.page.setting.SettingItem
 import com.roy93group.reader.ui.theme.palette.onLight
@@ -42,7 +42,7 @@ fun DarkThemePage(
     val amoledDarkTheme = LocalAmoledDarkTheme.current
     val scope = rememberCoroutineScope()
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(
@@ -81,7 +81,7 @@ fun DarkThemePage(
                             (!amoledDarkTheme).put(context, scope)
                         },
                     ) {
-                        RYSwitch(activated = amoledDarkTheme.value) {
+                        BaseSwitch(activated = amoledDarkTheme.value) {
                             (!amoledDarkTheme).put(context, scope)
                         }
                     }

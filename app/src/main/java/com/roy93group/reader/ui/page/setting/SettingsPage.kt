@@ -35,7 +35,7 @@ import com.roy93group.reader.infrastructure.preference.LocalSkipVersionNumber
 import com.roy93group.reader.ui.component.base.Banner
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
-import com.roy93group.reader.ui.component.base.RYScaffold
+import com.roy93group.reader.ui.component.base.BaseScaffold
 import com.roy93group.reader.ui.ext.getCurrentVersion
 import com.roy93group.reader.ui.page.common.RouteName
 import com.roy93group.reader.ui.page.setting.tip.UpdateDialog
@@ -52,7 +52,7 @@ fun SettingsPage(
     val skipVersion = LocalSkipVersionNumber.current
     val currentVersion by remember { mutableStateOf(context.getCurrentVersion()) }
 
-    RYScaffold(
+    BaseScaffold(
         containerColor = MaterialTheme.colorScheme.surface onLight MaterialTheme.colorScheme.inverseOnSurface,
         navigationIcon = {
             FeedbackIconButton(

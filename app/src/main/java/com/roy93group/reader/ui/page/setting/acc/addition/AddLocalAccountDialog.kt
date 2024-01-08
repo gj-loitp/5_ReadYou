@@ -30,8 +30,8 @@ import androidx.navigation.NavHostController
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
 import com.roy93group.reader.domain.model.account.AccountType
-import com.roy93group.reader.ui.component.base.RYDialog
-import com.roy93group.reader.ui.component.base.RYOutlineTextField
+import com.roy93group.reader.ui.component.base.BaseDlg
+import com.roy93group.reader.ui.component.base.BaseOutlineTextField
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
 import com.roy93group.reader.ui.page.common.RouteName
@@ -50,7 +50,7 @@ fun AddLocalAccountDialog(
 
     var name by remember { mutableStateOf("") }
 
-    RYDialog(
+    BaseDlg(
         modifier = Modifier.padding(horizontal = 44.dp),
         visible = uiState.addLocalAccountDialogVisible,
         properties = DialogProperties(usePlatformDefaultWidth = false),
@@ -76,7 +76,7 @@ fun AddLocalAccountDialog(
                 modifier = Modifier.verticalScroll(rememberScrollState())
             ) {
                 Spacer(modifier = Modifier.height(10.dp))
-                RYOutlineTextField(
+                BaseOutlineTextField(
                     value = name,
                     onValueChange = { name = it },
                     label = stringResource(R.string.name),
