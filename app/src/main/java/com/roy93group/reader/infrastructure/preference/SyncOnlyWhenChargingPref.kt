@@ -4,15 +4,15 @@ import android.content.Context
 import com.roy93group.reader.R
 import com.roy93group.reader.ui.page.setting.acc.AccountViewModel
 
-sealed class SyncOnlyWhenChargingPreference(
+sealed class SyncOnlyWhenChargingPref(
     val value: Boolean,
 ) {
 
-    object On : SyncOnlyWhenChargingPreference(true)
-    object Off : SyncOnlyWhenChargingPreference(false)
+    object On : SyncOnlyWhenChargingPref(true)
+    object Off : SyncOnlyWhenChargingPref(false)
 
     fun put(accountId: Int, viewModel: AccountViewModel) {
-        viewModel.update(accountId) { syncOnlyWhenCharging = this@SyncOnlyWhenChargingPreference }
+        viewModel.update(accountId) { syncOnlyWhenCharging = this@SyncOnlyWhenChargingPref }
     }
 
     fun toDesc(context: Context): String =
@@ -28,8 +28,8 @@ sealed class SyncOnlyWhenChargingPreference(
     }
 }
 
-operator fun SyncOnlyWhenChargingPreference.not(): SyncOnlyWhenChargingPreference =
+operator fun SyncOnlyWhenChargingPref.not(): SyncOnlyWhenChargingPref =
     when (value) {
-        true -> SyncOnlyWhenChargingPreference.Off
-        false -> SyncOnlyWhenChargingPreference.On
+        true -> SyncOnlyWhenChargingPref.Off
+        false -> SyncOnlyWhenChargingPref.On
     }

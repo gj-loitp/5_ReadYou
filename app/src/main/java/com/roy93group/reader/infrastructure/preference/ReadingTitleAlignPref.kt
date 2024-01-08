@@ -4,18 +4,18 @@ import android.content.Context
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.text.style.TextAlign
 import androidx.datastore.preferences.core.Preferences
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 import com.roy93group.reader.R
 import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
-sealed class ReadingTitleAlignPreference(val value: Int) : Preference() {
-    object Left : ReadingTitleAlignPreference(0)
-    object Right : ReadingTitleAlignPreference(1)
-    object Center : ReadingTitleAlignPreference(2)
-    object Justify : ReadingTitleAlignPreference(3)
+sealed class ReadingTitleAlignPref(val value: Int) : Preference() {
+    object Left : ReadingTitleAlignPref(0)
+    object Right : ReadingTitleAlignPref(1)
+    object Center : ReadingTitleAlignPref(2)
+    object Justify : ReadingTitleAlignPref(3)
 
     override fun put(context: Context, scope: CoroutineScope) {
         scope.launch {
@@ -49,7 +49,7 @@ sealed class ReadingTitleAlignPreference(val value: Int) : Preference() {
         val default = Left
         val values = listOf(Left, Right, Center, Justify)
 
-        fun fromPreferences(preferences: Preferences): ReadingTitleAlignPreference =
+        fun fromPreferences(preferences: Preferences): ReadingTitleAlignPref =
             when (preferences[DataStoreKeys.ReadingTitleAlign.key]) {
                 0 -> Left
                 1 -> Right

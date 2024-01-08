@@ -4,15 +4,15 @@ import android.content.Context
 import com.roy93group.reader.R
 import com.roy93group.reader.ui.page.setting.acc.AccountViewModel
 
-sealed class SyncOnlyOnWiFiPreference(
+sealed class SyncOnlyOnWiFiPref(
     val value: Boolean,
 ) {
 
-    object On : SyncOnlyOnWiFiPreference(true)
-    object Off : SyncOnlyOnWiFiPreference(false)
+    object On : SyncOnlyOnWiFiPref(true)
+    object Off : SyncOnlyOnWiFiPref(false)
 
     fun put(accountId: Int, viewModel: AccountViewModel) {
-        viewModel.update(accountId) { syncOnlyOnWiFi = this@SyncOnlyOnWiFiPreference }
+        viewModel.update(accountId) { syncOnlyOnWiFi = this@SyncOnlyOnWiFiPref }
     }
 
     fun toDesc(context: Context): String =
@@ -28,8 +28,8 @@ sealed class SyncOnlyOnWiFiPreference(
     }
 }
 
-operator fun SyncOnlyOnWiFiPreference.not(): SyncOnlyOnWiFiPreference =
+operator fun SyncOnlyOnWiFiPref.not(): SyncOnlyOnWiFiPref =
     when (value) {
-        true -> SyncOnlyOnWiFiPreference.Off
-        false -> SyncOnlyOnWiFiPreference.On
+        true -> SyncOnlyOnWiFiPref.Off
+        false -> SyncOnlyOnWiFiPref.On
     }

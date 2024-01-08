@@ -37,9 +37,9 @@ import com.roy93group.reader.infrastructure.preference.LocalReadingTextFontSize
 import com.roy93group.reader.infrastructure.preference.LocalReadingTextHorizontalPadding
 import com.roy93group.reader.infrastructure.preference.LocalReadingTheme
 import com.roy93group.reader.infrastructure.preference.ReadingLetterSpacingPreference
-import com.roy93group.reader.infrastructure.preference.ReadingTextAlignPreference
-import com.roy93group.reader.infrastructure.preference.ReadingTextFontSizePreference
-import com.roy93group.reader.infrastructure.preference.ReadingTextHorizontalPaddingPreference
+import com.roy93group.reader.infrastructure.preference.ReadingTextAlignPref
+import com.roy93group.reader.infrastructure.preference.ReadingTextFontSizePref
+import com.roy93group.reader.infrastructure.preference.ReadingTextHorizontalPaddingPref
 import com.roy93group.reader.infrastructure.preference.ReadingThemePreference
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
@@ -173,7 +173,7 @@ fun ReadingTextPage(
             fontSizeDialogVisible = false
         },
         onConfirm = {
-            ReadingTextFontSizePreference.put(context, scope, fontSizeValue ?: 0)
+            ReadingTextFontSizePref.put(context, scope, fontSizeValue ?: 0)
             ReadingThemePreference.Custom.put(context, scope)
             fontSizeDialogVisible = false
         }
@@ -209,7 +209,7 @@ fun ReadingTextPage(
             horizontalPaddingDialogVisible = false
         },
         onConfirm = {
-            ReadingTextHorizontalPaddingPreference.put(context, scope, horizontalPaddingValue ?: 0)
+            ReadingTextHorizontalPaddingPref.put(context, scope, horizontalPaddingValue ?: 0)
             ReadingThemePreference.Custom.put(context, scope)
             horizontalPaddingDialogVisible = false
         }
@@ -218,7 +218,7 @@ fun ReadingTextPage(
     RadioDlg(
         visible = alignDialogVisible,
         title = stringResource(R.string.alignment),
-        options = ReadingTextAlignPreference.values.map {
+        options = ReadingTextAlignPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == align,

@@ -2,20 +2,20 @@ package com.roy93group.reader.infrastructure.preference
 
 import android.content.Context
 import androidx.datastore.preferences.core.Preferences
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
-sealed class ReadingTitleUpperCasePreference(val value: Boolean) : Preference() {
-    object ON : ReadingTitleUpperCasePreference(true)
-    object OFF : ReadingTitleUpperCasePreference(false)
+sealed class ReadingSubheadBoldPref(val value: Boolean) : Preference() {
+    object ON : ReadingSubheadBoldPref(true)
+    object OFF : ReadingSubheadBoldPref(false)
 
     override fun put(context: Context, scope: CoroutineScope) {
         scope.launch {
             context.dataStore.put(
-                DataStoreKeys.ReadingTitleUpperCase,
+                DataStoreKeys.ReadingSubheadBold,
                 value
             )
         }
@@ -27,7 +27,7 @@ sealed class ReadingTitleUpperCasePreference(val value: Boolean) : Preference() 
         val values = listOf(ON, OFF)
 
         fun fromPreferences(preferences: Preferences) =
-            when (preferences[DataStoreKeys.ReadingTitleUpperCase.key]) {
+            when (preferences[DataStoreKeys.ReadingSubheadBold.key]) {
                 true -> ON
                 false -> OFF
                 else -> default
@@ -35,8 +35,8 @@ sealed class ReadingTitleUpperCasePreference(val value: Boolean) : Preference() 
     }
 }
 
-operator fun ReadingTitleUpperCasePreference.not(): ReadingTitleUpperCasePreference =
+operator fun ReadingSubheadBoldPref.not(): ReadingSubheadBoldPref =
     when (value) {
-        true -> ReadingTitleUpperCasePreference.OFF
-        false -> ReadingTitleUpperCasePreference.ON
+        true -> ReadingSubheadBoldPref.OFF
+        false -> ReadingSubheadBoldPref.ON
     }

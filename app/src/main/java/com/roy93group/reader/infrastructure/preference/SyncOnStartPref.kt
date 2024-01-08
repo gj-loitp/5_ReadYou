@@ -4,15 +4,15 @@ import android.content.Context
 import com.roy93group.reader.R
 import com.roy93group.reader.ui.page.setting.acc.AccountViewModel
 
-sealed class SyncOnStartPreference(
+sealed class SyncOnStartPref(
     val value: Boolean,
 ) {
 
-    object On : SyncOnStartPreference(true)
-    object Off : SyncOnStartPreference(false)
+    object On : SyncOnStartPref(true)
+    object Off : SyncOnStartPref(false)
 
     fun put(accountId: Int, viewModel: AccountViewModel) {
-        viewModel.update(accountId) { syncOnStart = this@SyncOnStartPreference }
+        viewModel.update(accountId) { syncOnStart = this@SyncOnStartPref }
     }
 
     fun toDesc(context: Context): String =
@@ -28,8 +28,8 @@ sealed class SyncOnStartPreference(
     }
 }
 
-operator fun SyncOnStartPreference.not(): SyncOnStartPreference =
+operator fun SyncOnStartPref.not(): SyncOnStartPref =
     when (value) {
-        true -> SyncOnStartPreference.Off
-        false -> SyncOnStartPreference.On
+        true -> SyncOnStartPref.Off
+        false -> SyncOnStartPref.On
     }

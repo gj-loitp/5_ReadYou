@@ -8,9 +8,9 @@ import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
 
-sealed class ReadingTextBoldPreference(val value: Boolean) : Preference() {
-    object ON : ReadingTextBoldPreference(true)
-    object OFF : ReadingTextBoldPreference(false)
+sealed class ReadingTextBoldPref(val value: Boolean) : Preference() {
+    object ON : ReadingTextBoldPref(true)
+    object OFF : ReadingTextBoldPref(false)
 
     override fun put(context: Context, scope: CoroutineScope) {
         scope.launch {
@@ -35,8 +35,8 @@ sealed class ReadingTextBoldPreference(val value: Boolean) : Preference() {
     }
 }
 
-operator fun ReadingTextBoldPreference.not(): ReadingTextBoldPreference =
+operator fun ReadingTextBoldPref.not(): ReadingTextBoldPref =
     when (value) {
-        true -> ReadingTextBoldPreference.OFF
-        false -> ReadingTextBoldPreference.ON
+        true -> ReadingTextBoldPref.OFF
+        false -> ReadingTextBoldPref.ON
     }

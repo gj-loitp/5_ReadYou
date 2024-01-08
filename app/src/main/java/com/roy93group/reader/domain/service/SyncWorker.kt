@@ -8,9 +8,9 @@ import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import com.roy93group.reader.infrastructure.preference.SyncIntervalPreference
-import com.roy93group.reader.infrastructure.preference.SyncOnlyOnWiFiPreference
-import com.roy93group.reader.infrastructure.preference.SyncOnlyWhenChargingPreference
+import com.roy93group.reader.infrastructure.preference.SyncIntervalPref
+import com.roy93group.reader.infrastructure.preference.SyncOnlyOnWiFiPref
+import com.roy93group.reader.infrastructure.preference.SyncOnlyWhenChargingPref
 import java.util.*
 import java.util.concurrent.TimeUnit
 
@@ -47,9 +47,9 @@ class SyncWorker @AssistedInject constructor(
 
         fun enqueuePeriodicWork(
             workManager: WorkManager,
-            syncInterval: SyncIntervalPreference,
-            syncOnlyWhenCharging: SyncOnlyWhenChargingPreference,
-            syncOnlyOnWiFi: SyncOnlyOnWiFiPreference,
+            syncInterval: SyncIntervalPref,
+            syncOnlyWhenCharging: SyncOnlyWhenChargingPref,
+            syncOnlyOnWiFi: SyncOnlyOnWiFiPref,
         ) {
             workManager.enqueueUniquePeriodicWork(
                 WORK_NAME,

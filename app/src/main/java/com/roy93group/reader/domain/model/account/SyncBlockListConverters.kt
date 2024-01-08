@@ -3,18 +3,18 @@ package com.roy93group.reader.domain.model.account
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverter
 import com.roy93group.reader.infrastructure.preference.SyncBlockList
-import com.roy93group.reader.infrastructure.preference.SyncBlockListPreference
+import com.roy93group.reader.infrastructure.preference.SyncBlockListPref
 
 /**
- * Provide [TypeConverter] of [SyncBlockListPreference] for [RoomDatabase].
+ * Provide [TypeConverter] of [SyncBlockListPref] for [RoomDatabase].
  */
 class SyncBlockListConverters {
 
     @TypeConverter
     fun toBlockList(syncBlockList: String): SyncBlockList =
-        SyncBlockListPreference.of(syncBlockList)
+        SyncBlockListPref.of(syncBlockList)
 
     @TypeConverter
     fun fromBlockList(syncBlockList: SyncBlockList?): String =
-        SyncBlockListPreference.toString(syncBlockList ?: emptyList())
+        SyncBlockListPref.toString(syncBlockList ?: emptyList())
 }

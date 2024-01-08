@@ -34,18 +34,18 @@ sealed class ReadingThemePreference(val value: Int) : Preference() {
     fun applyTheme(context: Context, scope: CoroutineScope) {
         when (this) {
             MaterialYou -> {
-                ReadingTitleBoldPreference.default.put(context, scope)
-                ReadingTitleUpperCasePreference.default.put(context, scope)
-                ReadingTitleAlignPreference.default.put(context, scope)
-                ReadingSubheadBoldPreference.default.put(context, scope)
-                ReadingSubheadUpperCasePreference.default.put(context, scope)
+                ReadingTitleBoldPref.default.put(context, scope)
+                ReadingTitleUpperCasePref.default.put(context, scope)
+                ReadingTitleAlignPref.default.put(context, scope)
+                ReadingSubheadBoldPref.default.put(context, scope)
+                ReadingSubheadUpperCasePref.default.put(context, scope)
                 ReadingSubheadAlignPreference.default.put(context, scope)
-                ReadingTextBoldPreference.default.put(context, scope)
-                ReadingTextHorizontalPaddingPreference.put(context, scope,
-                    ReadingTextHorizontalPaddingPreference.default)
-                ReadingTextAlignPreference.default.put(context, scope)
+                ReadingTextBoldPref.default.put(context, scope)
+                ReadingTextHorizontalPaddingPref.put(context, scope,
+                    ReadingTextHorizontalPaddingPref.default)
+                ReadingTextAlignPref.default.put(context, scope)
                 ReadingLetterSpacingPreference.put(context, scope, ReadingLetterSpacingPreference.default)
-                ReadingTextFontSizePreference.put(context, scope, ReadingTextFontSizePreference.default)
+                ReadingTextFontSizePref.put(context, scope, ReadingTextFontSizePref.default)
                 ReadingImageRoundedCornersPreference.put(context, scope, ReadingImageRoundedCornersPreference.default)
                 ReadingImageHorizontalPaddingPreference.put(context, scope,
                     ReadingImageHorizontalPaddingPreference.default)
@@ -53,36 +53,36 @@ sealed class ReadingThemePreference(val value: Int) : Preference() {
             }
 
             Reeder -> {
-                ReadingTitleBoldPreference.ON.put(context, scope)
-                ReadingTitleUpperCasePreference.default.put(context, scope)
-                ReadingTitleAlignPreference.default.put(context, scope)
-                ReadingSubheadBoldPreference.ON.put(context, scope)
-                ReadingSubheadUpperCasePreference.default.put(context, scope)
+                ReadingTitleBoldPref.ON.put(context, scope)
+                ReadingTitleUpperCasePref.default.put(context, scope)
+                ReadingTitleAlignPref.default.put(context, scope)
+                ReadingSubheadBoldPref.ON.put(context, scope)
+                ReadingSubheadUpperCasePref.default.put(context, scope)
                 ReadingSubheadAlignPreference.default.put(context, scope)
-                ReadingTextBoldPreference.default.put(context, scope)
-                ReadingTextHorizontalPaddingPreference.put(context, scope,
-                    ReadingTextHorizontalPaddingPreference.default)
-                ReadingTextAlignPreference.default.put(context, scope)
+                ReadingTextBoldPref.default.put(context, scope)
+                ReadingTextHorizontalPaddingPref.put(context, scope,
+                    ReadingTextHorizontalPaddingPref.default)
+                ReadingTextAlignPref.default.put(context, scope)
                 ReadingLetterSpacingPreference.put(context, scope, ReadingLetterSpacingPreference.default)
-                ReadingTextFontSizePreference.put(context, scope, 18)
+                ReadingTextFontSizePref.put(context, scope, 18)
                 ReadingImageRoundedCornersPreference.put(context, scope, 0)
                 ReadingImageHorizontalPaddingPreference.put(context, scope, 0)
                 ReadingImageMaximizePreference.default.put(context, scope)
             }
 
             Paper -> {
-                ReadingTitleBoldPreference.ON.put(context, scope)
-                ReadingTitleUpperCasePreference.ON.put(context, scope)
-                ReadingTitleAlignPreference.Center.put(context, scope)
-                ReadingSubheadBoldPreference.ON.put(context, scope)
-                ReadingSubheadUpperCasePreference.ON.put(context, scope)
+                ReadingTitleBoldPref.ON.put(context, scope)
+                ReadingTitleUpperCasePref.ON.put(context, scope)
+                ReadingTitleAlignPref.Center.put(context, scope)
+                ReadingSubheadBoldPref.ON.put(context, scope)
+                ReadingSubheadUpperCasePref.ON.put(context, scope)
                 ReadingSubheadAlignPreference.Center.put(context, scope)
-                ReadingTextBoldPreference.default.put(context, scope)
-                ReadingTextHorizontalPaddingPreference.put(context, scope,
-                    ReadingTextHorizontalPaddingPreference.default)
-                ReadingTextAlignPreference.Center.put(context, scope)
+                ReadingTextBoldPref.default.put(context, scope)
+                ReadingTextHorizontalPaddingPref.put(context, scope,
+                    ReadingTextHorizontalPaddingPref.default)
+                ReadingTextAlignPref.Center.put(context, scope)
                 ReadingLetterSpacingPreference.put(context, scope, ReadingLetterSpacingPreference.default)
-                ReadingTextFontSizePreference.put(context, scope, 20)
+                ReadingTextFontSizePref.put(context, scope, 20)
                 ReadingImageRoundedCornersPreference.put(context, scope, 0)
                 ReadingImageHorizontalPaddingPreference.put(context, scope,
                     ReadingImageHorizontalPaddingPreference.default)
@@ -90,18 +90,18 @@ sealed class ReadingThemePreference(val value: Int) : Preference() {
             }
 
             Custom -> {
-                ReadingTitleBoldPreference.default.put(context, scope)
-                ReadingTitleUpperCasePreference.default.put(context, scope)
-                ReadingTitleAlignPreference.default.put(context, scope)
-                ReadingSubheadBoldPreference.default.put(context, scope)
-                ReadingSubheadUpperCasePreference.default.put(context, scope)
+                ReadingTitleBoldPref.default.put(context, scope)
+                ReadingTitleUpperCasePref.default.put(context, scope)
+                ReadingTitleAlignPref.default.put(context, scope)
+                ReadingSubheadBoldPref.default.put(context, scope)
+                ReadingSubheadUpperCasePref.default.put(context, scope)
                 ReadingSubheadAlignPreference.default.put(context, scope)
-                ReadingTextBoldPreference.default.put(context, scope)
-                ReadingTextHorizontalPaddingPreference.put(context, scope,
-                    ReadingTextHorizontalPaddingPreference.default)
-                ReadingTextAlignPreference.default.put(context, scope)
+                ReadingTextBoldPref.default.put(context, scope)
+                ReadingTextHorizontalPaddingPref.put(context, scope,
+                    ReadingTextHorizontalPaddingPref.default)
+                ReadingTextAlignPref.default.put(context, scope)
                 ReadingLetterSpacingPreference.put(context, scope, ReadingLetterSpacingPreference.default)
-                ReadingTextFontSizePreference.put(context, scope, ReadingTextFontSizePreference.default)
+                ReadingTextFontSizePref.put(context, scope, ReadingTextFontSizePref.default)
                 ReadingImageRoundedCornersPreference.put(context, scope, ReadingImageRoundedCornersPreference.default)
                 ReadingImageHorizontalPaddingPreference.put(context, scope,
                     ReadingImageHorizontalPaddingPreference.default)

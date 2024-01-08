@@ -2,21 +2,21 @@ package com.roy93group.reader.domain.model.account
 
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverter
-import com.roy93group.reader.infrastructure.preference.SyncOnlyWhenChargingPreference
+import com.roy93group.reader.infrastructure.preference.SyncOnlyWhenChargingPref
 
 /**
- * Provide [TypeConverter] of [SyncOnlyWhenChargingPreference] for [RoomDatabase].
+ * Provide [TypeConverter] of [SyncOnlyWhenChargingPref] for [RoomDatabase].
  */
 class SyncOnlyWhenChargingConverters {
 
     @TypeConverter
-    fun toSyncOnlyWhenCharging(syncOnlyWhenCharging: Boolean): SyncOnlyWhenChargingPreference {
-        return SyncOnlyWhenChargingPreference.values.find { it.value == syncOnlyWhenCharging }
-            ?: SyncOnlyWhenChargingPreference.default
+    fun toSyncOnlyWhenCharging(syncOnlyWhenCharging: Boolean): SyncOnlyWhenChargingPref {
+        return SyncOnlyWhenChargingPref.values.find { it.value == syncOnlyWhenCharging }
+            ?: SyncOnlyWhenChargingPref.default
     }
 
     @TypeConverter
-    fun fromSyncOnlyWhenCharging(syncOnlyWhenCharging: SyncOnlyWhenChargingPreference): Boolean {
+    fun fromSyncOnlyWhenCharging(syncOnlyWhenCharging: SyncOnlyWhenChargingPref): Boolean {
         return syncOnlyWhenCharging.value
     }
 }

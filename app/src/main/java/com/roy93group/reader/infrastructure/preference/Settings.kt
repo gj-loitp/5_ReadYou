@@ -16,14 +16,14 @@ import com.roy93group.reader.ui.ext.dataStore
 data class Settings(
     // Version
     val newVersionNumber: Version = NewVersionNumberPreference.default,
-    val skipVersionNumber: Version = SkipVersionNumberPreference.default,
+    val skipVersionNumber: Version = SkipVersionNumberPref.default,
     val newVersionPublishDate: String = NewVersionPublishDatePreference.default,
     val newVersionLog: String = NewVersionLogPreference.default,
     val newVersionSize: String = NewVersionSizePreference.default,
     val newVersionDownloadUrl: String = NewVersionDownloadUrlPreference.default,
 
     // Theme
-    val themeIndex: Int = ThemeIndexPreference.default,
+    val themeIndex: Int = ThemeIndexPref.default,
     val customPrimaryColor: String = CustomPrimaryColorPreference.default,
     val darkTheme: DarkThemePreference = DarkThemePreference.default,
     val amoledDarkTheme: AmoledDarkThemePreference = AmoledDarkThemePreference.default,
@@ -57,18 +57,18 @@ data class Settings(
     val readingDarkTheme: ReadingDarkThemePreference = ReadingDarkThemePreference.default,
     val readingPageTonalElevation: ReadingPageTonalElevationPreference = ReadingPageTonalElevationPreference.default,
     val readingAutoHideToolbar: ReadingAutoHideToolbarPreference = ReadingAutoHideToolbarPreference.default,
-    val readingTextFontSize: Int = ReadingTextFontSizePreference.default,
+    val readingTextFontSize: Int = ReadingTextFontSizePref.default,
     val readingLetterSpacing: Double = ReadingLetterSpacingPreference.default,
-    val readingTextHorizontalPadding: Int = ReadingTextHorizontalPaddingPreference.default,
-    val readingTextAlign: ReadingTextAlignPreference = ReadingTextAlignPreference.default,
-    val readingTextBold: ReadingTextBoldPreference = ReadingTextBoldPreference.default,
-    val readingTitleAlign: ReadingTitleAlignPreference = ReadingTitleAlignPreference.default,
+    val readingTextHorizontalPadding: Int = ReadingTextHorizontalPaddingPref.default,
+    val readingTextAlign: ReadingTextAlignPref = ReadingTextAlignPref.default,
+    val readingTextBold: ReadingTextBoldPref = ReadingTextBoldPref.default,
+    val readingTitleAlign: ReadingTitleAlignPref = ReadingTitleAlignPref.default,
     val readingSubheadAlign: ReadingSubheadAlignPreference = ReadingSubheadAlignPreference.default,
     val readingFonts: ReadingFontsPreference = ReadingFontsPreference.default,
-    val readingTitleBold: ReadingTitleBoldPreference = ReadingTitleBoldPreference.default,
-    val readingSubheadBold: ReadingSubheadBoldPreference = ReadingSubheadBoldPreference.default,
-    val readingTitleUpperCase: ReadingTitleUpperCasePreference = ReadingTitleUpperCasePreference.default,
-    val readingSubheadUpperCase: ReadingSubheadUpperCasePreference = ReadingSubheadUpperCasePreference.default,
+    val readingTitleBold: ReadingTitleBoldPref = ReadingTitleBoldPref.default,
+    val readingSubheadBold: ReadingSubheadBoldPref = ReadingSubheadBoldPref.default,
+    val readingTitleUpperCase: ReadingTitleUpperCasePref = ReadingTitleUpperCasePref.default,
+    val readingSubheadUpperCase: ReadingSubheadUpperCasePref = ReadingSubheadUpperCasePref.default,
     val readingImageHorizontalPadding: Int = ReadingImageHorizontalPaddingPreference.default,
     val readingImageRoundedCorners: Int = ReadingImageRoundedCornersPreference.default,
     val readingImageMaximize: ReadingImageMaximizePreference = ReadingImageMaximizePreference.default,
@@ -85,7 +85,7 @@ data class Settings(
 
 // Version
 val LocalNewVersionNumber = compositionLocalOf { NewVersionNumberPreference.default }
-val LocalSkipVersionNumber = compositionLocalOf { SkipVersionNumberPreference.default }
+val LocalSkipVersionNumber = compositionLocalOf { SkipVersionNumberPref.default }
 val LocalNewVersionPublishDate = compositionLocalOf { NewVersionPublishDatePreference.default }
 val LocalNewVersionLog = compositionLocalOf { NewVersionLogPreference.default }
 val LocalNewVersionSize = compositionLocalOf { NewVersionSizePreference.default }
@@ -93,7 +93,7 @@ val LocalNewVersionDownloadUrl = compositionLocalOf { NewVersionDownloadUrlPrefe
 
 // Theme
 val LocalThemeIndex =
-    compositionLocalOf { ThemeIndexPreference.default }
+    compositionLocalOf { ThemeIndexPref.default }
 val LocalCustomPrimaryColor =
     compositionLocalOf { CustomPrimaryColorPreference.default }
 val LocalDarkTheme =
@@ -151,22 +151,22 @@ val LocalReadingPageTonalElevation =
     compositionLocalOf<ReadingPageTonalElevationPreference> { ReadingPageTonalElevationPreference.default }
 val LocalReadingAutoHideToolbar =
     compositionLocalOf<ReadingAutoHideToolbarPreference> { ReadingAutoHideToolbarPreference.default }
-val LocalReadingTextFontSize = compositionLocalOf { ReadingTextFontSizePreference.default }
+val LocalReadingTextFontSize = compositionLocalOf { ReadingTextFontSizePref.default }
 val LocalReadingLetterSpacing = compositionLocalOf { ReadingLetterSpacingPreference.default }
-val LocalReadingTextHorizontalPadding = compositionLocalOf { ReadingTextHorizontalPaddingPreference.default }
-val LocalReadingTextAlign = compositionLocalOf<ReadingTextAlignPreference> { ReadingTextAlignPreference.default }
-val LocalReadingTextBold = compositionLocalOf<ReadingTextBoldPreference> { ReadingTextBoldPreference.default }
-val LocalReadingTitleAlign = compositionLocalOf<ReadingTitleAlignPreference> { ReadingTitleAlignPreference.default }
+val LocalReadingTextHorizontalPadding = compositionLocalOf { ReadingTextHorizontalPaddingPref.default }
+val LocalReadingTextAlign = compositionLocalOf<ReadingTextAlignPref> { ReadingTextAlignPref.default }
+val LocalReadingTextBold = compositionLocalOf<ReadingTextBoldPref> { ReadingTextBoldPref.default }
+val LocalReadingTitleAlign = compositionLocalOf<ReadingTitleAlignPref> { ReadingTitleAlignPref.default }
 val LocalReadingSubheadAlign =
     compositionLocalOf<ReadingSubheadAlignPreference> { ReadingSubheadAlignPreference.default }
 val LocalReadingFonts = compositionLocalOf<ReadingFontsPreference> { ReadingFontsPreference.default }
-val LocalReadingTitleBold = compositionLocalOf<ReadingTitleBoldPreference> { ReadingTitleBoldPreference.default }
+val LocalReadingTitleBold = compositionLocalOf<ReadingTitleBoldPref> { ReadingTitleBoldPref.default }
 val LocalReadingSubheadBold =
-    compositionLocalOf<ReadingSubheadBoldPreference> { ReadingSubheadBoldPreference.default }
+    compositionLocalOf<ReadingSubheadBoldPref> { ReadingSubheadBoldPref.default }
 val LocalReadingTitleUpperCase =
-    compositionLocalOf<ReadingTitleUpperCasePreference> { ReadingTitleUpperCasePreference.default }
+    compositionLocalOf<ReadingTitleUpperCasePref> { ReadingTitleUpperCasePref.default }
 val LocalReadingSubheadUpperCase =
-    compositionLocalOf<ReadingSubheadUpperCasePreference> { ReadingSubheadUpperCasePreference.default }
+    compositionLocalOf<ReadingSubheadUpperCasePref> { ReadingSubheadUpperCasePref.default }
 val LocalReadingImageHorizontalPadding = compositionLocalOf { ReadingImageHorizontalPaddingPreference.default }
 val LocalReadingImageRoundedCorners = compositionLocalOf { ReadingImageRoundedCornersPreference.default }
 val LocalReadingImageMaximize =
@@ -270,4 +270,3 @@ fun SettingsProvider(
         content()
     }
 }
-

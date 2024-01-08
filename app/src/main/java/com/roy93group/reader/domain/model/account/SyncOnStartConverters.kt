@@ -2,20 +2,20 @@ package com.roy93group.reader.domain.model.account
 
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverter
-import com.roy93group.reader.infrastructure.preference.SyncOnStartPreference
+import com.roy93group.reader.infrastructure.preference.SyncOnStartPref
 
 /**
- * Provide [TypeConverter] of [SyncOnStartPreference] for [RoomDatabase].
+ * Provide [TypeConverter] of [SyncOnStartPref] for [RoomDatabase].
  */
 class SyncOnStartConverters {
 
     @TypeConverter
-    fun toSyncOnStart(syncOnStart: Boolean): SyncOnStartPreference {
-        return SyncOnStartPreference.values.find { it.value == syncOnStart } ?: SyncOnStartPreference.default
+    fun toSyncOnStart(syncOnStart: Boolean): SyncOnStartPref {
+        return SyncOnStartPref.values.find { it.value == syncOnStart } ?: SyncOnStartPref.default
     }
 
     @TypeConverter
-    fun fromSyncOnStart(syncOnStart: SyncOnStartPreference): Boolean {
+    fun fromSyncOnStart(syncOnStart: SyncOnStartPref): Boolean {
         return syncOnStart.value
     }
 }

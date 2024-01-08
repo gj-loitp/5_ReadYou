@@ -8,9 +8,9 @@ import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
 
-sealed class ReadingSubheadUpperCasePreference(val value: Boolean) : Preference() {
-    object ON : ReadingSubheadUpperCasePreference(true)
-    object OFF : ReadingSubheadUpperCasePreference(false)
+sealed class ReadingSubheadUpperCasePref(val value: Boolean) : Preference() {
+    object ON : ReadingSubheadUpperCasePref(true)
+    object OFF : ReadingSubheadUpperCasePref(false)
 
     override fun put(context: Context, scope: CoroutineScope) {
         scope.launch {
@@ -35,8 +35,8 @@ sealed class ReadingSubheadUpperCasePreference(val value: Boolean) : Preference(
     }
 }
 
-operator fun ReadingSubheadUpperCasePreference.not(): ReadingSubheadUpperCasePreference =
+operator fun ReadingSubheadUpperCasePref.not(): ReadingSubheadUpperCasePref =
     when (value) {
-        true -> ReadingSubheadUpperCasePreference.OFF
-        false -> ReadingSubheadUpperCasePreference.ON
+        true -> ReadingSubheadUpperCasePref.OFF
+        false -> ReadingSubheadUpperCasePref.ON
     }

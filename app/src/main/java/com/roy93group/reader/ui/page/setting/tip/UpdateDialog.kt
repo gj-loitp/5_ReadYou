@@ -36,7 +36,7 @@ import com.roy93group.reader.infrastructure.preference.LocalNewVersionNumber
 import com.roy93group.reader.infrastructure.preference.LocalNewVersionPublishDate
 import com.roy93group.reader.infrastructure.preference.LocalNewVersionSize
 import com.roy93group.reader.infrastructure.preference.OpenLinkPreference
-import com.roy93group.reader.infrastructure.preference.SkipVersionNumberPreference
+import com.roy93group.reader.infrastructure.preference.SkipVersionNumberPref
 import com.roy93group.reader.ui.component.base.BaseDlg
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.installLatestApk
@@ -150,7 +150,7 @@ fun UpdateDialog(
             if (downloadState !is Download.Progress) {
                 TextButton(
                     onClick = {
-                        SkipVersionNumberPreference.put(context, scope, newVersionNumber.toString())
+                        SkipVersionNumberPref.put(context, scope, newVersionNumber.toString())
                         updateViewModel.hideDialog()
                     }
                 ) {

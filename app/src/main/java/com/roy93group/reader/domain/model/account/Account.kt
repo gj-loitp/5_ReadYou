@@ -26,17 +26,17 @@ data class Account(
     @ColumnInfo
     var lastArticleId: String? = null,
     @ColumnInfo(defaultValue = "30")
-    var syncInterval: SyncIntervalPreference = SyncIntervalPreference.default,
+    var syncInterval: SyncIntervalPref = SyncIntervalPref.default,
     @ColumnInfo(defaultValue = "0")
-    var syncOnStart: SyncOnStartPreference = SyncOnStartPreference.default,
+    var syncOnStart: SyncOnStartPref = SyncOnStartPref.default,
     @ColumnInfo(defaultValue = "0")
-    var syncOnlyOnWiFi: SyncOnlyOnWiFiPreference = SyncOnlyOnWiFiPreference.default,
+    var syncOnlyOnWiFi: SyncOnlyOnWiFiPref = SyncOnlyOnWiFiPref.default,
     @ColumnInfo(defaultValue = "0")
-    var syncOnlyWhenCharging: SyncOnlyWhenChargingPreference = SyncOnlyWhenChargingPreference.default,
+    var syncOnlyWhenCharging: SyncOnlyWhenChargingPref = SyncOnlyWhenChargingPref.default,
     @ColumnInfo(defaultValue = "2592000000")
     var keepArchived: KeepArchivedPreference = KeepArchivedPreference.default,
     @ColumnInfo(defaultValue = "")
-    var syncBlockList: SyncBlockList = SyncBlockListPreference.default,
+    var syncBlockList: SyncBlockList = SyncBlockListPref.default,
     @ColumnInfo(defaultValue = DESUtils.empty)
     var securityKey: String? = DESUtils.empty,
 )

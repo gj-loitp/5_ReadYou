@@ -8,22 +8,22 @@ import com.roy93group.reader.domain.service.SyncWorker
 import com.roy93group.reader.ui.page.setting.acc.AccountViewModel
 import java.util.concurrent.TimeUnit
 
-sealed class SyncIntervalPreference(
+sealed class SyncIntervalPref(
     val value: Long,
 ) {
 
-    object Manually : SyncIntervalPreference(0L)
-    object Every15Minutes : SyncIntervalPreference(15L)
-    object Every30Minutes : SyncIntervalPreference(30L)
-    object Every1Hour : SyncIntervalPreference(60L)
-    object Every2Hours : SyncIntervalPreference(120L)
-    object Every3Hours : SyncIntervalPreference(180L)
-    object Every6Hours : SyncIntervalPreference(360L)
-    object Every12Hours : SyncIntervalPreference(720L)
-    object Every1Day : SyncIntervalPreference(1440L)
+    object Manually : SyncIntervalPref(0L)
+    object Every15Minutes : SyncIntervalPref(15L)
+    object Every30Minutes : SyncIntervalPref(30L)
+    object Every1Hour : SyncIntervalPref(60L)
+    object Every2Hours : SyncIntervalPref(120L)
+    object Every3Hours : SyncIntervalPref(180L)
+    object Every6Hours : SyncIntervalPref(360L)
+    object Every12Hours : SyncIntervalPref(720L)
+    object Every1Day : SyncIntervalPref(1440L)
 
     fun put(accountId: Int, viewModel: AccountViewModel) {
-        viewModel.update(accountId) { syncInterval = this@SyncIntervalPreference }
+        viewModel.update(accountId) { syncInterval = this@SyncIntervalPref }
     }
 
     fun toDesc(context: Context): String =

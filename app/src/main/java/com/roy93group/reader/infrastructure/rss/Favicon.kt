@@ -5,7 +5,7 @@ import androidx.annotation.Keep
 @Keep
 data class Favicon(
     val url: String? = null,
-    val icons: List<Icon>? = null
+    val icons: List<Icon>? = null,
 ) {
     data class Icon(
         val url: String?,

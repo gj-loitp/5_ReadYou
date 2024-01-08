@@ -58,7 +58,7 @@ import com.roy93group.reader.infrastructure.preference.LocalBasicFonts
 import com.roy93group.reader.infrastructure.preference.LocalCustomPrimaryColor
 import com.roy93group.reader.infrastructure.preference.LocalDarkTheme
 import com.roy93group.reader.infrastructure.preference.LocalThemeIndex
-import com.roy93group.reader.infrastructure.preference.ThemeIndexPreference
+import com.roy93group.reader.infrastructure.preference.ThemeIndexPref
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.BlockRadioButton
 import com.roy93group.reader.ui.component.base.BlockRadioGroupButtonItem
@@ -325,7 +325,7 @@ fun Palettes(
                             customColorValue = customPrimaryColor
                             addDialogVisible = true
                         } else {
-                            ThemeIndexPreference.put(context, scope, themeIndexPrefix + index)
+                            ThemeIndexPref.put(context, scope, themeIndexPrefix + index)
                         }
                     },
                     palette = if (isCustom) tonalPalettes else palette
@@ -349,7 +349,7 @@ fun Palettes(
         onConfirm = {
             it.checkColorHex()?.let { hex ->
                 CustomPrimaryColorPreference.put(context, scope, hex)
-                ThemeIndexPreference.put(context, scope, 4)
+                ThemeIndexPref.put(context, scope, 4)
                 addDialogVisible = false
             }
         }

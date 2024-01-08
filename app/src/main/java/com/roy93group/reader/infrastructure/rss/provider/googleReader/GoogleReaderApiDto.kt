@@ -1,4 +1,4 @@
-package com.roy93group.reader.infrastructure.rss.provider.greader
+package com.roy93group.reader.infrastructure.rss.provider.googleReader
 
 import androidx.annotation.Keep
 

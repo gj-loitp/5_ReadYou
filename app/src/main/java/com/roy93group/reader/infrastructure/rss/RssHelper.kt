@@ -151,7 +151,7 @@ class RssHelper @Inject constructor(
             val favicon = Gson().fromJson(content, Favicon::class.java)
             favicon?.icons?.first { it.width != null && it.width >= 20 }?.url?.let {
                 saveRssIcon(feedDao, feed, it)
-            }?: return@withContext
+            } ?: return@withContext
         }
     }
 

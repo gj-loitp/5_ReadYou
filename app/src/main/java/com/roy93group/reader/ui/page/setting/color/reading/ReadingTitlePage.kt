@@ -38,7 +38,7 @@ import com.roy93group.reader.infrastructure.preference.LocalReadingTitleBold
 import com.roy93group.reader.infrastructure.preference.LocalReadingTitleUpperCase
 import com.roy93group.reader.infrastructure.preference.ReadingSubheadAlignPreference
 import com.roy93group.reader.infrastructure.preference.ReadingThemePreference
-import com.roy93group.reader.infrastructure.preference.ReadingTitleAlignPreference
+import com.roy93group.reader.infrastructure.preference.ReadingTitleAlignPref
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
@@ -193,7 +193,7 @@ fun ReadingTitlePage(
     RadioDlg(
         visible = titleAlignDialogVisible,
         title = stringResource(R.string.alignment),
-        options = ReadingTitleAlignPreference.values.map {
+        options = ReadingTitleAlignPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == titleAlign,

@@ -33,8 +33,8 @@ import androidx.navigation.NavHostController
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.KeepArchivedPreference
-import com.roy93group.reader.infrastructure.preference.SyncBlockListPreference
-import com.roy93group.reader.infrastructure.preference.SyncIntervalPreference
+import com.roy93group.reader.infrastructure.preference.SyncBlockListPref
+import com.roy93group.reader.infrastructure.preference.SyncIntervalPref
 import com.roy93group.reader.infrastructure.preference.not
 import com.roy93group.reader.ui.component.base.DisplayText
 import com.roy93group.reader.ui.component.base.FeedbackIconButton
@@ -68,9 +68,9 @@ fun AccountDetailsPage(
     var nameDialogVisible by remember { mutableStateOf(false) }
     var blockListValue by remember {
         mutableStateOf(
-            SyncBlockListPreference.toString(
+            SyncBlockListPref.toString(
                 selectedAccount?.syncBlockList
-                    ?: SyncBlockListPreference.default
+                    ?: SyncBlockListPref.default
             )
         )
     }
@@ -254,7 +254,7 @@ fun AccountDetailsPage(
     RadioDlg(
         visible = syncIntervalDialogVisible,
         title = stringResource(R.string.sync_interval),
-        options = SyncIntervalPreference.values.map {
+        options = SyncIntervalPref.values.map {
             RadioDialogOption(
                 text = it.toDesc(context),
                 selected = it == selectedAccount?.syncInterval,
@@ -299,7 +299,7 @@ fun AccountDetailsPage(
         },
         onConfirm = {
             selectedAccount?.id?.let {
-                SyncBlockListPreference.put(it, viewModel, selectedAccount.syncBlockList)
+                SyncBlockListPref.put(it, viewModel, selectedAccount.syncBlockList)
                 blockListDialogVisible = false
                 context.showToast(selectedAccount.syncBlockList.toString())
             }

@@ -5,22 +5,20 @@ import androidx.datastore.preferences.core.Preferences
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import com.roy93group.reader.domain.model.general.Version
-import com.roy93group.reader.domain.model.general.toVersion
 import com.roy93group.reader.ui.ext.DataStoreKeys
 import com.roy93group.reader.ui.ext.dataStore
 import com.roy93group.reader.ui.ext.put
 
-object SkipVersionNumberPreference {
+object ThemeIndexPref {
 
-    val default = Version()
+    const val default = 5
 
-    fun put(context: Context, scope: CoroutineScope, value: String) {
+    fun put(context: Context, scope: CoroutineScope, value: Int) {
         scope.launch(Dispatchers.IO) {
-            context.dataStore.put(DataStoreKeys.SkipVersionNumber, value)
+            context.dataStore.put(DataStoreKeys.ThemeIndex, value)
         }
     }
 
     fun fromPreferences(preferences: Preferences) =
-        preferences[DataStoreKeys.SkipVersionNumber.key].toVersion()
+        preferences[DataStoreKeys.ThemeIndex.key] ?: default
 }

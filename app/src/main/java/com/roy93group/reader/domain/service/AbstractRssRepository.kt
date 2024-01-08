@@ -25,7 +25,7 @@ import com.roy93group.reader.domain.repository.FeedDao
 import com.roy93group.reader.domain.repository.GroupDao
 import com.roy93group.reader.infrastructure.android.NotificationHelper
 import com.roy93group.reader.infrastructure.preference.KeepArchivedPreference
-import com.roy93group.reader.infrastructure.preference.SyncIntervalPreference
+import com.roy93group.reader.infrastructure.preference.SyncIntervalPref
 import com.roy93group.reader.infrastructure.rss.RssHelper
 import com.roy93group.reader.ui.ext.currentAccountId
 import com.roy93group.reader.ui.ext.spacerDollar
@@ -175,7 +175,7 @@ abstract class AbstractRssRepository(
                 if (it.syncOnStart.value) {
                     SyncWorker.enqueueOneTimeWork(workManager)
                 }
-                if (it.syncInterval.value != SyncIntervalPreference.Manually.value) {
+                if (it.syncInterval.value != SyncIntervalPref.Manually.value) {
                     SyncWorker.enqueuePeriodicWork(
                         workManager = workManager,
                         syncInterval = it.syncInterval,
@@ -185,7 +185,7 @@ abstract class AbstractRssRepository(
                 }
             } else {
                 SyncWorker.enqueueOneTimeWork(workManager)
-                if (it.syncInterval.value != SyncIntervalPreference.Manually.value) {
+                if (it.syncInterval.value != SyncIntervalPref.Manually.value) {
                     SyncWorker.enqueuePeriodicWork(
                         workManager = workManager,
                         syncInterval = it.syncInterval,

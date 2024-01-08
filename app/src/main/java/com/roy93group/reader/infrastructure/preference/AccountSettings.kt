@@ -9,13 +9,13 @@ import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.currentAccountId
 
 // Accounts
-val LocalSyncInterval = compositionLocalOf<SyncIntervalPreference> { SyncIntervalPreference.default }
-val LocalSyncOnStart = compositionLocalOf<SyncOnStartPreference> { SyncOnStartPreference.default }
-val LocalSyncOnlyOnWiFi = compositionLocalOf<SyncOnlyOnWiFiPreference> { SyncOnlyOnWiFiPreference.default }
+val LocalSyncInterval = compositionLocalOf<SyncIntervalPref> { SyncIntervalPref.default }
+val LocalSyncOnStart = compositionLocalOf<SyncOnStartPref> { SyncOnStartPref.default }
+val LocalSyncOnlyOnWiFi = compositionLocalOf<SyncOnlyOnWiFiPref> { SyncOnlyOnWiFiPref.default }
 val LocalSyncOnlyWhenCharging =
-    compositionLocalOf<SyncOnlyWhenChargingPreference> { SyncOnlyWhenChargingPreference.default }
+    compositionLocalOf<SyncOnlyWhenChargingPref> { SyncOnlyWhenChargingPref.default }
 val LocalKeepArchived = compositionLocalOf<KeepArchivedPreference> { KeepArchivedPreference.default }
-val LocalSyncBlockList = compositionLocalOf { SyncBlockListPreference.default }
+val LocalSyncBlockList = compositionLocalOf { SyncBlockListPref.default }
 
 @Composable
 fun AccountSettingsProvider(
@@ -27,13 +27,13 @@ fun AccountSettingsProvider(
 
     CompositionLocalProvider(
         // Accounts
-        LocalSyncInterval provides (accountSettings?.syncInterval ?: SyncIntervalPreference.default),
-        LocalSyncOnStart provides (accountSettings?.syncOnStart ?: SyncOnStartPreference.default),
-        LocalSyncOnlyOnWiFi provides (accountSettings?.syncOnlyOnWiFi ?: SyncOnlyOnWiFiPreference.default),
+        LocalSyncInterval provides (accountSettings?.syncInterval ?: SyncIntervalPref.default),
+        LocalSyncOnStart provides (accountSettings?.syncOnStart ?: SyncOnStartPref.default),
+        LocalSyncOnlyOnWiFi provides (accountSettings?.syncOnlyOnWiFi ?: SyncOnlyOnWiFiPref.default),
         LocalSyncOnlyWhenCharging provides (accountSettings?.syncOnlyWhenCharging
-            ?: SyncOnlyWhenChargingPreference.default),
+            ?: SyncOnlyWhenChargingPref.default),
         LocalKeepArchived provides (accountSettings?.keepArchived ?: KeepArchivedPreference.default),
-        LocalSyncBlockList provides (accountSettings?.syncBlockList ?: SyncBlockListPreference.default),
+        LocalSyncBlockList provides (accountSettings?.syncBlockList ?: SyncBlockListPref.default),
     ) {
         content()
     }
