@@ -70,7 +70,7 @@ import com.roy93group.reader.ui.component.base.RYSwitch
 import com.roy93group.reader.ui.component.base.RadioDialog
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
-import com.roy93group.reader.ui.component.base.TextFieldDialog
+import com.roy93group.reader.ui.component.base.TextFieldDlg
 import com.roy93group.reader.ui.ext.ExternalFonts
 import com.roy93group.reader.ui.page.common.RouteName
 import com.roy93group.reader.ui.page.setting.SettingItem
@@ -334,7 +334,7 @@ fun Palettes(
         }
     }
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = addDialogVisible,
         title = stringResource(R.string.primary_color),
         icon = Icons.Outlined.Palette,

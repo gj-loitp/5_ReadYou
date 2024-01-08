@@ -30,7 +30,7 @@ import com.roy93group.reader.ui.component.ChangeUrlDialog
 import com.roy93group.reader.ui.component.FeedIcon
 import com.roy93group.reader.ui.component.RenameDialog
 import com.roy93group.reader.ui.component.base.BottomDrawer
-import com.roy93group.reader.ui.component.base.TextFieldDialog
+import com.roy93group.reader.ui.component.base.TextFieldDlg
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.openURL
 import com.roy93group.reader.ui.ext.roundClick
@@ -139,7 +139,7 @@ fun FeedOptionDrawer(
 
     ClearFeedDialog(feedName = feed?.name ?: "")
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = feedOptionUiState.newGroupDialogVisible,
         title = stringResource(R.string.create_new_group),
         icon = Icons.Outlined.CreateNewFolder,

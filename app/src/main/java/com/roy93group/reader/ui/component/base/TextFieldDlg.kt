@@ -16,7 +16,7 @@ import androidx.compose.ui.window.DialogProperties
 import com.roy93group.reader.R
 
 @Composable
-fun TextFieldDialog(
+fun TextFieldDlg(
     modifier: Modifier = Modifier,
     properties: DialogProperties = DialogProperties(),
     visible: Boolean = false,

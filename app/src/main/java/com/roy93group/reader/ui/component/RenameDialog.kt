@@ -5,7 +5,7 @@ import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.roy93group.reader.R
-import com.roy93group.reader.ui.component.base.TextFieldDialog
+import com.roy93group.reader.ui.component.base.TextFieldDlg
 
 @Composable
 fun RenameDialog(
@@ -15,7 +15,7 @@ fun RenameDialog(
     onDismissRequest: () -> Unit = {},
     onConfirm: (String) -> Unit = {},
 ) {
-    TextFieldDialog(
+    TextFieldDlg(
         visible = visible,
         title = stringResource(R.string.rename),
         icon = Icons.Outlined.Edit,

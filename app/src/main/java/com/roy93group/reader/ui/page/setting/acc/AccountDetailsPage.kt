@@ -44,7 +44,7 @@ import com.roy93group.reader.ui.component.base.RYSwitch
 import com.roy93group.reader.ui.component.base.RadioDialog
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
-import com.roy93group.reader.ui.component.base.TextFieldDialog
+import com.roy93group.reader.ui.component.base.TextFieldDlg
 import com.roy93group.reader.ui.component.base.Tips
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.showToast
@@ -228,7 +228,7 @@ fun AccountDetailsPage(
         }
     )
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = nameDialogVisible,
         title = stringResource(R.string.name),
         value = nameValue ?: "",
@@ -285,7 +285,7 @@ fun AccountDetailsPage(
         keepArchivedDialogVisible = false
     }
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = blockListDialogVisible,
         title = stringResource(R.string.block_list),
         value = blockListValue,

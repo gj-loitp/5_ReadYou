@@ -1,10 +1,20 @@
 package com.roy93group.reader.ui.component.base
 
+import android.annotation.SuppressLint
 import android.net.http.SslError
 import android.util.Log
-import android.webkit.*
+import android.webkit.SslErrorHandler
+import android.webkit.WebResourceError
+import android.webkit.WebResourceRequest
+import android.webkit.WebResourceResponse
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Stable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
@@ -15,6 +25,7 @@ import com.roy93group.reader.ui.ext.openURL
 
 const val INJECTION_TOKEN = "/android_asset_font/"
 
+@SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun WebView(
     modifier: Modifier = Modifier,
@@ -121,7 +132,6 @@ fun WebView(
         factory = { webView },
         update = {
             it.apply {
-                Log.i("RLog", "CustomWebView: ${content}")
                 settings.javaScriptEnabled = true
                 loadDataWithBaseURL(
                     null,

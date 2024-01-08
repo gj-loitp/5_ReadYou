@@ -13,7 +13,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
 import com.roy93group.reader.domain.model.account.security.FeverSecurityKey
-import com.roy93group.reader.ui.component.base.TextFieldDialog
+import com.roy93group.reader.ui.component.base.TextFieldDlg
 import com.roy93group.reader.ui.ext.mask
 import com.roy93group.reader.ui.page.setting.SettingItem
 import com.roy93group.reader.ui.page.setting.acc.AccountViewModel
@@ -63,7 +63,7 @@ fun LazyItemScope.FeverConnection(
         },
     ) {}
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = serverUrlDialogVisible,
         title = stringResource(R.string.server_url),
         value = serverUrlValue ?: "",
@@ -83,7 +83,7 @@ fun LazyItemScope.FeverConnection(
         }
     )
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = usernameDialogVisible,
         title = stringResource(R.string.username),
         value = usernameValue ?: "",
@@ -103,7 +103,7 @@ fun LazyItemScope.FeverConnection(
         }
     )
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = passwordDialogVisible,
         title = stringResource(R.string.password),
         value = passwordValue ?: "",

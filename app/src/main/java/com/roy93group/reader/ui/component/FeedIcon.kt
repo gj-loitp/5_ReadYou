@@ -46,7 +46,8 @@ fun FeedIcon(
             modifier = Modifier
                 .size(size)
                 .clip(CircleShape),
-            base64Uri = iconUrl)
+            base64Uri = iconUrl
+        )
     } else {
         RYAsyncImage(
             modifier = Modifier
@@ -61,6 +62,6 @@ fun FeedIcon(
 
 @Preview
 @Composable
-fun FeedIconPrev(){
+fun FeedIconPrev() {
     FeedIcon("AFF", null)
 }

@@ -50,7 +50,7 @@ import com.roy93group.reader.ui.component.base.RYSwitch
 import com.roy93group.reader.ui.component.base.RadioDialog
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
-import com.roy93group.reader.ui.component.base.TextFieldDialog
+import com.roy93group.reader.ui.component.base.TextFieldDlg
 import com.roy93group.reader.ui.component.base.Tips
 import com.roy93group.reader.ui.page.setting.SettingItem
 import com.roy93group.reader.ui.theme.palette.onLight
@@ -228,7 +228,7 @@ fun FeedsPageStylePage(
         filterBarStyleDialogVisible = false
     }
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = filterBarPaddingDialogVisible,
         title = stringResource(R.string.horizontal_padding),
         value = (filterBarPaddingValue ?: "").toString(),

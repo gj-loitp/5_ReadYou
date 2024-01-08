@@ -1,23 +1,3 @@
-/*
- * Feeder: Android RSS reader app
- * https://gitlab.com/spacecowboy/Feeder
- *
- * Copyright (C) 2022  Jonas Kalderstam
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 package com.roy93group.reader.ui.component.reader
 
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -40,11 +20,7 @@ import androidx.compose.ui.text.style.TextOverflow
  * This is a shorthand of [BasicText] with [pointerInput] to be able to handle click
  * event easily.
  *
- * @sample androidx.compose.foundation.samples.ClickableText
- *
  * For other gestures, e.g. long press, dragging, follow sample code.
- *
- * @sample androidx.compose.foundation.samples.LongClickableText
  *
  * @see BasicText
  * @see androidx.compose.ui.input.pointer.pointerInput

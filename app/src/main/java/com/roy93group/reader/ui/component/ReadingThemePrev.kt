@@ -4,7 +4,16 @@ import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
@@ -42,8 +51,9 @@ fun ReadingThemePrev(
         modifier = Modifier
             .width(150.dp)
             .clip(Shape24)
-            .background(MaterialTheme.colorScheme.inverseOnSurface
-                    onLight MaterialTheme.colorScheme.surface
+            .background(
+                MaterialTheme.colorScheme.inverseOnSurface
+                        onLight MaterialTheme.colorScheme.surface
             )
             .border(
                 width = animateDpAsState(if (selected == theme) 4.dp else (-1).dp).value,
@@ -67,68 +77,79 @@ fun ReadingThemePrev(
         )
         Spacer(modifier = Modifier.height(2.dp))
         // Metadata
-        Box(modifier = Modifier
-            .padding(horizontal = 12.dp)
-            .size(width = 32.dp, height = 4.dp)
-            .clip(CircleShape)
-            .background(MaterialTheme.colorScheme.tertiaryContainer)
+        Box(
+            modifier = Modifier
+                .padding(horizontal = 12.dp)
+                .size(width = 32.dp, height = 4.dp)
+                .clip(CircleShape)
+                .background(MaterialTheme.colorScheme.tertiaryContainer)
         )
         Spacer(modifier = Modifier.height(16.dp))
         // Paragraph
-        Box(modifier = Modifier
-            .padding(horizontal = 12.dp)
-            .fillMaxWidth()
-            .height(12.dp)
-            .clip(CircleShape)
-            .background(MaterialTheme.colorScheme.surfaceVariant)
+        Box(
+            modifier = Modifier
+                .padding(horizontal = 12.dp)
+                .fillMaxWidth()
+                .height(12.dp)
+                .clip(CircleShape)
+                .background(MaterialTheme.colorScheme.surfaceVariant)
         )
         Spacer(modifier = Modifier.height(4.dp))
-        Row(modifier = Modifier
-            .padding(horizontal = 12.dp)
-            .width(114.dp)
-            .height(12.dp)
+        Row(
+            modifier = Modifier
+                .padding(horizontal = 12.dp)
+                .width(114.dp)
+                .height(12.dp)
         ) {
-            Box(modifier = Modifier
-                .weight(1f)
-                .fillMaxSize()
-                .clip(CircleShape)
-                .background(MaterialTheme.colorScheme.surfaceVariant)
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxSize()
+                    .clip(CircleShape)
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
             )
-            Box(modifier = Modifier
-                .padding(start = 4.dp)
-                .weight(2f)
-                .fillMaxSize()
-                .clip(CircleShape)
-                .background(MaterialTheme.colorScheme.surfaceVariant)
+            Box(
+                modifier = Modifier
+                    .padding(start = 4.dp)
+                    .weight(2f)
+                    .fillMaxSize()
+                    .clip(CircleShape)
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
             )
         }
         Spacer(modifier = Modifier.height(8.dp))
         // Image
-        Box(modifier = Modifier
-            .padding(horizontal = when (theme) {
-                ReadingThemePreference.MaterialYou -> 12.dp
-                ReadingThemePreference.Reeder -> 0.dp
-                ReadingThemePreference.Paper -> 12.dp
-                ReadingThemePreference.Custom -> (LocalReadingImageHorizontalPadding.current / 2).dp
-            })
-            .fillMaxWidth()
-            .height(46.dp)
-            .clip(when (theme) {
-                ReadingThemePreference.MaterialYou -> MaterialTheme.shapes.medium
-                ReadingThemePreference.Reeder -> RectangleShape
-                ReadingThemePreference.Paper -> RectangleShape
-                ReadingThemePreference.Custom -> roundedCorners
-            })
-            .background(MaterialTheme.colorScheme.primaryContainer onDark MaterialTheme.colorScheme.secondaryContainer)
+        Box(
+            modifier = Modifier
+                .padding(
+                    horizontal = when (theme) {
+                        ReadingThemePreference.MaterialYou -> 12.dp
+                        ReadingThemePreference.Reeder -> 0.dp
+                        ReadingThemePreference.Paper -> 12.dp
+                        ReadingThemePreference.Custom -> (LocalReadingImageHorizontalPadding.current / 2).dp
+                    }
+                )
+                .fillMaxWidth()
+                .height(46.dp)
+                .clip(
+                    when (theme) {
+                        ReadingThemePreference.MaterialYou -> MaterialTheme.shapes.medium
+                        ReadingThemePreference.Reeder -> RectangleShape
+                        ReadingThemePreference.Paper -> RectangleShape
+                        ReadingThemePreference.Custom -> roundedCorners
+                    }
+                )
+                .background(MaterialTheme.colorScheme.primaryContainer onDark MaterialTheme.colorScheme.secondaryContainer)
         )
         Spacer(modifier = Modifier.height(8.dp))
         // Footer
-        Box(modifier = Modifier
-            .padding(horizontal = 12.dp)
-            .width(100.dp)
-            .height(12.dp)
-            .clip(CircleShape)
-            .background(MaterialTheme.colorScheme.surfaceVariant)
+        Box(
+            modifier = Modifier
+                .padding(horizontal = 12.dp)
+                .width(100.dp)
+                .height(12.dp)
+                .clip(CircleShape)
+                .background(MaterialTheme.colorScheme.surfaceVariant)
         )
         Spacer(modifier = Modifier.height(14.dp))
     }

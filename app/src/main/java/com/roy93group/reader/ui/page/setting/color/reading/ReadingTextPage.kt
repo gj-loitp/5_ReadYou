@@ -49,7 +49,7 @@ import com.roy93group.reader.ui.component.base.RYSwitch
 import com.roy93group.reader.ui.component.base.RadioDialog
 import com.roy93group.reader.ui.component.base.RadioDialogOption
 import com.roy93group.reader.ui.component.base.Subtitle
-import com.roy93group.reader.ui.component.base.TextFieldDialog
+import com.roy93group.reader.ui.component.base.TextFieldDlg
 import com.roy93group.reader.ui.page.setting.SettingItem
 import com.roy93group.reader.ui.theme.palette.onLight
 
@@ -161,7 +161,7 @@ fun ReadingTextPage(
         }
     )
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = fontSizeDialogVisible,
         title = stringResource(R.string.font_size),
         value = (fontSizeValue ?: "").toString(),
@@ -179,7 +179,7 @@ fun ReadingTextPage(
         }
     )
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = letterSpacingDialogVisible,
         title = stringResource(R.string.letter_spacing),
         value = (letterSpacingValue ?: "").toString(),
@@ -197,7 +197,7 @@ fun ReadingTextPage(
         }
     )
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = horizontalPaddingDialogVisible,
         title = stringResource(R.string.horizontal_padding),
         value = (horizontalPaddingValue ?: "").toString(),

@@ -1,30 +1,17 @@
-/*
- * Feeder: Android RSS reader app
- * https://gitlab.com/spacecowboy/Feeder
- *
- * Copyright (C) 2022  Jonas Kalderstam
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 package com.roy93group.reader.ui.component.reader
 
-import com.roy93group.reader.R
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.BoxWithConstraintsScope
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.rememberScrollState
@@ -52,6 +39,7 @@ import androidx.compose.ui.unit.dp
 import coil.size.Precision
 import coil.size.Size
 import coil.size.pxOrElse
+import com.roy93group.reader.R
 import com.roy93group.reader.infrastructure.preference.LocalReadingImageMaximize
 import com.roy93group.reader.ui.component.base.RYAsyncImage
 import org.jsoup.Jsoup

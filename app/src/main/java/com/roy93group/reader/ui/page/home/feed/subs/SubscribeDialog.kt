@@ -34,7 +34,7 @@ import com.roy93group.reader.R
 import com.roy93group.reader.ui.component.RenameDialog
 import com.roy93group.reader.ui.component.base.ClipboardTextField
 import com.roy93group.reader.ui.component.base.RYDialog
-import com.roy93group.reader.ui.component.base.TextFieldDialog
+import com.roy93group.reader.ui.component.base.TextFieldDlg
 import com.roy93group.reader.ui.ext.collectAsStateValue
 import com.roy93group.reader.ui.ext.roundClick
 import com.roy93group.reader.ui.page.home.feed.FeedOptionView
@@ -213,7 +213,7 @@ fun SubscribeDialog(
         }
     )
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = subscribeUiState.newGroupDialogVisible,
         title = stringResource(R.string.create_new_group),
         icon = Icons.Outlined.CreateNewFolder,

@@ -35,7 +35,7 @@ import com.roy93group.reader.ui.component.base.FeedbackIconButton
 import com.roy93group.reader.ui.component.base.RYScaffold
 import com.roy93group.reader.ui.component.base.RYSwitch
 import com.roy93group.reader.ui.component.base.Subtitle
-import com.roy93group.reader.ui.component.base.TextFieldDialog
+import com.roy93group.reader.ui.component.base.TextFieldDlg
 import com.roy93group.reader.ui.page.setting.SettingItem
 import com.roy93group.reader.ui.theme.palette.onLight
 
@@ -142,7 +142,7 @@ fun ReadingImagePage(
         }
     )
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = roundedCornersDialogVisible,
         title = stringResource(R.string.rounded_corners),
         value = (roundedCornersValue ?: "").toString(),
@@ -160,7 +160,7 @@ fun ReadingImagePage(
         }
     )
 
-    TextFieldDialog(
+    TextFieldDlg(
         visible = horizontalPaddingDialogVisible,
         title = stringResource(R.string.horizontal_padding),
         value = (horizontalPaddingValue ?: "").toString(),
