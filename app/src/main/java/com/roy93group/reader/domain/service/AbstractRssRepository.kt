@@ -6,13 +6,6 @@ import androidx.paging.PagingSource
 import androidx.work.CoroutineWorker
 import androidx.work.ListenableWorker
 import androidx.work.WorkManager
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.async
-import kotlinx.coroutines.awaitAll
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flowOn
-import kotlinx.coroutines.flow.mapLatest
-import kotlinx.coroutines.supervisorScope
 import com.roy93group.reader.domain.model.article.Article
 import com.roy93group.reader.domain.model.article.ArticleWithFeed
 import com.roy93group.reader.domain.model.feed.Feed
@@ -29,7 +22,15 @@ import com.roy93group.reader.infrastructure.pref.SyncIntervalPref
 import com.roy93group.reader.infrastructure.rss.RssHelper
 import com.roy93group.reader.ui.ext.currentAccountId
 import com.roy93group.reader.ui.ext.spacerDollar
-import java.util.*
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.mapLatest
+import kotlinx.coroutines.supervisorScope
+import java.util.Date
+import java.util.UUID
 
 abstract class AbstractRssRepository(
     private val context: Context,
@@ -93,7 +94,7 @@ abstract class AbstractRssRepository(
                         }
                 }
 
-            Log.i("RlOG", "onCompletion: ${System.currentTimeMillis() - preTime}")
+//            Log.i("RlOG", "onCompletion: ${System.currentTimeMillis() - preTime}")
             accountDao.queryById(accountId)?.let { account ->
                 accountDao.update(account.apply { updateAt = Date() })
             }
@@ -159,8 +160,10 @@ abstract class AbstractRssRepository(
         accountDao.queryById(context.currentAccountId)!!
             .takeIf { it.keepArchived != KeepArchivedPreference.Always }
             ?.let {
-                articleDao.deleteAllArchivedBeforeThan(it.id!!,
-                    Date(System.currentTimeMillis() - it.keepArchived.value))
+                articleDao.deleteAllArchivedBeforeThan(
+                    it.id!!,
+                    Date(System.currentTimeMillis() - it.keepArchived.value)
+                )
             }
     }
 
@@ -210,10 +213,10 @@ abstract class AbstractRssRepository(
         isUnread: Boolean,
     ): PagingSource<Int, ArticleWithFeed> {
         val accountId = context.currentAccountId
-        Log.i(
-            "RLog",
-            "pullArticles: accountId: ${accountId}, groupId: ${groupId}, feedId: ${feedId}, isStarred: ${isStarred}, isUnread: ${isUnread}"
-        )
+//        Log.i(
+//            "RLog",
+//            "pullArticles: accountId: ${accountId}, groupId: ${groupId}, feedId: ${feedId}, isStarred: ${isStarred}, isUnread: ${isUnread}"
+//        )
         return when {
             groupId != null -> when {
                 isStarred -> articleDao.queryArticleWithFeedByGroupIdWhenIsStarred(accountId, groupId, true)
@@ -240,10 +243,10 @@ abstract class AbstractRssRepository(
         isUnread: Boolean,
     ): Flow<Map<String, Int>> {
         val accountId = context.currentAccountId
-        Log.i(
-            "RLog",
-            "pullImportant: accountId: ${accountId}, isStarred: ${isStarred}, isUnread: ${isUnread}"
-        )
+//        Log.i(
+//            "RLog",
+//            "pullImportant: accountId: ${accountId}, isStarred: ${isStarred}, isUnread: ${isUnread}"
+//        )
         return when {
             isStarred -> articleDao.queryImportantCountWhenIsStarred(accountId, true)
             isUnread -> articleDao.queryImportantCountWhenIsUnread(accountId, true)
@@ -318,10 +321,10 @@ abstract class AbstractRssRepository(
         isUnread: Boolean,
     ): PagingSource<Int, ArticleWithFeed> {
         val accountId = context.currentAccountId
-        Log.i(
-            "RLog",
-            "searchArticles: content: ${content}, accountId: ${accountId}, groupId: ${groupId}, feedId: ${feedId}, isStarred: ${isStarred}, isUnread: ${isUnread}"
-        )
+//        Log.i(
+//            "RLog",
+//            "searchArticles: content: ${content}, accountId: ${accountId}, groupId: ${groupId}, feedId: ${feedId}, isStarred: ${isStarred}, isUnread: ${isUnread}"
+//        )
         return when {
             groupId != null -> when {
                 isStarred -> articleDao.searchArticleByGroupIdWhenIsStarred(accountId, content, groupId, true)

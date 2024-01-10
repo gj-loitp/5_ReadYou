@@ -6,7 +6,6 @@ import be.ceau.opml.entity.Body
 import be.ceau.opml.entity.Head
 import be.ceau.opml.entity.Opml
 import be.ceau.opml.entity.Outline
-import dagger.hilt.android.qualifiers.ApplicationContext
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.repository.AccountDao
 import com.roy93group.reader.domain.repository.FeedDao
@@ -14,6 +13,7 @@ import com.roy93group.reader.domain.repository.GroupDao
 import com.roy93group.reader.infrastructure.rss.OPMLDataSource
 import com.roy93group.reader.ui.ext.currentAccountId
 import com.roy93group.reader.ui.ext.getDefaultGroupId
+import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.InputStream
 import java.util.*
 import javax.inject.Inject
@@ -21,7 +21,7 @@ import javax.inject.Inject
 /**
  * Supports import and export from OPML files.
  */
-class OpmlService @Inject constructor(
+class OpmlSv @Inject constructor(
     @ApplicationContext
     private val context: Context,
     private val groupDao: GroupDao,
@@ -94,7 +94,7 @@ class OpmlService @Inject constructor(
                     )
                 })
             )
-        )!!
+        )
     }
 
     private fun getDefaultGroupId(accountId: Int): String = accountId.getDefaultGroupId()

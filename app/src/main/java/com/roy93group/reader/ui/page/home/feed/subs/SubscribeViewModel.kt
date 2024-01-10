@@ -8,7 +8,7 @@ import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.article.Article
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.domain.service.OpmlService
+import com.roy93group.reader.domain.service.OpmlSv
 import com.roy93group.reader.domain.service.RssSv
 import com.roy93group.reader.infrastructure.android.AndroidStringsHelper
 import com.roy93group.reader.infrastructure.rss.RssHelper
@@ -27,7 +27,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SubscribeViewModel @Inject constructor(
-    private val opmlService: OpmlService,
+    private val opmlService: OpmlSv,
     val rssService: RssSv,
     private val rssHelper: RssHelper,
     private val androidStringsHelper: AndroidStringsHelper,

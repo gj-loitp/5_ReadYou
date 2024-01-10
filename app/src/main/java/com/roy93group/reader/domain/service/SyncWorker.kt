@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit
 class SyncWorker @AssistedInject constructor(
     @Assisted context: Context,
     @Assisted workerParams: WorkerParameters,
-    private val accountService: AccountService,
+    private val accountService: AccountSv,
     private val rssService: RssSv,
 ) : CoroutineWorker(context, workerParams) {
 

@@ -5,10 +5,10 @@ import androidx.hilt.work.HiltWorkerFactory
 import androidx.work.Configuration
 import androidx.work.WorkManager
 import coil.ImageLoader
-import com.roy93group.reader.domain.service.AccountService
-import com.roy93group.reader.domain.service.AppService
-import com.roy93group.reader.domain.service.LocalRssService
-import com.roy93group.reader.domain.service.OpmlService
+import com.roy93group.reader.domain.service.AccountSv
+import com.roy93group.reader.domain.service.AppSv
+import com.roy93group.reader.domain.service.LocalRssSv
+import com.roy93group.reader.domain.service.OpmlSv
 import com.roy93group.reader.domain.service.RssSv
 import com.roy93group.reader.infrastructure.db.AndroidDatabase
 import com.roy93group.reader.infrastructure.di.ApplicationScope
@@ -55,19 +55,19 @@ class AndroidApp : Application(), Configuration.Provider {
     lateinit var notificationHelper: NotificationHelper
 
     @Inject
-    lateinit var appService: AppService
+    lateinit var appService: AppSv
 
     @Inject
     lateinit var androidStringsHelper: AndroidStringsHelper
 
     @Inject
-    lateinit var accountService: AccountService
+    lateinit var accountService: AccountSv
 
     @Inject
-    lateinit var localRssService: LocalRssService
+    lateinit var localRssService: LocalRssSv
 
     @Inject
-    lateinit var opmlService: OpmlService
+    lateinit var opmlService: OpmlSv
 
     @Inject
     lateinit var rssService: RssSv

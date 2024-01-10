@@ -14,7 +14,7 @@ import com.roy93group.reader.infrastructure.rss.RssHelper
 import com.roy93group.reader.infrastructure.android.NotificationHelper
 import javax.inject.Inject
 
-class LocalRssService @Inject constructor(
+class LocalRssSv @Inject constructor(
     @ApplicationContext
     private val context: Context,
     private val articleDao: ArticleDao,
@@ -29,6 +29,14 @@ class LocalRssService @Inject constructor(
     private val defaultDispatcher: CoroutineDispatcher,
     workManager: WorkManager,
 ) : AbstractRssRepository(
-    context, accountDao, articleDao, groupDao,
-    feedDao, workManager, rssHelper, notificationHelper, ioDispatcher, defaultDispatcher
+    context,
+    accountDao,
+    articleDao,
+    groupDao,
+    feedDao,
+    workManager,
+    rssHelper,
+    notificationHelper,
+    ioDispatcher,
+    defaultDispatcher,
 )

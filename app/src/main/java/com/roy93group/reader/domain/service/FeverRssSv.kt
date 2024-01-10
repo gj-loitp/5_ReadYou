@@ -6,10 +6,6 @@ import android.util.Log
 import androidx.work.CoroutineWorker
 import androidx.work.ListenableWorker
 import androidx.work.WorkManager
-import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.supervisorScope
-import kotlinx.coroutines.withContext
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.security.FeverSecurityKey
 import com.roy93group.reader.domain.model.article.Article
@@ -31,11 +27,15 @@ import com.roy93group.reader.ui.ext.currentAccountId
 import com.roy93group.reader.ui.ext.dollarLast
 import com.roy93group.reader.ui.ext.showToast
 import com.roy93group.reader.ui.ext.spacerDollar
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.supervisorScope
+import kotlinx.coroutines.withContext
 import net.dankito.readability4j.extended.Readability4JExtended
-import java.util.*
+import java.util.Date
 import javax.inject.Inject
 
-class FeverRssService @Inject constructor(
+class FeverRssSv @Inject constructor(
     @ApplicationContext
     private val context: Context,
     private val articleDao: ArticleDao,

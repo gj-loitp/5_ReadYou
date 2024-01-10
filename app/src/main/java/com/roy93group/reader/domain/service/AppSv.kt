@@ -1,12 +1,6 @@
 package com.roy93group.reader.domain.service
 
 import android.content.Context
-import android.util.Log
-import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.emptyFlow
-import kotlinx.coroutines.withContext
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.general.toVersion
 import com.roy93group.reader.infrastructure.di.IODispatcher
@@ -14,15 +8,24 @@ import com.roy93group.reader.infrastructure.di.MainDispatcher
 import com.roy93group.reader.infrastructure.net.Download
 import com.roy93group.reader.infrastructure.net.NetworkDataSource
 import com.roy93group.reader.infrastructure.net.downloadToFileWithProgress
-import com.roy93group.reader.infrastructure.pref.*
+import com.roy93group.reader.infrastructure.pref.NewVersionDownloadUrlPref
+import com.roy93group.reader.infrastructure.pref.NewVersionLogPref
+import com.roy93group.reader.infrastructure.pref.NewVersionNumberPref
+import com.roy93group.reader.infrastructure.pref.NewVersionPublishDatePref
+import com.roy93group.reader.infrastructure.pref.NewVersionSizePref
 import com.roy93group.reader.infrastructure.pref.NewVersionSizePref.formatSize
 import com.roy93group.reader.ui.ext.getCurrentVersion
 import com.roy93group.reader.ui.ext.getLatestApk
 import com.roy93group.reader.ui.ext.showToast
 import com.roy93group.reader.ui.ext.skipVersionNumber
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.emptyFlow
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class AppService @Inject constructor(
+class AppSv @Inject constructor(
     @ApplicationContext
     private val context: Context,
     private val networkDataSource: NetworkDataSource,
@@ -60,9 +63,9 @@ class AppService @Inject constructor(
             val latestSize = latest.assets?.first()?.size ?: 0
             val latestDownloadUrl = latest.assets?.first()?.browserDownloadUrl ?: ""
 
-            Log.i("RLog", "current version $currentVersion")
+//            Log.i("RLog", "current version $currentVersion")
             if (latestVersion.whetherNeedUpdate(currentVersion, skipVersion)) {
-                Log.i("RLog", "new version $latestVersion")
+//                Log.i("RLog", "new version $latestVersion")
                 NewVersionNumberPref.put(context, this, latestVersion.toString())
                 NewVersionLogPref.put(context, this, latestLog)
                 NewVersionPublishDatePref.put(context, this, latestPublishDate)
@@ -74,7 +77,7 @@ class AppService @Inject constructor(
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            Log.e("RLog", "checkUpdate: ${e.message}")
+//            Log.e("RLog", "checkUpdate: ${e.message}")
             withContext(mainDispatcher) {
                 if (showToast) context.showToast(context.getString(R.string.check_failure))
             }
@@ -84,13 +87,13 @@ class AppService @Inject constructor(
 
     suspend fun downloadFile(url: String): Flow<Download> =
         withContext(ioDispatcher) {
-            Log.i("RLog", "downloadFile start: $url")
+//            Log.i("RLog", "downloadFile start: $url")
             try {
                 return@withContext networkDataSource.downloadFile(url)
                     .downloadToFileWithProgress(context.getLatestApk())
             } catch (e: Exception) {
                 e.printStackTrace()
-                Log.e("RLog", "downloadFile: ${e.message}")
+//                Log.e("RLog", "downloadFile: ${e.message}")
                 withContext(mainDispatcher) {
                     context.showToast(context.getString(R.string.download_failure))
                 }

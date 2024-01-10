@@ -9,8 +9,8 @@ import javax.inject.Inject
 class RssSv @Inject constructor(
     @ApplicationContext
     private val context: Context,
-    private val localRssService: LocalRssService,
-    private val feverRssService: FeverRssService,
+    private val localRssService: LocalRssSv,
+    private val feverRssService: FeverRssSv,
 //    private val googleReaderRssRepository: GoogleReaderRssRepository,
 ) {
 

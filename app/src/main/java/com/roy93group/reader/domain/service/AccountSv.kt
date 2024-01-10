@@ -2,8 +2,6 @@ package com.roy93group.reader.domain.service
 
 import android.content.Context
 import android.os.Looper
-import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.flow.Flow
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
 import com.roy93group.reader.domain.model.account.AccountType
@@ -12,10 +10,17 @@ import com.roy93group.reader.domain.repository.AccountDao
 import com.roy93group.reader.domain.repository.ArticleDao
 import com.roy93group.reader.domain.repository.FeedDao
 import com.roy93group.reader.domain.repository.GroupDao
-import com.roy93group.reader.ui.ext.*
+import com.roy93group.reader.ui.ext.DataStoreKeys
+import com.roy93group.reader.ui.ext.currentAccountId
+import com.roy93group.reader.ui.ext.dataStore
+import com.roy93group.reader.ui.ext.getDefaultGroupId
+import com.roy93group.reader.ui.ext.put
+import com.roy93group.reader.ui.ext.showToast
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class AccountService @Inject constructor(
+class AccountSv @Inject constructor(
     @ApplicationContext
     private val context: Context,
     private val accountDao: AccountDao,
@@ -49,15 +54,17 @@ class AccountService @Inject constructor(
                     )
                 }
             }
-            context.dataStore.put(DataStoreKeys.CurrentAccountId, it.id!!)
-            context.dataStore.put(DataStoreKeys.CurrentAccountType, it.type.id)
+            context.dataStore.put(dataStoreKeys = DataStoreKeys.CurrentAccountId, value = it.id!!)
+            context.dataStore.put(dataStoreKeys = DataStoreKeys.CurrentAccountType, value = it.type.id)
         }
 
     suspend fun addDefaultAccount(): Account =
-        addAccount(Account(
-            type = AccountType.Local,
-            name = context.getString(R.string.read_you),
-        ))
+        addAccount(
+            Account(
+                type = AccountType.Local,
+                name = context.getString(R.string.read_you),
+            )
+        )
 
     suspend fun update(accountId: Int, block: Account.() -> Unit) {
         accountDao.queryById(accountId)?.let {
@@ -78,16 +85,16 @@ class AccountService @Inject constructor(
             groupDao.deleteByAccountId(accountId)
             accountDao.delete(it)
             accountDao.queryAll().getOrNull(0)?.let {
-                context.dataStore.put(DataStoreKeys.CurrentAccountId, it.id!!)
-                context.dataStore.put(DataStoreKeys.CurrentAccountType, it.type.id)
+                context.dataStore.put(dataStoreKeys = DataStoreKeys.CurrentAccountId, value = it.id!!)
+                context.dataStore.put(dataStoreKeys = DataStoreKeys.CurrentAccountType, value = it.type.id)
             }
         }
     }
 
     suspend fun switch(account: Account) {
         rssService.get().cancelSync()
-        context.dataStore.put(DataStoreKeys.CurrentAccountId, account.id!!)
-        context.dataStore.put(DataStoreKeys.CurrentAccountType, account.type.id)
+        context.dataStore.put(dataStoreKeys = DataStoreKeys.CurrentAccountId, value = account.id!!)
+        context.dataStore.put(dataStoreKeys = DataStoreKeys.CurrentAccountType, value = account.type.id)
 
         // Restart
         // context.packageManager.getLaunchIntentForPackage(context.packageName)?.let {

@@ -3,7 +3,7 @@ package com.roy93group.reader.ui.page.setting.tip
 import androidx.annotation.Keep
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.roy93group.reader.domain.service.AppService
+import com.roy93group.reader.domain.service.AppSv
 import com.roy93group.reader.infrastructure.net.Download
 import com.roy93group.reader.ui.ext.notFdroid
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,7 +19,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class UpdateViewModel @Inject constructor(
-    private val appService: AppService,
+    private val appService: AppSv,
 ) : ViewModel() {
 
     private val _updateUiState = MutableStateFlow(UpdateUiState())
