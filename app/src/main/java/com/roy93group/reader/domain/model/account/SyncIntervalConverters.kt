@@ -11,7 +11,9 @@ class SyncIntervalConverters {
 
     @TypeConverter
     fun toSyncInterval(syncInterval: Long): SyncIntervalPref {
-        return SyncIntervalPref.values.find { it.value == syncInterval } ?: SyncIntervalPref.default
+        return SyncIntervalPref.values.find {
+            it.value == syncInterval
+        } ?: SyncIntervalPref.default
     }
 
     @TypeConverter

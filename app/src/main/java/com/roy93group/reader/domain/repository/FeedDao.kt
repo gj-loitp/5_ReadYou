@@ -105,7 +105,6 @@ interface FeedDao {
             if (feed == null) {
                 insert(it)
             } else {
-                // TODO: Consider migrating the fields to be nullable.
                 it.isNotification = feed.isNotification
                 it.isFullContent = feed.isFullContent
                 update(it)

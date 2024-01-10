@@ -2,8 +2,8 @@ package com.roy93group.reader.ui.page.setting.acc.addition
 
 import androidx.annotation.Keep
 import androidx.lifecycle.ViewModel
-import com.roy93group.reader.domain.service.OpmlSv
-import com.roy93group.reader.domain.service.RssSv
+import com.roy93group.reader.domain.sv.OpmlSv
+import com.roy93group.reader.domain.sv.RssSv
 import com.roy93group.reader.infrastructure.android.AndroidStringsHelper
 import com.roy93group.reader.infrastructure.rss.RssHelper
 import dagger.hilt.android.lifecycle.HiltViewModel

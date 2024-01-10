@@ -11,7 +11,9 @@ class KeepArchivedConverters {
 
     @TypeConverter
     fun toKeepArchived(keepArchived: Long): KeepArchivedPreference {
-        return KeepArchivedPreference.values.find { it.value == keepArchived } ?: KeepArchivedPreference.default
+        return KeepArchivedPreference.values.find {
+            it.value == keepArchived
+        } ?: KeepArchivedPreference.default
     }
 
     @TypeConverter

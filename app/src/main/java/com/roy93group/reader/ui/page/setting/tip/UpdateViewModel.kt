@@ -3,7 +3,7 @@ package com.roy93group.reader.ui.page.setting.tip
 import androidx.annotation.Keep
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.roy93group.reader.domain.service.AppSv
+import com.roy93group.reader.domain.sv.AppSv
 import com.roy93group.reader.infrastructure.net.Download
 import com.roy93group.reader.ui.ext.notFdroid
 import dagger.hilt.android.lifecycle.HiltViewModel

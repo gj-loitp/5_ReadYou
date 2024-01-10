@@ -4,9 +4,6 @@ import androidx.annotation.Keep
 import androidx.room.*
 import com.roy93group.reader.domain.model.group.Group
 
-/**
- * TODO: Add class description
- */
 @Entity(
     tableName = "feed",
     foreignKeys = [ForeignKey(

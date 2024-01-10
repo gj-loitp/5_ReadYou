@@ -23,12 +23,14 @@ enum class MarkAsReadConditions {
         All -> Date()
         else -> Calendar.getInstance().apply {
             time = Date()
-            add(Calendar.DAY_OF_MONTH, when (this@MarkAsReadConditions) {
-                SevenDays -> -7
-                ThreeDays -> -3
-                OneDay -> -1
-                else -> throw IllegalArgumentException("Unknown condition: $this")
-            })
+            add(
+                Calendar.DAY_OF_MONTH, when (this@MarkAsReadConditions) {
+                    SevenDays -> -7
+                    ThreeDays -> -3
+                    OneDay -> -1
+                    else -> throw IllegalArgumentException("Unknown condition: $this")
+                }
+            )
         }.time
     }
 }

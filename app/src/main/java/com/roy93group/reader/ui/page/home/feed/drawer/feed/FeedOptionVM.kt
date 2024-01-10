@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.domain.service.RssSv
+import com.roy93group.reader.domain.sv.RssSv
 import com.roy93group.reader.infrastructure.di.IODispatcher
 import com.roy93group.reader.infrastructure.di.MainDispatcher
 import javax.inject.Inject

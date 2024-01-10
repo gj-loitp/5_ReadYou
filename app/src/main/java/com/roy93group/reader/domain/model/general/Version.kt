@@ -25,13 +25,6 @@ class Version(numbers: List<String>) {
 
     override fun toString() = "$major.$minor.$point"
 
-    /**
-     * Use [major], [minor], [point] for comparison.
-     *
-     * 1. [major] <=> [other.major]
-     * 2. [minor] <=> [other.minor]
-     * 3. [point] <=> [other.point]
-     */
     operator fun compareTo(other: Version): Int = when {
         major > other.major -> 1
         major < other.major -> -1

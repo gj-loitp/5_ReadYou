@@ -8,8 +8,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
-import com.roy93group.reader.domain.service.AccountSv
-import com.roy93group.reader.domain.service.RssSv
+import com.roy93group.reader.domain.sv.AccountSv
+import com.roy93group.reader.domain.sv.RssSv
 import com.roy93group.reader.infrastructure.android.AndroidStringsHelper
 import com.roy93group.reader.infrastructure.di.DefaultDispatcher
 import com.roy93group.reader.infrastructure.di.IODispatcher

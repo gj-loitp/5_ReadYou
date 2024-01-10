@@ -13,8 +13,8 @@ import com.roy93group.reader.domain.model.article.mapPagingFlowItem
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.general.Filter
 import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.domain.service.RssSv
-import com.roy93group.reader.domain.service.SyncWorker
+import com.roy93group.reader.domain.sv.RssSv
+import com.roy93group.reader.domain.sv.SyncWorker
 import com.roy93group.reader.infrastructure.android.AndroidStringsHelper
 import com.roy93group.reader.infrastructure.di.ApplicationScope
 import com.roy93group.reader.infrastructure.di.IODispatcher

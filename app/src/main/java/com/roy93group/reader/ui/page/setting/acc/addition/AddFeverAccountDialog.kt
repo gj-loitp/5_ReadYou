@@ -30,7 +30,7 @@ import androidx.navigation.NavHostController
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
 import com.roy93group.reader.domain.model.account.AccountType
-import com.roy93group.reader.domain.model.account.security.FeverSecurityKey
+import com.roy93group.reader.domain.model.account.sec.FeverSecurityKey
 import com.roy93group.reader.ui.component.base.BaseDlg
 import com.roy93group.reader.ui.component.base.BaseOutlineTextField
 import com.roy93group.reader.ui.ext.collectAsStateValue

@@ -1,4 +1,4 @@
-package com.roy93group.reader.domain.service
+package com.roy93group.reader.domain.sv
 
 import android.content.Context
 import android.text.Html
@@ -7,7 +7,7 @@ import androidx.work.CoroutineWorker
 import androidx.work.ListenableWorker
 import androidx.work.WorkManager
 import com.roy93group.reader.R
-import com.roy93group.reader.domain.model.account.security.FeverSecurityKey
+import com.roy93group.reader.domain.model.account.sec.FeverSecurityKey
 import com.roy93group.reader.domain.model.article.Article
 import com.roy93group.reader.domain.model.article.ArticleMeta
 import com.roy93group.reader.domain.model.feed.Feed

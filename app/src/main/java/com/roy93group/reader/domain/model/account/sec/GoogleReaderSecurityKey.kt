@@ -1,6 +1,6 @@
-package com.roy93group.reader.domain.model.account.security
+package com.roy93group.reader.domain.model.account.sec
 
-class FeverSecurityKey private constructor() : SecurityKey() {
+class GoogleReaderSecurityKey private constructor() : SecurityKey() {
 
     var serverUrl: String? = null
     var username: String? = null
@@ -13,7 +13,7 @@ class FeverSecurityKey private constructor() : SecurityKey() {
     }
 
     constructor(value: String? = DESUtils.empty) : this() {
-        decode(value, FeverSecurityKey::class.java).let {
+        decode(value, GoogleReaderSecurityKey::class.java).let {
             serverUrl = it.serverUrl
             username = it.username
             password = it.password

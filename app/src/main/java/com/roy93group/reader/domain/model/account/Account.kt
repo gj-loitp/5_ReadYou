@@ -4,7 +4,7 @@ import androidx.annotation.Keep
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.roy93group.reader.domain.model.account.security.DESUtils
+import com.roy93group.reader.domain.model.account.sec.DESUtils
 import com.roy93group.reader.infrastructure.pref.*
 import java.util.*
 

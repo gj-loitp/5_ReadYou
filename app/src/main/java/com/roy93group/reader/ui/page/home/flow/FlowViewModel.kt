@@ -5,7 +5,7 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.roy93group.reader.domain.model.general.MarkAsReadConditions
-import com.roy93group.reader.domain.service.RssSv
+import com.roy93group.reader.domain.sv.RssSv
 import com.roy93group.reader.infrastructure.di.IODispatcher
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher

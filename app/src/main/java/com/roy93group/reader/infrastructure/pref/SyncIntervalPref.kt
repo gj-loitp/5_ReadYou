@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.work.PeriodicWorkRequest
 import androidx.work.PeriodicWorkRequestBuilder
 import com.roy93group.reader.R
-import com.roy93group.reader.domain.service.SyncWorker
+import com.roy93group.reader.domain.sv.SyncWorker
 import com.roy93group.reader.ui.page.setting.acc.AccountViewModel
 import java.util.concurrent.TimeUnit
 

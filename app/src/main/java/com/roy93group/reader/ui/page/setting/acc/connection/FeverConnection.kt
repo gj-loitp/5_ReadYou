@@ -12,7 +12,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.account.Account
-import com.roy93group.reader.domain.model.account.security.FeverSecurityKey
+import com.roy93group.reader.domain.model.account.sec.FeverSecurityKey
 import com.roy93group.reader.ui.component.base.TextFieldDlg
 import com.roy93group.reader.ui.ext.mask
 import com.roy93group.reader.ui.page.setting.SettingItem

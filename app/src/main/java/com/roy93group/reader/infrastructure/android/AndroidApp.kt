@@ -5,11 +5,11 @@ import androidx.hilt.work.HiltWorkerFactory
 import androidx.work.Configuration
 import androidx.work.WorkManager
 import coil.ImageLoader
-import com.roy93group.reader.domain.service.AccountSv
-import com.roy93group.reader.domain.service.AppSv
-import com.roy93group.reader.domain.service.LocalRssSv
-import com.roy93group.reader.domain.service.OpmlSv
-import com.roy93group.reader.domain.service.RssSv
+import com.roy93group.reader.domain.sv.AccountSv
+import com.roy93group.reader.domain.sv.AppSv
+import com.roy93group.reader.domain.sv.LocalRssSv
+import com.roy93group.reader.domain.sv.OpmlSv
+import com.roy93group.reader.domain.sv.RssSv
 import com.roy93group.reader.infrastructure.db.AndroidDatabase
 import com.roy93group.reader.infrastructure.di.ApplicationScope
 import com.roy93group.reader.infrastructure.di.IODispatcher

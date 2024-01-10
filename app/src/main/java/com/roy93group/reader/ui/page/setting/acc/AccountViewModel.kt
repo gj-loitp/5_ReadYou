@@ -5,9 +5,9 @@ import androidx.annotation.Keep
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.roy93group.reader.domain.model.account.Account
-import com.roy93group.reader.domain.service.AccountSv
-import com.roy93group.reader.domain.service.OpmlSv
-import com.roy93group.reader.domain.service.RssSv
+import com.roy93group.reader.domain.sv.AccountSv
+import com.roy93group.reader.domain.sv.OpmlSv
+import com.roy93group.reader.domain.sv.RssSv
 import com.roy93group.reader.infrastructure.di.DefaultDispatcher
 import com.roy93group.reader.infrastructure.di.IODispatcher
 import com.roy93group.reader.infrastructure.di.MainDispatcher

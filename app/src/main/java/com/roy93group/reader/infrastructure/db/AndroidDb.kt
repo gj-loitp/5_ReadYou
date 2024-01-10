@@ -16,7 +16,7 @@ import com.roy93group.reader.domain.model.account.SyncIntervalConverters
 import com.roy93group.reader.domain.model.account.SyncOnStartConverters
 import com.roy93group.reader.domain.model.account.SyncOnlyOnWiFiConverters
 import com.roy93group.reader.domain.model.account.SyncOnlyWhenChargingConverters
-import com.roy93group.reader.domain.model.account.security.DESUtils
+import com.roy93group.reader.domain.model.account.sec.DESUtils
 import com.roy93group.reader.domain.model.article.Article
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.group.Group

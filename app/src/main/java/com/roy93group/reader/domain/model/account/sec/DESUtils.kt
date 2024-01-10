@@ -1,4 +1,4 @@
-package com.roy93group.reader.domain.model.account.security
+package com.roy93group.reader.domain.model.account.sec
 
 import android.util.Base64
 import javax.crypto.Cipher

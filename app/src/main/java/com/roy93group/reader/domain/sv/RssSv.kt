@@ -1,4 +1,4 @@
-package com.roy93group.reader.domain.service
+package com.roy93group.reader.domain.sv
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext

@@ -8,8 +8,8 @@ import com.roy93group.reader.R
 import com.roy93group.reader.domain.model.article.Article
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.domain.service.OpmlSv
-import com.roy93group.reader.domain.service.RssSv
+import com.roy93group.reader.domain.sv.OpmlSv
+import com.roy93group.reader.domain.sv.RssSv
 import com.roy93group.reader.infrastructure.android.AndroidStringsHelper
 import com.roy93group.reader.infrastructure.rss.RssHelper
 import com.roy93group.reader.ui.ext.formatUrl

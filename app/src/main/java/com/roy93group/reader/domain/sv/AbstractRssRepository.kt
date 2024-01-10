@@ -1,7 +1,6 @@
-package com.roy93group.reader.domain.service
+package com.roy93group.reader.domain.sv
 
 import android.content.Context
-import android.util.Log
 import androidx.paging.PagingSource
 import androidx.work.CoroutineWorker
 import androidx.work.ListenableWorker

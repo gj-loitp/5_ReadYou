@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.ItemSnapshotList
 import com.roy93group.reader.domain.model.article.ArticleFlowItem
 import com.roy93group.reader.domain.model.article.ArticleWithFeed
-import com.roy93group.reader.domain.service.RssSv
+import com.roy93group.reader.domain.sv.RssSv
 import com.roy93group.reader.infrastructure.rss.RssHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
