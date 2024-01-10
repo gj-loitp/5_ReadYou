@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.roy93group.reader.domain.model.account.Account
 import com.roy93group.reader.domain.service.AccountService
 import com.roy93group.reader.domain.service.OpmlService
-import com.roy93group.reader.domain.service.RssService
+import com.roy93group.reader.domain.service.RssSv
 import com.roy93group.reader.infrastructure.di.DefaultDispatcher
 import com.roy93group.reader.infrastructure.di.IODispatcher
 import com.roy93group.reader.infrastructure.di.MainDispatcher
@@ -26,7 +26,7 @@ import javax.inject.Inject
 @HiltViewModel
 class AccountViewModel @Inject constructor(
     private val accountService: AccountService,
-    private val rssService: RssService,
+    private val rssService: RssSv,
     private val opmlService: OpmlService,
     @IODispatcher
     private val ioDispatcher: CoroutineDispatcher,

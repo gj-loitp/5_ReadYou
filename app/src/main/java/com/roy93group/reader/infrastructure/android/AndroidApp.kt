@@ -5,12 +5,11 @@ import androidx.hilt.work.HiltWorkerFactory
 import androidx.work.Configuration
 import androidx.work.WorkManager
 import coil.ImageLoader
-import dagger.hilt.android.HiltAndroidApp
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import com.roy93group.reader.domain.service.*
+import com.roy93group.reader.domain.service.AccountService
+import com.roy93group.reader.domain.service.AppService
+import com.roy93group.reader.domain.service.LocalRssService
+import com.roy93group.reader.domain.service.OpmlService
+import com.roy93group.reader.domain.service.RssSv
 import com.roy93group.reader.infrastructure.db.AndroidDatabase
 import com.roy93group.reader.infrastructure.di.ApplicationScope
 import com.roy93group.reader.infrastructure.di.IODispatcher
@@ -20,6 +19,11 @@ import com.roy93group.reader.infrastructure.rss.RssHelper
 import com.roy93group.reader.ui.ext.del
 import com.roy93group.reader.ui.ext.getLatestApk
 import com.roy93group.reader.ui.ext.isFdroid
+import dagger.hilt.android.HiltAndroidApp
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import javax.inject.Inject
 
@@ -28,16 +32,6 @@ import javax.inject.Inject
  */
 @HiltAndroidApp
 class AndroidApp : Application(), Configuration.Provider {
-
-    /**
-     * From: [Feeder](https://gitlab.com/spacecowboy/Feeder).
-     *
-     * Install Conscrypt to handle TLSv1.3 pre Android10.
-     */
-    init {
-        // Cancel TLSv1.3 support pre Android10
-        // Security.insertProviderAt(Conscrypt.newProvider(), 1)
-    }
 
     @Inject
     lateinit var androidDatabase: AndroidDatabase
@@ -76,7 +70,7 @@ class AndroidApp : Application(), Configuration.Provider {
     lateinit var opmlService: OpmlService
 
     @Inject
-    lateinit var rssService: RssService
+    lateinit var rssService: RssSv
 
     @Inject
     @ApplicationScope

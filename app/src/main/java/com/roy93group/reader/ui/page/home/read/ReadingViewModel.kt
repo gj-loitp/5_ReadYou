@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.ItemSnapshotList
 import com.roy93group.reader.domain.model.article.ArticleFlowItem
 import com.roy93group.reader.domain.model.article.ArticleWithFeed
-import com.roy93group.reader.domain.service.RssService
+import com.roy93group.reader.domain.service.RssSv
 import com.roy93group.reader.infrastructure.rss.RssHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -21,7 +21,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ReadingViewModel @Inject constructor(
-    private val rssService: RssService,
+    private val rssService: RssSv,
     private val rssHelper: RssHelper,
 ) : ViewModel() {
 

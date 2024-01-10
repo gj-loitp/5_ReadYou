@@ -1,7 +1,6 @@
-
-
 package com.roy93group.reader.infrastructure.di
 
+import android.annotation.SuppressLint
 import android.content.Context
 import dagger.Module
 import dagger.Provides
@@ -69,10 +68,13 @@ fun cachingHttpClient(
 
 fun OkHttpClient.Builder.trustAllCerts() {
     try {
-        val trustManager = object : X509TrustManager {
+        val trustManager = @SuppressLint("CustomX509TrustManager")
+        object : X509TrustManager {
+            @SuppressLint("TrustAllX509TrustManager")
             override fun checkClientTrusted(chain: Array<out X509Certificate>?, authType: String?) {
             }
 
+            @SuppressLint("TrustAllX509TrustManager")
             override fun checkServerTrusted(chain: Array<out X509Certificate>?, authType: String?) {
             }
 
@@ -84,11 +86,11 @@ fun OkHttpClient.Builder.trustAllCerts() {
         val sslSocketFactory = sslContext.socketFactory
 
         sslSocketFactory(sslSocketFactory, trustManager)
-            .hostnameVerifier(HostnameVerifier { _, _ -> true })
+            .hostnameVerifier { _, _ -> true }
     } catch (e: NoSuchAlgorithmException) {
-        // ignore
+        e.printStackTrace()
     } catch (e: KeyManagementException) {
-        // ignore
+        e.printStackTrace()
     }
 }
 

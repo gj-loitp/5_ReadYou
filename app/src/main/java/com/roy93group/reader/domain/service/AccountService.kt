@@ -22,7 +22,7 @@ class AccountService @Inject constructor(
     private val groupDao: GroupDao,
     private val feedDao: FeedDao,
     private val articleDao: ArticleDao,
-    private val rssService: RssService,
+    private val rssService: RssSv,
 ) {
 
     fun getAccounts(): Flow<List<Account>> = accountDao.queryAllAsFlow()

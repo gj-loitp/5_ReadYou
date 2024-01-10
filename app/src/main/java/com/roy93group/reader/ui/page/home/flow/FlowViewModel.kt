@@ -5,7 +5,7 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.roy93group.reader.domain.model.general.MarkAsReadConditions
-import com.roy93group.reader.domain.service.RssService
+import com.roy93group.reader.domain.service.RssSv
 import com.roy93group.reader.infrastructure.di.IODispatcher
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
@@ -17,7 +17,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class FlowViewModel @Inject constructor(
-    private val rssService: RssService,
+    private val rssService: RssSv,
     @IODispatcher
     private val ioDispatcher: CoroutineDispatcher,
 ) : ViewModel() {

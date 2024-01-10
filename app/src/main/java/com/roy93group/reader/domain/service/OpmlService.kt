@@ -27,7 +27,7 @@ class OpmlService @Inject constructor(
     private val groupDao: GroupDao,
     private val feedDao: FeedDao,
     private val accountDao: AccountDao,
-    private val rssService: RssService,
+    private val rssService: RssSv,
     private val OPMLDataSource: OPMLDataSource,
 ) {
 

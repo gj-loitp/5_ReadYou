@@ -6,7 +6,7 @@ import com.roy93group.reader.domain.model.account.AccountType
 import com.roy93group.reader.ui.ext.currentAccountType
 import javax.inject.Inject
 
-class RssService @Inject constructor(
+class RssSv @Inject constructor(
     @ApplicationContext
     private val context: Context,
     private val localRssService: LocalRssService,

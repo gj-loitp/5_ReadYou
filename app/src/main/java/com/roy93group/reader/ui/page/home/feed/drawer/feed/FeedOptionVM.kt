@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.domain.service.RssService
+import com.roy93group.reader.domain.service.RssSv
 import com.roy93group.reader.infrastructure.di.IODispatcher
 import com.roy93group.reader.infrastructure.di.MainDispatcher
 import javax.inject.Inject
@@ -25,7 +25,7 @@ import javax.inject.Inject
 @OptIn(ExperimentalMaterialApi::class)
 @HiltViewModel
 class FeedOptionViewModel @Inject constructor(
-    val rssService: RssService,
+    val rssService: RssSv,
     @MainDispatcher
     private val mainDispatcher: CoroutineDispatcher,
     @IODispatcher

@@ -13,7 +13,7 @@ import com.roy93group.reader.domain.model.article.mapPagingFlowItem
 import com.roy93group.reader.domain.model.feed.Feed
 import com.roy93group.reader.domain.model.general.Filter
 import com.roy93group.reader.domain.model.group.Group
-import com.roy93group.reader.domain.service.RssService
+import com.roy93group.reader.domain.service.RssSv
 import com.roy93group.reader.domain.service.SyncWorker
 import com.roy93group.reader.infrastructure.android.AndroidStringsHelper
 import com.roy93group.reader.infrastructure.di.ApplicationScope
@@ -33,7 +33,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val rssService: RssService,
+    private val rssService: RssSv,
     private val androidStringsHelper: AndroidStringsHelper,
     @ApplicationScope
     private val applicationScope: CoroutineScope,

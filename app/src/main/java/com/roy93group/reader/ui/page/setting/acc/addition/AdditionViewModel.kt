@@ -3,7 +3,7 @@ package com.roy93group.reader.ui.page.setting.acc.addition
 import androidx.annotation.Keep
 import androidx.lifecycle.ViewModel
 import com.roy93group.reader.domain.service.OpmlService
-import com.roy93group.reader.domain.service.RssService
+import com.roy93group.reader.domain.service.RssSv
 import com.roy93group.reader.infrastructure.android.AndroidStringsHelper
 import com.roy93group.reader.infrastructure.rss.RssHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,7 +16,7 @@ import javax.inject.Inject
 @HiltViewModel
 class AdditionViewModel @Inject constructor(
     private val opmlService: OpmlService,
-    private val rssService: RssService,
+    private val rssService: RssSv,
     private val rssHelper: RssHelper,
     private val androidStringsHelper: AndroidStringsHelper,
 ) : ViewModel() {

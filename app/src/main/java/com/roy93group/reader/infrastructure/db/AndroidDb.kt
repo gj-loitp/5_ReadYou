@@ -1,10 +1,21 @@
 package com.roy93group.reader.infrastructure.db
 
 import android.content.Context
-import androidx.room.*
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import androidx.room.TypeConverter
+import androidx.room.TypeConverters
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.roy93group.reader.domain.model.account.*
+import com.roy93group.reader.domain.model.account.Account
+import com.roy93group.reader.domain.model.account.AccountTypeConverters
+import com.roy93group.reader.domain.model.account.KeepArchivedConverters
+import com.roy93group.reader.domain.model.account.SyncBlockListConverters
+import com.roy93group.reader.domain.model.account.SyncIntervalConverters
+import com.roy93group.reader.domain.model.account.SyncOnStartConverters
+import com.roy93group.reader.domain.model.account.SyncOnlyOnWiFiConverters
+import com.roy93group.reader.domain.model.account.SyncOnlyWhenChargingConverters
 import com.roy93group.reader.domain.model.account.security.DESUtils
 import com.roy93group.reader.domain.model.article.Article
 import com.roy93group.reader.domain.model.feed.Feed
@@ -13,12 +24,21 @@ import com.roy93group.reader.domain.repository.AccountDao
 import com.roy93group.reader.domain.repository.ArticleDao
 import com.roy93group.reader.domain.repository.FeedDao
 import com.roy93group.reader.domain.repository.GroupDao
-import com.roy93group.reader.infrastructure.pref.*
+import com.roy93group.reader.infrastructure.pref.KeepArchivedPreference
+import com.roy93group.reader.infrastructure.pref.SyncIntervalPref
+import com.roy93group.reader.infrastructure.pref.SyncOnStartPref
+import com.roy93group.reader.infrastructure.pref.SyncOnlyOnWiFiPref
+import com.roy93group.reader.infrastructure.pref.SyncOnlyWhenChargingPref
 import com.roy93group.reader.ui.ext.toInt
-import java.util.*
+import java.util.Date
 
 @Database(
-    entities = [Account::class, Feed::class, Article::class, Group::class],
+    entities = [
+        Account::class,
+        Feed::class,
+        Article::class,
+        Group::class,
+    ],
     version = 5
 )
 @TypeConverters(
