@@ -348,7 +348,7 @@
     <string name="inoreader" translatable="false">Inoreader</string>
     <string name="local_desc">On this device</string>
     <string name="services">Services</string>
-    <string name="feedly_desc" translatable="false">feedll.com</string>
+    <string name="feedly_desc" translatable="false">feedly.com</string>
     <string name="inoreader_desc" translatable="false">inoreader.com</string>
     <string name="self_hosted">Self-Hosted</string>
     <string name="fresh_rss_desc" translatable="false">freshrss.org</string>
@@ -393,5 +393,7 @@
     <string name="default_browser">Force default browser</string>
     <string name="always_ask">Always Ask</string>
     <string name="open_link_specific_browser">Browser</string>
+    <string name="open_link_something_wrong">\"Open Link\" setting ignored because something went wrong.</string>
+    <string name="open_link_ask_dialog_title">Open with…</string>
     <string name="open_link_something_wrong">Open Link Setting was ignored because something went whrong.</string>
 </resources>
