@@ -150,7 +150,8 @@ abstract class AbstractRssRepository(
             try {
                 rssHelper.queryRssIcon(feedDao, feed)
             } catch (e: Exception) {
-                Log.i("RLog", "queryRssIcon is failed: ${e.message}")
+//                Log.i("RLog", "queryRssIcon is failed: ${e.message}")
+                e.printStackTrace()
             }
         }
         return FeedWithArticle(

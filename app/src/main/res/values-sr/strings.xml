@@ -130,7 +130,6 @@
     <string name="manually">Ручно</string>
     <string name="server_url">URL адреса сервера</string>
     <string name="in_coding">У процесу програмирања</string>
-    <string name="server_url">URL сервера</string>
     <string name="all_move_to_group_toast">Премештени су сви фидови у групу „%1$s“</string>
     <string name="connection">Веза</string>
     <string name="all_deny_parse_full_content_toast">Нема више рашчлањивања комплетног садржаја свих чланака у групи „%1$s“</string>

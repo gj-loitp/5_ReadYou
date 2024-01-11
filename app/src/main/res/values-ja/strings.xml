@@ -26,7 +26,6 @@
     <string name="mark_as_read_one_day">1 日以上前の記事を既読としてマーク</string>
     <string name="mark_as_read_three_days">３日以上前の記事を既読としてマーク</string>
     <string name="seven_days">7日</string>
-    <string name="seven_days">７日</string>
     <string name="close">閉じる</string>
     <string name="get_new_updates">新しいアップデートを取得する</string>
     <string name="get_new_updates_desc">バージョン %1$s が利用可能です</string>
@@ -118,8 +117,6 @@
     <string name="three_days">3日</string>
     <string name="in_coding">開発中</string>
     <string name="one_day">1日</string>
-    <string name="three_days">３日</string>
-    <string name="one_day">１日</string>
     <string name="coming_soon">近日公開</string>
     <string name="accounts_desc">ローカル、FreshRSS</string>
     <string name="color_and_style_desc">テーマ、カラースタイル、フォントサイズ</string>

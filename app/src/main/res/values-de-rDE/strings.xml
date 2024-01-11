@@ -84,7 +84,6 @@
     <string name="seven_days">7 T</string>
     <string name="close">Schließen</string>
     <string name="get_new_updates">Neue Updates erhalten</string>
-    <string name="get_new_updates_desc">Neue version %1$s ist verfügbar</string>
     <string name="get_new_updates_desc">Version %1$s wurde veröffentlicht</string>
     <string name="in_coding">In Entwicklung</string>
     <string name="coming_soon">Demnächst verfügbar</string>
