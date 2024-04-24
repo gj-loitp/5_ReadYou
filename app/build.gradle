@@ -15,10 +15,10 @@ if (keyPropsFile.exists()) {
 }
 
 android {
-    namespace 'com.roy93group.reader'
+    namespace 'com.mckimquyen.reader'
     compileSdk 34
     defaultConfig {
-        applicationId "com.roy93group.reader"
+        applicationId "com.mckimquyen.reader"
         minSdk 26
         targetSdk 34
         versionCode 20240107

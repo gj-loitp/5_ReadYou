@@ -36,4 +36,4 @@
 
 # Provider API
 -keep class me.ash.reader.infrastructure.** { *; }
--keep class com.roy93group.reader.data.provider.** { *; }
+-keep class com.mckimquyen.reader.data.provider.** { *; }

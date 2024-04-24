@@ -1,0 +1,113 @@
+package com.mckimquyen.reader.infrastructure.rss
+
+import android.content.Context
+import be.ceau.opml.OpmlParser
+import com.mckimquyen.reader.domain.model.feed.Feed
+import com.mckimquyen.reader.domain.model.group.Group
+import com.mckimquyen.reader.domain.model.group.GroupWithFeed
+import com.mckimquyen.reader.infrastructure.di.IODispatcher
+import com.mckimquyen.reader.ui.ext.currentAccountId
+import com.mckimquyen.reader.ui.ext.spacerDollar
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.withContext
+import java.io.InputStream
+import java.util.*
+import javax.inject.Inject
+
+class OPMLDataSource @Inject constructor(
+    @ApplicationContext
+    private val context: Context,
+    @IODispatcher
+    private val ioDispatcher: CoroutineDispatcher,
+) {
+
+    @Throws(Exception::class)
+    suspend fun parseFileInputStream(
+        inputStream: InputStream,
+        defaultGroup: Group,
+    ): List<GroupWithFeed> {
+        return withContext(ioDispatcher) {
+            val accountId = context.currentAccountId
+            val opml = OpmlParser().parse(inputStream)
+            val groupWithFeedList = mutableListOf<GroupWithFeed>().also {
+                it.addGroup(defaultGroup)
+            }
+
+            opml.body.outlines.forEach {
+                // Only feeds
+                if (it.subElements.isEmpty()) {
+                    // It's a empty group
+                    if (it.attributes["xmlUrl"] == null) {
+                        if (!it.attributes["isDefault"].toBoolean()) {
+                            groupWithFeedList.addGroup(
+                                Group(
+                                    id = context.currentAccountId.spacerDollar(
+                                        UUID.randomUUID().toString()
+                                    ),
+                                    name = it.attributes["title"] ?: it.text!!,
+                                    accountId = accountId,
+                                )
+                            )
+                        }
+                    } else {
+                        groupWithFeedList.addFeedToDefault(
+                            Feed(
+                                id = context.currentAccountId.spacerDollar(
+                                    UUID.randomUUID().toString()
+                                ),
+                                name = it.attributes["title"] ?: it.text!!,
+                                url = it.attributes["xmlUrl"]!!,
+                                groupId = defaultGroup.id,
+                                accountId = accountId,
+                                isNotification = it.attributes["isNotification"].toBoolean(),
+                                isFullContent = it.attributes["isFullContent"].toBoolean(),
+                            )
+                        )
+                    }
+                } else {
+                    var groupId = defaultGroup.id
+                    if (!it.attributes["isDefault"].toBoolean()) {
+                        groupId =
+                            context.currentAccountId.spacerDollar(UUID.randomUUID().toString())
+                        groupWithFeedList.addGroup(
+                            Group(
+                                id = groupId,
+                                name = it.attributes["title"] ?: it.text!!,
+                                accountId = accountId,
+                            )
+                        )
+                    }
+                    it.subElements.forEach { outline ->
+                        groupWithFeedList.addFeed(
+                            Feed(
+                                id = context.currentAccountId.spacerDollar(
+                                    UUID.randomUUID().toString()
+                                ),
+                                name = outline.attributes["title"] ?: outline.text!!,
+                                url = outline.attributes["xmlUrl"]!!,
+                                groupId = groupId,
+                                accountId = accountId,
+                                isNotification = outline.attributes["isNotification"].toBoolean(),
+                                isFullContent = outline.attributes["isFullContent"].toBoolean(),
+                            )
+                        )
+                    }
+                }
+            }
+            groupWithFeedList
+        }
+    }
+
+    private fun MutableList<GroupWithFeed>.addGroup(group: Group) {
+        add(GroupWithFeed(group = group, feeds = mutableListOf()))
+    }
+
+    private fun MutableList<GroupWithFeed>.addFeed(feed: Feed) {
+        last().feeds.add(feed)
+    }
+
+    private fun MutableList<GroupWithFeed>.addFeedToDefault(feed: Feed) {
+        first().feeds.add(feed)
+    }
+}
