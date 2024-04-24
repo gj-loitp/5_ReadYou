@@ -21,8 +21,8 @@ android {
         applicationId "com.mckimquyen.reader"
         minSdk 26
         targetSdk 34
-        versionCode 20240107
-        versionName "2024.01.07"
+        versionCode 20240424
+        versionName "2024.04.24"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
