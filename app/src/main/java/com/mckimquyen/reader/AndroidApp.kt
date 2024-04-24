@@ -37,7 +37,7 @@ class AndroidApp : Application(), Configuration.Provider {
     lateinit var androidDatabase: AndroidDatabase
 
     @Inject
-    lateinit var workerFactory: HiltWorkerFactory
+    lateinit var hiltWorkerFactory: HiltWorkerFactory
 
     @Inject
     lateinit var workManager: WorkManager
@@ -46,7 +46,7 @@ class AndroidApp : Application(), Configuration.Provider {
     lateinit var networkDataSource: NetworkDataSource
 
     @Inject
-    lateinit var OPMLDataSource: OPMLDataSource
+    lateinit var opmlDataSource: OPMLDataSource
 
     @Inject
     lateinit var rssHelper: RssHelper
@@ -55,7 +55,7 @@ class AndroidApp : Application(), Configuration.Provider {
     lateinit var notificationHelper: NotificationHelper
 
     @Inject
-    lateinit var appService: AppSv
+    lateinit var appSv: AppSv
 
     @Inject
     lateinit var androidStringsHelper: AndroidStringsHelper
@@ -64,13 +64,13 @@ class AndroidApp : Application(), Configuration.Provider {
     lateinit var accountService: AccountSv
 
     @Inject
-    lateinit var localRssService: LocalRssSv
+    lateinit var localRssSv: LocalRssSv
 
     @Inject
     lateinit var opmlService: OpmlSv
 
     @Inject
-    lateinit var rssService: RssSv
+    lateinit var rssSv: RssSv
 
     @Inject
     @ApplicationScope
@@ -109,7 +109,7 @@ class AndroidApp : Application(), Configuration.Provider {
      */
     override fun getWorkManagerConfiguration(): Configuration =
         Configuration.Builder()
-            .setWorkerFactory(workerFactory)
+            .setWorkerFactory(hiltWorkerFactory)
             .setMinimumLoggingLevel(android.util.Log.DEBUG)
             .build()
 
@@ -122,7 +122,7 @@ class AndroidApp : Application(), Configuration.Provider {
     }
 
     private suspend fun workerInit() {
-        rssService.get().doSync(isOnStart = true)
+        rssSv.get().doSync(isOnStart = true)
     }
 
     private suspend fun checkUpdate() {
@@ -132,6 +132,6 @@ class AndroidApp : Application(), Configuration.Provider {
                 if (it.exists()) it.del()
             }
         }
-        appService.checkUpdate(showToast = false)
+        appSv.checkUpdate(showToast = false)
     }
 }
