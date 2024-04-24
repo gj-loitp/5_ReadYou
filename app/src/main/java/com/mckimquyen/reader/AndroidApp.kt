@@ -1,4 +1,4 @@
-package com.mckimquyen.reader.infrastructure.android
+package com.mckimquyen.reader
 
 import android.app.Application
 import androidx.hilt.work.HiltWorkerFactory
@@ -10,6 +10,9 @@ import com.mckimquyen.reader.domain.sv.AppSv
 import com.mckimquyen.reader.domain.sv.LocalRssSv
 import com.mckimquyen.reader.domain.sv.OpmlSv
 import com.mckimquyen.reader.domain.sv.RssSv
+import com.mckimquyen.reader.infrastructure.android.AndroidStringsHelper
+import com.mckimquyen.reader.infrastructure.android.CrashHandler
+import com.mckimquyen.reader.infrastructure.android.NotificationHelper
 import com.mckimquyen.reader.infrastructure.db.AndroidDatabase
 import com.mckimquyen.reader.infrastructure.di.ApplicationScope
 import com.mckimquyen.reader.infrastructure.di.IODispatcher
@@ -27,9 +30,6 @@ import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import javax.inject.Inject
 
-/**
- * The Application class, where the Dagger components is generated.
- */
 @HiltAndroidApp
 class AndroidApp : Application(), Configuration.Provider {
 
