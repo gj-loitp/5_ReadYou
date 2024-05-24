@@ -17,7 +17,7 @@
     </queries>
 
     <application
-        android:name=".AndroidApp"
+        android:name=".RApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/read_you"

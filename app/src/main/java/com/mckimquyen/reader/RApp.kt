@@ -46,7 +46,7 @@ import javax.inject.Inject
 //done mckimquyen
 
 @HiltAndroidApp
-class AndroidApp : Application(), Configuration.Provider {
+class RApp : Application(), Configuration.Provider {
 
     @Inject
     lateinit var androidDatabase: AndroidDatabase
