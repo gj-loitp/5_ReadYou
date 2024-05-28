@@ -33,7 +33,6 @@ import javax.inject.Inject
 //TODO ad applovin
 //TODO finger print
 
-//TODO double to exit app
 //TODO why you see ad
 //TODO samsung a50 bottom navi system
 //TODO keystore
@@ -45,6 +44,7 @@ import javax.inject.Inject
 
 //done mckimquyen
 //change icon launcher
+//double to exit app
 
 @HiltAndroidApp
 class RApp : Application(), Configuration.Provider {
