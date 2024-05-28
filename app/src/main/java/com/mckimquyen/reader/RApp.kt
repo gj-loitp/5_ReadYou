@@ -32,19 +32,19 @@ import javax.inject.Inject
 
 //TODO ad applovin
 //TODO finger print
-
 //TODO why you see ad
 //TODO samsung a50 bottom navi system
 //TODO keystore
-//TODO leak canary
-//TODO proguard
-//TODO change pkg name manifest
+
 //TODO rate app, share app, more app
 //TODO policy
 
 //done mckimquyen
 //change icon launcher
 //double to exit app
+//leak canary
+//proguard
+//change pkg name manifest
 
 @HiltAndroidApp
 class RApp : Application(), Configuration.Provider {
