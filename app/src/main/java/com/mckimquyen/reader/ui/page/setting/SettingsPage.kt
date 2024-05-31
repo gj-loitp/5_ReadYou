@@ -141,17 +141,17 @@ fun SettingsPage(
                         }
                     }
                 }
-                item {
-                    SelectableSettingGroupItem(
-                        title = stringResource(R.string.tips_and_support),
-                        desc = stringResource(R.string.tips_and_support_desc),
-                        icon = Icons.Outlined.TipsAndUpdates,
-                    ) {
-                        navController.navigate(RouteName.TIPS_AND_SUPPORT) {
-                            launchSingleTop = true
-                        }
-                    }
-                }
+//                item {
+//                    SelectableSettingGroupItem(
+//                        title = stringResource(R.string.tips_and_support),
+//                        desc = stringResource(R.string.tips_and_support_desc),
+//                        icon = Icons.Outlined.TipsAndUpdates,
+//                    ) {
+//                        navController.navigate(RouteName.TIPS_AND_SUPPORT) {
+//                            launchSingleTop = true
+//                        }
+//                    }
+//                }
                 item {
                     Spacer(modifier = Modifier.height(24.dp))
                     Spacer(modifier = Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars))
