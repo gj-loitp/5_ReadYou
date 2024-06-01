@@ -37,7 +37,6 @@ import javax.inject.Inject
 //TODO keystore
 
 //TODO rate app, share app, more app
-//TODO policy
 
 //done mckimquyen
 //change icon launcher
@@ -45,6 +44,7 @@ import javax.inject.Inject
 //leak canary
 //proguard
 //change pkg name manifest
+//policy
 
 @HiltAndroidApp
 class RApp : Application(), Configuration.Provider {

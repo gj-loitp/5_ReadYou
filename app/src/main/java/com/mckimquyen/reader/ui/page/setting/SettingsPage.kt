@@ -9,9 +9,13 @@ import androidx.compose.foundation.layout.windowInsetsBottomHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.AccountCircle
+import androidx.compose.material.icons.outlined.Code
+import androidx.compose.material.icons.outlined.Download
 import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material.icons.outlined.Lightbulb
 import androidx.compose.material.icons.outlined.Palette
+import androidx.compose.material.icons.outlined.Policy
+import androidx.compose.material.icons.outlined.StarRate
 import androidx.compose.material.icons.outlined.TipsAndUpdates
 import androidx.compose.material.icons.outlined.TouchApp
 import androidx.compose.material.icons.rounded.ArrowBack
@@ -152,6 +156,60 @@ fun SettingsPage(
 //                        }
 //                    }
 //                }
+                item {
+                    SelectableSettingGroupItem(
+                        title = "Rate app",
+                        desc = "Please rate 5 stars if you find this application useful",
+                        icon = Icons.Outlined.StarRate,
+                    ) {
+
+                    }
+                }
+                item {
+                    SelectableSettingGroupItem(
+                        title = "Get more apps",
+                        desc = "Download more of these amazing apps from the store, they are very useful for you",
+                        icon = Icons.Outlined.Download,
+                    ) {
+
+                    }
+                }
+                item {
+                    SelectableSettingGroupItem(
+                        title = "Share this app",
+                        desc = "Please share this application for others to use with you",
+                        icon = Icons.Outlined.Download,
+                    ) {
+
+                    }
+                }
+                item {
+                    SelectableSettingGroupItem(
+                        title = "Term & Policy",
+                        desc = "Read Security terms and privacy policy",
+                        icon = Icons.Outlined.Policy,
+                    ) {
+
+                    }
+                }
+                item {
+                    SelectableSettingGroupItem(
+                        title = "Source code (original version)",
+                        desc = "An Android RSS reader presented in Material You style.",
+                        icon = Icons.Outlined.Code,
+                    ) {
+//                        https://github.com/Ashinch/ReadYou
+                    }
+                }
+                item {
+                    SelectableSettingGroupItem(
+                        title = "Source code (this version)",
+                        desc = "An Android RSS reader presented in Material You style.",
+                        icon = Icons.Outlined.Code,
+                    ) {
+//                        https://github.com/gj-loitp/5_ReadYou
+                    }
+                }
                 item {
                     Spacer(modifier = Modifier.height(24.dp))
                     Spacer(modifier = Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars))

@@ -74,7 +74,7 @@ fun SelectableSettingGroupItem(
                         text = it,
                         color = if (selected) MaterialTheme.colorScheme.surface.copy(alpha = 0.7f)
                         else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
-                        maxLines = 1,
+                        maxLines = 5,
                         style = MaterialTheme.typography.bodyMedium,
                     )
                 }
