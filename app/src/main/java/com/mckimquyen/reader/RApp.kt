@@ -33,7 +33,6 @@ import javax.inject.Inject
 //TODO ad applovin
 //TODO finger print
 //TODO why you see ad
-//TODO samsung a50 bottom navi system
 //TODO keystore
 
 //done mckimquyen
@@ -44,6 +43,7 @@ import javax.inject.Inject
 //change pkg name manifest
 //policy
 //rate app, share app, more app
+//build version
 
 @HiltAndroidApp
 class RApp : Application(), Configuration.Provider {
