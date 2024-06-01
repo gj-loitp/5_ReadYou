@@ -30,10 +30,13 @@ import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import javax.inject.Inject
 
+//https://www.reddit.com/r/rss/comments/fylt16/is_there_a_website_where_you_can_download_opml/
+
 //TODO ad applovin
 //TODO finger print
 //TODO why you see ad
 //TODO keystore
+//TODO import oplm vietnam
 
 //done mckimquyen
 //change icon launcher
