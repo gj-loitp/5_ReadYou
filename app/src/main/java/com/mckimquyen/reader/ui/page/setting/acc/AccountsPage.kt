@@ -80,26 +80,26 @@ fun AccountsPage(
                         ) {}
                     }
                 }
-                item {
-                    Tips(text = stringResource(R.string.accounts_tips))
-                    Spacer(modifier = Modifier.height(24.dp))
-                }
-                item {
-                    Subtitle(
-                        modifier = Modifier.padding(horizontal = 24.dp),
-                        text = stringResource(R.string.more),
-                    )
-                    SettingItem(
-                        title = stringResource(R.string.add_accounts),
-                        desc = stringResource(R.string.add_accounts_desc),
-                        icon = Icons.Outlined.PersonAdd,
-                        onClick = {
-                            navController.navigate(RouteName.ADD_ACCOUNTS) {
-                                launchSingleTop = true
-                            }
-                        },
-                    ) {}
-                }
+//                item {
+//                    Tips(text = stringResource(R.string.accounts_tips))
+//                    Spacer(modifier = Modifier.height(24.dp))
+//                }
+//                item {
+//                    Subtitle(
+//                        modifier = Modifier.padding(horizontal = 24.dp),
+//                        text = stringResource(R.string.more),
+//                    )
+//                    SettingItem(
+//                        title = stringResource(R.string.add_accounts),
+//                        desc = stringResource(R.string.add_accounts_desc),
+//                        icon = Icons.Outlined.PersonAdd,
+//                        onClick = {
+//                            navController.navigate(RouteName.ADD_ACCOUNTS) {
+//                                launchSingleTop = true
+//                            }
+//                        },
+//                    ) {}
+//                }
                 item {
                     Spacer(modifier = Modifier.height(24.dp))
                     Spacer(modifier = Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars))

@@ -214,10 +214,10 @@ fun AccountDetailsPage(
                         title = stringResource(R.string.clear_all_articles),
                         onClick = { viewModel.showClearDialog() },
                     ) {}
-                    SettingItem(
-                        title = stringResource(R.string.delete_account),
-                        onClick = { viewModel.showDeleteDialog() },
-                    ) {}
+//                    SettingItem(
+//                        title = stringResource(R.string.delete_account),
+//                        onClick = { viewModel.showDeleteDialog() },
+//                    ) {}
                     Spacer(modifier = Modifier.height(24.dp))
                 }
                 item {

@@ -55,26 +55,26 @@ fun LanguagesPage(
         },
         content = {
             LazyColumn {
-                item(key = languages.value) {
-                    DisplayText(text = stringResource(R.string.languages), desc = "")
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Banner(
-                        title = stringResource(R.string.help_translate),
-                        icon = Icons.Outlined.Lightbulb,
-                        action = {
-                            Icon(
-                                imageVector = Icons.Outlined.KeyboardArrowRight,
-                                contentDescription = stringResource(R.string.go_to),
-                            )
-                        },
-                    ) {
-                        context.openURL(
-                            context.getString(R.string.translatable_url),
-                            OpenLinkPref.AutoPreferCustomTabs
-                        )
-                    }
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
+//                item(key = languages.value) {
+//                    DisplayText(text = stringResource(R.string.languages), desc = "")
+//                    Spacer(modifier = Modifier.height(16.dp))
+//                    Banner(
+//                        title = stringResource(R.string.help_translate),
+//                        icon = Icons.Outlined.Lightbulb,
+//                        action = {
+//                            Icon(
+//                                imageVector = Icons.Outlined.KeyboardArrowRight,
+//                                contentDescription = stringResource(R.string.go_to),
+//                            )
+//                        },
+//                    ) {
+//                        context.openURL(
+//                            context.getString(R.string.translatable_url),
+//                            OpenLinkPref.AutoPreferCustomTabs
+//                        )
+//                    }
+//                    Spacer(modifier = Modifier.height(16.dp))
+//                }
                 item {
                     LanguagesPref.values.map {
                         SettingItem(
