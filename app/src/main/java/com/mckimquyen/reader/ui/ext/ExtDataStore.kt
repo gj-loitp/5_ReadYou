@@ -24,7 +24,7 @@ val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "se
 val Context.skipVersionNumber: String
     get() = this.dataStore.get(DataStoreKeys.SkipVersionNumber) ?: ""
 val Context.isFirstLaunch: Boolean
-    get() = this.dataStore.get(DataStoreKeys.IsFirstLaunch) ?: true
+    get() = this.dataStore.get(DataStoreKeys.IsFirstLaunch) ?: false
 val Context.currentAccountId: Int
     get() = this.dataStore.get(DataStoreKeys.CurrentAccountId)!!
 val Context.currentAccountType: Int
