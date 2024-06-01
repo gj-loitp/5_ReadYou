@@ -184,10 +184,10 @@ fun FeedsPage(
             LazyColumn {
                 item {
                     DisplayText(
-                        modifier = Modifier
-                            .clickable {
-                                accountTabVisible = true
-                            },
+//                        modifier = Modifier
+//                            .clickable {
+//                                accountTabVisible = true
+//                            },
                         // .pointerInput(Unit) {
                         //     detectTapGestures(
                         //         onPress = {
@@ -320,23 +320,23 @@ fun FeedsPage(
     GroupOptionDrawer()
     FeedOptionDrawer()
 
-    AccountsTab(
-        visible = accountTabVisible,
-        accounts = accounts,
-        onAccountSwitch = {
-            accountViewModel.switchAccount(it) {
-                accountTabVisible = false
-                navController.navigate(RouteName.SETTINGS)
-                navController.navigate(RouteName.FEEDS) {
-                    launchSingleTop = true
-                    restoreState = true
-                }
-            }
-        },
-        onDismissRequest = {
-            accountTabVisible = false
-        },
-    )
+//    AccountsTab(
+//        visible = accountTabVisible,
+//        accounts = accounts,
+//        onAccountSwitch = {
+//            accountViewModel.switchAccount(it) {
+//                accountTabVisible = false
+//                navController.navigate(RouteName.SETTINGS)
+//                navController.navigate(RouteName.FEEDS) {
+//                    launchSingleTop = true
+//                    restoreState = true
+//                }
+//            }
+//        },
+//        onDismissRequest = {
+//            accountTabVisible = false
+//        },
+//    )
 }
 
 private fun filterChange(
