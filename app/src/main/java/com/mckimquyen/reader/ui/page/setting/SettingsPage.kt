@@ -16,7 +16,6 @@ import androidx.compose.material.icons.outlined.Lightbulb
 import androidx.compose.material.icons.outlined.Palette
 import androidx.compose.material.icons.outlined.Policy
 import androidx.compose.material.icons.outlined.StarRate
-import androidx.compose.material.icons.outlined.TipsAndUpdates
 import androidx.compose.material.icons.outlined.TouchApp
 import androidx.compose.material.icons.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.Close
@@ -37,10 +36,15 @@ import com.mckimquyen.reader.R
 import com.mckimquyen.reader.infrastructure.pref.LocalNewVersionNumber
 import com.mckimquyen.reader.infrastructure.pref.LocalSkipVersionNumber
 import com.mckimquyen.reader.ui.component.base.Banner
+import com.mckimquyen.reader.ui.component.base.BaseScaffold
 import com.mckimquyen.reader.ui.component.base.DisplayText
 import com.mckimquyen.reader.ui.component.base.FeedbackIconButton
-import com.mckimquyen.reader.ui.component.base.BaseScaffold
 import com.mckimquyen.reader.ui.ext.getCurrentVersion
+import com.mckimquyen.reader.ui.ext.moreApp
+import com.mckimquyen.reader.ui.ext.openBrowserPolicy
+import com.mckimquyen.reader.ui.ext.openUrlInBrowser
+import com.mckimquyen.reader.ui.ext.rateApp
+import com.mckimquyen.reader.ui.ext.shareApp
 import com.mckimquyen.reader.ui.page.common.RouteName
 import com.mckimquyen.reader.ui.page.setting.tip.UpdateDialog
 import com.mckimquyen.reader.ui.page.setting.tip.UpdateViewModel
@@ -162,7 +166,7 @@ fun SettingsPage(
                         desc = "Please rate 5 stars if you find this application useful",
                         icon = Icons.Outlined.StarRate,
                     ) {
-
+                        context.rateApp(packageName = context.packageName)
                     }
                 }
                 item {
@@ -171,7 +175,7 @@ fun SettingsPage(
                         desc = "Download more of these amazing apps from the store, they are very useful for you",
                         icon = Icons.Outlined.Download,
                     ) {
-
+                        context.moreApp()
                     }
                 }
                 item {
@@ -180,7 +184,7 @@ fun SettingsPage(
                         desc = "Please share this application for others to use with you",
                         icon = Icons.Outlined.Download,
                     ) {
-
+                        context.shareApp()
                     }
                 }
                 item {
@@ -189,7 +193,7 @@ fun SettingsPage(
                         desc = "Read Security terms and privacy policy",
                         icon = Icons.Outlined.Policy,
                     ) {
-
+                        context.openBrowserPolicy()
                     }
                 }
                 item {
@@ -198,7 +202,7 @@ fun SettingsPage(
                         desc = "An Android RSS reader presented in Material You style.",
                         icon = Icons.Outlined.Code,
                     ) {
-//                        https://github.com/Ashinch/ReadYou
+                        context.openUrlInBrowser("https://github.com/Ashinch/ReadYou")
                     }
                 }
                 item {
@@ -207,7 +211,7 @@ fun SettingsPage(
                         desc = "An Android RSS reader presented in Material You style.",
                         icon = Icons.Outlined.Code,
                     ) {
-//                        https://github.com/gj-loitp/5_ReadYou
+                        context.openUrlInBrowser("https://github.com/gj-loitp/5_ReadYou")
                     }
                 }
                 item {

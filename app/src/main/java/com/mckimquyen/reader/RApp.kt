@@ -36,8 +36,6 @@ import javax.inject.Inject
 //TODO samsung a50 bottom navi system
 //TODO keystore
 
-//TODO rate app, share app, more app
-
 //done mckimquyen
 //change icon launcher
 //double to exit app
@@ -45,6 +43,7 @@ import javax.inject.Inject
 //proguard
 //change pkg name manifest
 //policy
+//rate app, share app, more app
 
 @HiltAndroidApp
 class RApp : Application(), Configuration.Provider {
