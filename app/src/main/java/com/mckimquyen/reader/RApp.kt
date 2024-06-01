@@ -35,7 +35,6 @@ import javax.inject.Inject
 //TODO ad applovin
 //TODO finger print
 //TODO why you see ad
-//TODO keystore
 //TODO import oplm vietnam
 
 //done mckimquyen
@@ -47,6 +46,7 @@ import javax.inject.Inject
 //policy
 //rate app, share app, more app
 //build version
+//keystore
 
 @HiltAndroidApp
 class RApp : Application(), Configuration.Provider {

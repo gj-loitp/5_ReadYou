@@ -21,8 +21,8 @@ android {
         applicationId "com.mckimquyen.reader"
         minSdk 26
         targetSdk 34
-        versionCode 20240523
-        versionName "2024.05.23"
+        versionCode 20240106
+        versionName "2024.01.06"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -39,28 +39,38 @@ android {
         }
     }
 
+//    lint {
+//        baseline = file("lint-baseline.xml")
+//    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
     flavorDimensions.add("channel")
     productFlavors {
-        fdroid {
+        dev {
             dimension "channel"
         }
-        github {
+        prod {
             dimension "channel"
         }
     }
     signingConfigs {
         release {
-            keyAlias keyProps["keyAlias"]
-            keyPassword keyProps["keyPassword"]
-            storeFile keyProps["storeFile"] ? file(keyProps["storeFile"]) : null
-            storePassword keyProps["storePassword"]
+            storeFile file("keystores.jks")
+            storePassword "27072000"
+            keyAlias "mckimquyen"
+            keyPassword "27072000"
         }
     }
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
     }

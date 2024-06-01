@@ -395,4 +395,12 @@
     <string name="open_link_specific_browser">Browser</string>
     <string name="open_link_something_wrong">\"Open Link\" setting ignored because something went wrong.</string>
     <string name="open_link_ask_dialog_title">Open with…</string>
+    <string name="mark_as_read_one_day">1 Mark posts older than days as read</string>
+    <string name="mark_as_read_three_days">３Mark posts older than days as read</string>
+    <string name="mark_as_read_seven_days">Mark as read older than 7 days</string>
+    <string name="in_coding">In development</string>
+    <string name="line_spacing">Line spacing</string>
+    <string name="tips_top_bar_tonal_elevation">Tonal height is only available when scrolling</string>
+    <string name="open_with">Open %1$s</string>
+    <string name="options">choice</string>
 </resources>
