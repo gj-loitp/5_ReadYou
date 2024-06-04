@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "RSS Cat Hub"
+rootProject.name = "RSS_Cat_Hub"
 include ':app'
