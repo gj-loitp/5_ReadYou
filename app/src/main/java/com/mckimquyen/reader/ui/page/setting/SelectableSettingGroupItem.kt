@@ -65,7 +65,8 @@ fun SelectableSettingGroupItem(
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = title,
-                    maxLines = if (desc == null) 2 else 1,
+//                    maxLines = if (desc == null) 2 else 1,
+                    maxLines = 2,
                     style = MaterialTheme.typography.titleLarge.copy(fontSize = 20.sp),
                     color = if (selected) MaterialTheme.colorScheme.surface else MaterialTheme.colorScheme.onSurface,
                 )
