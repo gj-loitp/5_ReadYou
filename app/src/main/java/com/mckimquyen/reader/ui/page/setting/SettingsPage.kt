@@ -227,6 +227,15 @@ fun SettingsPage(
                     }
                 }
                 item {
+                    SelectableSettingGroupItem(
+                        title = "Join the BetaTesting Community Today!",
+                        desc = "Test exciting new products and get paid to give feedback for new apps",
+                        icon = Icons.Outlined.Code,
+                    ) {
+                        context.openUrlInBrowser("https://github.com/gj-loitp/20-TESTER-FOR-CLOSED-TESTING/tree/main")
+                    }
+                }
+                item {
                     Spacer(modifier = Modifier.height(24.dp))
                     Spacer(modifier = Modifier.windowInsetsBottomHeight(WindowInsets.navigationBars))
                 }
