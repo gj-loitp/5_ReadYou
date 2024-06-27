@@ -47,6 +47,7 @@ import javax.inject.Inject
 //rate app, share app, more app
 //build version
 //keystore
+//beta tester
 
 @HiltAndroidApp
 class RApp : Application(), Configuration.Provider {

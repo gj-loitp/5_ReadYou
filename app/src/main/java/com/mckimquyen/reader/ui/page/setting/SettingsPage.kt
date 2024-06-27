@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.windowInsetsBottomHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.AccountCircle
+import androidx.compose.material.icons.outlined.AddCircle
 import androidx.compose.material.icons.outlined.Build
 import androidx.compose.material.icons.outlined.Code
 import androidx.compose.material.icons.outlined.Download
@@ -16,6 +17,7 @@ import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material.icons.outlined.Lightbulb
 import androidx.compose.material.icons.outlined.Palette
 import androidx.compose.material.icons.outlined.Policy
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material.icons.outlined.StarRate
 import androidx.compose.material.icons.outlined.TouchApp
 import androidx.compose.material.icons.rounded.ArrowBack
@@ -194,7 +196,7 @@ fun SettingsPage(
                     SelectableSettingGroupItem(
                         title = "Share this app",
                         desc = "Please share this application for others to use with you",
-                        icon = Icons.Outlined.Download,
+                        icon = Icons.Outlined.Share,
                     ) {
                         context.shareApp()
                     }
@@ -230,7 +232,7 @@ fun SettingsPage(
                     SelectableSettingGroupItem(
                         title = "Join the BetaTesting Community Today!",
                         desc = "Test exciting new products and get paid to give feedback for new apps",
-                        icon = Icons.Outlined.Code,
+                        icon = Icons.Outlined.AddCircle,
                     ) {
                         context.openUrlInBrowser("https://github.com/gj-loitp/20-TESTER-FOR-CLOSED-TESTING/tree/main")
                     }
