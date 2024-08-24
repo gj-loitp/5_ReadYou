@@ -184,6 +184,7 @@ fun SubscribeDialog(
                     }
                 ) {
                     Text(text = stringResource(R.string.import_from_opml))
+
                 }
             } else {
                 TextButton(

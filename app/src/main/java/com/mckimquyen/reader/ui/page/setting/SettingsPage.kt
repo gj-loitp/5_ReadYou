@@ -234,7 +234,8 @@ fun SettingsPage(
                         desc = "Test exciting new products and get paid to give feedback for new apps",
                         icon = Icons.Outlined.AddCircle,
                     ) {
-                        context.openUrlInBrowser("https://github.com/gj-loitp/20-TESTER-FOR-CLOSED-TESTING/tree/main")
+//                        context.openUrlInBrowser("https://github.com/gj-loitp/20-TESTER-FOR-CLOSED-TESTING/tree/main")
+                        context.rateApp("com.mckimquyen.bemytester")
                     }
                 }
                 item {
