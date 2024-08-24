@@ -1,13 +1,12 @@
 package com.mckimquyen.reader.infrastructure.android
 
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
 import android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.CompositionLocalProvider
@@ -15,14 +14,15 @@ import androidx.core.view.WindowCompat
 import androidx.profileinstaller.ProfileInstallerInitializer
 import coil.ImageLoader
 import coil.compose.LocalImageLoader
-import dagger.hilt.android.AndroidEntryPoint
 import com.mckimquyen.reader.domain.repository.AccountDao
 import com.mckimquyen.reader.infrastructure.pref.AccountSettingsProvider
 import com.mckimquyen.reader.infrastructure.pref.LanguagesPref
 import com.mckimquyen.reader.infrastructure.pref.SettingsProvider
 import com.mckimquyen.reader.ui.ext.languages
 import com.mckimquyen.reader.ui.page.common.HomeEntry
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+
 
 /**
  * The Single-Activity Architecture.
@@ -35,6 +35,13 @@ class MainActivity : ComponentActivity() {
 
     @Inject
     lateinit var accountDao: AccountDao
+
+    override fun attachBaseContext(newBase: Context) {
+        val override = Configuration(newBase.resources.configuration)
+        override.fontScale = 1.0f
+        applyOverrideConfiguration(override)
+        super.attachBaseContext(newBase)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
