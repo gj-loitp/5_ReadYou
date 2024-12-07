@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-//            enableAdaptiveRefreshRate()
+            enableAdaptiveRefreshRate()
         }
     }
 
