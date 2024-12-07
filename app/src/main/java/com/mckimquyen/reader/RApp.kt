@@ -36,6 +36,8 @@ import javax.inject.Inject
 //TODO finger print
 //TODO why you see ad
 //TODO import oplm vietnam
+//TODO roy93~ 120hz
+//TODO roy93~ review in app
 
 //done mckimquyen
 //change icon launcher
