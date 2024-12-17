@@ -109,7 +109,7 @@ dependencies {
     api("io.coil-kt:coil-svg:2.1.0")
     api("io.coil-kt:coil-gif:2.1.0")
 
-    api "com.squareup.okhttp3:okhttp:5.0.0-alpha.11"
+//    api "com.squareup.okhttp3:okhttp:5.0.0-alpha.11"
     api "com.squareup.okhttp3:okhttp-coroutines-jvm:5.0.0-alpha.11"
     api "com.squareup.retrofit2:retrofit:2.9.0"
     api "com.squareup.retrofit2:converter-gson:2.9.0"
