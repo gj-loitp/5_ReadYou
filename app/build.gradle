@@ -117,10 +117,11 @@ dependencies {
     api "androidx.work:work-runtime-ktx:2.8.0-alpha02"
     api "androidx.datastore:datastore-preferences:1.0.0"
 
-    api "androidx.room:room-paging:2.5.0"
-    api "androidx.room:room-common:2.5.0"
-    api "androidx.room:room-ktx:2.5.0"
-    kapt "androidx.room:room-compiler:2.5.0"
+    api "androidx.room:room-paging:2.5.2"
+    api "androidx.room:room-common:2.5.2"
+    api "androidx.room:room-ktx:2.5.2"
+    //noinspection KaptUsageInsteadOfKsp
+    kapt "androidx.room:room-compiler:2.5.2"
 
     api "androidx.paging:paging-common:3.1.1"
     api "androidx.paging:paging-runtime:3.1.1"
