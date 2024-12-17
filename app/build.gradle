@@ -123,9 +123,10 @@ dependencies {
     //noinspection KaptUsageInsteadOfKsp
     kapt "androidx.room:room-compiler:2.5.2"
 
-    api "androidx.paging:paging-common:3.1.1"
-    api "androidx.paging:paging-runtime:3.1.1"
+//    api "androidx.paging:paging-common:3.1.1"
+//    api "androidx.paging:paging-runtime:3.1.1"
     api "androidx.paging:paging-compose:1.0.0-alpha14"
+
     api "androidx.browser:browser:1.8.0"
     api "androidx.navigation:navigation-compose:2.5.0-rc01"
     api "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.0-rc01"
