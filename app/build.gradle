@@ -139,12 +139,14 @@ dependencies {
     api "com.google.accompanist:accompanist-flowlayout:0.24.7-alpha"
     api "com.google.accompanist:accompanist-navigation-animation:0.24.7-alpha"
     api "com.google.accompanist:accompanist-swiperefresh:0.24.7-alpha"
-    api "androidx.compose.animation:animation-graphics:1.2.0-beta02"
+
+//    api "androidx.compose.animation:animation-graphics:1.2.0-beta02"
     api "androidx.compose.ui:ui:1.2.0-beta02"
     api "androidx.compose.ui:ui-util:1.2.0-beta02"
     api "androidx.compose.material:material:1.2.0-beta02"
     api "androidx.compose.material:material-icons-extended:1.2.0-beta02"
     api "androidx.compose.ui:ui-tooling-preview:1.2.0-beta02"
+
     api "androidx.hilt:hilt-work:1.0.0"
     api "com.google.dagger:hilt-android:2.40.5"
     kapt "com.google.dagger:hilt-android-compiler:2.40.5"
