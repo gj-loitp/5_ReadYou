@@ -101,7 +101,7 @@ dependencies {
 //    api "androidx.compose.compiler:compiler:1.5.15"
     api "com.github.ireward:compose-html:1.0.2"
 //    api "com.caverock:androidsvg-aar:$androidSVG"
-    api "be.ceau:opml-parser:$opmlParser"
+//    api "be.ceau:opml-parser:$opmlParser"
     api "net.dankito.readability4j:readability4j:$readability4j"
     api "com.rometools:rome:$rome"
     api("io.coil-kt:coil-base:2.1.0")
