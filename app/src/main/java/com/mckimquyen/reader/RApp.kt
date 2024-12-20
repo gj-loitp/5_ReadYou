@@ -36,9 +36,9 @@ import javax.inject.Inject
 //TODO finger print
 //TODO why you see ad
 //TODO import oplm vietnam
-//TODO roy93~ review in app
 
 //done mckimquyen
+//review in app bingo
 //font scale
 //120hz
 //change icon launcher
