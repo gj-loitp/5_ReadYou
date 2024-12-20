@@ -142,7 +142,7 @@ dependencies {
 
 //    api "androidx.compose.animation:animation-graphics:1.2.0-beta02"
 //    api "androidx.compose.ui:ui:1.2.0-beta02"
-//    api "androidx.compose.ui:ui-util:1.2.0-beta02"
+    api "androidx.compose.ui:ui-util:1.2.0-beta02"
     api "androidx.compose.material:material:1.2.0-beta02"
     api "androidx.compose.material:material-icons-extended:1.2.0-beta02"
     api "androidx.compose.ui:ui-tooling-preview:1.2.0-beta02"
